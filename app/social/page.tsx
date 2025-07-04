@@ -175,7 +175,7 @@ export default function Social() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl">
-              <div className="relative aspect-square overflow-hidden rounded-full shadow-xl w-48 h-48 mx-auto mb-6">
+              <div className="relative aspect-square overflow-hidden">
                 <Image
                   src="https://readdy.ai/api/search-image?query=Educational%20infographic%20about%20the%20Feynman%20Technique%20with%20step-by-step%20process%2C%20modern%20design%20with%20purple%20accents%2C%20clean%20typography%2C%20learning%20methodology%20visualization%2C%20professional%20educational%20content&width=400&height=400&seq=post-1&orientation=squarish"
                   alt="Feynman Technique Steps"
