@@ -1,0 +1,440 @@
+
+'use client';
+
+import Link from 'next/link';
+import { useState } from 'react';
+import Image from 'next/image';
+
+export default function Social() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    if (name === 'message' && value.length > 500) {
+      return;
+    }
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setSubmitStatus('Thank you for your message! We will get back to you soon.');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch {
+      setSubmitStatus('There was an error sending your message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const socialLinks = [
+    {
+      name: 'Instagram',
+      icon: 'ri-instagram-fill',
+      url: 'https://instagram.com/feynmanproject',
+      followers: '25.2K',
+      description: 'Daily learning tips, visual explanations, and behind-the-scenes content',
+      color: 'from-pink-500 to-purple-600'
+    },
+    {
+      name: 'TikTok',
+      icon: 'ri-tiktok-fill',
+      url: 'https://tiktok.com/@feynmanproject',
+      followers: '18.7K',
+      description: 'Quick learning hacks, concept breakdowns, and educational entertainment',
+      color: 'from-gray-800 to-gray-900'
+    },
+    {
+      name: 'YouTube',
+      icon: 'ri-youtube-fill',
+      url: 'https://youtube.com/feynmanproject',
+      followers: '42.1K',
+      description: 'In-depth tutorials, lectures, and comprehensive course content',
+      color: 'from-red-500 to-red-600'
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-[#0D0D0D] text-white">
+      {/* Navigation */}
+      <nav className="sticky top-0 z-50 bg-[#0D0D0D]/95 backdrop-blur-sm border-b border-purple-500/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center py-4">
+            <Link href="/" className="flex items-center space-x-2">
+              <div className="text-2xl font-bold text-[#8E44AD]" style={{ fontFamily: 'var(--font-pacifico)' }}>
+                Feynman Project
+              </div>
+            </Link>
+            
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex space-x-8">
+              <Link href="/about" className="hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">About</Link>
+              <Link href="/books" className="hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">Books</Link>
+              <Link href="/social" className="text-[#8E44AD] cursor-pointer">Social Media</Link>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button 
+              className="md:hidden w-6 h-6 flex items-center justify-center cursor-pointer"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <i className="ri-menu-line text-xl"></i>
+            </button>
+          </div>
+
+          {/* Mobile Navigation */}
+          {isMenuOpen && (
+            <div className="md:hidden pb-4">
+              <div className="flex flex-col space-y-2">
+                <Link href="/about" className="py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">About</Link>
+                <Link href="/books" className="py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">Books</Link>
+                <Link href="/social" className="py-2 text-[#8E44AD] cursor-pointer">Social Media</Link>
+              </div>
+            </div>
+          )}
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-br from-[#0D0D0D] via-[#1A0D1A] to-[#0D0D0D]">
+        <div className="absolute inset-0 bg-[url('https://readdy.ai/api/search-image?query=Social%20media%20and%20digital%20connection%20concept%20with%20floating%20social%20icons%20and%20network%20patterns%20in%20purple%20theme%2C%20modern%20technology%20background%2C%20communication%20and%20connectivity%20symbols%2C%20dark%20space%20with%20glowing%20elements&width=1920&height=800&seq=social-hero&orientation=landscape')] bg-cover bg-center opacity-15"></div>
+        
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-[#8E44AD] bg-clip-text text-transparent">
+            Connect With Us
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-8">
+            Join our community across social platforms and stay updated with the latest educational content
+          </p>
+          <div className="bg-[#8E44AD]/10 border border-[#8E44AD]/30 rounded-lg p-6 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-300">
+              Follow us for daily learning tips, concept breakdowns, and exclusive educational content designed to make complex topics simple.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Media Platforms */}
+      <section className="py-20 bg-[#1A1A1A]">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Follow Our Journey</h2>
+            <p className="text-xl text-gray-400">Find us on your favorite social platforms</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {socialLinks.map((platform) => (
+              <div key={platform.name} className="bg-[#2A2A2A] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                <div className={`h-32 bg-gradient-to-br ${platform.color} flex items-center justify-center`}>
+                  <i className={`${platform.icon} text-6xl text-white`}></i>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-2xl font-bold">{platform.name}</h3>
+                    <span className="text-[#8E44AD] font-bold text-lg">{platform.followers}</span>
+                  </div>
+                  <p className="text-gray-400 mb-6 leading-relaxed">{platform.description}</p>
+                  <a 
+                    href={platform.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full bg-[#8E44AD] hover:bg-[#7D3C98] text-white text-center py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                  >
+                    Follow Us
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Content Section */}
+      <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Latest Content</h2>
+            <p className="text-xl text-gray-400">Recent posts from our social media channels</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl">
+              <div className="aspect-square overflow-hidden">
+                <Image
+                  src="https://readdy.ai/api/search-image?query=Educational%20infographic%20about%20the%20Feynman%20Technique%20with%20step-by-step%20process%2C%20modern%20design%20with%20purple%20accents%2C%20clean%20typography%2C%20learning%20methodology%20visualization%2C%20professional%20educational%20content&width=400&height=400&seq=post-1&orientation=squarish"
+                  alt="Feynman Technique Steps"
+                  fill
+                  className="w-full h-full object-cover object-top"
+                  unoptimized
+                />
+              </div>
+              <div className="p-4">
+                <div className="flex items-center mb-2">
+                  <i className="ri-instagram-line text-[#8E44AD] mr-2"></i>
+                  <span className="text-sm text-gray-400">Instagram • 2 days ago</span>
+                </div>
+                <h3 className="font-semibold mb-2">The 4 Steps of Feynman Technique</h3>
+                <p className="text-gray-400 text-sm">Master any concept with this simple yet powerful learning method...</p>
+              </div>
+            </div>
+            
+            <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative aspect-square overflow-hidden">
+                <Image
+                  src="https://readdy.ai/api/search-image?query=Physics%20concept%20explanation%20with%20simple%20analogies%20and%20visual%20diagrams%2C%20educational%20illustration%20style%2C%20purple%20and%20white%20color%20scheme%2C%20scientific%20learning%20made%20simple%2C%20clear%20explanatory%20graphics&width=400&height=400&seq=post-2&orientation=squarish"
+                  alt="Physics Made Simple"
+                  fill
+                  className="object-cover object-top"
+                  unoptimized
+                />
+              </div>
+              <div className="p-4">
+                <div className="flex items-center mb-2">
+                  <i className="ri-youtube-line text-[#8E44AD] mr-2"></i>
+                  <span className="text-sm text-gray-400">YouTube • 5 days ago</span>
+                </div>
+                <h3 className="font-semibold mb-2">Quantum Physics in 5 Minutes</h3>
+                <p className="text-gray-400 text-sm">Breaking down quantum mechanics using everyday analogies...</p>
+              </div>
+            </div>
+            
+            <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative aspect-square overflow-hidden">
+                <Image
+                  src="https://readdy.ai/api/search-image?query=Study%20tips%20and%20learning%20strategies%20infographic%20with%20brain%20and%20lightbulb%20symbols%2C%20modern%20educational%20design%2C%20purple%20theme%2C%20productivity%20and%20learning%20optimization%2C%20motivational%20study%20content&width=400&height=400&seq=post-3&orientation=squarish"
+                  alt="Study Tips"
+                  fill
+                  className="object-cover object-top"
+                  unoptimized
+                />
+              </div>
+              <div className="p-4">
+                <div className="flex items-center mb-2">
+                  <i className="ri-tiktok-line text-[#8E44AD] mr-2"></i>
+                  <span className="text-sm text-gray-400">TikTok • 1 week ago</span>
+                </div>
+                <h3 className="font-semibold mb-2">5 Study Hacks That Actually Work</h3>
+                <p className="text-gray-400 text-sm">Science-backed techniques to improve your learning efficiency...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-20 bg-[#1A1A1A]">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+            <p className="text-xl text-gray-400">Have questions or suggestions? We`&rsquo;d love to hear from you!</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center flex-shrink-0">
+                    <i className="ri-mail-line text-white"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Email</h4>
+                    <p className="text-gray-400">hello@feynmanproject.com</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center flex-shrink-0">
+                    <i className="ri-time-line text-white"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Response Time</h4>
+                    <p className="text-gray-400">We typically respond within 24 hours</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center flex-shrink-0">
+                    <i className="ri-question-line text-white"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-1">Support</h4>
+                    <p className="text-gray-400">Questions about our books, courses, or learning techniques</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <form id="contact-form" onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-semibold mb-2">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-[#2A2A2A] border border-gray-600 rounded-lg focus:border-[#8E44AD] focus:outline-none transition-colors duration-300 text-sm"
+                    placeholder="Your full name"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="email" className="block text-sm font-semibold mb-2">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-[#2A2A2A] border border-gray-600 rounded-lg focus:border-[#8E44AD] focus:outline-none transition-colors duration-300 text-sm"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-semibold mb-2">Subject</label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-[#2A2A2A] border border-gray-600 rounded-lg focus:border-[#8E44AD] focus:outline-none transition-colors duration-300 text-sm"
+                    placeholder="What's this about?"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-sm font-semibold mb-2">
+                    Message ({formData.message.length}/500)
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    rows={6}
+                    maxLength={500}
+                    className="w-full px-4 py-3 bg-[#2A2A2A] border border-gray-600 rounded-lg focus:border-[#8E44AD] focus:outline-none transition-colors duration-300 resize-none text-sm"
+                    placeholder="Tell us what's on your mind..."
+                  />
+                </div>
+                
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#8E44AD] hover:bg-[#7D3C98] disabled:bg-gray-600 text-white py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 disabled:transform-none cursor-pointer whitespace-nowrap"
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
+                
+                {submitStatus && (
+                  <div className={`p-4 rounded-lg ${submitStatus.includes('error') ? 'bg-red-500/10 border border-red-500/30 text-red-400' : 'bg-green-500/10 border border-green-500/30 text-green-400'}`}>
+                    {submitStatus}
+                  </div>
+                )}
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Community Stats */}
+      <section className="py-20 bg-gradient-to-r from-[#8E44AD] to-[#A569BD]">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Join Our Growing Community</h2>
+            <p className="text-xl opacity-90">Learners from around the world are already part of our journey</p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">85K+</div>
+              <p className="text-lg opacity-90">Total Followers</p>
+            </div>
+            <div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">12K+</div>
+              <p className="text-lg opacity-90">Books Sold</p>
+            </div>
+            <div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">150+</div>
+              <p className="text-lg opacity-90">Countries Reached</p>
+            </div>
+            <div>
+              <div className="text-4xl md:text-5xl font-bold mb-2">98%</div>
+              <p className="text-lg opacity-90">Satisfaction Rate</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-[#0D0D0D] py-12 border-t border-purple-500/20">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div>
+              <div className="text-2xl font-bold text-[#8E44AD] mb-4" style={{ fontFamily: 'var(--font-pacifico)' }}>
+                Feynman Project
+              </div>
+              <p className="text-gray-400 leading-relaxed">
+                Empowering learners worldwide through the proven Feynman Technique of understanding by teaching.
+              </p>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+              <div className="space-y-2">
+                <Link href="/about" className="block text-gray-400 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">About Us</Link>
+                <Link href="/books" className="block text-gray-400 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">Our Books</Link>
+                <Link href="/social" className="block text-gray-400 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">Social Media</Link>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
+              <div className="flex space-x-4">
+                {socialLinks.map((platform) => (
+                  <a 
+                    key={platform.name}
+                    href={platform.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-[#8E44AD] rounded-full flex items-center justify-center hover:bg-[#7D3C98] transition-colors duration-300 cursor-pointer"
+                  >
+                    <i className={`${platform.icon} text-white`}></i>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+          
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p className="text-gray-400">© 2024 Feynman Project. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
