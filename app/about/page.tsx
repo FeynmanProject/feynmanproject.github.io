@@ -189,8 +189,9 @@ export default function About() {
                 <Image
                   src="https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20a%20confident%20educator%20and%20researcher%2C%20warm%20smile%2C%20modern%20business%20attire%2C%20purple%20background%2C%20inspirational%20and%20approachable%20appearance%2C%20high%20quality%20headshot%2C%20educational%20leadership%20style&width=400&height=400&seq=founder-1&orientation=squarish"
                   alt="Dr. Sarah Chen - Founder"
-                  fill
-                  className="object-cover object-top"
+                  width={192}
+                  height={192}
+                  className="w-full h-full object-cover object-top rounded-full"
                   unoptimized
                 />
               </div>
