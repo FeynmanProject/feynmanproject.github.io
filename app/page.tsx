@@ -22,9 +22,18 @@ export default function Home() {
             
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-8">
-              <Link href="/about" className="hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">About</Link>
-              <Link href="/books" className="hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">Books</Link>
-              <Link href="/social" className="hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">Social Media</Link>
+              <Link href="/about" className="flex items-center space-x-1 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
+                <i className="ri-information-line text-lg"></i>
+                <span>About</span>
+              </Link>
+              <Link href="/books" className="flex items-center space-x-1 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
+                <i className="ri-book-2-line text-lg"></i>
+                <span>Books</span>
+              </Link>
+              <Link href="/social" className="flex items-center space-x-1 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
+                <i className="ri-share-line text-lg"></i>
+                <span>Social Media</span>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -40,9 +49,18 @@ export default function Home() {
           {isMenuOpen && (
             <div className="md:hidden pb-4">
               <div className="flex flex-col space-y-2">
-                <Link href="/about" className="py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">About</Link>
-                <Link href="/books" className="py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">Books</Link>
-                <Link href="/social" className="py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">Social Media</Link>
+                <Link href="/about" className="flex items-center space-x-2 py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
+                  <i className="ri-information-line"></i>
+                  <span>About</span>
+                </Link>
+                <Link href="/books" className="flex items-center space-x-2 py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
+                  <i className="ri-book-2-line"></i>
+                  <span>Books</span>
+                </Link>
+                <Link href="/social" className="flex items-center space-x-2 py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
+                  <i className="ri-share-line"></i>
+                  <span>Social Media</span>
+                </Link>
               </div>
             </div>
           )}
