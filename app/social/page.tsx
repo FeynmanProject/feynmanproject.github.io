@@ -134,7 +134,7 @@ export default function Social() {
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#0D0D0D] via-[#1A0D1A] to-[#0D0D0D]">
-        <div className="absolute inset-0 bg-[url('https://readdy.ai/api/search-image?query=Social%20media%20and%20digital%20connection%20concept%20with%20floating%20social%20icons%20and%20network%20patterns%20in%20purple%20theme%2C%20modern%20technology%20background%2C%20communication%20and%20connectivity%20symbols%2C%20dark%20space%20with%20glowing%20elements&width=1920&height=800&seq=social-hero&orientation=landscape')] bg-cover bg-center opacity-15"></div>
+        <div className="absolute inset-0 bg-[url('https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/ebd63a4154de474830d689114285f5aa.jfif')] bg-cover bg-center opacity-15"></div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-[#8E44AD] bg-clip-text text-transparent">
