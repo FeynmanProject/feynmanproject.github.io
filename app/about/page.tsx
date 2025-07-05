@@ -20,13 +20,24 @@ export default function About() {
                 Feynman Project
               </div>
             </Link>
-            
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8 ml-auto">
-              <Link href="/about" className="text-[#8E44AD] cursor-pointer">About</Link>
-              <Link href="/books" className="hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">Books</Link>
-              <Link href="/social" className="hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">Social Media</Link>
+
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center space-x-8">
+              <Link href="/about" className="flex items-center space-x-1 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
+                <i className="ri-information-line text-lg"></i>
+                <span>About</span>
+              </Link>
+              <Link href="/books" className="flex items-center space-x-1 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
+                <i className="ri-book-2-line text-lg"></i>
+                <span>Books</span>
+              </Link>
+              <Link href="/social" className="flex items-center space-x-1 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
+                <i className="ri-share-line text-lg"></i>
+                <span>Social Media</span>
+              </Link>
             </div>
+       
+  
 
             {/* Mobile Menu Button */}
             <button 
@@ -38,15 +49,25 @@ export default function About() {
           </div>
 
           {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <div className="md:hidden pb-4">
-              <div className="flex flex-col space-y-2">
-                <Link href="/about" className="py-2 text-[#8E44AD] cursor-pointer">About</Link>
-                <Link href="/books" className="py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">Books</Link>
-                <Link href="/social" className="py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">Social Media</Link>
-              </div>
-            </div>
-          )}
+          <div
+          className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+            isMenuOpen ? 'max-h-96 opacity-100 pb-4' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="flex flex-col space-y-2">
+            <Link href="/about" className="flex items-center space-x-2 py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
+              <i className="ri-information-line"></i>
+              <span>About</span>
+            </Link>
+            <Link href="/books" className="flex items-center space-x-2 py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
+              <i className="ri-book-2-line"></i>
+              <span>Books</span>
+            </Link>
+            <Link href="/social" className="flex items-center space-x-2 py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
+              <i className="ri-share-line"></i>
+              <span>Social Media</span>
+            </Link>
+          </div>
         </div>
       </nav>
 
