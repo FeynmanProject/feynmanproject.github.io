@@ -226,6 +226,7 @@ export default function About() {
                   alt="Emily Watson - Technology Lead"
                   fill
                   className="object-cover object-top"
+                  unoptimized
                 />
               </div>
               <h3 className="text-xl font-bold mb-2">Emily Watson</h3>
@@ -240,6 +241,7 @@ export default function About() {
                   src="https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20a%20community%20manager%20and%20social%20media%20expert%2C%20warm%20engaging%20smile%2C%20modern%20professional%20attire%2C%20purple%20background%2C%20friendly%20and%20approachable%20appearance%2C%20high%20quality%20headshot%2C%20community%20leadership%20style&width=400&height=400&seq=founder-4&orientation=squarish"
                   alt="David Park - Community Manager"
                   fill
+                  unoptimized
                   className="w-full h-full object-cover object-top"
                 />
               </div>
