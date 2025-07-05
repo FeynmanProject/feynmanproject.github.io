@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title: "Feynman Project",
   description: "Dari rumit ke simpel — belajar matematika dengan cara yang masuk akal",
   icons: {
-    icon: '/favicon.png',
+    icon: "/favicon.png",
   },
 };
 
@@ -35,14 +35,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head>
-        {/* ⬇️ Tambahkan ini agar Remix Icon bisa digunakan */}
+        {/* ⬇️ Remix Icon CDN */}
         <link
           href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
           rel="stylesheet"
         />
       </head>
       <body
-        className={${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased}
+        className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased`}
       >
         {children}
       </body>
