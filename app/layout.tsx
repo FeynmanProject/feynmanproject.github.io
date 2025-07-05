@@ -22,6 +22,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Feynman Project",
   description: "Dari rumit ke simpel — belajar matematika dengan cara yang masuk akal",
+  icons: {
+    icon: '/favicon.png',
+  },
 };
 
 export default function RootLayout({
