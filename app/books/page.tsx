@@ -411,14 +411,29 @@ export default function Books() {
             
             <div>
               <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
-              <div className="flex space-x-4">
-                <a href="#" className="w-10 h-10 bg-[#8E44AD] rounded-full flex items-center justify-center hover:bg-[#7D3C98] transition-colors duration-300 cursor-pointer">
+                            <div className="flex space-x-4">
+                <a 
+                  href="https://www.instagram.com/feynmanprojects/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-[#8E44AD] rounded-full flex items-center justify-center hover:bg-[#7D3C98] transition-colors duration-300 cursor-pointer"
+                >
                   <i className="ri-instagram-line text-white"></i>
                 </a>
-                <a href="#" className="w-10 h-10 bg-[#8E44AD] rounded-full flex items-center justify-center hover:bg-[#7D3C98] transition-colors duration-300 cursor-pointer">
+                <a 
+                  href="https://www.tiktok.com/@feynmanproject"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-[#8E44AD] rounded-full flex items-center justify-center hover:bg-[#7D3C98] transition-colors duration-300 cursor-pointer"
+                >
                   <i className="ri-tiktok-line text-white"></i>
                 </a>
-                <a href="#" className="w-10 h-10 bg-[#8E44AD] rounded-full flex items-center justify-center hover:bg-[#7D3C98] transition-colors duration-300 cursor-pointer">
+                <a
+                  href="https://www.youtube.com/@FeynmanProjects"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-[#8E44AD] rounded-full flex items-center justify-center hover:bg-[#7D3C98] transition-colors duration-300 cursor-pointer"
+                >
                   <i className="ri-youtube-line text-white"></i>
                 </a>
               </div>
