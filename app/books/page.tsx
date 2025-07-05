@@ -198,7 +198,7 @@ export default function Books() {
       <section className="py-12 bg-[#1A1A1A]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
+            {uniqueCategories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
