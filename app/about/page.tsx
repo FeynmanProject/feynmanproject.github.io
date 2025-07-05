@@ -183,7 +183,7 @@ export default function About() {
             <p className="text-xl text-gray-400">Passionate educators and learners driving our mission forward</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl">
                 <Image
