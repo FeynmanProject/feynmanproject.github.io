@@ -395,7 +395,7 @@ export default function Social() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <div className=""text-2xl font-bold text-[#8E44AD] font-sans">
+              <div className="text-2xl font-bold text-[#8E44AD] font-sans">
                 Feynman Project
               </div>
               <p className="text-gray-400 leading-relaxed">
