@@ -180,6 +180,16 @@ export default function Books() {
               <span>Social Media</span>
             </Link>
           </div>
+          
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden w-6 h-6 flex items-center justify-center cursor-pointer"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <i className="ri-menu-line text-xl"></i>
+          </button>
+        </div>
+          
 
         {/* Mobile Navigation */}
         <div
