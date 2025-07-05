@@ -94,23 +94,33 @@ export default function Books() {
       buyLink: "https://forms.google.com/feynman-book-purchase-9"
     }
   ];
-
+  
   const uniqueCategories = ["All", ...Array.from(new Set(books.map(book => book.category)))];
   const [selectedCategory, setSelectedCategory] = useState("All");
-
+  
+    interface Book {
+    id: number;
+    title: string;
+    author: string;
+    description: string;
+    price: string;
+    image: string;
+    category: string;
+    buyLink?: string;
+  }
+  
   const filteredBooks = selectedCategory === "All" 
     ? books 
     : books.filter(book => book.category === selectedCategory);
-
-  // Book Card Component Template
-  const BookCard = ({ book }) => (
+  
+  const BookCard = ({ book }: { book: Book }) => (
     <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-      <div className="aspect-[3/4] overflow-hidden">
+      <div className="aspect-[3/4] overflow-hidden relative">
         <Image
           src={book.image}
           alt={book.title}
           fill
-          className="(max-width: 768px) 100vw, 33vw"
+          sizes="(max-width: 768px) 100vw, 33vw"
           unoptimized
         />
       </div>
@@ -121,8 +131,8 @@ export default function Books() {
         <p className="text-gray-300 text-sm mb-4 leading-relaxed">{book.description}</p>
         <div className="flex items-center justify-between">
           <span className="text-2xl font-bold text-[#8E44AD]">{book.price}</span>
-          <a 
-            href={book.buyLink} 
+          <a
+            href={book.buyLink}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#8E44AD] hover:bg-[#7D3C98] text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap"
@@ -133,6 +143,7 @@ export default function Books() {
       </div>
     </div>
   );
+
   
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white">
