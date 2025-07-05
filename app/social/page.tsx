@@ -47,7 +47,7 @@ export default function Social() {
     {
       name: 'Instagram',
       icon: 'ri-instagram-fill',
-      url: 'https://instagram.com/feynmanproject',
+      url: 'https://www.instagram.com/feynmanprojects/',
       followers: '25.2K',
       description: 'Daily learning tips, visual explanations, and behind-the-scenes content',
       color: 'from-pink-500 to-purple-600'
@@ -63,7 +63,7 @@ export default function Social() {
     {
       name: 'YouTube',
       icon: 'ri-youtube-fill',
-      url: 'https://youtube.com/feynmanproject',
+      url: 'https://www.youtube.com/@FeynmanProjects',
       followers: '42.1K',
       description: 'In-depth tutorials, lectures, and comprehensive course content',
       color: 'from-red-500 to-red-600'
