@@ -7,7 +7,7 @@ const pacifico = Pacifico({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-pacifico',
-})
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,6 +34,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
+      <head>
+        {/* ⬇️ Tambahkan ini agar Remix Icon bisa digunakan */}
+        <link
+          href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+          rel="stylesheet"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} antialiased`}
       >
