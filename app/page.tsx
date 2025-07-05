@@ -242,7 +242,7 @@ export default function Home() {
               <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
               <div className="flex space-x-4">
                 <a 
-                  href="https://instagram.com/feynmanproject"
+                  href="https://www.instagram.com/feynmanprojects/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-[#8E44AD] rounded-full flex items-center justify-center hover:bg-[#7D3C98] transition-colors duration-300 cursor-pointer"
