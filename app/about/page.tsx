@@ -52,7 +52,7 @@ export default function About() {
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#0D0D0D] via-[#1A0D1A] to-[#0D0D0D]">
-        <div className="absolute inset-0 bg-[url('https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/0e76adb1498b97d4ea78b8aedb432c00.jfif')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('https://readdy.ai/api/search-image?query=Abstract%20educational%20background%20with%20floating%20books%2C%20mathematical%20formulas%2C%20and%20light%20bulbs%20in%20purple%20and%20dark%20tones%2C%20representing%20knowledge%20and%20learning%2C%20modern%20minimalist%20design%2C%20deep%20space%20atmosphere%2C%20inspirational%20education%20concept&width=1920&height=800&seq=about-hero&orientation=landscape')] bg-cover bg-center opacity-10"></div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-[#8E44AD] bg-clip-text text-transparent">
