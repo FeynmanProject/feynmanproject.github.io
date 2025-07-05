@@ -17,6 +17,7 @@ export default function Books() {
       price: "$24.99",
       image: "https://readdy.ai/api/search-image?query=Modern%20book%20cover%20design%20with%20elegant%20typography%20and%20abstract%20geometric%20patterns%20in%20purple%20and%20white%2C%20educational%20theme%2C%20simple%20and%20clean%20design%2C%20professional%20academic%20style%2C%20knowledge%20and%20learning%20symbols&width=400&height=600&seq=book-1&orientation=portrait",
       category: "Education"
+      buyLink: "https://forms.google.com/feynman-book-purchase-1"
     },
     {
       id: 2,
@@ -26,6 +27,7 @@ export default function Books() {
       price: "$29.99",
       image: "https://readdy.ai/api/search-image?query=Scientific%20book%20cover%20with%20physics%20formulas%20and%20atomic%20structures%20in%20purple%20gradient%20background%2C%20modern%20educational%20design%2C%20clean%20typography%2C%20science%20and%20learning%20theme%2C%20professional%20academic%20appearance&width=400&height=600&seq=book-2&orientation=portrait",
       category: "Science"
+      buyLink: "https://forms.google.com/feynman-book-purchase-2"
     },
     {
       id: 3,
@@ -35,6 +37,7 @@ export default function Books() {
       price: "$22.99",
       image: "https://readdy.ai/api/search-image?query=Educational%20book%20cover%20with%20classroom%20and%20teaching%20symbols%2C%20purple%20and%20white%20color%20scheme%2C%20modern%20minimalist%20design%2C%20learning%20and%20education%20theme%2C%20professional%20typography%2C%20inspirational%20style&width=400&height=600&seq=book-3&orientation=portrait",
       category: "Psychology"
+      buyLink: "https://forms.google.com/feynman-book-purchase-3"
     },
     {
       id: 4,
@@ -44,6 +47,7 @@ export default function Books() {
       price: "$26.99",
       image: "https://readdy.ai/api/search-image?query=Mathematics%20book%20cover%20with%20geometric%20patterns%20and%20mathematical%20symbols%20in%20purple%20theme%2C%20elegant%20design%2C%20educational%20and%20approachable%20style%2C%20clean%20modern%20typography%2C%20academic%20professional%20appearance&width=400&height=600&seq=book-4&orientation=portrait",
       category: "Mathematics"
+      buyLink: "https://forms.google.com/feynman-book-purchase-4"
     },
     {
       id: 5,
@@ -53,6 +57,7 @@ export default function Books() {
       price: "$28.99",
       image: "https://readdy.ai/api/search-image?query=Neuroscience%20and%20brain%20themed%20book%20cover%20with%20neural%20networks%20and%20cognitive%20symbols%20in%20purple%20gradient%2C%20scientific%20educational%20design%2C%20modern%20professional%20style%2C%20learning%20and%20brain%20science%20theme&width=400&height=600&seq=book-5&orientation=portrait",
       category: "Neuroscience"
+      buyLink: "https://forms.google.com/feynman-book-purchase-5"
     },
     {
       id: 6,
@@ -62,6 +67,7 @@ export default function Books() {
       price: "$25.99",
       image: "https://readdy.ai/api/search-image?query=Communication%20and%20speaking%20themed%20book%20cover%20with%20speech%20bubbles%20and%20connection%20symbols%20in%20purple%20design%2C%20professional%20business%20style%2C%20modern%20clean%20typography%2C%20communication%20skills%20theme&width=400&height=600&seq=book-6&orientation=portrait",
       category: "Communication"
+      buyLink: "https://forms.google.com/feynman-book-purchase-6"
     },
     {
       id: 7,
