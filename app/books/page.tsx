@@ -220,38 +220,12 @@ export default function Books() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredBooks.map((book) => (
-              <div key={book.id} className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="aspect-[3/4] relative overflow-hidden">
-                  <Image
-                    src={book.image}
-                    alt={book.title}
-                    fill
-                    className="(max-width: 768px) 100vw, 33vw"
-                    unoptimized
-                  />
-                </div>
-                <div className="p-6">
-                  <div className="text-sm text-[#8E44AD] font-semibold mb-2">{book.category}</div>
-                  <h3 className="text-xl font-bold mb-2">{book.title}</h3>
-                  <p className="text-gray-400 text-sm mb-3">by {book.author}</p>
-                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">{book.description}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-[#8E44AD]">{book.price}</span>
-                    <a 
-                      href="https://forms.google.com/feynman-book-purchase" 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-[#8E44AD] hover:bg-[#7D3C98] text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap"
-                    >
-                      Buy Now
-                    </a>
-                  </div>
-                </div>
-              </div>
+              <BookCard key={book.id} book={book} />
             ))}
           </div>
         </div>
       </section>
+
 
       {/* Features Section */}
       <section className="py-20 bg-[#1A1A1A]">
