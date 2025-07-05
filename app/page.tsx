@@ -51,7 +51,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0D0D0D] via-[#1A0D1A] to-[#0D0D0D]">
-        <div className="absolute inset-0 bg-[url('https://readdy.ai/api/search-image?query=Abstract%20geometric%20purple%20gradient%20background%20with%20subtle%20mathematical%20formulas%20and%20learning%20symbols%20floating%20in%20dark%20space%2C%20modern%20educational%20atmosphere%2C%20deep%20purple%20and%20black%20tones%2C%20minimalist%20design%2C%20scientific%20aesthetic%2C%20knowledge%20and%20teaching%20concept&width=1920&height=1080&seq=hero-bg&orientation=landscape')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/36ac12023f1e7deb86dac358629a33f7.jfif')] bg-cover bg-center opacity-20"></div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-[#8E44AD] bg-clip-text text-transparent">
