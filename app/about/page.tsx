@@ -187,7 +187,7 @@ export default function About() {
             <div className="text-center">
               <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl">
                 <Image
-                  src="https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20a%20confident%20educator%20and%20researcher%2C%20warm%20smile%2C%20modern%20business%20attire%2C%20purple%20background%2C%20inspirational%20and%20approachable%20appearance%2C%20high%20quality%20headshot%2C%20educational%20leadership%20style&width=400&height=400&seq=founder-1&orientation=squarish"
+                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/0909b88981a42a1416b47377a17d9718.png"
                   alt="Dr. Sarah Chen - Founder"
                   width={192}
                   height={192}
@@ -205,7 +205,7 @@ export default function About() {
             <div className="text-center">
               <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl relative">
                 <Image 
-                  src="https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20a%20creative%20content%20director%2C%20friendly%20expression%2C%20modern%20casual%20professional%20attire%2C%20purple%20background%2C%20innovative%20and%20approachable%20style%2C%20high%20quality%20headshot%2C%20creative%20professional%20appearance&width=400&height=400&seq=founder-2&orientation=squarish"
+                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/89caa20f90a1aa501a81121965edf303.png"
                   alt="Michael Rodriguez - Content Director"
                   fill
                   className="object-cover object-top"
@@ -222,7 +222,7 @@ export default function About() {
             <div className="text-center">
               <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl relative">
                 <Image
-                  src="https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20a%20technology%20expert%20and%20developer%2C%20confident%20smile%2C%20modern%20tech%20professional%20attire%2C%20purple%20background%2C%20innovative%20and%20tech-savvy%20appearance%2C%20high%20quality%20headshot%2C%20technical%20leadership%20style&width=400&height=400&seq=founder-3&orientation=squarish"
+                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/d2aae01ff2024d3fe3f211134c42626d.png"
                   alt="Emily Watson - Technology Lead"
                   fill
                   className="object-cover object-top"
@@ -239,7 +239,7 @@ export default function About() {
             <div className="text-center">
               <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl relative">
                 <Image 
-                  src="https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20a%20community%20manager%20and%20social%20media%20expert%2C%20warm%20engaging%20smile%2C%20modern%20professional%20attire%2C%20purple%20background%2C%20friendly%20and%20approachable%20appearance%2C%20high%20quality%20headshot%2C%20community%20leadership%20style&width=400&height=400&seq=founder-4&orientation=squarish"
+                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b6dd85eebbf08e0f61033e88f7cefd9d.png"
                   alt="David Park - Community Manager"
                   fill
                   unoptimized
