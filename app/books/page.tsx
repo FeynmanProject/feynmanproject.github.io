@@ -62,16 +62,76 @@ export default function Books() {
       price: "$25.99",
       image: "https://readdy.ai/api/search-image?query=Communication%20and%20speaking%20themed%20book%20cover%20with%20speech%20bubbles%20and%20connection%20symbols%20in%20purple%20design%2C%20professional%20business%20style%2C%20modern%20clean%20typography%2C%20communication%20skills%20theme&width=400&height=600&seq=book-6&orientation=portrait",
       category: "Communication"
+    },
+    {
+      id: 7,
+      title: "Critical Thinking Fundamentals",
+      author: "David Park",
+      description: "Develop essential critical thinking skills to analyze information, solve problems, and make better decisions in academic and professional contexts.",
+      price: "$23.99",
+      image: "https://readdy.ai/api/search-image?query=Critical%20thinking%20book%20cover%20with%20brain%20and%20lightbulb%20symbols%2C%20purple%20and%20white%20design%2C%20analytical%20and%20logical%20theme%2C%20modern%20educational%20style%2C%20professional%20typography%2C%20thinking%20and%20reasoning%20concepts&width=400&height=600&seq=book-7&orientation=portrait",
+      category: "Education",
+      buyLink: "https://forms.google.com/feynman-book-purchase-7"
+    },
+    {
+      id: 8,
+      title: "Chemistry Simplified",
+      author: "Dr. Sarah Chen & Michael Rodriguez",
+      description: "Demystify chemistry through visual explanations and practical examples. From basic atoms to complex reactions, understand the building blocks of matter.",
+      price: "$27.99",
+      image: "https://readdy.ai/api/search-image?query=Chemistry%20book%20cover%20with%20molecular%20structures%20and%20periodic%20table%20elements%20in%20purple%20theme%2C%20scientific%20educational%20design%2C%20clean%20modern%20typography%2C%20chemistry%20and%20laboratory%20style%2C%20professional%20academic%20appearance&width=400&height=600&seq=book-8&orientation=portrait",
+      category: "Science",
+      buyLink: "https://forms.google.com/feynman-book-purchase-8"
+    },
+    {
+      id: 9,
+      title: "Memory and Learning",
+      author: "Emily Watson & David Park",
+      description: "Unlock the secrets of effective memory techniques and learning strategies based on cognitive science research and practical application.",
+      price: "$24.99",
+      image: "https://readdy.ai/api/search-image?query=Memory%20and%20brain%20function%20book%20cover%20with%20neural%20pathways%20and%20memory%20symbols%20in%20purple%20gradient%2C%20neuroscience%20theme%2C%20modern%20educational%20design%2C%20professional%20typography%2C%20learning%20and%20memory%20concepts&width=400&height=600&seq=book-9&orientation=portrait",
+      category: "Neuroscience",
+      buyLink: "https://forms.google.com/feynman-book-purchase-9"
     }
   ];
 
-  const categories = ["All", "Education", "Science", "Psychology", "Mathematics", "Neuroscience", "Communication"];
+  const uniqueCategories = ["All", ...Array.from(new Set(books.map(book => book.category)))];
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const filteredBooks = selectedCategory === "All" 
     ? books 
     : books.filter(book => book.category === selectedCategory);
 
+  // Book Card Component Template
+  const BookCard = ({ book }) => (
+    <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+      <div className="aspect-[3/4] overflow-hidden">
+        <img 
+          src={book.image}
+          alt={book.title}
+          className="w-full h-full object-cover object-top"
+        />
+      </div>
+      <div className="p-6">
+        <div className="text-sm text-[#8E44AD] font-semibold mb-2">{book.category}</div>
+        <h3 className="text-xl font-bold mb-2">{book.title}</h3>
+        <p className="text-gray-400 text-sm mb-3">by {book.author}</p>
+        <p className="text-gray-300 text-sm mb-4 leading-relaxed">{book.description}</p>
+        <div className="flex items-center justify-between">
+          <span className="text-2xl font-bold text-[#8E44AD]">{book.price}</span>
+          <a 
+            href={book.buyLink} 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#8E44AD] hover:bg-[#7D3C98] text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap"
+          >
+            Buy Now
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+  
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white">
       {/* Navigation */}
