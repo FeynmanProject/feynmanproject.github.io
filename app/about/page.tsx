@@ -234,6 +234,7 @@ export default function About() {
               <p className="text-gray-400 leading-relaxed">
                 Full-stack developer and UX designer passionate about creating intuitive platforms that enhance the learning experience.
               </p>
+            <div>
 
             <div className="text-center">
               <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl relative">
