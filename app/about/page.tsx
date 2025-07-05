@@ -233,10 +233,25 @@ export default function About() {
               <p className="text-gray-400 leading-relaxed">
                 Full-stack developer and UX designer passionate about creating intuitive platforms that enhance the learning experience.
               </p>
+
+            <div className="text-center">
+              <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl relative">
+                <Image 
+                  src="https://readdy.ai/api/search-image?query=Professional%20portrait%20of%20a%20community%20manager%20and%20social%20media%20expert%2C%20warm%20engaging%20smile%2C%20modern%20professional%20attire%2C%20purple%20background%2C%20friendly%20and%20approachable%20appearance%2C%20high%20quality%20headshot%2C%20community%20leadership%20style&width=400&height=400&seq=founder-4&orientation=squarish"
+                  alt="David Park - Community Manager"
+                  fill
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <h3 className="text-xl font-bold mb-2">David Park</h3>
+              <p className="text-[#8E44AD] mb-4">Community Manager</p>
+              <p className="text-gray-400 leading-relaxed">
+                Experienced community builder who connects learners worldwide and fosters collaborative learning environments across all our platforms.
+              </p>
             </div>
           </div>
         </div>
-      </section>
+      </section>              
 
       {/* History Section */}
       <section className="py-20 bg-[#1A1A1A]">
@@ -338,7 +353,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <div className="text-2xl font-bold text-[#8E44AD] mb-4" style={{ fontFamily: 'var(--font-pacifico)' }}>
+              <div className="text-2xl font-bold text-[#8E44AD] font-sans">
                 Feynman Project
               </div>
               <p className="text-gray-400 leading-relaxed">
