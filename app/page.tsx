@@ -9,19 +9,20 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#0D0D0D] text-white">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-[#0D0D0D]/95 backdrop-blur-sm border-b border-purple-500/20 px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+      <div className="min-h-screen bg-[#0D0D0D] text-white">
+        {/* Navigation */}
+        <nav className="sticky top-0 z-50 bg-[#0D0D0D]/95 backdrop-blur-sm border-b border-purple-500/20 px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="text-2xl font-bold text-[#8E44AD] font-sans">
-                Feynman Project
-              </div>
-            </Link>
+            <div className="flex items-center">
+              <Link href="/" className="flex items-center space-x-2">
+                <div className="text-2xl font-bold text-[#8E44AD] font-sans">
+                  Feynman Project
+                </div>
+              </Link>
+            </div>          
             
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex space-x-8">
+            {/* KANAN: Menu Desktop */}
+            <div className="hidden md:flex items-center space-x-8">
               <Link href="/about" className="flex items-center space-x-1 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
                 <i className="ri-information-line text-lg"></i>
                 <span>About</span>
@@ -36,18 +37,21 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Mobile Menu Button */}
-            <button 
-              className="md:hidden w-6 h-6 flex items-center justify-center cursor-pointer"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              <i className="ri-menu-line text-xl"></i>
-            </button>
-          </div>
+  {/* KANAN: Menu Mobile */}
+  <button 
+    className="md:hidden w-6 h-6 flex items-center justify-center cursor-pointer"
+    onClick={() => setIsMenuOpen(!isMenuOpen)}
+  >
+    <i className="ri-menu-line text-xl"></i>
+  </button>
+</div>
 
           {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <div className="md:hidden pb-4">
+            <div
+              className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+                isMenuOpen ? 'max-h-96 opacity-100 pb-4' : 'max-h-0 opacity-0'
+              }`}
+            >
               <div className="flex flex-col space-y-2">
                 <Link href="/about" className="flex items-center space-x-2 py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
                   <i className="ri-information-line"></i>
