@@ -79,7 +79,7 @@ export default function Books() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="text-2xl font-bold text-[#8E44AD]" style={{ fontFamily: 'var(--font-pacifico)' }}>
+              <div className="text-2xl font-bold text-[#8E44AD] font-sans">
                 Feynman Project
               </div>
             </Link>
@@ -339,7 +339,7 @@ export default function Books() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <div className="text-2xl font-bold text-[#8E44AD] mb-4" style={{ fontFamily: 'var(--font-pacifico)' }}>
+              <div className="text-2xl font-bold text-[#8E44AD] font-sans">
                 Feynman Project
               </div>
               <p className="text-gray-400 leading-relaxed">
