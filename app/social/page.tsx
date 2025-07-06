@@ -28,20 +28,37 @@ export default function Social() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setSubmitStatus('Thank you for your message! We will get back to you soon.');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch {
-      setSubmitStatus('There was an error sending your message. Please try again.');
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSegTcgGzf4do94BHF648HmYeyJ0P90WiR8uxfNnjXbobHUkIg/formResponse";
+
+  const formDataEncoded = new URLSearchParams({
+    "entry.1334276760": formData.name,
+    "entry.372625114": formData.email,
+    "entry.1325249687": formData.subject,
+    "entry.1205002476": formData.message,
+  });
+
+  try {
+    await fetch(formUrl, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: formDataEncoded.toString(),
+    });
+
+      setSubmitStatus("Thank you for your message!");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      setSubmitStatus("There was an error. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
   };
+
 
   const socialLinks = [
     {
@@ -111,9 +128,9 @@ export default function Social() {
 
         {/* Mobile Navigation */}
         <div
-          className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+          className={md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
             isMenuOpen ? 'max-h-96 opacity-100 pb-4' : 'max-h-0 opacity-0'
-          }`}
+          }}
         >
           <div className="flex flex-col space-y-2">
             <Link href="/about" className="flex items-center space-x-2 py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
@@ -162,8 +179,8 @@ export default function Social() {
           <div className="grid md:grid-cols-3 gap-8">
             {socialLinks.map((platform) => (
               <div key={platform.name} className="bg-[#2A2A2A] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className={`h-32 bg-gradient-to-br ${platform.color} flex items-center justify-center`}>
-                  <i className={`${platform.icon} text-6xl text-white`}></i>
+                <div className={h-32 bg-gradient-to-br ${platform.color} flex items-center justify-center}>
+                  <i className={${platform.icon} text-6xl text-white}></i>
                 </div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-4">
@@ -263,7 +280,7 @@ export default function Social() {
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
-            <p className="text-xl text-gray-400">Have questions or suggestions? We`&rsquo;d love to hear from you!</p>
+            <p className="text-xl text-gray-400">Have questions or suggestions? We&rsquo;d love to hear from you!</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-12">
@@ -372,7 +389,7 @@ export default function Social() {
                 </button>
                 
                 {submitStatus && (
-                  <div className={`p-4 rounded-lg ${submitStatus.includes('error') ? 'bg-red-500/10 border border-red-500/30 text-red-400' : 'bg-green-500/10 border border-green-500/30 text-green-400'}`}>
+                  <div className={p-4 rounded-lg ${submitStatus.includes('error') ? 'bg-red-500/10 border border-red-500/30 text-red-400' : 'bg-green-500/10 border border-green-500/30 text-green-400'}}>
                     {submitStatus}
                   </div>
                 )}
@@ -444,7 +461,7 @@ export default function Social() {
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-[#8E44AD] rounded-full flex items-center justify-center hover:bg-[#7D3C98] transition-colors duration-300 cursor-pointer"
                   >
-                    <i className={`${platform.icon} text-white`}></i>
+                    <i className={${platform.icon} text-white}></i>
                   </a>
                 ))}
               </div>
