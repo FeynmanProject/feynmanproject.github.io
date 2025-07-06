@@ -82,7 +82,7 @@ export default function Home() {
             Paham Matematika? Jelasin Sendiri, Bro!
           </p>
           <p className="text-lg md:text-xl mb-12 text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Kuasai konsep matematika lewat pemahaman yang mendalam. Kami bantu kamu belajar secara runtut karena mengerti itu lebih penting daripada sekadar mengerjakan soal.
+            Kuasai konsep matematika lewat pemahaman yang mendalam. Kami bantu kamu belajar secara runtut — karena mengerti itu lebih penting daripada sekadar mengerjakan soal.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
