@@ -264,8 +264,7 @@ export default function Social() {
               </div>
               <div className="p-4">
                 <div className="flex items-center mb-2">
-                  <i className="ri-tiktok-line text-[#8E44AD] mr-2"></i>
-                  <span className="text-sm text-gray-400">TikTok • 1 week ago</span>
+                  <span className="text-sm text-gray-400">Seabank</span>
                 </div>
                 <h3 className="font-semibold mb-2">Dukung Feynman Project Lewat Donasi Anda</h3>
                 <p className="text-gray-400 text-sm">Bantu Kami Berkembang Lewat Donasi...</p>
