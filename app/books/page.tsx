@@ -12,7 +12,7 @@ export default function Books() {
     {
       id: 1,
       title: "Kalkulus 1",
-      author: "Abdul Wahhab",
+      author: "Abdul Wahhab, Fritz Adelbertus Sitindaon, Natalius Desta Sutanto",
       description: "Master the fundamentals of breaking down complex concepts into understandable pieces. This comprehensive guide teaches you how to identify the core elements of any subject and present them clearly.",
       price: "Rp 50.000",
       image: "https://readdy.ai/api/search-image?query=Modern%20book%20cover%20design%20with%20elegant%20typography%20and%20abstract%20geometric%20patterns%20in%20purple%20and%20white%2C%20educational%20theme%2C%20simple%20and%20clean%20design%2C%20professional%20academic%20style%2C%20knowledge%20and%20learning%20symbols&width=400&height=600&seq=book-1&orientation=portrait",
@@ -32,7 +32,7 @@ export default function Books() {
     {
       id: 3,
       title: "Algoritma dan Pemrograman",
-      author: "Abdul Wahhab",
+      author: "Abdul Wahhab, Albert Wijaya",
       description: "Discover how the act of teaching transforms your own understanding. This book explores the psychological and practical aspects of learning through explanation.",
       price: "Rp 60.000",
       image: "https://readdy.ai/api/search-image?query=Educational%20book%20cover%20with%20classroom%20and%20teaching%20symbols%2C%20purple%20and%20white%20color%20scheme%2C%20modern%20minimalist%20design%2C%20learning%20and%20education%20theme%2C%20professional%20typography%2C%20inspirational%20style&width=400&height=600&seq=book-3&orientation=portrait",
@@ -42,7 +42,7 @@ export default function Books() {
     {
       id: 4,
       title: "Persamaan Diferensial Biasa",
-      author: "Abdul Wahhab dan Renzie Aditya",
+      author: "Abdul Wahhab, Renzie Aditya",
       description: "Overcome math anxiety and build confidence through clear, logical progressions. Learn to see the beauty and patterns in mathematical concepts.",
       price: "Rp 60.000",
       image: "https://readdy.ai/api/search-image?query=Mathematics%20book%20cover%20with%20geometric%20patterns%20and%20mathematical%20symbols%20in%20purple%20theme%2C%20elegant%20design%2C%20educational%20and%20approachable%20style%2C%20clean%20modern%20typography%2C%20academic%20professional%20appearance&width=400&height=600&seq=book-4&orientation=portrait",
@@ -52,7 +52,7 @@ export default function Books() {
     {
       id: 5,
       title: "Kalkulus 3",
-      author: "Abdul Wahhab dan Bryan Jonathan",
+      author: "Abdul Wahhab, Bryan Jonathan",
       description: "Explore the cognitive science behind effective learning. Understand how your brain processes information and how to optimize your learning strategies.",
       price: "Rp. 65.000",
       image: "https://readdy.ai/api/search-image?query=Neuroscience%20and%20brain%20themed%20book%20cover%20with%20neural%20networks%20and%20cognitive%20symbols%20in%20purple%20gradient%2C%20scientific%20educational%20design%2C%20modern%20professional%20style%2C%20learning%20and%20brain%20science%20theme&width=400&height=600&seq=book-5&orientation=portrait",
@@ -61,7 +61,7 @@ export default function Books() {
     },
     {
       id: 6,
-      title: "Communication Mastery",
+      title: "Logika dan Himpunan",
       author: "Dr. Sarah Chen & Team",
       description: "Learn the art of clear communication in any field. Whether presenting ideas, writing reports, or teaching others, master the skills of effective explanation.",
       price: "Rp 50.000",
