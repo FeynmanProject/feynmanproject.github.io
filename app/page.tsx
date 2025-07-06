@@ -240,7 +240,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-[#0D0D0D] py-12 border-t border-purple-500/20">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 items-start">
             <div>
               <div className="text-2xl font-bold text-[#8E44AD] font-sans">
                 Feynman Project
@@ -250,7 +250,7 @@ export default function Home() {
               </p>
             </div>
             
-            <div>
+            <div className="mt-[28px]">
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <div className="space-y-2">
                 <Link href="/about" className="block text-gray-400 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">About Us</Link>
