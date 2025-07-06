@@ -122,7 +122,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Mengapa “Feynman Project?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Mengapa Feynman Project?</h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                 Nama platform ini terinspirasi dari Richard Feynman — seorang fisikawan peraih Nobel yang dikenal bukan hanya karena kejeniusannya, tetapi karena kemampuannya menjelaskan hal sulit dengan cara yang sederhana dan penuh rasa ingin tahu.
               </p>
@@ -185,8 +185,8 @@ export default function Home() {
       <section className="py-20 bg-[#1A1A1A]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Our Platform?</h2>
-            <p className="text-xl text-gray-400">Transform your learning experience with proven techniques</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Mengapa Memilih Platform Kami?</h2>
+            <p className="text-xl text-gray-400">Ubah cara Anda belajar dengan pendekatan yang telah terbukti efektif.</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -194,8 +194,8 @@ export default function Home() {
               <div className="w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center mb-6">
                 <i className="ri-book-open-line text-2xl text-white"></i>
               </div>
-              <h3 className="text-xl font-bold mb-4">Curated Books</h3>
-              <p className="text-gray-400">Access our collection of carefully selected books that embody the Feynman philosophy of clear, simple explanations.</p>
+              <h3 className="text-xl font-bold mb-4">Buku Diktat Pilihan</h3>
+              <p className="text-gray-400">Jelajahi buku-buku pilihan kami — tersedia untuk dibaca dan dibeli, lengkap dengan materi dan pembahasan soal.</p>
             </div>
             
             <div className="bg-[#2A2A2A] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
@@ -203,15 +203,15 @@ export default function Home() {
                 <i className="ri-video-line text-2xl text-white"></i>
               </div>
               <h3 className="text-xl font-bold mb-4">Video Tutorials</h3>
-              <p className="text-gray-400">Watch engaging video content that demonstrates the Feynman Technique in action across various subjects.</p>
+              <p className="text-gray-400">Jelajahi video pembelajaran matematika yang disusun secara sistematis untuk membantu pemahaman konsep dari dasar hingga lanjutan.</p>
             </div>
             
             <div className="bg-[#2A2A2A] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
               <div className="w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center mb-6">
                 <i className="ri-community-line text-2xl text-white"></i>
               </div>
-              <h3 className="text-xl font-bold mb-4">Learning Community</h3>
-              <p className="text-gray-400">Connect with like-minded learners and educators who share the passion for teaching and understanding.</p>
+              <h3 className="text-xl font-bold mb-4">Komunitas Belajar</h3>
+              <p className="text-gray-400">Terhubung dengan sesama pelajar dan pengajar yang memiliki semangat yang sama: mengajar, memahami, dan terus bertumbuh bersama.</p>
             </div>
           </div>
         </div>
