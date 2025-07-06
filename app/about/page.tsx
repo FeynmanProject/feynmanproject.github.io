@@ -261,7 +261,7 @@ export default function About() {
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <h3 className="text-xl font-bold mb-2">Richard Gordon Hamonangan Sinurat</h3>
+              <h3 className="text-xl font-bold mb-2">Richard Gordon H.S.</h3>
               <p className="text-[#8E44AD] mb-4">Community Manager</p>
               <p className="text-gray-400 leading-relaxed">
                 Experienced community builder who connects learners worldwide and fosters collaborative learning environments across all our platforms.
