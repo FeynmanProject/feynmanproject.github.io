@@ -220,14 +220,14 @@ export default function Books() {
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-[#8E44AD] bg-clip-text text-transparent">
-            Our Book Collection
+            Koleksi Buku Kami
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-8">
-            Carefully crafted books that embody the Feynman philosophy of clear, simple explanations
+            Buku-buku yang dirancang dengan cermat untuk menyajikan penjelasan yang jelas, terstruktur, dan mudah dipahami.
           </p>
           <div className="bg-[#8E44AD]/10 border border-[#8E44AD]/30 rounded-lg p-6 max-w-2xl mx-auto">
             <p className="text-lg text-gray-300">
-              Each book is designed to help you master complex subjects through the power of simple explanations and teaching-to-learn techniques.
+              Setiap buku disusun untuk membantu Anda memahami materi secara mendalam melalui pendekatan yang runtut dan logis. Beberapa buku tersedia untuk dibeli, lengkap dengan materi dan pembahasan soal untuk belajar mandiri.
             </p>
           </div>
         </div>
@@ -270,8 +270,8 @@ export default function Books() {
       <section className="py-20 bg-[#1A1A1A]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Our Books?</h2>
-            <p className="text-xl text-gray-400">What makes our publications special</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Mengapa Memilih Buku Kami?</h2>
+            <p className="text-xl text-gray-400">Apa yang membuat buku diktat kami istimewa</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -279,9 +279,9 @@ export default function Books() {
               <div className="w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center mx-auto mb-6">
                 <i className="ri-lightbulb-line text-2xl text-white"></i>
               </div>
-              <h3 className="text-xl font-bold mb-4">Clear Explanations</h3>
+              <h3 className="text-xl font-bold mb-4">Penjelasan yang Jelas</h3>
               <p className="text-gray-400 leading-relaxed">
-                Every concept is broken down into digestible pieces using analogies, examples, and step-by-step reasoning that anyone can follow.
+                Setiap konsep diuraikan menjadi bagian-bagian kecil yang mudah dipahami, menggunakan analogi, contoh, dan penalaran langkah demi langkah.
               </p>
             </div>
             
@@ -289,9 +289,9 @@ export default function Books() {
               <div className="w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center mx-auto mb-6">
                 <i className="ri-user-line text-2xl text-white"></i>
               </div>
-              <h3 className="text-xl font-bold mb-4">Practical Application</h3>
+              <h3 className="text-xl font-bold mb-4">Aplikasi Praktis</h3>
               <p className="text-gray-400 leading-relaxed">
-                Each book includes exercises and real-world applications to help you practice the Feynman Technique and solidify your understanding.
+                Setiap buku dilengkapi dengan latihan soal dan penerapan dalam konteks nyata untuk memperkuat pemahaman Anda.
               </p>
             </div>
             
@@ -299,9 +299,9 @@ export default function Books() {
               <div className="w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center mx-auto mb-6">
                 <i className="ri-award-line text-2xl text-white"></i>
               </div>
-              <h3 className="text-xl font-bold mb-4">Expert Authors</h3>
+              <h3 className="text-xl font-bold mb-4">Tim Penyusun Terpercaya</h3>
               <p className="text-gray-400 leading-relaxed">
-                Written by experienced educators and researchers who have mastered the art of making complex subjects accessible to all learners.
+                Buku kami disusun oleh tim yang memiliki pengalaman dalam mengajar dan menyusun materi matematika secara terstruktur.
               </p>
             </div>
           </div>
@@ -312,8 +312,8 @@ export default function Books() {
       <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">What Readers Say</h2>
-            <p className="text-xl text-gray-400">Testimonials from our community</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Kata Mereka</h2>
+            <p className="text-xl text-gray-400">Ulasan dari komunitas pembaca dan pemirsa video kami.</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
