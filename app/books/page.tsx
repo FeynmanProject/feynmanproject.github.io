@@ -228,6 +228,7 @@ export default function Books() {
           <div className="bg-[#8E44AD]/10 border border-[#8E44AD]/30 rounded-lg p-6 max-w-2xl mx-auto">
             <p className="text-lg text-gray-300">
               Setiap buku dirancang untuk membantu Anda belajar mandiri dengan penjelasan runtut, materi lengkap, dan pembahasan soal.
+            </p>
           </div>
         </div>
       </section>
