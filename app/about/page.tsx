@@ -82,7 +82,7 @@ export default function About() {
             About Feynman Project
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
-            Revolutionizing education through the power of simple explanations and the art of teaching to learn.
+            Belajar Matematika Jadi Seru: Jelasin Sendiri, Paham Sampai Inti.
           </p>
         </div>
       </section>
@@ -153,7 +153,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Philosophy</h2>
-            <p className="text-xl text-gray-400">The principles that guide everything we do</p>
+            <p className="text-xl text-gray-400">Prinsip-prinsip yang membimbing setiap hal yang kami lakukan</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -163,8 +163,7 @@ export default function About() {
               </div>
               <h3 className="text-xl font-bold mb-4">Simplicity is Clarity</h3>
               <p className="text-gray-400 leading-relaxed">
-                Complex ideas become accessible when broken down into simple, understandable components. 
-                We champion clear communication over jargon and complexity.
+                Gagasan yang kompleks menjadi lebih mudah dipahami ketika diuraikan menjadi bagian-bagian yang sederhana dan jelas. Kami menjunjung komunikasi yang lugas, bukan jargon atau kerumitan.
               </p>
             </div>
             
@@ -174,8 +173,7 @@ export default function About() {
               </div>
               <h3 className="text-xl font-bold mb-4">Teaching is Learning</h3>
               <p className="text-gray-400 leading-relaxed">
-                The act of teaching reveals gaps in understanding and solidifies knowledge. 
-                Every teacher is a student, and every student has something to teach.
+                Tindakan mengajar membuka celah dalam pemahaman dan memperkuat pengetahuan. Setiap pengajar adalah seorang pelajar, dan setiap pelajar punya sesuatu untuk diajarkan.
               </p>
             </div>
             
@@ -185,8 +183,7 @@ export default function About() {
               </div>
               <h3 className="text-xl font-bold mb-4">Accessible Education</h3>
               <p className="text-gray-400 leading-relaxed">
-                Quality education should not be a privilege. We strive to make learning materials 
-                and techniques available to everyone, regardless of background or circumstances.
+                Kami percaya bahwa akses terhadap pendidikan bermutu harus diperluas. Karena itu, kami menghadirkan materi dan teknik belajar yang terjangkau dan dapat diakses oleh siapa pun, tanpa memandang latar belakang atau kondisi.
               </p>
             </div>
           </div>
