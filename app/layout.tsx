@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Feynman Project",
-  description: "Dari rumit ke simpel — belajar matematika dengan cara yang masuk akal",
+  description: "Feynman Project adalah inisiatif pembelajaran matematika yang berfokus pada pemahaman konsep secara mendalam. Kami menghadirkan materi, latihan, dan penjelasan yang dirancang agar matematika tidak hanya dapat dihitung, tapi benar-benar dipahami.",
   icons: {
     icon: "/favicon.png",
   },
