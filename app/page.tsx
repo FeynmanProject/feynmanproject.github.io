@@ -101,7 +101,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Watch Our Introduction</h2>
-            <p className="text-xl text-gray-400">Discover how the Feynman Technique can revolutionize your learning</p>
+            <p className="text-xl text-gray-400">Ini cara kami menyampaikan materi: menekankan alur berpikir dan membangun pemahaman langkah demi langkah.</p>
           </div>
           
           <div className="relative aspect-video max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
@@ -122,10 +122,9 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">What is the Feynman Technique?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Mengapa “Feynman Project?</h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                Named after Nobel Prize-winning physicist Richard Feynman, this learning method is based on a simple principle: 
-                if you can&rsquo;t explain something simply, you don&rsquo;t understand it well enough.
+                Nama platform ini terinspirasi dari Richard Feynman — seorang fisikawan peraih Nobel yang dikenal bukan hanya karena kejeniusannya, tetapi karena kemampuannya menjelaskan hal sulit dengan cara yang sederhana dan penuh rasa ingin tahu.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
@@ -133,8 +132,8 @@ export default function Home() {
                     <span className="text-white font-bold text-sm">1</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-white mb-1">Choose a Concept</h3>
-                    <p className="text-gray-400">Pick something you want to learn or understand better</p>
+                    <h3 className="font-semibold text-white mb-1">Pilih Konsep</h3>
+                    <p className="text-gray-400">Tentukan topik atau materi yang ingin kamu pahami lebih dalam.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -142,8 +141,8 @@ export default function Home() {
                     <span className="text-white font-bold text-sm">2</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-white mb-1">Teach It Simply</h3>
-                    <p className="text-gray-400">Explain it in plain language, as if teaching a child</p>
+                    <h3 className="font-semibold text-white mb-1">Ajarkan dengan Bahasa Sendiri</h3>
+                    <p className="text-gray-400">Coba jelaskan topik tersebut seolah kamu mengajarkannya kepada anak kecil — sederhana, jujur, dan langsung.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -151,8 +150,8 @@ export default function Home() {
                     <span className="text-white font-bold text-sm">3</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-white mb-1">Identify Gaps</h3>
-                    <p className="text-gray-400">Find areas where your explanation breaks down</p>
+                    <h3 className="font-semibold text-white mb-1">Temukan Titik Lemah</h3>
+                    <p className="text-gray-400">Amati bagian mana yang sulit dijelaskan. Di situlah celah pemahamanmu.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
@@ -160,8 +159,8 @@ export default function Home() {
                     <span className="text-white font-bold text-sm">4</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-white mb-1">Simplify & Analogize</h3>
-                    <p className="text-gray-400">Use analogies and simple terms to clarify complex ideas</p>
+                    <h3 className="font-semibold text-white mb-1">Sederhanakan & Gunakan Analogi</h3>
+                    <p className="text-gray-400">Perbaiki penjelasanmu dengan kalimat yang lebih jelas, contoh konkret, atau analogi yang membantu.</p>
                   </div>
                 </div>
               </div>
