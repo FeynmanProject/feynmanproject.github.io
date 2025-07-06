@@ -52,7 +52,7 @@ export default function Social() {
 
       setSubmitStatus("Thank you for your message!");
       setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch (error) {
+    } catch {
       setSubmitStatus("There was an error. Please try again.");
     } finally {
       setIsSubmitting(false);
