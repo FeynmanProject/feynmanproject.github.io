@@ -169,7 +169,7 @@ export default function Home() {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <Image 
-                  src="https://readdy.ai/api/search-image?query=Richard%20Feynman%20inspired%20illustration%20showing%20a%20person%20teaching%20at%20a%20blackboard%20with%20mathematical%20equations%20and%20diagrams%2C%20warm%20purple%20lighting%2C%20educational%20atmosphere%2C%20modern%20artistic%20style%2C%20knowledge%20sharing%20concept%2C%20inspirational%20learning%20environment&width=600&height=600&seq=feynman-teaching&orientation=squarish"
+                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/ed683c15d9bdb59669509c782ab9d728.jfif"
                   alt="Feynman Technique Illustration"
                   width={600}
                   height={600}
