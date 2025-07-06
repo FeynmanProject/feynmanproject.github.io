@@ -92,15 +92,12 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Misi Kami</h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                We believe that true understanding comes from the ability to explain complex concepts in simple terms. 
-                Our mission is to make quality education accessible to everyone by promoting the Feynman Technique - 
-                a proven method that transforms how people learn and retain knowledge.
+                Kami percaya bahwa pemahaman yang sejati tidak hanya diukur dari seberapa banyak yang bisa dihafal, tetapi dari seberapa baik seseorang dapat menjelaskan kembali sebuah konsep dengan cara yang sederhana. Misi kami adalah membangun ruang belajar yang mendorong setiap individu untuk benar-benar memahami apa yang mereka pelajari—bukan sekadar mengejar nilai, tetapi mengejar makna.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                Through carefully curated content, engaging videos, and a supportive community, we empower learners 
-                to become teachers, fostering deeper understanding and lifelong learning habits.
+                Melalui pendekatan belajar yang aktif dan reflektif, kami menciptakan komunitas yang mendorong setiap pembelajar untuk menjadi pengajar. Dengan konten yang terarah, media yang mudah diakses, dan semangat kolaborasi, kami membentuk lingkungan belajar yang tidak hanya mendalam, tetapi juga menyenangkan dan penuh dukungan.
               </p>
             </div>
             <div className="relative">
@@ -134,14 +131,12 @@ export default function About() {
               </div>
             </div>
             <div className="order-1 md:order-2">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Vision</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Visi Kami</h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                We envision a world where learning is not limited by traditional barriers - where anyone, anywhere, 
-                can access quality education and develop a deep understanding of any subject through the power of teaching.
+                Kami membayangkan sebuah dunia di mana belajar tidak lagi menjadi beban, tetapi sebuah proses yang menghidupkan. Dunia di mana siapa pun, dari mana pun, bisa mengakses pendidikan yang bermakna dan membangun pemahaman yang utuh atas apa yang mereka pelajari.
               </p>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                By building a global community of learners who teach and teachers who learn, we aim to create 
-                an ecosystem where knowledge flows freely and understanding deepens through explanation.
+                Feynman Project hadir untuk menumbuhkan budaya belajar yang jujur, terbuka, dan saling menguatkan—tempat di mana menjelaskan adalah bagian dari proses belajar, dan kebingungan bukan akhir, tetapi awal dari pemahaman. Kami percaya bahwa ketika seseorang bisa mengajarkan sesuatu dengan jelas, saat itulah ia benar-benar memahaminya.
               </p>
               <div className="bg-[#8E44AD]/10 border-l-4 border-[#8E44AD] p-6 rounded-r-lg">
                 <p className="text-[#8E44AD] font-semibold italic">
