@@ -194,7 +194,7 @@ export default function Social() {
                     rel="noopener noreferrer"
                     className="block w-full bg-[#8E44AD] hover:bg-[#7D3C98] text-white text-center py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer"
                   >
-                    Follow Us
+                    Ikuti Kami
                   </a>
                 </div>
               </div>
@@ -207,8 +207,8 @@ export default function Social() {
       <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Latest Content</h2>
-            <p className="text-xl text-gray-400">Recent posts from our social media channels</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Konten Terbaru</h2>
+            <p className="text-xl text-gray-400">Postingan terbaru dari media sosial kami</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -279,13 +279,13 @@ export default function Social() {
       <section className="py-20 bg-[#1A1A1A]">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
-            <p className="text-xl text-gray-400">Have questions or suggestions? We&rsquo;d love to hear from you!</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Hubungi Kami</h2>
+            <p className="text-xl text-gray-400">Punya pertanyaan atau saran? Kami dengan senang hati ingin mendengarnya!</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold mb-6">Informasi Kontak</h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center flex-shrink-0">
@@ -293,7 +293,7 @@ export default function Social() {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Email</h4>
-                    <p className="text-gray-400">hello@feynmanproject.com</p>
+                    <p className="text-gray-400">feynmanpro@gmail.com</p>
                   </div>
                 </div>
                 
@@ -302,8 +302,8 @@ export default function Social() {
                     <i className="ri-time-line text-white"></i>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Response Time</h4>
-                    <p className="text-gray-400">We typically respond within 24 hours</p>
+                    <h4 className="font-semibold mb-1">Waktu Respon</h4>
+                    <p className="text-gray-400">Kami biasanya merespons dalam waktu 24 jam</p>
                   </div>
                 </div>
                 
@@ -312,8 +312,8 @@ export default function Social() {
                     <i className="ri-question-line text-white"></i>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1">Support</h4>
-                    <p className="text-gray-400">Questions about our books, courses, or learning techniques</p>
+                    <h4 className="font-semibold mb-1">Dukungan</h4>
+                    <p className="text-gray-400">Pertanyaan seputar buku, kursus, dan lainnya</p>
                   </div>
                 </div>
               </div>
