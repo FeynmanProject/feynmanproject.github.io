@@ -389,9 +389,9 @@ export default function Books() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[#8E44AD] to-[#A569BD]">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Start Your Learning Journey</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Mulai Perjalanan Belajarmu</h2>
           <p className="text-xl mb-8 opacity-90">
-            Transform how you understand and explain complex concepts with our carefully crafted books.
+            Ubah cara kamu memahami dan menjelaskan konsep-konsep kompleks melalui buku-buku kami yang dirancang dengan cermat.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 
@@ -400,10 +400,10 @@ export default function Books() {
               rel="noopener noreferrer"
               className="bg-white text-[#8E44AD] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap"
             >
-              Purchase Books
+              Beli Sekarang
             </a>
             <Link href="/about" className="border-2 border-white text-white hover:bg-white hover:text-[#8E44AD] px-8 py-4 rounded-full font-semibold transition-all duration-300 cursor-pointer whitespace-nowrap">
-              Learn More
+              Pelajari Lebih Lanjut
             </Link>
           </div>
         </div>
