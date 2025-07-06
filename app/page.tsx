@@ -222,16 +222,16 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[#8E44AD] to-[#A569BD]">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Learning?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Siap Bergabung Bersama Kami?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Join thousands of learners who have discovered the power of teaching to truly understand.
+            Belajar dengan cara yang membuatmu benar-benar memahami.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/books" className="bg-white text-[#8E44AD] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap">
-              Start Learning
+              Mulai Belajar
             </Link>
             <Link href="/social" className="border-2 border-white text-white hover:bg-white hover:text-[#8E44AD] px-8 py-4 rounded-full font-semibold transition-all duration-300 cursor-pointer whitespace-nowrap">
-              Follow Us
+              Ikuti Kami
             </Link>
           </div>
         </div>
