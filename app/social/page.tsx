@@ -207,8 +207,8 @@ export default function Social() {
       <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Konten Terbaru</h2>
-            <p className="text-xl text-gray-400">Postingan terbaru dari media sosial kami</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Pemberitahuan Terbaru</h2>
+            <p className="text-xl text-gray-400">Informasi dan pembaruan terkini dari kami</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
