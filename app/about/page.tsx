@@ -133,10 +133,10 @@ export default function About() {
             <div className="order-1 md:order-2">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Vision</h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                Kami membayangkan sebuah dunia di mana belajar tidak lagi menjadi beban, tetapi sebuah proses yang menghidupkan. Dunia di mana siapa pun, dari mana pun, bisa mengakses pendidikan yang bermakna dan membangun pemahaman yang utuh atas apa yang mereka pelajari.
+                Menumbuhkan pemahaman matematika yang kokoh dan berkelanjutan melalui metode aktif—dengan ‘teaching-as-learning’, peserta bukan hanya paham, tapi bisa mengajar.
               </p>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                Feynman Project hadir untuk menumbuhkan budaya belajar yang jujur, terbuka, dan saling menguatkan—tempat di mana menjelaskan adalah bagian dari proses belajar, dan kebingungan bukan akhir, tetapi awal dari pemahaman. Kami percaya bahwa ketika seseorang bisa mengajarkan sesuatu dengan jelas, saat itulah ia benar-benar memahaminya.
+                Menjadi rujukan pembelajaran matematika modern yang memadukan intuisi, logika, dan keberanian berpikir—setiap pelajar menjadi ‘mathematician’ yang percaya diri menjelaskan konsep rumit.
               </p>
               <div className="bg-[#8E44AD]/10 border-l-4 border-[#8E44AD] p-6 rounded-r-lg">
                 <p className="text-[#8E44AD] font-semibold italic">
