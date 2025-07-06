@@ -92,7 +92,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Misi Kami</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                 Kami percaya bahwa pemahaman yang sejati tidak hanya diukur dari seberapa banyak yang bisa dihafal, tetapi dari seberapa baik seseorang dapat menjelaskan kembali sebuah konsep dengan cara yang sederhana. Misi kami adalah membangun ruang belajar yang mendorong setiap individu untuk benar-benar memahami apa yang mereka pelajari—bukan sekadar mengejar nilai, tetapi mengejar makna.
               </p>
@@ -131,7 +131,7 @@ export default function About() {
               </div>
             </div>
             <div className="order-1 md:order-2">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Visi Kami</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Vision</h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                 Kami membayangkan sebuah dunia di mana belajar tidak lagi menjadi beban, tetapi sebuah proses yang menghidupkan. Dunia di mana siapa pun, dari mana pun, bisa mengakses pendidikan yang bermakna dan membangun pemahaman yang utuh atas apa yang mereka pelajari.
               </p>
