@@ -210,7 +210,7 @@ export default function About() {
                   unoptimized
                 />
               </div>
-              <h3 className="text-xl font-bold mb-2">Dr. Sarah Chen</h3>
+              <h3 className="text-xl font-bold mb-2">Muhammad Faris Naufaldi</h3>
               <p className="text-[#8E44AD] mb-4">Founder & Educational Director</p>
               <p className="text-gray-400 leading-relaxed">
                 Former physics professor with 15 years of experience in making complex scientific concepts accessible to students worldwide.
@@ -227,7 +227,7 @@ export default function About() {
                   unoptimized
                 />
               </div>
-              <h3 className="text-xl font-bold mb-2">Michael Rodriguez</h3>
+              <h3 className="text-xl font-bold mb-2">Natalius Desta Riyanto</h3>
               <p className="text-[#8E44AD] mb-4">Content Director</p>
               <p className="text-gray-400 leading-relaxed">
                 Award-winning educational content creator specializing in transforming traditional learning materials into engaging, accessible formats.
@@ -261,7 +261,7 @@ export default function About() {
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <h3 className="text-xl font-bold mb-2">David Park</h3>
+              <h3 className="text-xl font-bold mb-2">Richard Gordon Hamonangan Sinurat</h3>
               <p className="text-[#8E44AD] mb-4">Community Manager</p>
               <p className="text-gray-400 leading-relaxed">
                 Experienced community builder who connects learners worldwide and fosters collaborative learning environments across all our platforms.
