@@ -331,7 +331,7 @@ export default function Social() {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 bg-[#2A2A2A] border border-gray-600 rounded-lg focus:border-[#8E44AD] focus:outline-none transition-colors duration-300 text-sm"
-                    placeholder="Your full name"
+                    placeholder="Nama lengkap Anda"
                   />
                 </div>
                 
@@ -345,7 +345,7 @@ export default function Social() {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 bg-[#2A2A2A] border border-gray-600 rounded-lg focus:border-[#8E44AD] focus:outline-none transition-colors duration-300 text-sm"
-                    placeholder="your.email@example.com"
+                    placeholder="tulis.email@example.com"
                   />
                 </div>
                 
@@ -359,7 +359,7 @@ export default function Social() {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 bg-[#2A2A2A] border border-gray-600 rounded-lg focus:border-[#8E44AD] focus:outline-none transition-colors duration-300 text-sm"
-                    placeholder="What's this about?"
+                    placeholder="Tentang apa ini?"
                   />
                 </div>
                 
@@ -376,7 +376,7 @@ export default function Social() {
                     rows={6}
                     maxLength={500}
                     className="w-full px-4 py-3 bg-[#2A2A2A] border border-gray-600 rounded-lg focus:border-[#8E44AD] focus:outline-none transition-colors duration-300 resize-none text-sm"
-                    placeholder="Tell us what's on your mind..."
+                    placeholder="Ceritakan apa yang ingin Anda sampaikan..."
                   />
                 </div>
                 
