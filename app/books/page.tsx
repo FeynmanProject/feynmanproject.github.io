@@ -71,7 +71,7 @@ export default function Books() {
     },
     {
       id: 7,
-      title: "Critical Thinking Fundamentals",
+      title: "Kalkulus 2",
       author: "David Park",
       description: "Develop essential critical thinking skills to analyze information, solve problems, and make better decisions in academic and professional contexts.",
       price: "Rp 65.000",
@@ -81,7 +81,7 @@ export default function Books() {
     },
     {
       id: 8,
-      title: "Chemistry Simplified",
+      title: "Matematika Diskrit",
       author: "Dr. Sarah Chen & Michael Rodriguez",
       description: "Demystify chemistry through visual explanations and practical examples. From basic atoms to complex reactions, understand the building blocks of matter.",
       price: "Rp 70.000",
@@ -91,7 +91,7 @@ export default function Books() {
     },
     {
       id: 9,
-      title: "Memory and Learning",
+      title: "Geometri Analitik",
       author: "Emily Watson & David Park",
       description: "Unlock the secrets of effective memory techniques and learning strategies based on cognitive science research and practical application.",
       price: "Rp 80.000",
