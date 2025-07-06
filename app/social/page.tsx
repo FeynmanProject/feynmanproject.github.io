@@ -245,10 +245,10 @@ export default function Social() {
               <div className="p-4">
                 <div className="flex items-center mb-2">
                   <i className="ri-youtube-line text-[#8E44AD] mr-2"></i>
-                  <span className="text-sm text-gray-400">Seabank</span>
+                  <span className="text-sm text-gray-400">Youtube • 5 days ago</span>
                 </div>
-                <h3 className="font-semibold mb-2">Dukung Feynman Project Lewat Donasi Anda</h3>
-                <p className="text-gray-400 text-sm">Bantu Kami Berkembang Lewat Donasi...</p>
+                <h3 className="font-semibold mb-2">Quantum Physics in 5 Minutes</h3>
+                <p className="text-gray-400 text-sm">Breaking down quantum mechanics using everyday analogies...</p>
               </div>
             </div>
             
@@ -267,8 +267,8 @@ export default function Social() {
                   <i className="ri-tiktok-line text-[#8E44AD] mr-2"></i>
                   <span className="text-sm text-gray-400">TikTok • 1 week ago</span>
                 </div>
-                <h3 className="font-semibold mb-2">5 Study Hacks That Actually Work</h3>
-                <p className="text-gray-400 text-sm">Science-backed techniques to improve your learning efficiency...</p>
+                <h3 className="font-semibold mb-2">Dukung Feynman Project Lewat Donasi Anda</h3>
+                <p className="text-gray-400 text-sm">Bantu Kami Berkembang Lewat Donasi...</p>
               </div>
             </div>
           </div>
