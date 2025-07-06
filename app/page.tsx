@@ -87,10 +87,10 @@ export default function Home() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/books" className="bg-[#8E44AD] hover:bg-[#7D3C98] text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap">
-              Explore Our Books
+              Jelajahi Buku Diktat Kami
             </Link>
             <Link href="/about" className="border-2 border-[#8E44AD] text-[#8E44AD] hover:bg-[#8E44AD] hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 cursor-pointer whitespace-nowrap">
-              Learn More
+              Pelajari Lebih Lanjut
             </Link>
           </div>
         </div>
