@@ -66,7 +66,7 @@ export default function Social() {
       icon: 'ri-instagram-fill',
       url: 'https://www.instagram.com/feynmanprojects/',
       followers: '25.2K',
-      description: 'Daily learning tips, visual explanations, and behind-the-scenes content',
+      description: 'Tips belajar harian, penjelasan visual, dan konten di balik layar',
       color: 'from-pink-500 to-purple-600'
     },
     {
@@ -74,7 +74,7 @@ export default function Social() {
       icon: 'ri-tiktok-fill',
       url: 'https://tiktok.com/@feynmanproject',
       followers: '18.7K',
-      description: 'Quick learning hacks, concept breakdowns, and educational entertainment',
+      description: 'Trik belajar cepat, penjabaran konsep, dan hiburan edukatif',
       color: 'from-gray-800 to-gray-900'
     },
     {
@@ -82,7 +82,7 @@ export default function Social() {
       icon: 'ri-youtube-fill',
       url: 'https://www.youtube.com/@FeynmanProjects',
       followers: '42.1K',
-      description: 'In-depth tutorials, lectures, and comprehensive course content',
+      description: 'Tutorial mendalam, kuliah online, dan konten kursus yang komprehensif',
       color: 'from-red-500 to-red-600'
     }
   ];
@@ -158,11 +158,11 @@ export default function Social() {
             Connect With Us
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 leading-relaxed mb-8">
-            Join our community across social platforms and stay updated with the latest educational content
+            Bergabunglah dengan komunitas kami di berbagai platform sosial dan dapatkan pembaruan konten edukatif terbaru
           </p>
           <div className="bg-[#8E44AD]/10 border border-[#8E44AD]/30 rounded-lg p-6 max-w-2xl mx-auto">
             <p className="text-lg text-gray-300">
-              Follow us for daily learning tips, concept breakdowns, and exclusive educational content designed to make complex topics simple.
+              Ikuti kami untuk tips belajar harian, penjelasan konsep, dan konten eksklusif yang dirancang untuk menyederhanakan topik-topik yang kompleks.
             </p>
           </div>
         </div>
@@ -173,7 +173,7 @@ export default function Social() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Follow Our Journey</h2>
-            <p className="text-xl text-gray-400">Find us on your favorite social platforms</p>
+            <p className="text-xl text-gray-400">Temukan Kami di Platform Sosial Favorit Anda</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
