@@ -64,7 +64,7 @@ export default function Books() {
       title: "Communication Mastery",
       author: "Dr. Sarah Chen & Team",
       description: "Learn the art of clear communication in any field. Whether presenting ideas, writing reports, or teaching others, master the skills of effective explanation.",
-      price: "$25.99",
+      price: "Rp 50.000",
       image: "https://readdy.ai/api/search-image?query=Communication%20and%20speaking%20themed%20book%20cover%20with%20speech%20bubbles%20and%20connection%20symbols%20in%20purple%20design%2C%20professional%20business%20style%2C%20modern%20clean%20typography%2C%20communication%20skills%20theme&width=400&height=600&seq=book-6&orientation=portrait",
       category: "Communication",
       buyLink: "https://forms.google.com/feynman-book-purchase-6"
@@ -74,7 +74,7 @@ export default function Books() {
       title: "Critical Thinking Fundamentals",
       author: "David Park",
       description: "Develop essential critical thinking skills to analyze information, solve problems, and make better decisions in academic and professional contexts.",
-      price: "$23.99",
+      price: "Rp 65.000",
       image: "https://readdy.ai/api/search-image?query=Critical%20thinking%20book%20cover%20with%20brain%20and%20lightbulb%20symbols%2C%20purple%20and%20white%20design%2C%20analytical%20and%20logical%20theme%2C%20modern%20educational%20style%2C%20professional%20typography%2C%20thinking%20and%20reasoning%20concepts&width=400&height=600&seq=book-7&orientation=portrait",
       category: "Education",
       buyLink: "https://forms.google.com/feynman-book-purchase-7"
@@ -84,7 +84,7 @@ export default function Books() {
       title: "Chemistry Simplified",
       author: "Dr. Sarah Chen & Michael Rodriguez",
       description: "Demystify chemistry through visual explanations and practical examples. From basic atoms to complex reactions, understand the building blocks of matter.",
-      price: "$27.99",
+      price: "Rp 70.000",
       image: "https://readdy.ai/api/search-image?query=Chemistry%20book%20cover%20with%20molecular%20structures%20and%20periodic%20table%20elements%20in%20purple%20theme%2C%20scientific%20educational%20design%2C%20clean%20modern%20typography%2C%20chemistry%20and%20laboratory%20style%2C%20professional%20academic%20appearance&width=400&height=600&seq=book-8&orientation=portrait",
       category: "Science",
       buyLink: "https://forms.google.com/feynman-book-purchase-8"
@@ -94,7 +94,7 @@ export default function Books() {
       title: "Memory and Learning",
       author: "Emily Watson & David Park",
       description: "Unlock the secrets of effective memory techniques and learning strategies based on cognitive science research and practical application.",
-      price: "$24.99",
+      price: "Rp 80.000",
       image: "https://readdy.ai/api/search-image?query=Memory%20and%20brain%20function%20book%20cover%20with%20neural%20pathways%20and%20memory%20symbols%20in%20purple%20gradient%2C%20neuroscience%20theme%2C%20modern%20educational%20design%2C%20professional%20typography%2C%20learning%20and%20memory%20concepts&width=400&height=600&seq=book-9&orientation=portrait",
       category: "Neuroscience",
       buyLink: "https://forms.google.com/feynman-book-purchase-9"
@@ -143,7 +143,7 @@ export default function Books() {
             rel="noopener noreferrer"
             className="bg-[#8E44AD] hover:bg-[#7D3C98] text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap"
           >
-            Buy Now
+            Beli Sekarang
           </a>
         </div>
       </div>
