@@ -245,17 +245,17 @@ export default function Social() {
               <div className="p-4">
                 <div className="flex items-center mb-2">
                   <i className="ri-youtube-line text-[#8E44AD] mr-2"></i>
-                  <span className="text-sm text-gray-400">YouTube • 5 days ago</span>
+                  <span className="text-sm text-gray-400">Seabank</span>
                 </div>
-                <h3 className="font-semibold mb-2">Quantum Physics in 5 Minutes</h3>
-                <p className="text-gray-400 text-sm">Breaking down quantum mechanics using everyday analogies...</p>
+                <h3 className="font-semibold mb-2">Dukung Feynman Project Lewat Donasi Anda</h3>
+                <p className="text-gray-400 text-sm">Bantu Kami Berkembang Lewat Donasi...</p>
               </div>
             </div>
             
             <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl">
               <div className="relative aspect-square overflow-hidden">
                 <Image
-                  src="https://readdy.ai/api/search-image?query=Study%20tips%20and%20learning%20strategies%20infographic%20with%20brain%20and%20lightbulb%20symbols%2C%20modern%20educational%20design%2C%20purple%20theme%2C%20productivity%20and%20learning%20optimization%2C%20motivational%20study%20content&width=400&height=400&seq=post-3&orientation=squarish"
+                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/de89c6e5ad3f5ed561ecf092a6909bfb.png"
                   alt="Study Tips"
                   fill
                   className="object-cover object-top"
