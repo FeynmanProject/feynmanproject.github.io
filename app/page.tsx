@@ -79,7 +79,7 @@ export default function Home() {
             Feynman Project
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300 font-light">
-            Learn by Teaching – The Feynman Way
+            Paham Matematika? Jelasin Sendiri, Bro!
           </p>
           <p className="text-lg md:text-xl mb-12 text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Master complex concepts by explaining them simply. Our platform transforms the way you learn 
