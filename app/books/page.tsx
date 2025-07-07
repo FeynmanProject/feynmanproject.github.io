@@ -12,7 +12,7 @@ export default function Books() {
     {
       id: 1,
       title: "Kalkulus 1",
-      author: "Abdul Wahhab, Fritz Adelbertus Sitindaon, Natalius Desta Sutanto",
+      author: "Abdul Wahhab, Fritz Adelbertus Sitindaon, Natalius Desta Riyanto",
       description: "Master the fundamentals of breaking down complex concepts into understandable pieces. This comprehensive guide teaches you how to identify the core elements of any subject and present them clearly.",
       price: "Rp 50.000",
       image: "https://readdy.ai/api/search-image?query=Modern%20book%20cover%20design%20with%20elegant%20typography%20and%20abstract%20geometric%20patterns%20in%20purple%20and%20white%2C%20educational%20theme%2C%20simple%20and%20clean%20design%2C%20professional%20academic%20style%2C%20knowledge%20and%20learning%20symbols&width=400&height=600&seq=book-1&orientation=portrait",
