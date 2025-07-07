@@ -276,71 +276,67 @@ export default function About() {
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Journey</h2>
-            <p className="text-xl text-gray-400">How we started and where we&rsquo;re heading</p>
+            <p className="text-xl text-gray-400">Perjalanan Karya Feynman Project</p>
           </div>
           
           <div className="space-y-12">
             <div className="flex items-start space-x-6">
               <div className="flex-shrink-0 w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">2020</span>
+                <span className="text-white font-bold">1</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">The Spark</h3>
+                <h3 className="text-xl font-bold mb-2">Dimulai dari Kegelisahan</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  Dr. Sarah Chen noticed her students struggling with complex physics concepts. Inspired by Richard Feynman&rsquo;s teaching philosophy, 
-                  she began experimenting with simplified explanations and peer teaching methods.
+                 Berawal dari satu pertanyaan sederhana:
+                 Bagaimana jika materi kuliah dijelaskan secara lebih runtut dan masuk akal—agar mahasiswa bisa memahami, bukan sekadar mengulang?
                 </p>
               </div>
             </div>
             
             <div className="flex items-start space-x-6">
               <div className="flex-shrink-0 w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">2021</span>
+                <span className="text-white font-bold">2</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">First Success</h3>
+                <h3 className="text-xl font-bold mb-2">Lahirnya Karya Pertama</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  The pilot program showed remarkable results - students who taught others scored 40% higher on comprehension tests. 
-                  This validated the power of the Feynman Technique in modern education.
+                  Untuk menjawab pertanyaan itu, dibuatlah video-video pengajaran yang berusaha menyederhanakan konsep rumit. Tak lama kemudian, muncul pula diktat dan catatan belajar yang disusun bersama beberapa kontributor—berdasarkan semangat: belajar dimulai dari memahami cara berpikir.
                 </p>
               </div>
             </div>
             
             <div className="flex items-start space-x-6">
               <div className="flex-shrink-0 w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">2022</span>
+                <span className="text-white font-bold">3</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">Going Digital</h3>
+                <h3 className="text-xl font-bold mb-2">Membuka Akses dan Menyediakan Pilihan</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  With the help of Michael and Emily, we launched our first digital platform, making the Feynman Technique 
-                  accessible to learners worldwide through online courses and interactive content.
+                  Video pembelajaran disediakan secara gratis dan terbuka bagi siapa saja. Sementara itu, beberapa buku diktat kami terbitkan sebagai bentuk materi belajar yang lebih terstruktur—tersedia untuk dibeli bagi yang membutuhkan pendamping belajar yang komprehensif.
                 </p>
               </div>
             </div>
             
             <div className="flex items-start space-x-6">
               <div className="flex-shrink-0 w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">2023</span>
+                <span className="text-white font-bold">4</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">Community Growth</h3>
+                <h3 className="text-xl font-bold mb-2">Tumbuh Bersama Kontributor</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  Our community grew to over 50,000 active learners across 80 countries. We published our first book series 
-                  and launched social media channels to reach even more people.
+                  Materi terus berkembang berkat kolaborasi dari individu-individu yang peduli terhadap pendidikan. Setiap masukan, revisi, dan penambahan topik adalah bentuk kerja bersama yang terbuka.
                 </p>
               </div>
             </div>
             
             <div className="flex items-start space-x-6">
               <div className="flex-shrink-0 w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">2024</span>
+                <span className="text-white font-bold">5</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">Expanding Horizons</h3>
+                <h3 className="text-xl font-bold mb-2">Harapan yang Kami Bawa</h3>
                 <p className="text-gray-400 leading-relaxed">
-                  Today, we continue to innovate with new interactive features, partnerships with educational institutions, 
-                  and expanded content covering diverse subjects from science to humanities.
+                  Kami berharap apa yang telah dibuat—meski sederhana—dapat membantu mahasiswa memahami konsep lebih baik, menemukan cara belajar yang pas, dan merasa ditemani dalam prosesnya.
                 </p>
               </div>
             </div>
