@@ -213,7 +213,7 @@ export default function About() {
               <h3 className="text-xl font-bold mb-2">Muhammad Faris Naufaldi</h3>
               <p className="text-[#8E44AD] mb-4">Founder of Feynman Project</p>
               <p className="text-gray-400 leading-relaxed">
-                Mengelola wajah digital Feynman Project—dari konten visual hingga tampilan situs web. Bertanggung jawab atas media sosial, desain kreatif, serta pengembangan front-end untuk berbagai platform. Juga ikut mendorong kolaborasi dalam penyusunan buku diktat. Percaya bahwa penyampaian yang jelas dan estetika yang tepat mampu menjembatani pemahaman.
+                Mengelola wajah digital Feynman Project dari desain hingga media. Aktif menginisiasi kolaborasi untuk pengembangan buku dan platform belajar.
               </p>
             </div>
             
@@ -264,7 +264,7 @@ export default function About() {
               <h3 className="text-xl font-bold mb-2">Richard G. H. Sinurat</h3>
               <p className="text-[#8E44AD] mb-4">Co-Founder of Feynman Project</p>
               <p className="text-gray-400 leading-relaxed">
-                Bekerja di balik layar Feynman Project—mulai dari mempersiapkan materi, mengatur operasional, hingga menyentuh sisi teknis backend. Dengan ketertarikan pada logika matematika, percaya bahwa cara terbaik untuk belajar adalah dengan mengajar, dan bahwa matematika bisa menjadi sahabat jika didekati dengan cara yang tepat.
+                Tertarik pada logika, membantu merancang konten dan operasional agar matematika terasa masuk akal dan mudah dipahami.
               </p>
             </div>
           </div>
