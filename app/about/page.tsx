@@ -103,7 +103,7 @@ export default function About() {
             <div className="relative">
               <div className="aspect-square relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image 
-                  src="https://readdy.ai/api/search-image?query=Inspiring%20educational%20scene%20with%20a%20diverse%20group%20of%20students%20and%20teacher%20engaged%20in%20collaborative%20learning%2C%20modern%20classroom%20setting%2C%20warm%20purple%20lighting%2C%20books%20and%20digital%20devices%2C%20knowledge%20sharing%20atmosphere%2C%20contemporary%20educational%20environment&width=600&height=600&seq=mission-image&orientation=squarish"
+                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/36d3026030e784dc6480169fed366441.png"
                   alt="Our Mission"
                   fill
                   className="object-cover object-top"
@@ -122,7 +122,7 @@ export default function About() {
             <div className="relative order-2 md:order-1">
               <div className="aspect-square relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image 
-                  src="https://readdy.ai/api/search-image?query=Futuristic%20vision%20of%20global%20education%20with%20interconnected%20learning%20networks%2C%20digital%20knowledge%20transfer%2C%20holographic%20displays%20of%20information%2C%20purple%20and%20blue%20color%20scheme%2C%20modern%20technology%20in%20education%2C%20worldwide%20learning%20community%20concept&width=600&height=600&seq=vision-image&orientation=squarish"
+                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/9fdc9f77a1962ccbe565261e8ff2ab4f.png"
                   alt="Our Vision"
                   fill
                   className="object-cover object-top"
