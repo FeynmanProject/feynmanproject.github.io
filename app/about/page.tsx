@@ -351,16 +351,16 @@ export default function About() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[#8E44AD] to-[#A569BD]">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Join Our Mission</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Bergabunglah dalam Misi Kami</h2>
           <p className="text-xl mb-8 opacity-90">
-            Be part of a community that&rsquo;s transforming education through the power of simple explanations.
+            Jadilah bagian dari komunitas yang mengubah dunia pendidikan melalui kekuatan penjelasan yang sederhana.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/books" className="bg-white text-[#8E44AD] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap">
-              Explore Our Books
+              Jelajahi Buku Kami
             </Link>
             <Link href="/social" className="border-2 border-white text-white hover:bg-white hover:text-[#8E44AD] px-8 py-4 rounded-full font-semibold transition-all duration-300 cursor-pointer whitespace-nowrap">
-              Connect With Us
+              Terhubung dengan Kami
             </Link>
           </div>
         </div>
