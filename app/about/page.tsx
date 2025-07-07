@@ -195,7 +195,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
-            <p className="text-xl text-gray-400">Passionate educators and learners driving our mission forward</p>
+            <p className="text-xl text-gray-400">Feynman Project lahir dari kolaborasi para pembelajar dan berfokus pada penyajian ilmu secara runtut dan sederhana untuk mendukung proses belajar yang lebih bermakna.</p>
           </div>
           
           <div className="grid md:grid-cols-4 gap-8">
@@ -211,9 +211,9 @@ export default function About() {
                 />
               </div>
               <h3 className="text-xl font-bold mb-2">Muhammad Faris Naufaldi</h3>
-              <p className="text-[#8E44AD] mb-4">Founder</p>
+              <p className="text-[#8E44AD] mb-4">Founder of Feynman Project</p>
               <p className="text-gray-400 leading-relaxed">
-                Former physics professor with 15 years of experience in making complex scientific concepts accessible to students worldwide.
+                Mengelola wajah digital Feynman Project—dari konten visual hingga tampilan situs web. Bertanggung jawab atas media sosial, desain kreatif, serta pengembangan front-end untuk berbagai platform. Juga ikut mendorong kolaborasi dalam penyusunan buku diktat. Percaya bahwa penyampaian yang jelas dan estetika yang tepat mampu menjembatani pemahaman.
               </p>
             </div>
             
@@ -228,7 +228,7 @@ export default function About() {
                 />
               </div>
               <h3 className="text-xl font-bold mb-2">Natalius Desta Riyanto</h3>
-              <p className="text-[#8E44AD] mb-4">Co-Founder</p>
+              <p className="text-[#8E44AD] mb-4">Co-Founder of Feynman Project</p>
               <p className="text-gray-400 leading-relaxed">
                 Award-winning educational content creator specializing in transforming traditional learning materials into engaging, accessible formats.
               </p>
@@ -245,7 +245,7 @@ export default function About() {
                 />
               </div>
               <h3 className="text-xl font-bold mb-2">Adregal Tora</h3>
-              <p className="text-[#8E44AD] mb-4">Co-Founder</p>
+              <p className="text-[#8E44AD] mb-4">Co-Founder of Feynman Project</p>
               <p className="text-gray-400 leading-relaxed">
                 Full-stack developer and UX designer passionate about creating intuitive platforms that enhance the learning experience.
               </p>
@@ -262,9 +262,9 @@ export default function About() {
                 />
               </div>
               <h3 className="text-xl font-bold mb-2">Richard G. H. Sinurat</h3>
-              <p className="text-[#8E44AD] mb-4">Co-Founder</p>
+              <p className="text-[#8E44AD] mb-4">Co-Founder of Feynman Project</p>
               <p className="text-gray-400 leading-relaxed">
-                Experienced community builder who connects learners worldwide and fosters collaborative learning environments across all our platforms.
+                Bekerja di balik layar Feynman Project—mulai dari mempersiapkan materi, mengatur operasional, hingga menyentuh sisi teknis backend. Dengan ketertarikan pada logika matematika, percaya bahwa cara terbaik untuk belajar adalah dengan mengajar, dan bahwa matematika bisa menjadi sahabat jika didekati dengan cara yang tepat.
               </p>
             </div>
           </div>
