@@ -351,9 +351,9 @@ export default function About() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[#8E44AD] to-[#A569BD]">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Bergabung dalam Perjalanan Belajar</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Gabung dan Rasakan Cara Belajar yang Berbeda</h2>
           <p className="text-xl mb-8 opacity-90">
-            Bantu kami menyederhanakan konsep-konsep kompleks agar lebih mudah diakses oleh siapa saja yang ingin belajar.
+            Temukan pemahaman mendalam melalui pendekatan yang sederhana dan logis.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link href="/books" className="bg-white text-[#8E44AD] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap">
