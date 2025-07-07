@@ -211,7 +211,7 @@ export default function About() {
                 />
               </div>
               <h3 className="text-xl font-bold mb-2">Muhammad Faris Naufaldi</h3>
-              <p className="text-[#8E44AD] mb-4">Founder & Educational Director</p>
+              <p className="text-[#8E44AD] mb-4">Founder</p>
               <p className="text-gray-400 leading-relaxed">
                 Former physics professor with 15 years of experience in making complex scientific concepts accessible to students worldwide.
               </p>
@@ -228,7 +228,7 @@ export default function About() {
                 />
               </div>
               <h3 className="text-xl font-bold mb-2">Natalius Desta Riyanto</h3>
-              <p className="text-[#8E44AD] mb-4">Content Director</p>
+              <p className="text-[#8E44AD] mb-4">Co-Founder</p>
               <p className="text-gray-400 leading-relaxed">
                 Award-winning educational content creator specializing in transforming traditional learning materials into engaging, accessible formats.
               </p>
@@ -244,8 +244,8 @@ export default function About() {
                   unoptimized
                 />
               </div>
-              <h3 className="text-xl font-bold mb-2">Emily Watson</h3>
-              <p className="text-[#8E44AD] mb-4">Technology Lead</p>
+              <h3 className="text-xl font-bold mb-2">Adregal Tora</h3>
+              <p className="text-[#8E44AD] mb-4">Co-Founder</p>
               <p className="text-gray-400 leading-relaxed">
                 Full-stack developer and UX designer passionate about creating intuitive platforms that enhance the learning experience.
               </p>
@@ -254,15 +254,15 @@ export default function About() {
             <div className="text-center">
               <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl relative">
                 <Image 
-                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b6dd85eebbf08e0f61033e88f7cefd9d.png"
+                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/35f2486849850195865b2e960e70faa7.png"
                   alt="David Park - Community Manager"
                   fill
                   unoptimized
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <h3 className="text-xl font-bold mb-2">Richard Gordon H.S.</h3>
-              <p className="text-[#8E44AD] mb-4">Community Manager</p>
+              <h3 className="text-xl font-bold mb-2">Richard G. H. Sinurat</h3>
+              <p className="text-[#8E44AD] mb-4">Co-Founder</p>
               <p className="text-gray-400 leading-relaxed">
                 Experienced community builder who connects learners worldwide and fosters collaborative learning environments across all our platforms.
               </p>
