@@ -15,7 +15,7 @@ export default function Books() {
       author: "Abdul Wahhab, Fritz Adelbertus Sitindaon, Natalius Desta Riyanto",
       description: "Master the fundamentals of breaking down complex concepts into understandable pieces. This comprehensive guide teaches you how to identify the core elements of any subject and present them clearly.",
       price: "Rp 50.000",
-      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/2a850d92014190545a84846a97f8e068.png",
+      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/fb0ec3bb01faf5b1255467f527284baa.png",
       category: "Kalkulus",
       buyLink: "https://forms.google.com/feynman-book-purchase-1"
     },
