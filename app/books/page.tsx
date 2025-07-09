@@ -316,7 +316,7 @@ export default function Books() {
             <p className="text-xl text-gray-400">Ulasan dari komunitas pembaca dan pemirsa video kami.</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-10 gap-8">
             <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
@@ -339,6 +339,160 @@ export default function Books() {
               </div>
             </div>
             
+            <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
+                  <span className="text-white font-bold">MR</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold">Marcus Roberts</h4>
+                  <p className="text-gray-400 text-sm">High School Teacher</p>
+                </div>
+              </div>
+              <p className="text-gray-300 italic">
+                &quot;Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.&quot;
+              </p>
+              <div className="flex text-[#8E44AD] mt-4">
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+              </div>
+            </div>
+
+             <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
+                  <span className="text-white font-bold">MR</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold">Marcus Roberts</h4>
+                  <p className="text-gray-400 text-sm">High School Teacher</p>
+                </div>
+              </div>
+              <p className="text-gray-300 italic">
+                &quot;Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.&quot;
+              </p>
+              <div className="flex text-[#8E44AD] mt-4">
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+              </div>
+            </div>
+
+            <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
+                  <span className="text-white font-bold">MR</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold">Marcus Roberts</h4>
+                  <p className="text-gray-400 text-sm">High School Teacher</p>
+                </div>
+              </div>
+              <p className="text-gray-300 italic">
+                &quot;Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.&quot;
+              </p>
+              <div className="flex text-[#8E44AD] mt-4">
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+              </div>
+            </div>
+
+            <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
+                  <span className="text-white font-bold">MR</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold">Marcus Roberts</h4>
+                  <p className="text-gray-400 text-sm">High School Teacher</p>
+                </div>
+              </div>
+              <p className="text-gray-300 italic">
+                &quot;Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.&quot;
+              </p>
+              <div className="flex text-[#8E44AD] mt-4">
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+              </div>
+            </div>            
+
+            <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
+                  <span className="text-white font-bold">MR</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold">Marcus Roberts</h4>
+                  <p className="text-gray-400 text-sm">High School Teacher</p>
+                </div>
+              </div>
+              <p className="text-gray-300 italic">
+                &quot;Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.&quot;
+              </p>
+              <div className="flex text-[#8E44AD] mt-4">
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+              </div>
+            </div>
+
+            <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
+                  <span className="text-white font-bold">MR</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold">Marcus Roberts</h4>
+                  <p className="text-gray-400 text-sm">High School Teacher</p>
+                </div>
+              </div>
+              <p className="text-gray-300 italic">
+                &quot;Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.&quot;
+              </p>
+              <div className="flex text-[#8E44AD] mt-4">
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+              </div>
+            </div>
+
+            <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
+                  <span className="text-white font-bold">MR</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold">Marcus Roberts</h4>
+                  <p className="text-gray-400 text-sm">High School Teacher</p>
+                </div>
+              </div>
+              <p className="text-gray-300 italic">
+                &quot;Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.&quot;
+              </p>
+              <div className="flex text-[#8E44AD] mt-4">
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+                <i className="ri-star-fill"></i>
+              </div>
+            </div>
+
             <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
