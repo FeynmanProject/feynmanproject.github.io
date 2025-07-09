@@ -50,7 +50,7 @@ export default function Social() {
       body: formDataEncoded.toString(),
     });
 
-      setSubmitStatus("Thank you for your message!");
+      setSubmitStatus("Terima kasih atas pesan anda. Pesan anda telah kami terima!");
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch {
       setSubmitStatus("There was an error. Please try again.");
@@ -384,7 +384,7 @@ export default function Social() {
                   disabled={isSubmitting}
                   className="w-full bg-[#8E44AD] hover:bg-[#7D3C98] disabled:bg-gray-600 text-white py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 disabled:transform-none cursor-pointer whitespace-nowrap"
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {isSubmitting ? 'Sending...' : 'Kirimkan Pesan'}
                 </button>
                 
                 {submitStatus && (
