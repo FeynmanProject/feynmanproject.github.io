@@ -230,7 +230,7 @@ export default function About() {
               <h3 className="text-xl font-bold mb-2">Natalius Desta Riyanto</h3>
               <p className="text-[#8E44AD] mb-4">Co-Founder of Feynman Project</p>
               <p className="text-gray-400 leading-relaxed">
-                Award-winning educational content creator specializing in transforming traditional learning materials into engaging, accessible formats.
+                Menyusun materi pengajaran untuk video dan buku diktat, fokus pada penyampaian konsep secara sistematis dan jelas.
               </p>
             </div>
             
@@ -247,7 +247,7 @@ export default function About() {
               <h3 className="text-xl font-bold mb-2">Adregal Tora</h3>
               <p className="text-[#8E44AD] mb-4">Co-Founder of Feynman Project</p>
               <p className="text-gray-400 leading-relaxed">
-                Full-stack developer and UX designer passionate about creating intuitive platforms that enhance the learning experience.
+                Berperan dalam pembuatan animasi edukatif dan penyusunan materi ajar yang mendukung pemahaman logis dan runtut.
               </p>
             </div>
 
