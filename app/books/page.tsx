@@ -15,8 +15,8 @@ export default function Books() {
       author: "Abdul Wahhab, Fritz Adelbertus Sitindaon, Natalius Desta Riyanto",
       description: "Master the fundamentals of breaking down complex concepts into understandable pieces. This comprehensive guide teaches you how to identify the core elements of any subject and present them clearly.",
       price: "Rp 50.000",
-      image: "https://readdy.ai/api/search-image?query=Modern%20book%20cover%20design%20with%20elegant%20typography%20and%20abstract%20geometric%20patterns%20in%20purple%20and%20white%2C%20educational%20theme%2C%20simple%20and%20clean%20design%2C%20professional%20academic%20style%2C%20knowledge%20and%20learning%20symbols&width=400&height=600&seq=book-1&orientation=portrait",
-      category: "Education",
+      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/2a850d92014190545a84846a97f8e068.png",
+      category: "Kalkulus",
       buyLink: "https://forms.google.com/feynman-book-purchase-1"
     },
     {
@@ -25,8 +25,8 @@ export default function Books() {
       author: "Abdul Wahhab",
       description: "Transform your understanding of physics through clear analogies and step-by-step explanations. From quantum mechanics to relativity, complex concepts become accessible.",
       price: "Rp 50.000",
-      image: "https://readdy.ai/api/search-image?query=Scientific%20book%20cover%20with%20physics%20formulas%20and%20atomic%20structures%20in%20purple%20gradient%20background%2C%20modern%20educational%20design%2C%20clean%20typography%2C%20science%20and%20learning%20theme%2C%20professional%20academic%20appearance&width=400&height=600&seq=book-2&orientation=portrait",
-      category: "Science",
+      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/1b37e6ce27e904d90109492dae5c964a.png",
+      category: "ALE",
       buyLink: "https://forms.google.com/feynman-book-purchase-2"
     },
     {
@@ -35,8 +35,8 @@ export default function Books() {
       author: "Abdul Wahhab, Albert Wijaya",
       description: "Discover how the act of teaching transforms your own understanding. This book explores the psychological and practical aspects of learning through explanation.",
       price: "Rp 60.000",
-      image: "https://readdy.ai/api/search-image?query=Educational%20book%20cover%20with%20classroom%20and%20teaching%20symbols%2C%20purple%20and%20white%20color%20scheme%2C%20modern%20minimalist%20design%2C%20learning%20and%20education%20theme%2C%20professional%20typography%2C%20inspirational%20style&width=400&height=600&seq=book-3&orientation=portrait",
-      category: "Psychology",
+      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/346068c9673e596b3bc5d470dca8c449.png",
+      category: "ALPROG",
       buyLink: "https://forms.google.com/feynman-book-purchase-3"
     },
     {
@@ -46,7 +46,7 @@ export default function Books() {
       description: "Overcome math anxiety and build confidence through clear, logical progressions. Learn to see the beauty and patterns in mathematical concepts.",
       price: "Rp 60.000",
       image: "https://readdy.ai/api/search-image?query=Mathematics%20book%20cover%20with%20geometric%20patterns%20and%20mathematical%20symbols%20in%20purple%20theme%2C%20elegant%20design%2C%20educational%20and%20approachable%20style%2C%20clean%20modern%20typography%2C%20academic%20professional%20appearance&width=400&height=600&seq=book-4&orientation=portrait",
-      category: "Mathematics",
+      category: "PDB",
       buyLink: "https://forms.google.com/feynman-book-purchase-4"
     },
     {
@@ -56,7 +56,7 @@ export default function Books() {
       description: "Explore the cognitive science behind effective learning. Understand how your brain processes information and how to optimize your learning strategies.",
       price: "Rp. 65.000",
       image: "https://readdy.ai/api/search-image?query=Neuroscience%20and%20brain%20themed%20book%20cover%20with%20neural%20networks%20and%20cognitive%20symbols%20in%20purple%20gradient%2C%20scientific%20educational%20design%2C%20modern%20professional%20style%2C%20learning%20and%20brain%20science%20theme&width=400&height=600&seq=book-5&orientation=portrait",
-      category: "Neuroscience",
+      category: "Kalkulus",
       buyLink: "https://forms.google.com/feynman-book-purchase-5"
     },
     {
@@ -66,7 +66,7 @@ export default function Books() {
       description: "Learn the art of clear communication in any field. Whether presenting ideas, writing reports, or teaching others, master the skills of effective explanation.",
       price: "Rp 50.000",
       image: "https://readdy.ai/api/search-image?query=Communication%20and%20speaking%20themed%20book%20cover%20with%20speech%20bubbles%20and%20connection%20symbols%20in%20purple%20design%2C%20professional%20business%20style%2C%20modern%20clean%20typography%2C%20communication%20skills%20theme&width=400&height=600&seq=book-6&orientation=portrait",
-      category: "Communication",
+      category: "LDH",
       buyLink: "https://forms.google.com/feynman-book-purchase-6"
     },
     {
@@ -75,8 +75,8 @@ export default function Books() {
       author: "David Park",
       description: "Develop essential critical thinking skills to analyze information, solve problems, and make better decisions in academic and professional contexts.",
       price: "Rp 65.000",
-      image: "https://readdy.ai/api/search-image?query=Critical%20thinking%20book%20cover%20with%20brain%20and%20lightbulb%20symbols%2C%20purple%20and%20white%20design%2C%20analytical%20and%20logical%20theme%2C%20modern%20educational%20style%2C%20professional%20typography%2C%20thinking%20and%20reasoning%20concepts&width=400&height=600&seq=book-7&orientation=portrait",
-      category: "Education",
+      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b9b7039ee591637b7cca258c95026aa0.png",
+      category: "Kalkulus",
       buyLink: "https://forms.google.com/feynman-book-purchase-7"
     },
     {
@@ -85,8 +85,8 @@ export default function Books() {
       author: "Dr. Sarah Chen & Michael Rodriguez",
       description: "Demystify chemistry through visual explanations and practical examples. From basic atoms to complex reactions, understand the building blocks of matter.",
       price: "Rp 70.000",
-      image: "https://readdy.ai/api/search-image?query=Chemistry%20book%20cover%20with%20molecular%20structures%20and%20periodic%20table%20elements%20in%20purple%20theme%2C%20scientific%20educational%20design%2C%20clean%20modern%20typography%2C%20chemistry%20and%20laboratory%20style%2C%20professional%20academic%20appearance&width=400&height=600&seq=book-8&orientation=portrait",
-      category: "Science",
+      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b9b7039ee591637b7cca258c95026aa0.png",
+      category: "Matdis",
       buyLink: "https://forms.google.com/feynman-book-purchase-8"
     },
     {
@@ -95,8 +95,8 @@ export default function Books() {
       author: "Emily Watson & David Park",
       description: "Unlock the secrets of effective memory techniques and learning strategies based on cognitive science research and practical application.",
       price: "Rp 80.000",
-      image: "https://readdy.ai/api/search-image?query=Memory%20and%20brain%20function%20book%20cover%20with%20neural%20pathways%20and%20memory%20symbols%20in%20purple%20gradient%2C%20neuroscience%20theme%2C%20modern%20educational%20design%2C%20professional%20typography%2C%20learning%20and%20memory%20concepts&width=400&height=600&seq=book-9&orientation=portrait",
-      category: "Neuroscience",
+      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b9b7039ee591637b7cca258c95026aa0.png",
+      category: "Geolit",
       buyLink: "https://forms.google.com/feynman-book-purchase-9"
     }
   ];
