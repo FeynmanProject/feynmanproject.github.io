@@ -25,7 +25,7 @@ export default function Books() {
       author: "Abdul Wahhab",
       description: "Transform your understanding of physics through clear analogies and step-by-step explanations. From quantum mechanics to relativity, complex concepts become accessible.",
       price: "Rp 50.000",
-      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/1b37e6ce27e904d90109492dae5c964a.png",
+      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/eb2336a16c48149b10c6084226d6e403.png",
       category: "ALE",
       buyLink: "https://forms.google.com/feynman-book-purchase-2"
     },
