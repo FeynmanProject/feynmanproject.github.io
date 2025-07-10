@@ -232,9 +232,9 @@ const testimonials = [
 
         {/* Mobile Navigation */}
         <div
-          className={md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+          className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
             isMenuOpen ? 'max-h-96 opacity-100 pb-4' : 'max-h-0 opacity-0'
-          }}
+          }`}
         >
           <div className="flex flex-col space-y-2">
             <Link href="/about" className="flex items-center space-x-2 py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
@@ -280,11 +280,12 @@ const testimonials = [
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={px-6 py-3 rounded-full font-semibold transition-all duration-300 cursor-pointer whitespace-nowrap ${
+
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 cursor-pointer whitespace-nowrap ${
                   selectedCategory === category
                     ? 'bg-[#8E44AD] text-white'
                     : 'bg-[#2A2A2A] text-gray-300 hover:bg-[#8E44AD]/20 hover:text-[#8E44AD]'
-                }}
+                }`}
               >
                 {category}
               </button>
@@ -401,7 +402,7 @@ const testimonials = [
                 <p className="text-gray-400 text-sm">{t.role}</p>
               </div>
             </div>
-            <p className="text-gray-300 italic">{"${t.quote}"}</p>
+            <p className="text-gray-300 italic">"{t.quote}"</p>
             <div className="flex text-[#8E44AD] mt-4">
               {Array.from({ length: 5 }).map((_, i) => (
                 <i key={i} className="ri-star-fill"></i>
