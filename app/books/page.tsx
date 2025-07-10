@@ -356,7 +356,8 @@ export default function Books() {
                   </div>
                 ))}
               </div>
-            </div>      
+            </div>
+          </section>
       
       <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
         <div className="max-w-6xl mx-auto px-4">
