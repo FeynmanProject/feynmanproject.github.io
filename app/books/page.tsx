@@ -1,24 +1,12 @@
 
 'use client';
 
-import { useRef } from 'react';
 import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
 
-
 export default function Books() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const bookSliderRef = useRef<HTMLDivElement>(null);
-  const testimonialSliderRef = useRef<HTMLDivElement>(null);
-
-  const scrollLeft = (ref: React.RefObject<HTMLDivElement | null>) => {
-    if (ref.current) ref.current.scrollBy({ left: -300, behavior: 'smooth' });
-  };
-
-  const scrollRight = (ref: React.RefObject<HTMLDivElement | null>) => {
-    if (ref.current) ref.current.scrollBy({ left: 300, behavior: 'smooth' });
-  };
 
   const books = [
     {
@@ -269,27 +257,15 @@ export default function Books() {
       {/* Books Grid */}
       <section className="py-20 bg-[#0D0D0D]">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold">Daftar Buku</h2>
-            <div className="flex gap-4">
-              <button onClick={() => scrollLeft(bookSliderRef)} className="bg-[#8E44AD] p-2 rounded-full text-white">
-                ←
-              </button>
-              <button onClick={() => scrollRight(bookSliderRef)} className="bg-[#8E44AD] p-2 rounded-full text-white">
-                →
-              </button>
-            </div>
-          </div>
-          <div ref={bookSliderRef} className="flex gap-6 overflow-x-auto scroll-smooth pb-2">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredBooks.map((book) => (
-              <div key={book.id} className="flex-shrink-0 w-[300px]">
-                <BookCard book={book} />
-              </div>
+              <BookCard key={book.id} book={book} />
             ))}
           </div>
         </div>
       </section>
-      
+
+
       {/* Features Section */}
       <section className="py-20 bg-[#1A1A1A]">
         <div className="max-w-6xl mx-auto px-4">
@@ -333,24 +309,12 @@ export default function Books() {
       </section>
 
       {/* Testimonials Section */}
-
-          <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
-            <div className="max-w-6xl mx-auto px-4">
-              <div className="text-center mb-12">
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">Kata Mereka</h2>
-                <p className="text-xl text-gray-400">Ulasan dari komunitas pembaca dan pemirsa video kami.</p>
-              </div>
-              <div className="flex justify-end gap-4 mb-6">
-                <button onClick={() => scrollLeft(testimonialSliderRef)} className="bg-[#8E44AD] p-2 rounded-full text-white">
-                  ←
-                </button>
-                <button onClick={() => scrollRight(testimonialSliderRef)} className="bg-[#8E44AD] p-2 rounded-full text-white">
-                  →
-                </button>
-              </div>
-              <div ref={testimonialSliderRef} className="flex gap-6 overflow-x-auto scroll-smooth pb-2">
-                {[...Array(4).keys()].map((i) => (
-                  <div key={i} className="flex-shrink-0 w-[300px] bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
+      <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Kata Mereka</h2>
+            <p className="text-xl text-gray-400">Ulasan dari komunitas pembaca dan pemirsa video kami.</p>
+          </div>
           
           <div className="grid md:grid-cols-4 gap-8">
             <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
