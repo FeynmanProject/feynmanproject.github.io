@@ -296,13 +296,13 @@ const testimonials = [
 
       <section className="py-20 bg-[#0D0D0D] relative">
         <button
-          className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
+          className="absolute left-1 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
           onClick={() => scrollLeft(bookSliderRef)}
         >
           <i className="ri-arrow-left-line text-xl"></i>
         </button>
         <button
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
+          className="absolute right-1 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
           onClick={() => scrollRight(bookSliderRef)}
         >
           <i className="ri-arrow-right-line text-xl"></i>
