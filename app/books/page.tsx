@@ -351,12 +351,6 @@ export default function Books() {
               <div ref={testimonialSliderRef} className="flex gap-6 overflow-x-auto scroll-smooth pb-2">
                 {[...Array(4).keys()].map((i) => (
                   <div key={i} className="flex-shrink-0 w-[300px] bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
-                    {/* Replace with real testimonial content */}
-                    <p className="text-white">Testimonial {i + 1}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
           
           <div className="grid md:grid-cols-4 gap-8">
             <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
