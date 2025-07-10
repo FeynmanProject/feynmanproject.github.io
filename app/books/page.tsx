@@ -402,7 +402,7 @@ const testimonials = [
                 <p className="text-gray-400 text-sm">{t.role}</p>
               </div>
             </div>
-            <p className="text-gray-300 italic">"{t.quote}"</p>
+            <p className="text-gray-300 italic">&ldquo;{t.quote}&rdquo;</p>
             <div className="flex text-[#8E44AD] mt-4">
               {Array.from({ length: 5 }).map((_, i) => (
                 <i key={i} className="ri-star-fill"></i>
