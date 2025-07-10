@@ -6,17 +6,6 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useRef } from 'react';
 
-interface Book {
-  id: number;
-  title: string;
-  author: string;
-  description: string;
-  price: string;
-  image: string;
-  category: string;
-  buyLink?: string;
-}
-
 export default function Books() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const bookSliderRef = useRef<HTMLDivElement>(null);
@@ -126,6 +115,17 @@ export default function Books() {
   
   const uniqueCategories = ["All", ...Array.from(new Set(books.map(book => book.category)))];
   const [selectedCategory, setSelectedCategory] = useState("All");
+  
+    interface Book {
+    id: number;
+    title: string;
+    author: string;
+    description: string;
+    price: string;
+    image: string;
+    category: string;
+    buyLink?: string;
+  }
   
   const filteredBooks = selectedCategory === "All" 
     ? books 
@@ -373,50 +373,48 @@ const testimonials = [
       <p className="text-xl text-gray-400">Ulasan dari komunitas pembaca dan pemirsa video kami.</p>
     </div>
 
-<div className="flex items-center justify-center gap-4">
-  {/* Tombol Kiri */}
-  <button
-    onClick={() => scrollLeft(testimonialSliderRef)}
-    className="bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
-  >
-    <i className="ri-arrow-left-line text-xl"></i>
-  </button>
 
-  {/* Kontainer Testimonial Scroll */}
-  <div
-    ref={testimonialSliderRef}
-    className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth py-4"
-  >
-    {testimonials.map((t, index) => (
-      <div key={index} className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
-        <div className="flex items-center mb-4">
-          <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
-            <span className="text-white font-bold">{t.initials}</span>
+    
+    <div className="relative">
+      <button
+        className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
+        onClick={() => scrollLeft(testimonialSliderRef)}
+      >
+        <i className="ri-arrow-left-line text-xl"></i>
+      </button>
+      <button
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
+        onClick={() => scrollRight(testimonialSliderRef)}
+      >
+        <i className="ri-arrow-right-line text-xl"></i>
+      </button>
+
+      <div
+        ref={testimonialSliderRef}
+        className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth py-4"
+      >
+        {testimonials.map((t, index) => (
+          <div key={index} className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
+                <span className="text-white font-bold">{t.initials}</span>
+              </div>
+              <div>
+                <h4 className="font-semibold">{t.name}</h4>
+                <p className="text-gray-400 text-sm">{t.role}</p>
+              </div>
+            </div>
+            <p className="text-gray-300 italic">&ldquo;{t.quote}&rdquo;</p>
+            <div className="flex text-[#8E44AD] mt-4">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <i key={i} className="ri-star-fill"></i>
+              ))}
+            </div>
           </div>
-          <div>
-            <h4 className="font-semibold">{t.name}</h4>
-            <p className="text-gray-400 text-sm">{t.role}</p>
-          </div>
-        </div>
-        <p className="text-gray-300 italic">&ldquo;{t.quote}&rdquo;</p>
-        <div className="flex text-[#8E44AD] mt-4">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <i key={i} className="ri-star-fill"></i>
-          ))}
-        </div>
+        ))}
       </div>
-    ))}
+    </div>
   </div>
-
-  {/* Tombol Kanan */}
-  <button
-    onClick={() => scrollRight(testimonialSliderRef)}
-    className="bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
-  >
-    <i className="ri-arrow-right-line text-xl"></i>
-  </button>
-</div>
-
 </section>
 
       {/* CTA Section */}
