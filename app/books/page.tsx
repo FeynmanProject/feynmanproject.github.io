@@ -294,8 +294,8 @@ const testimonials = [
         </div>
       </section>
 
-<section className="py-20 bg-[#0D0D0D] relative">
-  <div className="max-w-6xl mx-auto px-4">
+<section className="py-20 bg-[#0D0D0D]">
+  <div className="max-w-6xl mx-auto px-4 relative"> {/* Posisikan relative DI SINI */}
     
     {/* Tombol Panah */}
     <button
