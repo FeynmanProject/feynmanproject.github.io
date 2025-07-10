@@ -1,4 +1,17 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Tambahkan utilitas no-scrollbar ke dalam layer utilities Tailwind */
+@layer utilities {
+  .no-scrollbar {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+  }
+}
