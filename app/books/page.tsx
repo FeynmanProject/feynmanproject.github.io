@@ -294,33 +294,37 @@ const testimonials = [
         </div>
       </section>
 
-      <section className="py-20 bg-[#0D0D0D] relative">
-        <button
-          className="absolute left-0 top-1/2 md:left-6 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
-          onClick={() => scrollLeft(bookSliderRef)}
-        >
-          <i className="ri-arrow-left-line text-xl"></i>
-        </button>
-        <button
-          className="absolute right-0 md:right-6 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
-          onClick={() => scrollRight(bookSliderRef)}
-        >
-          <i className="ri-arrow-right-line text-xl"></i>
-        </button>
+<section className="py-20 bg-[#0D0D0D] relative">
+  <div className="max-w-6xl mx-auto px-4">
+    
+    {/* Tombol Panah */}
+    <button
+      className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
+      onClick={() => scrollLeft(bookSliderRef)}
+    >
+      <i className="ri-arrow-left-line text-xl"></i>
+    </button>
+    <button
+      className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
+      onClick={() => scrollRight(bookSliderRef)}
+    >
+      <i className="ri-arrow-right-line text-xl"></i>
+    </button>
 
-        <div className="max-w-6xl mx-auto px-4">
-          <div
-            ref={bookSliderRef}
-            className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth"
-          >
-            {filteredBooks.map((book) => (
-              <div key={book.id} className="min-w-[300px] max-w-sm flex-shrink-0">
-                <BookCard book={book} />
-              </div>
-            ))}
-          </div>
+    {/* Slider Buku */}
+    <div
+      ref={bookSliderRef}
+      className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth"
+    >
+      {filteredBooks.map((book) => (
+        <div key={book.id} className="min-w-[300px] max-w-sm flex-shrink-0">
+          <BookCard book={book} />
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
 
       {/* Features Section */}
