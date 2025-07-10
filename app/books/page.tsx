@@ -11,12 +11,12 @@ export default function Books() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const bookSliderRef = useRef<HTMLDivElement>(null);
   const testimonialSliderRef = useRef<HTMLDivElement>(null);
-  
-  const scrollLeft = (ref: React.RefObject<HTMLDivElement>) => {
+
+  const scrollLeft = (ref: React.RefObject<HTMLDivElement | null>) => {
     if (ref.current) ref.current.scrollBy({ left: -300, behavior: 'smooth' });
   };
 
-  const scrollRight = (ref: React.RefObject<HTMLDivElement>) => {
+  const scrollRight = (ref: React.RefObject<HTMLDivElement | null>) => {
     if (ref.current) ref.current.scrollBy({ left: 300, behavior: 'smooth' });
   };
 
