@@ -110,6 +110,34 @@ export default function Books() {
       buyLink: "https://forms.google.com/feynman-book-purchase-9"
     }
   ];
+
+const testimonials = [
+  {
+    initials: "JD",
+    name: "Jessica Davis",
+    role: "Engineering Student",
+    quote: "Physics Made Simple completely changed how I understand complex concepts. The analogies and explanations are brilliant!",
+  },
+  {
+    initials: "MR",
+    name: "Marcus Roberts",
+    role: "High School Teacher",
+    quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
+  },
+  {
+    initials: "AL",
+    name: "Anna Liu",
+    role: "Graduate Student",
+    quote: "Mathematics Without Fear helped me overcome my math anxiety. I actually understand and enjoy math now!",
+  },
+  {
+    initials: "BK",
+    name: "Brian Kim",
+    role: "Computer Science Major",
+    quote: "I finally grasped recursion thanks to the clear breakdown in the books. Recommended for all learners.",
+  },
+];
+
   
   const uniqueCategories = ["All", ...Array.from(new Set(books.map(book => book.category)))];
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -162,32 +190,6 @@ export default function Books() {
     </div>
   );
 
-const testimonials = [
-  {
-    initials: "JD",
-    name: "Jessica Davis",
-    role: "Engineering Student",
-    quote: "Physics Made Simple completely changed how I understand complex concepts. The analogies and explanations are brilliant!",
-  },
-  {
-    initials: "MR",
-    name: "Marcus Roberts",
-    role: "High School Teacher",
-    quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
-  },
-  {
-    initials: "AL",
-    name: "Anna Liu",
-    role: "Graduate Student",
-    quote: "Mathematics Without Fear helped me overcome my math anxiety. I actually understand and enjoy math now!",
-  },
-  {
-    initials: "BK",
-    name: "Brian Kim",
-    role: "Computer Science Major",
-    quote: "I finally grasped recursion thanks to the clear breakdown in the books. Recommended for all learners.",
-  },
-];
 
   
   return (
