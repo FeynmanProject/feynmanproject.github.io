@@ -358,13 +358,6 @@ export default function Books() {
               </div>
             </div>
           </section>
-      
-      <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Kata Mereka</h2>
-            <p className="text-xl text-gray-400">Ulasan dari komunitas pembaca dan pemirsa video kami.</p>
-          </div>
           
           <div className="grid md:grid-cols-4 gap-8">
             <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
