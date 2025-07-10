@@ -21,14 +21,14 @@ export default function Books() {
 
   const scrollLeft = (ref: React.RefObject<HTMLDivElement | null>) => {
     if (ref.current) {
-      ref.current.scrollBy({ left: -500, behavior: 'smooth' });
+      ref.current.scrollBy({ left: -700, behavior: 'smooth' });
       addFadeAnimation(ref); // tambahkan animasi
     }
   };
 
   const scrollRight = (ref: React.RefObject<HTMLDivElement | null>) => {
     if (ref.current) {
-      ref.current.scrollBy({ left: 500, behavior: 'smooth' });
+      ref.current.scrollBy({ left: 700, behavior: 'smooth' });
       addFadeAnimation(ref); // tambahkan animasi
     }
   };
