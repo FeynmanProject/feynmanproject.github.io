@@ -4,9 +4,21 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
+import { useRef } from 'react';
 
 export default function Books() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const bookSliderRef = useRef<HTMLDivElement>(null);
+  const testimonialSliderRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeft = (ref: React.RefObject<HTMLDivElement | null>) => {
+    if (ref.current) ref.current.scrollBy({ left: -300, behavior: 'smooth' });
+  };
+
+  const scrollRight = (ref: React.RefObject<HTMLDivElement | null>) => {
+    if (ref.current) ref.current.scrollBy({ left: 300, behavior: 'smooth' });
+  };
+
 
   const books = [
     {
@@ -254,12 +266,29 @@ export default function Books() {
         </div>
       </section>
 
-      {/* Books Grid */}
-      <section className="py-20 bg-[#0D0D0D]">
+      <section className="py-20 bg-[#0D0D0D] relative">
+        <button
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
+          onClick={() => scrollLeft(bookSliderRef)}
+        >
+          <i className="ri-arrow-left-line text-xl"></i>
+        </button>
+        <button
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
+          onClick={() => scrollRight(bookSliderRef)}
+        >
+          <i className="ri-arrow-right-line text-xl"></i>
+        </button>
+
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            ref={bookSliderRef}
+            className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth"
+          >
             {filteredBooks.map((book) => (
-              <BookCard key={book.id} book={book} />
+              <div key={book.id} className="min-w-[300px] max-w-sm flex-shrink-0">
+                <BookCard book={book} />
+              </div>
             ))}
           </div>
         </div>
@@ -309,12 +338,30 @@ export default function Books() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Kata Mereka</h2>
-            <p className="text-xl text-gray-400">Ulasan dari komunitas pembaca dan pemirsa video kami.</p>
-          </div>
+<div className="relative">
+  <button
+    className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
+    onClick={() => scrollLeft(testimonialSliderRef)}
+  >
+    <i className="ri-arrow-left-line text-xl"></i>
+  </button>
+  <button
+    className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
+    onClick={() => scrollRight(testimonialSliderRef)}
+  >
+    <i className="ri-arrow-right-line text-xl"></i>
+  </button>
+
+  <div
+    ref={testimonialSliderRef}
+    className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth py-4"
+  >
+    {/* Wrap testimonial cards here */}
+    <div className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">...</div>
+    ...
+  </div>
+</div>
+
           
           <div className="grid md:grid-cols-4 gap-8">
             <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
