@@ -162,6 +162,33 @@ export default function Books() {
     </div>
   );
 
+const testimonials = [
+  {
+    initials: "JD",
+    name: "Jessica Davis",
+    role: "Engineering Student",
+    quote: "Physics Made Simple completely changed how I understand complex concepts. The analogies and explanations are brilliant!",
+  },
+  {
+    initials: "MR",
+    name: "Marcus Roberts",
+    role: "High School Teacher",
+    quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
+  },
+  {
+    initials: "AL",
+    name: "Anna Liu",
+    role: "Graduate Student",
+    quote: "Mathematics Without Fear helped me overcome my math anxiety. I actually understand and enjoy math now!",
+  },
+  {
+    initials: "BK",
+    name: "Brian Kim",
+    role: "Computer Science Major",
+    quote: "I finally grasped recursion thanks to the clear breakdown in the books. Recommended for all learners.",
+  },
+];
+
   
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white">
@@ -338,122 +365,54 @@ export default function Books() {
       </section>
 
       {/* Testimonials Section */}
-<div className="relative">
-  <button
-    className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
-    onClick={() => scrollLeft(testimonialSliderRef)}
-  >
-    <i className="ri-arrow-left-line text-xl"></i>
-  </button>
-  <button
-    className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
-    onClick={() => scrollRight(testimonialSliderRef)}
-  >
-    <i className="ri-arrow-right-line text-xl"></i>
-  </button>
+<section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4">Kata Mereka</h2>
+      <p className="text-xl text-gray-400">Ulasan dari komunitas pembaca dan pemirsa video kami.</p>
+    </div>
 
-  <div
-    ref={testimonialSliderRef}
-    className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth py-4"
-  >
-    {/* Wrap testimonial cards here */}
-    <div className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">...</div>
-    ...
-  </div>
-</div>
+    <div className="relative">
+      <button
+        className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
+        onClick={() => scrollLeft(testimonialSliderRef)}
+      >
+        <i className="ri-arrow-left-line text-xl"></i>
+      </button>
+      <button
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
+        onClick={() => scrollRight(testimonialSliderRef)}
+      >
+        <i className="ri-arrow-right-line text-xl"></i>
+      </button>
 
-          
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
-                  <span className="text-white font-bold">JD</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold">Jessica Davis</h4>
-                  <p className="text-gray-400 text-sm">Engineering Student</p>
-                </div>
+      <div
+        ref={testimonialSliderRef}
+        className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth py-4"
+      >
+        {testimonials.map((t, index) => (
+          <div key={index} className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
+            <div className="flex items-center mb-4">
+              <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
+                <span className="text-white font-bold">{t.initials}</span>
               </div>
-              <p className="text-gray-300 italic">
-                &quot;Physics Made Simple completely changed how I understand complex concepts. The analogies and explanations are brilliant!&quot;
-              </p>
-              <div className="flex text-[#8E44AD] mt-4">
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
+              <div>
+                <h4 className="font-semibold">{t.name}</h4>
+                <p className="text-gray-400 text-sm">{t.role}</p>
               </div>
             </div>
-            
-            <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
-                  <span className="text-white font-bold">MR</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold">Marcus Roberts</h4>
-                  <p className="text-gray-400 text-sm">High School Teacher</p>
-                </div>
-              </div>
-              <p className="text-gray-300 italic">
-                &quot;Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.&quot;
-              </p>
-              <div className="flex text-[#8E44AD] mt-4">
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-              </div>
-            </div>
-
-            <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
-                  <span className="text-white font-bold">MR</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold">Marcus Roberts</h4>
-                  <p className="text-gray-400 text-sm">High School Teacher</p>
-                </div>
-              </div>
-              <p className="text-gray-300 italic">
-                &quot;Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.&quot;
-              </p>
-              <div className="flex text-[#8E44AD] mt-4">
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-              </div>
-            </div>            
-            
-            <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
-                  <span className="text-white font-bold">AL</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold">Anna Liu</h4>
-                  <p className="text-gray-400 text-sm">Graduate Student</p>
-                </div>
-              </div>
-              <p className="text-gray-300 italic">
-                &quot;Mathematics Without Fear helped me overcome my math anxiety. I actually understand and enjoy math now!&quot;
-              </p>
-              <div className="flex text-[#8E44AD] mt-4">
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-                <i className="ri-star-fill"></i>
-              </div>
+            <p className="text-gray-300 italic">"{t.quote}"</p>
+            <div className="flex text-[#8E44AD] mt-4">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <i key={i} className="ri-star-fill"></i>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[#8E44AD] to-[#A569BD]">
