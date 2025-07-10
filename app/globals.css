@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Tambahkan utilitas no-scrollbar ke dalam layer utilities Tailwind */
 @layer utilities {
   .no-scrollbar {
     -ms-overflow-style: none; /* Internet Explorer 10+ */
@@ -14,4 +13,20 @@
   .no-scrollbar::-webkit-scrollbar {
     display: none; /* Chrome, Safari, and Opera */
   }
+}
+
+/* 🎞️ Animasi fade + slide */
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-slide {
+  animation: fadeSlide 0.4s ease-out;
 }
