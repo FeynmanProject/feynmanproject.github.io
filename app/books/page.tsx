@@ -11,14 +11,27 @@ export default function Books() {
   const bookSliderRef = useRef<HTMLDivElement>(null);
   const testimonialSliderRef = useRef<HTMLDivElement>(null);
 
+  const addFadeAnimation = (ref: React.RefObject<HTMLDivElement | null>) => {
+    if (ref.current) {
+      ref.current.classList.remove('animate-fade-slide'); // reset animasi dulu
+      void ref.current.offsetWidth; // force reflow
+      ref.current.classList.add('animate-fade-slide');
+    }
+  };
+
   const scrollLeft = (ref: React.RefObject<HTMLDivElement | null>) => {
-    if (ref.current) ref.current.scrollBy({ left: -300, behavior: 'smooth' });
+    if (ref.current) {
+      ref.current.scrollBy({ left: -300, behavior: 'smooth' });
+      addFadeAnimation(ref); // tambahkan animasi
+    }
   };
 
   const scrollRight = (ref: React.RefObject<HTMLDivElement | null>) => {
-    if (ref.current) ref.current.scrollBy({ left: 300, behavior: 'smooth' });
+    if (ref.current) {
+      ref.current.scrollBy({ left: 300, behavior: 'smooth' });
+      addFadeAnimation(ref); // tambahkan animasi
+    }
   };
-
 
   const books = [
     {
