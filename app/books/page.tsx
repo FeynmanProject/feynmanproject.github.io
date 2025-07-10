@@ -377,9 +377,9 @@ const testimonials = [
       <p className="text-xl text-gray-400">Ulasan dari komunitas pembaca dan pemirsa video kami.</p>
     </div>
 
-
-    
+    {/* Tombol dan Slider dibungkus agar tombol tidak menindih */}
     <div className="relative">
+      {/* Tombol Panah */}
       <button
         className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
         onClick={() => scrollLeft(testimonialSliderRef)}
@@ -393,12 +393,16 @@ const testimonials = [
         <i className="ri-arrow-right-line text-xl"></i>
       </button>
 
+      {/* Slider Testimoni */}
       <div
         ref={testimonialSliderRef}
-        className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth py-4"
+        className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth px-8"
       >
         {testimonials.map((t, index) => (
-          <div key={index} className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
+          <div
+            key={index}
+            className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl"
+          >
             <div className="flex items-center mb-4">
               <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
                 <span className="text-white font-bold">{t.initials}</span>
