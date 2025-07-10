@@ -6,6 +6,17 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useRef } from 'react';
 
+interface Book {
+  id: number;
+  title: string;
+  author: string;
+  description: string;
+  price: string;
+  image: string;
+  category: string;
+  buyLink?: string;
+}
+
 export default function Books() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const bookSliderRef = useRef<HTMLDivElement>(null);
@@ -115,17 +126,6 @@ export default function Books() {
   
   const uniqueCategories = ["All", ...Array.from(new Set(books.map(book => book.category)))];
   const [selectedCategory, setSelectedCategory] = useState("All");
-  
-    interface Book {
-    id: number;
-    title: string;
-    author: string;
-    description: string;
-    price: string;
-    image: string;
-    category: string;
-    buyLink?: string;
-  }
   
   const filteredBooks = selectedCategory === "All" 
     ? books 
