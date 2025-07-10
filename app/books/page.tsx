@@ -357,7 +357,6 @@ export default function Books() {
                 ))}
               </div>
             </div>
-          </section>
           
           <div className="grid md:grid-cols-4 gap-8">
             <div className="bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
