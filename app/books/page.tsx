@@ -392,7 +392,10 @@ const testimonials = [
               className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth py-4"
             >
               {testimonials.map((t, index) => (
-                <div key={index} className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
+                <div
+                  key={index}
+                  className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl"
+                >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
                       <span className="text-white font-bold">{t.initials}</span>
@@ -410,10 +413,7 @@ const testimonials = [
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
+            
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[#8E44AD] to-[#A569BD]">
