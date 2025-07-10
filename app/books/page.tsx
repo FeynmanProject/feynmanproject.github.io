@@ -413,8 +413,9 @@ const testimonials = [
                   </div>
                 </div>
               ))}
-            </div>  {/* ← TAMBAHKAN INI */}
-            </div>  {/* Ini menutup .relative */}
+              </div> {/* ⬅️ Ini menutup testimonialSliderRef */}
+              </div> {/* ⬅️ Ini menutup .relative */}
+              </section> {/* ⬅️ ✅ WAJIB: Tutup section testimonial */}
             
 
       {/* CTA Section */}
