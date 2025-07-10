@@ -2,9 +2,8 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
-import { useRef } from 'react';
 
 export default function Books() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +17,6 @@ export default function Books() {
   const scrollRight = (ref: React.RefObject<HTMLDivElement | null>) => {
     if (ref.current) ref.current.scrollBy({ left: 300, behavior: 'smooth' });
   };
-
 
   const books = [
     {
@@ -132,7 +130,7 @@ export default function Books() {
     : books.filter(book => book.category === selectedCategory);
   
   const BookCard = ({ book }: { book: Book }) => (
-    <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+    <div className="bg-[#1A1A1A] h-[620px] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
       <div className="aspect-[3/4] overflow-hidden relative">
         <Image
           src={book.image}
@@ -142,12 +140,14 @@ export default function Books() {
           unoptimized
         />
       </div>
-      <div className="p-6">
-        <div className="text-sm text-[#8E44AD] font-semibold mb-2">{book.category}</div>
-        <h3 className="text-xl font-bold mb-2">{book.title}</h3>
-        <p className="text-gray-400 text-sm mb-3">by {book.author}</p>
-        <p className="text-gray-300 text-sm mb-4 leading-relaxed">{book.description}</p>
-        <div className="flex items-center justify-between">
+      <div className="p-6 flex flex-col justify-between h-full">
+        <div>
+          <div className="text-sm text-[#8E44AD] font-semibold mb-2">{book.category}</div>
+          <h3 className="text-xl font-bold mb-2">{book.title}</h3>
+          <p className="text-gray-400 text-sm mb-3">by {book.author}</p>
+          <p className="text-gray-300 text-sm mb-4 leading-relaxed">{book.description}</p>
+        </div>
+        <div className="flex items-center justify-between mt-auto">
           <span className="text-2xl font-bold text-[#8E44AD]">{book.price}</span>
           <a
             href={book.buyLink}
@@ -293,15 +293,16 @@ const testimonials = [
         </div>
       </section>
 
+      {/* Book Section */}
       <section className="py-20 bg-[#0D0D0D] relative">
         <button
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
+          className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
           onClick={() => scrollLeft(bookSliderRef)}
         >
           <i className="ri-arrow-left-line text-xl"></i>
         </button>
         <button
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
+          className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
           onClick={() => scrollRight(bookSliderRef)}
         >
           <i className="ri-arrow-right-line text-xl"></i>
@@ -365,54 +366,54 @@ const testimonials = [
       </section>
 
       {/* Testimonials Section */}
-<section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
-  <div className="max-w-6xl mx-auto px-4">
-    <div className="text-center mb-16">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4">Kata Mereka</h2>
-      <p className="text-xl text-gray-400">Ulasan dari komunitas pembaca dan pemirsa video kami.</p>
-    </div>
+      <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Kata Mereka</h2>
+            <p className="text-xl text-gray-400">Ulasan dari komunitas pembaca dan pemirsa video kami.</p>
+          </div>
 
-    <div className="relative">
-      <button
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
-        onClick={() => scrollLeft(testimonialSliderRef)}
-      >
-        <i className="ri-arrow-left-line text-xl"></i>
-      </button>
-      <button
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
-        onClick={() => scrollRight(testimonialSliderRef)}
-      >
-        <i className="ri-arrow-right-line text-xl"></i>
-      </button>
+          <div className="relative">
+            <button
+              className="absolute -left-6 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
+              onClick={() => scrollLeft(testimonialSliderRef)}
+            >
+              <i className="ri-arrow-left-line text-xl"></i>
+            </button>
+            <button
+              className="absolute -right-6 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
+              onClick={() => scrollRight(testimonialSliderRef)}
+            >
+              <i className="ri-arrow-right-line text-xl"></i>
+            </button>
 
-      <div
-        ref={testimonialSliderRef}
-        className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth py-4"
-      >
-        {testimonials.map((t, index) => (
-          <div key={index} className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
-            <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
-                <span className="text-white font-bold">{t.initials}</span>
-              </div>
-              <div>
-                <h4 className="font-semibold">{t.name}</h4>
-                <p className="text-gray-400 text-sm">{t.role}</p>
-              </div>
-            </div>
-            <p className="text-gray-300 italic">{`"${t.quote}"`}</p>
-            <div className="flex text-[#8E44AD] mt-4">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <i key={i} className="ri-star-fill"></i>
+            <div
+              ref={testimonialSliderRef}
+              className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth py-4"
+            >
+              {testimonials.map((t, index) => (
+                <div key={index} className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl">
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
+                      <span className="text-white font-bold">{t.initials}</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">{t.name}</h4>
+                      <p className="text-gray-400 text-sm">{t.role}</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-300 italic">"{t.quote}"</p>
+                  <div className="flex text-[#8E44AD] mt-4">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <i key={i} className="ri-star-fill"></i>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[#8E44AD] to-[#A569BD]">
