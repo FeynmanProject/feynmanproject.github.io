@@ -471,7 +471,7 @@ const testimonials = [
                 Feynman Project
               </div>
               <p className="text-gray-400 leading-relaxed">
-                Empowering learners worldwide through the proven Feynman Technique of understanding by teaching.
+                Belajar menjadi bermakna saat kita mampu mengajarkannya kepada orang lain.
               </p>
             </div>
             
@@ -516,7 +516,7 @@ const testimonials = [
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p className="text-gray-400">© 2024 Feynman Project. All rights reserved.</p>
+            <p className="text-gray-400">© 2025 Feynman Project. Content is licensed under Creative Commons BY-NC-SA 4.0.</p>
           </div>
         </div>
       </footer>
