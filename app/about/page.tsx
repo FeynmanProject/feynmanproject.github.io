@@ -237,34 +237,34 @@ export default function About() {
             <div className="text-center">
               <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl relative">
                 <Image
-                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/d2aae01ff2024d3fe3f211134c42626d.png"
+                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/35f2486849850195865b2e960e70faa7.png"
                   alt="Emily Watson - Technology Lead"
                   fill
                   className="object-cover object-top"
                   unoptimized
                 />
               </div>
-              <h3 className="text-xl font-bold mb-2">Adregal Tora</h3>
+              <h3 className="text-xl font-bold mb-2">Richard G. H. Sinurat</h3>
               <p className="text-[#8E44AD] mb-4">Co-Founder of Feynman Project</p>
               <p className="text-gray-400 leading-relaxed">
-                Berperan dalam pembuatan animasi edukatif dan penyusunan materi ajar yang mendukung pemahaman logis dan runtut.
+               Tertarik pada logika, membantu merancang konten dan operasional agar matematika terasa masuk akal dan mudah dipahami.
               </p>
             </div>
 
             <div className="text-center">
               <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl relative">
                 <Image 
-                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/35f2486849850195865b2e960e70faa7.png"
+                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/d2aae01ff2024d3fe3f211134c42626d.png"
                   alt="David Park - Community Manager"
                   fill
                   unoptimized
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <h3 className="text-xl font-bold mb-2">Richard G. H. Sinurat</h3>
+              <h3 className="text-xl font-bold mb-2">Adregal Tora</h3>
               <p className="text-[#8E44AD] mb-4">Co-Founder of Feynman Project</p>
               <p className="text-gray-400 leading-relaxed">
-                Tertarik pada logika, membantu merancang konten dan operasional agar matematika terasa masuk akal dan mudah dipahami.
+                Berperan dalam pembuatan animasi edukatif dan penyusunan materi ajar yang mendukung pemahaman logis dan runtut.
               </p>
             </div>
           </div>
