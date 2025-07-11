@@ -116,12 +116,12 @@ export default function Books() {
     },
     {
       id: 9,
-      title: "Analisis Riil 1",
+      title: "Analisis 1",
       author: "-",
       description: "-",
       price: "Rp ****",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b9b7039ee591637b7cca258c95026aa0.png",
-      category: "Analisis Riil 1",
+      category: "Analisis Riil",
       buyLink: "https://forms.google.com/feynman-book-purchase-7"    
     },
     {
