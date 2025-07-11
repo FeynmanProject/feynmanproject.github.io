@@ -146,12 +146,12 @@ export default function Books() {
   
 const BookCard = ({ book }: { book: Book }) => (
   <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col h-[580px]">
-    <div className="aspect-[3/4] overflow-hidden relative">
+    <div className="relative w-full h-[360px]">
       <Image
         src={book.image}
         alt={book.title}
         fill
-        sizes="(max-width: 768px) 100vw, 33vw"
+        className="object-cover rounded-t-2xl"
         unoptimized
       />
     </div>
