@@ -403,7 +403,7 @@ export default function Social() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Bergabung dalam Perjalanan Belajar Kami</h2>
-            <p className="text-xl opacity-90">Memulai dari kecil. Bermimpi besar.</p>
+            <p className="text-xl opacity-90">Menumbuhkan Pemahaman, Bukan Sekadar Nilai.</p>
           </div>
           
           <div className="grid md:grid-cols-4 gap-8 text-center">
