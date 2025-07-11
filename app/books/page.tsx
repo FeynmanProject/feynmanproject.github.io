@@ -146,7 +146,7 @@ export default function Books() {
   
 const BookCard = ({ book }: { book: Book }) => (
   <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col h-[580px]">
-    <div className="relative w-full h-[360px]">
+    <div className="w-full aspect-[832/1107] relative">
       <Image
         src={book.image}
         alt={book.title}
