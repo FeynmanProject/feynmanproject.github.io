@@ -58,7 +58,7 @@ export default function Books() {
       id: 3,
       title: "Algoritma dan Pemrograman",
       author: "Abdul Wahhab, Albert Wijaya",
-      description: "Transform your understanding of physics through clear analogies and step-by-step explanations. From quantum mechanics to relativity, complex concepts become accessible.",
+      description: "Menyusun algoritma dengan alur logika bersyarat dan berulang dan menggunakan struktur data larik (array), serta subprogram untuk menyelesaikan masalah saintifik yang memiliki struktur larik seperti matrik atau vektor serta penggunaan dan penyelesaian fungsi-fungsi numerik.",
       price: "Rp 60.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/346068c9673e596b3bc5d470dca8c449.png",
       category: "ALPROG",
