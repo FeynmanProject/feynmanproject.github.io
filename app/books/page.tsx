@@ -144,36 +144,37 @@ export default function Books() {
     ? books 
     : books.filter(book => book.category === selectedCategory);
   
-  const BookCard = ({ book }: { book: Book }) => (
-    <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-      <div className="aspect-[3/4] overflow-hidden relative">
-        <Image
-          src={book.image}
-          alt={book.title}
-          fill
-          sizes="(max-width: 768px) 100vw, 33vw"
-          unoptimized
-        />
-      </div>
-      <div className="p-6">
-        <div className="text-sm text-[#8E44AD] font-semibold mb-2">{book.category}</div>
-        <h3 className="text-xl font-bold mb-2">{book.title}</h3>
-        <p className="text-gray-400 text-sm mb-3">by {book.author}</p>
-        <p className="text-gray-300 text-sm mb-4 leading-relaxed">{book.description}</p>
-        <div className="flex items-center justify-between">
-          <span className="text-2xl font-bold text-[#8E44AD]">{book.price}</span>
-          <a
-            href={book.buyLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#8E44AD] hover:bg-[#7D3C98] text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap"
-          >
-            Beli Sekarang
-          </a>
-        </div>
+const BookCard = ({ book }: { book: Book }) => (
+  <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col h-[580px]">
+    <div className="aspect-[3/4] overflow-hidden relative">
+      <Image
+        src={book.image}
+        alt={book.title}
+        fill
+        sizes="(max-width: 768px) 100vw, 33vw"
+        unoptimized
+      />
+    </div>
+    <div className="flex-1 flex flex-col p-6">
+      <div className="text-sm text-[#8E44AD] font-semibold mb-2">{book.category}</div>
+      <h3 className="text-xl font-bold mb-2">{book.title}</h3>
+      <p className="text-gray-400 text-sm mb-3">by {book.author}</p>
+      <p className="text-gray-300 text-sm mb-4 leading-relaxed line-clamp-4">{book.description}</p>
+      <div className="mt-auto flex items-center justify-between">
+        <span className="text-2xl font-bold text-[#8E44AD]">{book.price}</span>
+        <a
+          href={book.buyLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#8E44AD] hover:bg-[#7D3C98] text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap"
+        >
+          Beli Sekarang
+        </a>
       </div>
     </div>
-  );
+  </div>
+);
+
 
 const testimonials = [
   {
