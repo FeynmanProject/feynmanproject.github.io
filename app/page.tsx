@@ -248,7 +248,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
                 Feynman Project
               </div>
               <p className="text-gray-400 leading-relaxed">
-                Mendorong pemahaman yang mendalam melalui cara berpikir dan menjelaskan secara sederhana.
+                Belajar menjadi bermakna saat kita mampu mengajarkannya kepada orang lain.
               </p>
             </div>
             
@@ -293,7 +293,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p className="text-gray-400">© 2024 Feynman Project. Content is licensed under Creative Commons BY-NC-SA 4.0.</p>
+            <p className="text-gray-400">© 2025 Feynman Project. Content is licensed under Creative Commons BY-NC-SA 4.0.</p>
           </div>
         </div>
       </footer>
