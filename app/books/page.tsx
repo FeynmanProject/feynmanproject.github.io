@@ -78,7 +78,7 @@ export default function Books() {
       id: 5,
       title: "Kalkulus 3",
       author: "Abdul Wahhab, Bryan Jonathan",
-      description: "Mengaitkan konsep dasar matematika yang  berhubungan dengan deret bilangan riel, integral tak wajar dan deret fungsi secara sistematis, logis, dan komprehensif sesuai dengan konsep dasar kalkulus",
+      description: "Mengaitkan konsep dasar matematika yang  berhubungan dengan deret bilangan riel, integral tak wajar dan deret fungsi secara sistematis, logis, dan komprehensif sesuai dengan konsep dasar kalkulus.",
       price: "Rp. 65.000",
       image: "https://readdy.ai/api/search-image?query=Neuroscience%20and%20brain%20themed%20book%20cover%20with%20neural%20networks%20and%20cognitive%20symbols%20in%20purple%20gradient%2C%20scientific%20educational%20design%2C%20modern%20professional%20style%2C%20learning%20and%20brain%20science%20theme&width=400&height=600&seq=book-5&orientation=portrait",
       category: "Kalkulus",
