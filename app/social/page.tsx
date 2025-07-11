@@ -402,26 +402,26 @@ export default function Social() {
       <section className="py-20 bg-gradient-to-r from-[#8E44AD] to-[#A569BD]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Join Our Growing Community</h2>
-            <p className="text-xl opacity-90">Learners from around the world are already part of our journey</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Bergabung dalam Perjalanan Belajar Kami</h2>
+            <p className="text-xl opacity-90">Memulai dari kecil. Bermimpi besar.</p>
           </div>
           
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">85K+</div>
-              <p className="text-lg opacity-90">Total Followers</p>
+              <div className="text-4xl md:text-5xl font-bold mb-2">4+</div>
+              <p className="text-lg opacity-90">Buku Interaktif</p>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">12K+</div>
-              <p className="text-lg opacity-90">Books Sold</p>
+              <div className="text-4xl md:text-5xl font-bold mb-2">6+</div>
+              <p className="text-lg opacity-90">Kontributor Aktif</p>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">150+</div>
-              <p className="text-lg opacity-90">Countries Reached</p>
+              <div className="text-4xl md:text-5xl font-bold mb-2">200+</div>
+              <p className="text-lg opacity-90">Halaman Materi Disusun</p>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-bold mb-2">98%</div>
-              <p className="text-lg opacity-90">Satisfaction Rate</p>
+              <div className="text-4xl md:text-5xl font-bold mb-2">10+</div>
+              <p className="text-lg opacity-90">Konten Digital Dibagikan</p>
             </div>
           </div>
         </div>
