@@ -279,7 +279,7 @@ const testimonials = [
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#0D0D0D] via-[#1A0D1A] to-[#0D0D0D]">
-        <div className="absolute inset-0 bg-[url('https://readdy.ai/api/search-image?query=Library%20of%20floating%20books%20in%20space%20with%20purple%20magical%20lighting%2C%20knowledge%20and%20wisdom%20atmosphere%2C%20educational%20fantasy%20style%2C%20books%20opening%20and%20releasing%20glowing%20particles%2C%20dark%20background%20with%20purple%20accents&width=1920&height=800&seq=books-hero&orientation=landscape')] bg-cover bg-center opacity-15"></div>
+        <div className="absolute inset-0 bg-[url('https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/4e022c79b031d0b30a9e1786362ee671.jfif')] bg-cover bg-center opacity-15')] bg-cover bg-center opacity-15"></div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-[#8E44AD] bg-clip-text text-transparent">
