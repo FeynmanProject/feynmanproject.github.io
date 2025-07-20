@@ -75,7 +75,7 @@ export default function About() {
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#0D0D0D] via-[#1A0D1A] to-[#0D0D0D]">
-        <div className="absolute inset-0 bg-[url('https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/1d91a54be437b936a2b16c2187c88831.jfif')] bg-cover bg-center opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/8f31d4605792ad8674bba0f683425d4f.jfif')] bg-cover bg-center opacity-10"></div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-[#8E44AD] bg-clip-text text-transparent">
