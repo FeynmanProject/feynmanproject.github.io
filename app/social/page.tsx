@@ -65,7 +65,6 @@ export default function Social() {
       name: 'Instagram',
       icon: 'ri-instagram-fill',
       url: 'https://www.instagram.com/feynmanprojects/',
-      followers: '25.2K',
       description: 'Tips belajar harian, penjelasan visual, dan konten di balik layar',
       color: 'from-pink-500 to-purple-600'
     },
@@ -73,7 +72,6 @@ export default function Social() {
       name: 'TikTok',
       icon: 'ri-tiktok-fill',
       url: 'https://tiktok.com/@feynmanproject',
-      followers: '18.7K',
       description: 'Trik belajar cepat, penjabaran konsep, dan hiburan edukatif',
       color: 'from-gray-800 to-gray-900'
     },
@@ -81,7 +79,6 @@ export default function Social() {
       name: 'YouTube',
       icon: 'ri-youtube-fill',
       url: 'https://www.youtube.com/@FeynmanProjects',
-      followers: '42.1K',
       description: 'Tutorial mendalam, kuliah online, dan konten kursus yang komprehensif',
       color: 'from-red-500 to-red-600'
     }
