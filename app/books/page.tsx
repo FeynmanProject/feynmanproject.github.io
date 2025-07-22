@@ -90,7 +90,7 @@ export default function Books() {
       author: "TIM FEYNMAN PROJECT",
       description: "Memahami keterkaitan antara konsep logika, himpunan, dan penalaran matematis sebagai dasar berpikir sistematis, runtut, dan menyeluruh dalam pengembangan konsep-konsep matematika lanjutan.",
       price: "Rp 50.000",
-      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/01d56cba98d73a97a0be7cfa6ec59454.png",
+      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/cf58a03cce8d55021311c8399e13f2e6.png",
       category: "LDH",
       buyLink: "https://forms.google.com/feynman-book-purchase-6"
     },
