@@ -70,7 +70,7 @@ export default function Books() {
       author: "Abdul Wahhab, Renzie Aditya",
       description: "Menerapkan konsep dasar matematis untuk menyelesaikan berbagai masalah persamaan diferensial biasa, baik secara analitik, maupun menggunakan pendekatan deret.",
       price: "Rp 60.000",
-      image: "https://readdy.ai/api/search-image?query=Mathematics%20book%20cover%20with%20geometric%20patterns%20and%20mathematical%20symbols%20in%20purple%20theme%2C%20elegant%20design%2C%20educational%20and%20approachable%20style%2C%20clean%20modern%20typography%2C%20academic%20professional%20appearance&width=400&height=600&seq=book-4&orientation=portrait",
+      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c606d4d1341412a98dd748c3be25ef70.png",
       category: "PDB",
       buyLink: "https://forms.google.com/feynman-book-purchase-4"
     },
