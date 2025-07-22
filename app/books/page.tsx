@@ -80,7 +80,7 @@ export default function Books() {
       author: "Abdul Wahhab, Bryan Jonathan",
       description: "Mengaitkan konsep dasar matematika yang  berhubungan dengan deret bilangan riil, integral tak wajar dan deret fungsi secara sistematis, logis, dan komprehensif sesuai dengan konsep dasar kalkulus.",
       price: "Rp. 65.000",
-      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/9190427d8c02930468cb641dbd2a834e.png",
+      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/e7c0cb832afcd55576b125f8212959ec.png",
       category: "Kalkulus",
       buyLink: "https://forms.google.com/feynman-book-purchase-5"
     },
