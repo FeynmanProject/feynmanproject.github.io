@@ -50,7 +50,7 @@ export default function Books() {
       author: "Abdul Wahhab",
       description: "Menerapkan teori dasar aljabar linier ruang Euclid, mampu menghitung perhitungan dalam persamaan linier dan matriks, aplikasi dari sistem linier, determinan, ruang vektor Euclidean, nilai eigen dan vektor eigen.",
       price: "Rp 50.000",
-      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/eb2336a16c48149b10c6084226d6e403.png",
+      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/3df264044ff8ef342a62e169384b991a.png",
       category: "ALE",
       buyLink: "https://forms.google.com/feynman-book-purchase-2"
     },
