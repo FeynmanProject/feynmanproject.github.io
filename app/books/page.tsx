@@ -40,7 +40,7 @@ export default function Books() {
       author: "Abdul Wahhab, Fritz Adelbertus Sitindaon, Natalius Desta Riyanto",
       description: "Menentukan penyelesaian dari permasalahan yang berkaitan dengan Kalkulus fungsi real satu variabel seperti limit, turunan, dan integral.",
       price: "Rp 50.000",
-      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/2e426a4b175c1021ccaca27ff0ec1e03.png",
+      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/09df2910d57052d7c1994f7e5a00ba22.png",
       category: "Kalkulus",
       buyLink: "https://forms.google.com/feynman-book-purchase-1"
     },
@@ -86,12 +86,12 @@ export default function Books() {
     },
     {
       id: 6,
-      title: "Logika dan Himpunan",
-      author: "-",
-      description: "-",
-      price: "Rp ****",
-      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b9b7039ee591637b7cca258c95026aa0.png",
-      category: "LDH",
+      title: "Matematika Dasar",
+      author: "Abdul Wahhab",
+      description: "Mempelajari fungsi 1 variabel bernilai riil dan konsep kalkulus yang berkaitan dengan fungsi tersebut, seperti sistem bilangan riil, fungsi, limit, kekontinuan, turunan dan aplikasinya, integral dan aplikasinya, fungsi transenden alami dan sifat-sifatnya.",
+      price: "Rp 50.000",
+      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/a9a31e10b72d5850e0662f4260044bd9.png",
+      category: "MatDas",
       buyLink: "https://forms.google.com/feynman-book-purchase-6"
     },
     {
