@@ -40,7 +40,7 @@ export default function Books() {
       author: "Abdul Wahhab, Fritz Adelbertus Sitindaon, Natalius Desta Riyanto",
       description: "Menentukan penyelesaian dari permasalahan yang berkaitan dengan Kalkulus fungsi real satu variabel seperti limit, turunan, dan integral.",
       price: "Rp 50.000",
-      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/fb0ec3bb01faf5b1255467f527284baa.png",
+      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/2e426a4b175c1021ccaca27ff0ec1e03.png",
       category: "Kalkulus",
       buyLink: "https://forms.google.com/feynman-book-purchase-1"
     },
@@ -60,7 +60,7 @@ export default function Books() {
       author: "Abdul Wahhab, Albert Wijaya",
       description: "Menyusun algoritma dengan alur logika bersyarat dan berulang serta menggunakan array, vektor, matriks dan fungsi untuk menyelesaikan masalah saintifik.",
       price: "Rp 60.000",
-      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/346068c9673e596b3bc5d470dca8c449.png",
+      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/8e187fa56beec5354edb3df4bb22a2f6.png",
       category: "ALPROG",
       buyLink: "https://forms.google.com/feynman-book-purchase-3"
     },
@@ -87,10 +87,10 @@ export default function Books() {
     {
       id: 6,
       title: "Logika dan Himpunan",
-      author: "TIM FEYNMAN PROJECT",
-      description: "Memahami keterkaitan antara konsep logika, himpunan, dan penalaran matematis sebagai dasar berpikir sistematis, runtut, dan menyeluruh dalam pengembangan konsep-konsep matematika lanjutan.",
-      price: "Rp 50.000",
-      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/cf58a03cce8d55021311c8399e13f2e6.png",
+      author: "-",
+      description: "-",
+      price: "Rp ****",
+      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b9b7039ee591637b7cca258c95026aa0.png",
       category: "LDH",
       buyLink: "https://forms.google.com/feynman-book-purchase-6"
     },
