@@ -228,12 +228,12 @@ const testimonials = [
     quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
   },
   {
-    name: "Anna Liu",
-    role: "Graduate Student",
-    quote: "Mathematics Without Fear helped me overcome my math anxiety. I actually understand and enjoy math now!",
+    name: "Muhammad Andi Garlan",
+    role: "Teknik Sipil, Universitas Brawijaya (UB)",
+    quote: "Aku mahasiswa teknik dan sempat kesulitan di kalkulus. Buku diktat dan video Feynman Project bantu banget karena dijelasin dari konsep, bukan cuma rumus.",
   },
   {
-    name: "Muhammad Syach Iqbal",
+    name: "Syach Iqbal",
     role: "Digital Business Innovation, Universitas Bina Nusantara (BINUS)",
     quote: "Aku bukan anak murni matematika, tapi kadang butuh paham teori dasar buat ngoding. Video di Feynman Project cukup bantu, apalagi yang soal logika proposisional dan himpunan.",
   },
