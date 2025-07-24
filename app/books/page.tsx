@@ -460,11 +460,6 @@ const testimonials = [
               </div>
             </div>
             <p className="text-gray-300 italic">&ldquo;{t.quote}&rdquo;</p>
-            <div className="flex text-[#8E44AD] mt-4">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <i key={i} className="ri-star-fill"></i>
-              ))}
-            </div>
           </div>
         ))}
       </div>
