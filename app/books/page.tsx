@@ -233,9 +233,9 @@ const testimonials = [
     quote: "Mathematics Without Fear helped me overcome my math anxiety. I actually understand and enjoy math now!",
   },
   {
-    name: "Brian Kim",
-    role: "Computer Science Major",
-    quote: "I finally grasped recursion thanks to the clear breakdown in the books. Recommended for all learners.",
+    name: "Muhammad Syach Iqbal",
+    role: "Digital Business Innovation, Universitas Bina Nusantara (BINUS)",
+    quote: "Aku bukan anak murni matematika, tapi kadang butuh paham teori dasar buat ngoding. Video di Feynman Project cukup bantu, apalagi yang soal logika proposisional dan himpunan.",
   },
 ];
 
