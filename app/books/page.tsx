@@ -223,14 +223,14 @@ const testimonials = [
     quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
   },
   {
-    name: "Marcus Roberts",
-    role: "High School Teacher",
-    quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
+    name: "Naia Saira",
+    role: "Teknik Industri, Universitas Tarumanagara (UNTAR)",
+    quote: "Belajar kalkulus dan aljabar di teknik industri kadang bikin bingung, apalagi kalau konsep dasarnya belum kuat. Feynman Project bantu banget lewat penjelasan yang runtut dan mudah dipahami.",
   },
   {
     name: "Muhammad Andi Garlan",
     role: "Teknik Sipil, Universitas Brawijaya (UB)",
-    quote: "Sebagai mahasiswa teknik yang sempat kesulitan memahami kalkulus, keberadaan buku diktat dan video dari Feynman Project sangat membantu. Materi dijelaskan dari konsep dasarnya, bukan sekadar rumus, jadi lebih mudah dicerna dan diingat.",
+    quote: "Sebagai mahasiswa teknik yang sempat kesulitan memahami kalkulus, keberadaan buku diktat dan video dari Feynman Project sangat membantu. Materi dijelaskan dari konsep dasarnya, bukan sekadar rumus.",
   },
   {
     name: "Syach Iqbal",
