@@ -190,7 +190,7 @@ const testimonials = [
   {
     name: "Filbert",
     role: "Teknik Industri, Institut Teknologi Sepuluh Nopember (ITS)",
-    quote: "Suka banget sama pendekatan Feynman Project yang ngajak ngerti konsep lebih dalam dan nyusun ulang materinya secara logis.",
+    quote: "Suka banget sama pendekatan Feynman Project yang ngajak ngerti konsep lebih dalam. Videonya bantu nyusun ulang materi dengan cara yang runtut dan masuk akal.",
   },
   {
     name: "Marcus Roberts",
