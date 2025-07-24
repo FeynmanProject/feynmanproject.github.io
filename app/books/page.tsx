@@ -225,7 +225,7 @@ const testimonials = [
   {
     name: "Naia Saira",
     role: "Teknik Industri, Universitas Tarumanagara (UNTAR)",
-    quote: "Belajar kalkulus dan aljabar di teknik industri kadang bikin bingung, apalagi kalau konsep dasarnya belum kuat. Feynman Project bantu banget lewat penjelasan yang runtut dan mudah dipahami.",
+    quote: "Belajar kalkulus dan aljabar di teknik industri kadang bikin bingung, apalagi kalau konsep dasarnya belum kuat, Feynman Project bantu banget lewat penjelasan yang runtut dan mudah dipahami.",
   },
   {
     name: "Muhammad Andi Garlan",
