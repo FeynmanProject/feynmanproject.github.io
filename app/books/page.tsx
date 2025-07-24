@@ -188,61 +188,51 @@ const BookCard = ({ book }: { book: Book }) => (
 
 const testimonials = [
   {
-    initials: "1",
     name: "Filbert",
     role: "Teknik Industri, Institut Teknologi Sepuluh Nopember (ITS)",
-    quote: "Aku suka cara pendekatan Feynman-nya: bener-bener ngajak mikir dan nyusun ulang konsep.",
+    quote: "Saya menyukai pendekatan Feynman Project yang mendorong saya untuk memahami konsep secara mendalam dan menyusunnya kembali dengan logis.",
   },
   {
-    initials: "MR",
     name: "Marcus Roberts",
     role: "High School Teacher",
     quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
   },
   {
-    initials: "MR",
     name: "Marcus Roberts",
     role: "High School Teacher",
     quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
   },
   {
-    initials: "MR",
     name: "Marcus Roberts",
     role: "High School Teacher",
     quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
   },
   {
-    initials: "MR",
     name: "Marcus Roberts",
     role: "High School Teacher",
     quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
   },
   {
-    initials: "MR",
     name: "Marcus Roberts",
     role: "High School Teacher",
     quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
   },
   {
-    initials: "MR",
     name: "Marcus Roberts",
     role: "High School Teacher",
     quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
   },
   {
-    initials: "MR",
     name: "Marcus Roberts",
     role: "High School Teacher",
     quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
   },
   {
-    initials: "AL",
     name: "Anna Liu",
     role: "Graduate Student",
     quote: "Mathematics Without Fear helped me overcome my math anxiety. I actually understand and enjoy math now!",
   },
   {
-    initials: "BK",
     name: "Brian Kim",
     role: "Computer Science Major",
     quote: "I finally grasped recursion thanks to the clear breakdown in the books. Recommended for all learners.",
@@ -464,9 +454,6 @@ const testimonials = [
             className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl"
           >
             <div className="flex items-center mb-4">
-              <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center mr-4">
-                <span className="text-white font-bold">{t.initials}</span>
-              </div>
               <div>
                 <h4 className="font-semibold">{t.name}</h4>
                 <p className="text-gray-400 text-sm">{t.role}</p>
