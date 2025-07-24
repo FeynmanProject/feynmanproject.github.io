@@ -188,10 +188,46 @@ const BookCard = ({ book }: { book: Book }) => (
 
 const testimonials = [
   {
-    initials: "JD",
-    name: "Jessica Davis",
-    role: "Engineering Student",
-    quote: "Physics Made Simple completely changed how I understand complex concepts. The analogies and explanations are brilliant!",
+    initials: "1",
+    name: "Filbert",
+    role: "Teknik Industri, Institut Teknologi Sepuluh Nopember (ITS)",
+    quote: "Aku suka cara pendekatan Feynman-nya: bener-bener ngajak mikir dan nyusun ulang konsep.",
+  },
+  {
+    initials: "MR",
+    name: "Marcus Roberts",
+    role: "High School Teacher",
+    quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
+  },
+  {
+    initials: "MR",
+    name: "Marcus Roberts",
+    role: "High School Teacher",
+    quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
+  },
+  {
+    initials: "MR",
+    name: "Marcus Roberts",
+    role: "High School Teacher",
+    quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
+  },
+  {
+    initials: "MR",
+    name: "Marcus Roberts",
+    role: "High School Teacher",
+    quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
+  },
+  {
+    initials: "MR",
+    name: "Marcus Roberts",
+    role: "High School Teacher",
+    quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
+  },
+  {
+    initials: "MR",
+    name: "Marcus Roberts",
+    role: "High School Teacher",
+    quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
   },
   {
     initials: "MR",
