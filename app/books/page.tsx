@@ -230,7 +230,7 @@ const testimonials = [
   {
     name: "Muhammad Andi Garlan",
     role: "Teknik Sipil, Universitas Brawijaya (UB)",
-    quote: "Aku mahasiswa teknik dan sempat kesulitan di kalkulus. Buku diktat dan video Feynman Project bantu banget karena dijelasin dari konsep, bukan cuma rumus.",
+    quote: "Sebagai mahasiswa teknik yang sempat kesulitan memahami kalkulus, keberadaan buku diktat dan video dari Feynman Project sangat membantu. Materi dijelaskan dari konsep dasarnya, bukan sekadar rumus, jadi lebih mudah dicerna dan diingat.",
   },
   {
     name: "Syach Iqbal",
