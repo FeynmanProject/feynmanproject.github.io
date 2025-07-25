@@ -220,7 +220,7 @@ const testimonials = [
   {
     name: "Rahma Wati",
     role: "Pendidikan Matematika, Universitas Lambung Mangkurat (ULM)",
-    quote: "Ngajar jadi lebih percaya diri setelah nonton video dari Feynman Project. Penjelasan yang jelas dan runtut bikin materi lebih gampang disampaikan ke siswa, terutama topik-topik yang abstrak.",
+    quote: "Belajar konsep sebelum ngajar itu penting. Video dari Feynman Project bantu banget, terutama penjelasan limit dan turunan yang sering bikin bingung.",
   },
   {
     name: "Naia Saira",
