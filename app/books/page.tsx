@@ -218,9 +218,9 @@ const testimonials = [
     quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
   },
   {
-    name: "Marcus Roberts",
-    role: "High School Teacher",
-    quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
+    name: "Rahma Wati",
+    role: "Pendidikan Matematika, Universitas Lambung Mangkurat (ULM)",
+    quote: "Ngajar jadi lebih percaya diri setelah nonton video dari Feynman Project. Penjelasan yang jelas dan runtut bikin materi lebih gampang disampaikan ke siswa, terutama topik-topik yang abstrak.",
   },
   {
     name: "Naia Saira",
