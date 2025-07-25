@@ -188,8 +188,8 @@ const BookCard = ({ book }: { book: Book }) => (
 
 const testimonials = [
   {
-    name: "Filbert",
-    role: "Teknik Industri, Institut Teknologi Sepuluh Nopember (ITS)",
+    name: "Filbert Martin",
+    role: "Teknik Informatika, Institut Teknologi Sepuluh Nopember (ITS)",
     quote: "Suka banget sama pendekatan Feynman Project yang ngajak ngerti konsep lebih dalam. Videonya bantu nyusun ulang materi dengan cara yang runtut dan masuk akal.",
   },
   {
