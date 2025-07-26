@@ -12,17 +12,18 @@ export default function Books() {
   const bookSliderRef = useRef<HTMLDivElement>(null);
   const testimonialSliderRef = useRef<HTMLDivElement>(null);
 
-const scrollLeft = (ref: React.RefObject<HTMLDivElement>) => {
+const scrollLeft = (ref: React.RefObject<HTMLDivElement | null>) => {
   if (ref.current) {
     ref.current.scrollBy({ left: -800, behavior: 'smooth' });
   }
 };
 
-const scrollRight = (ref: React.RefObject<HTMLDivElement>) => {
+const scrollRight = (ref: React.RefObject<HTMLDivElement | null>) => {
   if (ref.current) {
     ref.current.scrollBy({ left: 800, behavior: 'smooth' });
   }
 };
+
 
   // ✅ Tambahkan useEffect untuk autoplay testimonial
   useEffect(() => {
