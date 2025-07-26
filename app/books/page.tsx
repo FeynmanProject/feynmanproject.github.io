@@ -27,32 +27,45 @@ export default function Books() {
 
 
   // ✅ Tambahkan useEffect untuk autoplay testimonial
-  useEffect(() => {
-    const container = testimonialSliderRef.current;
-    if (!container) return;
+useEffect(() => {
+  const container = testimonialSliderRef.current;
+  if (!container) return;
 
-    let scrollPos = 0;
-    const speed = 1.5;
-    let animationFrameId: number;
+  let scrollPos = 0;
+  const speed = 1.5;
+  const animationFrameIdRef = { current: 0 };
 
-    const scroll = () => {
-      scrollPos += speed;
-      if (scrollPos >= container.scrollWidth / 2) {
-        scrollPos = 0;
-      }
+  const scroll = () => {
+    scrollPos += speed;
+    if (scrollPos >= container.scrollWidth / 2) {
+      scrollPos = 0;
+    }
 
-      container.scrollTo({
-        left: scrollPos,
-        behavior: 'auto'
-      });
+    container.scrollTo({
+      left: scrollPos,
+      behavior: 'auto',
+    });
 
-      animationFrameId = requestAnimationFrame(scroll);
-    };
+    animationFrameIdRef.current = requestAnimationFrame(scroll);
+  };
 
-    scroll();
+  animationFrameIdRef.current = requestAnimationFrame(scroll);
 
-    return () => cancelAnimationFrame(animationFrameId);
-  }, []);
+  // Hentikan scroll saat hover
+  const handleMouseEnter = () => cancelAnimationFrame(animationFrameIdRef.current);
+  const handleMouseLeave = () => {
+    animationFrameIdRef.current = requestAnimationFrame(scroll);
+  };
+
+  container.addEventListener('mouseenter', handleMouseEnter);
+  container.addEventListener('mouseleave', handleMouseLeave);
+
+  return () => {
+    cancelAnimationFrame(animationFrameIdRef.current);
+    container.removeEventListener('mouseenter', handleMouseEnter);
+    container.removeEventListener('mouseleave', handleMouseLeave);
+  };
+}, []);
 
   const books = [
     {
