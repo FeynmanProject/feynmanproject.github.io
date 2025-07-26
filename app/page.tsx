@@ -162,6 +162,11 @@ export default function Home() {
       quote: "Suka banget sama pendekatan Feynman Project yang ngajak ngerti konsep lebih dalam. Videonya bantu nyusun ulang materi dengan cara yang runtut dan masuk akal.",
     },
     {
+      name: "Rachel Keisha Loviana",
+      role: "Matematika, Universitas Pertahanan (UNHAN)",
+      quote: "Thanks to Feynman Project, akhirnya bisa paham konsep integral dan cara pakainya, yang sebelumnya terasa abstrak banget waktu belajar sendiri.",
+    },
+    {
       name: "Rahma Wati",
       role: "Pendidikan Matematika, Universitas Lambung Mangkurat (ULM)",
       quote: "Belajar konsep sebelum ngajar itu penting. Video dari Feynman Project bantu banget, terutama penjelasan limit dan turunan yang sering bikin bingung.",
@@ -339,7 +344,7 @@ export default function Home() {
                   className="w-full bg-[#8E44AD] hover:bg-[#7D3C98] text-white py-3 px-6 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap flex items-center justify-center space-x-2"
                 >
                   <i className="ri-play-circle-line text-xl"></i>
-                  <span>Watch Now</span>
+                  <span>Tonton Sekarang</span>
                 </a>
               </div>
             </div>
