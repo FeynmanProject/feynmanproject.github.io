@@ -327,7 +327,7 @@ export default function Home() {
       </div>
 
       <div className="flex justify-center mt-8 space-x-2">
-        {classesData.map((_, index) => (
+        {classesData.map((classItem, index) => (
           <button
             key={index}
             onClick={() => scrollToIndex(index)} // ← tambahkan penggunaan index
