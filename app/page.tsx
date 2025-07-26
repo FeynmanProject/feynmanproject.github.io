@@ -16,65 +16,65 @@ interface ClassData {
 const classesData: ClassData[] = [
   {
     id: '1',
-    title: 'Class Of Calculus 1',
-    displayName: 'Introduction to Economics',
-    thumbnail: 'https://readdy.ai/api/search-image?query=Modern%20economics%20classroom%20with%20professional%20teacher%20explaining%20economic%20principles%2C%20clean%20minimalist%20background%20with%20charts%20and%20graphs%2C%20warm%20lighting%2C%20professional%20educational%20setting%2C%20modern%20interior%20design&width=400&height=240&seq=econ2&orientation=landscape',
+    title: 'Kalkulus 1',
+    displayName: 'Class Of Calculus 1',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/d2561da9ec1202b39f016196e2801322.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample1'
   },
   {
     id: '2',
-    title: 'DIFFERENTIAL CALCULUS',
-    displayName: 'Differential Calculus',
-    thumbnail: 'https://readdy.ai/api/search-image?query=Mathematics%20professor%20teaching%20calculus%20at%20whiteboard%20with%20mathematical%20equations%2C%20clean%20modern%20classroom%2C%20professional%20educational%20environment%2C%20warm%20academic%20lighting%2C%20minimalist%20design&width=400&height=240&seq=calc1&orientation=landscape',
+    title: 'Logika',
+    displayName: 'Class Of Logics',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/79815af43fe7c1311b7e1b6a14827e61.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample2'
   },
   {
     id: '3',
-    title: 'FUNDAMENTAL PHYSICS',
-    displayName: 'Fundamental Physics',
-    thumbnail: 'https://readdy.ai/api/search-image?query=Physics%20teacher%20demonstrating%20experiments%20in%20modern%20laboratory%2C%20clean%20scientific%20equipment%2C%20professional%20educational%20setting%2C%20bright%20clean%20background%2C%20academic%20atmosphere&width=400&height=240&seq=phys1&orientation=landscape',
+    title: 'ALE',
+    displayName: 'Aljabar Linear Elementer',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/83b88160e918a6ae3c82fa58837973db.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample3'
   },
   {
     id: '4',
-    title: 'ORGANIC CHEMISTRY',
-    displayName: 'Organic Chemistry',
-    thumbnail: 'https://readdy.ai/api/search-image?query=Chemistry%20professor%20explaining%20organic%20compounds%20with%20molecular%20models%2C%20clean%20modern%20laboratory%2C%20professional%20educational%20environment%2C%20bright%20scientific%20setting%2C%20minimalist%20design&width=400&height=240&seq=chem1&orientation=landscape',
+    title: 'Kalkulus 3',
+    displayName: 'Class Of Calculus 3',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/78627b70bc245649255a4f947f0e3846.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample4'
   },
   {
     id: '5',
-    title: 'INTRODUCTION STATISTICS',
-    displayName: 'Applied Statistics',
-    thumbnail: 'https://readdy.ai/api/search-image?query=Statistics%20teacher%20presenting%20data%20analysis%20on%20modern%20displays%2C%20clean%20professional%20classroom%2C%20educational%20technology%2C%20bright%20academic%20environment%2C%20minimalist%20contemporary%20design&width=400&height=240&seq=stat1&orientation=landscape',
+    title: 'Kalkulus 2',
+    displayName: 'Class Of Calculus 2',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b00731e90631af26bff4c5fee9b79878.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
   },
   {
     id: '6',
-    title: 'APPLIED STATISTICS 1',
-    displayName: 'Applied Statistics',
-    thumbnail: 'https://readdy.ai/api/search-image?query=Statistics%20teacher%20presenting%20data%20analysis%20on%20modern%20displays%2C%20clean%20professional%20classroom%2C%20educational%20technology%2C%20bright%20academic%20environment%2C%20minimalist%20contemporary%20design&width=400&height=240&seq=stat1&orientation=landscape',
+    title: 'PDB',
+    displayName: 'Persamaan Diferensial Biasa',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b00731e90631af26bff4c5fee9b79878.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
   },
   {
     id: '7',
-    title: 'APPLIED STATISTICS 2',
-    displayName: 'Applied Statistics',
-    thumbnail: 'https://readdy.ai/api/search-image?query=Statistics%20teacher%20presenting%20data%20analysis%20on%20modern%20displays%2C%20clean%20professional%20classroom%2C%20educational%20technology%2C%20bright%20academic%20environment%2C%20minimalist%20contemporary%20design&width=400&height=240&seq=stat1&orientation=landscape',
+    title: 'Matdis',
+    displayName: 'Matematika Diskrit',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b00731e90631af26bff4c5fee9b79878.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
   },
   {
     id: '8',
-    title: 'APPLIED STATISTICS 3',
-    displayName: 'Applied Statistics',
-    thumbnail: 'https://readdy.ai/api/search-image?query=Statistics%20teacher%20presenting%20data%20analysis%20on%20modern%20displays%2C%20clean%20professional%20classroom%2C%20educational%20technology%2C%20bright%20academic%20environment%2C%20minimalist%20contemporary%20design&width=400&height=240&seq=stat1&orientation=landscape',
+    title: 'ALIN',
+    displayName: 'Aljabar Linear',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b00731e90631af26bff4c5fee9b79878.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
   },
   {
     id: '9',
-    title: 'MOLECULAR BIOLOGY',
-    displayName: 'Molecular Biology',
-    thumbnail: 'https://readdy.ai/api/search-image?query=Biology%20professor%20explaining%20molecular%20structures%20in%20modern%20laboratory%2C%20clean%20scientific%20environment%2C%20professional%20educational%20setting%2C%20bright%20clean%20background%2C%20academic%20atmosphere&width=400&height=240&seq=bio1&orientation=landscape',
+    title: 'Analisis 1',
+    displayName: 'Analisis Riil',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b00731e90631af26bff4c5fee9b79878.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample6'
   }
 ];
