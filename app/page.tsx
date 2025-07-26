@@ -287,14 +287,14 @@ export default function Home() {
     <div className="relative">
       <button
         onClick={prevSlide}
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-[#8E44AD] hover:bg-[#7D3C98] rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer"
+        className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-[#111111] hover:bg-[#222222] rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer"
       >
         <i className="ri-arrow-left-line text-white text-xl"></i>
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-[#8E44AD] hover:bg-[#7D3C98] rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer"
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-[#111111]  hover:bg-[#222222] rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer"
       >
         <i className="ri-arrow-right-line text-white text-xl"></i>
       </button>
@@ -358,7 +358,7 @@ export default function Home() {
             key={index}
             onClick={() => scrollToIndex(index)} // ← tambahkan penggunaan index
             className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
-              index === currentIndex ? 'bg-[#8E44AD]' : 'bg-gray-600 hover:bg-gray-500'
+              index === currentIndex ? 'bg-[#111111]' : 'bg-[#333333] hover:bg-[#444444]'
             }`}
           />
         ))}
