@@ -287,11 +287,16 @@ export default function Home() {
               className="flex-shrink-0 w-96 bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 transform hover:scale-105"
             >
               <div className="relative h-60 overflow-hidden">
-                <img
+                <Image
                   src={classItem.thumbnail}
                   alt={classItem.displayName}
+                  width={400}
+                  height={240}
                   className="w-full h-full object-cover object-top"
+                  unoptimized
                 />
+
+                
                 <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
 
                 <div className="absolute inset-0 flex items-center justify-start pl-6">
@@ -325,15 +330,15 @@ export default function Home() {
         {classesData.map((_, index) => (
           <button
             key={index}
-            onClick={() => scrollToIndex(index)}
+            onClick={() => scrollToIndex(index)} // ← tambahkan penggunaan index
             className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
               index === currentIndex ? 'bg-[#8E44AD]' : 'bg-gray-600 hover:bg-gray-500'
             }`}
           />
         ))}
-      </div>
     </div>
-
+  </div>
+    
     <div className="text-center mt-12">
       <button className="bg-transparent border-2 border-[#8E44AD] text-[#8E44AD] hover:bg-[#8E44AD] hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 cursor-pointer whitespace-nowrap">
         See All Classes
