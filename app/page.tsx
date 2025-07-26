@@ -51,7 +51,7 @@ const classesData: ClassData[] = [
   },
   {
     id: '6',
-    title: 'persamaan diferensial 1',
+    title: 'PDB',
     displayName: 'Persamaan Diferensial Biasa',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b00731e90631af26bff4c5fee9b79878.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
@@ -280,8 +280,8 @@ export default function Home() {
 <section className="py-20 bg-[#0D0D0D]">
   <div className="max-w-7xl mx-auto px-4">
     <div className="text-center mb-12">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Most Popular Classes</h2>
-      <p className="text-xl text-gray-400">Discover our top-rated courses designed with the Feynman Technique</p>
+      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Kelas Paling Populer</h2>
+      <p className="text-xl text-gray-400">Feynman Project hadir untuk membangun pemahaman matematika yang kuat</p>
     </div>
 
     <div className="relative">
