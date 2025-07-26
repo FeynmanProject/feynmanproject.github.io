@@ -51,15 +51,15 @@ const classesData: ClassData[] = [
   },
   {
     id: '6',
-    title: 'persamaan diferensial biasa',
-    displayName: 'PDB',
+    title: 'persamaan diferensial 1',
+    displayName: 'Persamaan Diferensial Biasa',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b00731e90631af26bff4c5fee9b79878.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
   },
   {
     id: '7',
-    title: 'Matematika Diskrit',
-    displayName: 'Matdis',
+    title: 'Matdis',
+    displayName: 'Matematika Diskrit',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b00731e90631af26bff4c5fee9b79878.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
   },
@@ -341,7 +341,7 @@ export default function Home() {
                   href={classItem.youtubePlaylist}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-[#8E44AD] hover:bg-[#7D3C98] text-white py-3 px-6 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap flex items-center justify-center space-x-2"
+                  className="w-full bg-[#111111] hover:bg-[#222222] text-white py-3 px-6 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap flex items-center justify-center space-x-2"
                 >
                   <i className="ri-play-circle-line text-xl"></i>
                   <span>Tonton Sekarang</span>
