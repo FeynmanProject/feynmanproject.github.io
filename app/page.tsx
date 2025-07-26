@@ -16,7 +16,7 @@ interface ClassData {
 const classesData: ClassData[] = [
   {
     id: '1',
-    title: '  Kalkulus 1',
+    title: 'Kalkulus 1',
     displayName: 'Class Of Calculus 1',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/d2561da9ec1202b39f016196e2801322.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample1'
@@ -30,8 +30,8 @@ const classesData: ClassData[] = [
   },
   {
     id: '3',
-    title: '    ALE',
-    displayName: 'Aljabar Linear Elementer',
+    title: 'Aljabar linear elementer',
+    displayName: 'ALE',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/83b88160e918a6ae3c82fa58837973db.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample3'
   },
@@ -51,22 +51,22 @@ const classesData: ClassData[] = [
   },
   {
     id: '6',
-    title: '   PDB',
-    displayName: 'Persamaan Diferensial Biasa',
+    title: 'persamaan diferensial biasa',
+    displayName: 'PDB',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b00731e90631af26bff4c5fee9b79878.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
   },
   {
     id: '7',
-    title: 'Matdis',
-    displayName: 'Matematika Diskrit',
+    title: 'Matematika Diskrit',
+    displayName: 'Matdis',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b00731e90631af26bff4c5fee9b79878.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
   },
   {
     id: '8',
-    title: '   ALIN',
-    displayName: 'Aljabar Linear',
+    title: 'Aljabar Linear',
+    displayName: 'ALIN',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b00731e90631af26bff4c5fee9b79878.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
   },
