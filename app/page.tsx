@@ -2,7 +2,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 
 interface ClassData {
@@ -61,42 +61,41 @@ const classesData: ClassData[] = [
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const testimonialSliderRef = useRef<HTMLDivElement | null>(null);
-const [currentIndex, setCurrentIndex] = useState(0);
-const carouselRef = useRef<HTMLDivElement>(null);
-const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-const scrollToIndex = (index: number) => {
-  if (carouselRef.current) {
-    const cardWidth = 400;
-    const gap = 24;
-    const scrollPosition = index * (cardWidth + gap);
-    carouselRef.current.scrollTo({
-      left: scrollPosition,
-      behavior: 'smooth'
-    });
-    setCurrentIndex(index);
-  }
-};
+  const scrollToIndex = (index: number) => {
+    if (carouselRef.current) {
+      const cardWidth = 400;
+      const gap = 24;
+      const scrollPosition = index * (cardWidth + gap);
+      carouselRef.current.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth'
+      });
+      setCurrentIndex(index);
+    }
+  };
 
-const nextSlide = () => {
-  const nextIndex = (currentIndex + 1) % classesData.length;
-  scrollToIndex(nextIndex);
-};
+  const nextSlide = useCallback(() => {
+    const nextIndex = (currentIndex + 1) % classesData.length;
+    scrollToIndex(nextIndex);
+  }, [currentIndex]);
 
-const prevSlide = () => {
-  const prevIndex = currentIndex === 0 ? classesData.length - 1 : currentIndex - 1;
-  scrollToIndex(prevIndex);
-};
+  const prevSlide = () => {
+    const prevIndex = currentIndex === 0 ? classesData.length - 1 : currentIndex - 1;
+    scrollToIndex(prevIndex);
+  };
 
-const handleMouseEnter = () => setIsAutoPlaying(false);
-const handleMouseLeave = () => setIsAutoPlaying(true);
+  const handleMouseEnter = () => setIsAutoPlaying(false);
+  const handleMouseLeave = () => setIsAutoPlaying(true);
 
-useEffect(() => {
-  if (!isAutoPlaying) return;
-  const interval = setInterval(() => nextSlide(), 4000);
-  return () => clearInterval(interval);
-}, [currentIndex, isAutoPlaying]);
-
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    const interval = setInterval(() => nextSlide(), 4000);
+    return () => clearInterval(interval);
+  }, [currentIndex, isAutoPlaying, nextSlide]);
 
   // ✅ Autoplay testimonial section
   useEffect(() => {
