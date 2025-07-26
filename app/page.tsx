@@ -5,9 +5,98 @@ import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 
+interface ClassData {
+  id: string;
+  title: string;
+  displayName: string;
+  thumbnail: string;
+  youtubePlaylist: string;
+}
+
+const classesData: ClassData[] = [
+  {
+    id: '1',
+    title: 'Class Of Calculus 1',
+    displayName: 'Introduction to Economics',
+    thumbnail: 'https://readdy.ai/api/search-image?query=Modern%20economics%20classroom%20with%20professional%20teacher%20explaining%20economic%20principles%2C%20clean%20minimalist%20background%20with%20charts%20and%20graphs%2C%20warm%20lighting%2C%20professional%20educational%20setting%2C%20modern%20interior%20design&width=400&height=240&seq=econ2&orientation=landscape',
+    youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample1'
+  },
+  {
+    id: '2',
+    title: 'DIFFERENTIAL CALCULUS',
+    displayName: 'Differential Calculus',
+    thumbnail: 'https://readdy.ai/api/search-image?query=Mathematics%20professor%20teaching%20calculus%20at%20whiteboard%20with%20mathematical%20equations%2C%20clean%20modern%20classroom%2C%20professional%20educational%20environment%2C%20warm%20academic%20lighting%2C%20minimalist%20design&width=400&height=240&seq=calc1&orientation=landscape',
+    youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample2'
+  },
+  {
+    id: '3',
+    title: 'FUNDAMENTAL PHYSICS',
+    displayName: 'Fundamental Physics',
+    thumbnail: 'https://readdy.ai/api/search-image?query=Physics%20teacher%20demonstrating%20experiments%20in%20modern%20laboratory%2C%20clean%20scientific%20equipment%2C%20professional%20educational%20setting%2C%20bright%20clean%20background%2C%20academic%20atmosphere&width=400&height=240&seq=phys1&orientation=landscape',
+    youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample3'
+  },
+  {
+    id: '4',
+    title: 'ORGANIC CHEMISTRY',
+    displayName: 'Organic Chemistry',
+    thumbnail: 'https://readdy.ai/api/search-image?query=Chemistry%20professor%20explaining%20organic%20compounds%20with%20molecular%20models%2C%20clean%20modern%20laboratory%2C%20professional%20educational%20environment%2C%20bright%20scientific%20setting%2C%20minimalist%20design&width=400&height=240&seq=chem1&orientation=landscape',
+    youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample4'
+  },
+  {
+    id: '5',
+    title: 'APPLIED STATISTICS',
+    displayName: 'Applied Statistics',
+    thumbnail: 'https://readdy.ai/api/search-image?query=Statistics%20teacher%20presenting%20data%20analysis%20on%20modern%20displays%2C%20clean%20professional%20classroom%2C%20educational%20technology%2C%20bright%20academic%20environment%2C%20minimalist%20contemporary%20design&width=400&height=240&seq=stat1&orientation=landscape',
+    youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
+  },
+  {
+    id: '6',
+    title: 'MOLECULAR BIOLOGY',
+    displayName: 'Molecular Biology',
+    thumbnail: 'https://readdy.ai/api/search-image?query=Biology%20professor%20explaining%20molecular%20structures%20in%20modern%20laboratory%2C%20clean%20scientific%20environment%2C%20professional%20educational%20setting%2C%20bright%20clean%20background%2C%20academic%20atmosphere&width=400&height=240&seq=bio1&orientation=landscape',
+    youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample6'
+  }
+];
+
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const testimonialSliderRef = useRef<HTMLDivElement | null>(null);
+const [currentIndex, setCurrentIndex] = useState(0);
+const carouselRef = useRef<HTMLDivElement>(null);
+const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+const scrollToIndex = (index: number) => {
+  if (carouselRef.current) {
+    const cardWidth = 400;
+    const gap = 24;
+    const scrollPosition = index * (cardWidth + gap);
+    carouselRef.current.scrollTo({
+      left: scrollPosition,
+      behavior: 'smooth'
+    });
+    setCurrentIndex(index);
+  }
+};
+
+const nextSlide = () => {
+  const nextIndex = (currentIndex + 1) % classesData.length;
+  scrollToIndex(nextIndex);
+};
+
+const prevSlide = () => {
+  const prevIndex = currentIndex === 0 ? classesData.length - 1 : currentIndex - 1;
+  scrollToIndex(prevIndex);
+};
+
+const handleMouseEnter = () => setIsAutoPlaying(false);
+const handleMouseLeave = () => setIsAutoPlaying(true);
+
+useEffect(() => {
+  if (!isAutoPlaying) return;
+  const interval = setInterval(() => nextSlide(), 4000);
+  return () => clearInterval(interval);
+}, [currentIndex, isAutoPlaying]);
+
 
   // ✅ Autoplay testimonial section
   useEffect(() => {
@@ -163,26 +252,96 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Introduction Video Section */}
-      <section className="py-20 bg-[#1A1A1A]">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Watch Our Introduction</h2>
-            <p className="text-xl text-gray-400">Ini cara kami menyampaikan materi: menekankan alur berpikir dan membangun pemahaman langkah demi langkah.</p>
-          </div>
-          
-          <div className="relative aspect-video max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="Feynman Project Introduction"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
+<section className="py-20 bg-[#0D0D0D]">
+  <div className="max-w-7xl mx-auto px-4">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Most Popular Classes</h2>
+      <p className="text-xl text-gray-400">Discover our top-rated courses designed with the Feynman Technique</p>
+    </div>
+
+    <div className="relative">
+      <button
+        onClick={prevSlide}
+        className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-[#8E44AD] hover:bg-[#7D3C98] rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer"
+      >
+        <i className="ri-arrow-left-line text-white text-xl"></i>
+      </button>
+
+      <button
+        onClick={nextSlide}
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-[#8E44AD] hover:bg-[#7D3C98] rounded-full flex items-center justify-center transition-all duration-300 cursor-pointer"
+      >
+        <i className="ri-arrow-right-line text-white text-xl"></i>
+      </button>
+
+      <div
+        ref={carouselRef}
+        className="overflow-x-auto scrollbar-hide px-16"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+      >
+        <div className="flex space-x-6 pb-4">
+          {classesData.map((classItem, index) => (
+            <div
+              key={classItem.id}
+              className="flex-shrink-0 w-96 bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 transform hover:scale-105"
+            >
+              <div className="relative h-60 overflow-hidden">
+                <img
+                  src={classItem.thumbnail}
+                  alt={classItem.displayName}
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+
+                <div className="absolute inset-0 flex items-center justify-start pl-6">
+                  <h3 className="text-white text-2xl font-bold uppercase tracking-wide max-w-xs leading-tight">
+                    {classItem.title}
+                  </h3>
+                </div>
+              </div>
+
+              <div className="p-6">
+                <div className="inline-block bg-black px-3 py-1 rounded-full mb-4">
+                  <span className="text-white text-sm font-medium">{classItem.displayName}</span>
+                </div>
+
+                <a
+                  href={classItem.youtubePlaylist}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-[#8E44AD] hover:bg-[#7D3C98] text-white py-3 px-6 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap flex items-center justify-center space-x-2"
+                >
+                  <i className="ri-play-circle-line text-xl"></i>
+                  <span>Watch Now</span>
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
+
+      <div className="flex justify-center mt-8 space-x-2">
+        {classesData.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => scrollToIndex(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
+              index === currentIndex ? 'bg-[#8E44AD]' : 'bg-gray-600 hover:bg-gray-500'
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+
+    <div className="text-center mt-12">
+      <button className="bg-transparent border-2 border-[#8E44AD] text-[#8E44AD] hover:bg-[#8E44AD] hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 cursor-pointer whitespace-nowrap">
+        See All Classes
+      </button>
+    </div>
+  </div>
+</section>
 
       {/* Quick About Section */}
       <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
