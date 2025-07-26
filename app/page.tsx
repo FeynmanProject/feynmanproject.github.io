@@ -8,16 +8,26 @@ import Image from 'next/image';
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const testimonialSliderRef = useRef<HTMLDivElement | null>(null);
-
+  
+  const addFadeAnimation = (ref: React.RefObject<HTMLDivElement | null>) => {
+    if (ref.current) {
+      ref.current.classList.remove('animate-fade-slide'); // reset animasi dulu
+      void ref.current.offsetWidth; // force reflow
+      ref.current.classList.add('animate-fade-slide');
+    }
+  };
+  
 const scrollLeft = (ref: React.RefObject<HTMLDivElement | null>) => {
   if (ref.current) {
     ref.current.scrollBy({ left: -800, behavior: 'smooth' });
+    addFadeAnimation(ref); // tambahkan animasi
   }
 };
 
 const scrollRight = (ref: React.RefObject<HTMLDivElement | null>) => {
   if (ref.current) {
     ref.current.scrollBy({ left: 800, behavior: 'smooth' });
+    addFadeAnimation(ref); // tambahkan animasi
   }
 };
 
