@@ -2,11 +2,53 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const testimonialSliderRef = useRef<HTMLDivElement>(null);
+
+  const scrollLeft = (ref: React.RefObject<HTMLDivElement>) => {
+    if (ref.current) {
+      ref.current.scrollBy({ left: -800, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = (ref: React.RefObject<HTMLDivElement>) => {
+    if (ref.current) {
+      ref.current.scrollBy({ left: 800, behavior: 'smooth' });
+    }
+  };
+
+  const testimonials = [
+    {
+      name: "Filbert Martin",
+      role: "Teknik Informatika, Institut Teknologi Sepuluh Nopember (ITS)",
+      quote: "Suka banget sama pendekatan Feynman Project yang ngajak ngerti konsep lebih dalam. Videonya bantu nyusun ulang materi dengan cara yang runtut dan masuk akal.",
+    },
+    {
+      name: "Rahma Wati",
+      role: "Pendidikan Matematika, Universitas Lambung Mangkurat (ULM)",
+      quote: "Belajar konsep sebelum ngajar itu penting. Video dari Feynman Project bantu banget, terutama penjelasan limit dan turunan yang sering bikin bingung.",
+    },
+    {
+      name: "Naia Saira",
+      role: "Teknik Industri, Universitas Tarumanagara (UNTAR)",
+      quote: "Belajar kalkulus dan aljabar di teknik industri kadang bikin bingung, apalagi kalau konsep dasarnya belum kuat, Feynman Project bantu banget lewat penjelasan yang runtut dan mudah dipahami.",
+    },
+    {
+      name: "Muhammad Andi Garlan",
+      role: "Teknik Sipil, Universitas Brawijaya (UB)",
+      quote: "Sebagai mahasiswa teknik yang sempat kesulitan memahami kalkulus, keberadaan buku diktat dan video dari Feynman Project sangat membantu. Materi dijelaskan dari konsep dasarnya, bukan sekadar rumus.",
+    },
+    {
+      name: "Syach Iqbal",
+      role: "Digital Business Innovation, Universitas Bina Nusantara (BINUS)",
+      quote: "Aku bukan anak murni matematika, tapi kadang butuh paham teori dasar buat ngoding. Video di Feynman Project cukup bantu, apalagi yang soal logika proposisional dan himpunan.",
+    },
+  ];
+
 
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white">
@@ -219,6 +261,49 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Kata Mereka</h2>
+            <p className="text-xl text-gray-400">Ulasan dari komunitas pembaca dan pemirsa video kami.</p>
+          </div>
+          <div className="relative">
+            <button
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
+              onClick={() => scrollLeft(testimonialSliderRef)}
+            >
+              <i className="ri-arrow-left-line text-xl"></i>
+            </button>
+            <button
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
+              onClick={() => scrollRight(testimonialSliderRef)}
+            >
+              <i className="ri-arrow-right-line text-xl"></i>
+            </button>
+            <div
+              ref={testimonialSliderRef}
+              className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth px-8"
+            >
+              {testimonials.map((t, index) => (
+                <div
+                  key={index}
+                  className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl"
+                >
+                  <div className="flex items-center mb-4">
+                    <div>
+                      <h4 className="font-semibold">{t.name}</h4>
+                      <p className="text-gray-400 text-sm">{t.role}</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-300 italic">&ldquo;{t.quote}&rdquo;</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[#8E44AD] to-[#A569BD]">
         <div className="max-w-4xl mx-auto px-4 text-center">
