@@ -277,7 +277,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Kata Mereka</h2>
-            <p className="text-xl text-gray-400">Ulasan dari komunitas pembaca dan pemirsa video kami.</p>
+            <p className="text-xl text-gray-400">Ulasan dari pemirsa video kami.</p>
           </div>
           <div className="relative">
             <button
