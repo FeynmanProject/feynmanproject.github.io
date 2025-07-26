@@ -12,15 +12,7 @@ export default function Books() {
   const bookSliderRef = useRef<HTMLDivElement>(null);
   const testimonialSliderRef = useRef<HTMLDivElement>(null);
 
-  const addFadeAnimation = (ref: React.RefObject<HTMLDivElement | null>) => {
-    if (ref.current) {
-      ref.current.classList.remove('animate-fade-slide'); // reset animasi dulu
-      void ref.current.offsetWidth; // force reflow
-      ref.current.classList.add('animate-fade-slide');
-    }
-  };
-  
-  // ✅ Fungsi scrollLeft dan scrollRight khusus untuk bookSlider
+  // ✅ Fungsi scrollLeft dan scrollRight untuk tombol buku
   const scrollLeft = () => {
     if (bookSliderRef.current) {
       bookSliderRef.current.scrollBy({ left: -800, behavior: 'smooth' });
@@ -358,23 +350,37 @@ const testimonials = [
         </div>
       </section>
 
-<section className="py-20 bg-[#0D0D0D]">
-  <div className="max-w-6xl mx-auto px-4 relative"> {/* Posisikan relative DI SINI */}
-    
+      {/* Book Slider */}
+      <section className="py-20 bg-[#0D0D0D]">
+        <div className="max-w-6xl mx-auto px-4 relative">
+          {/* Tombol kiri */}
+          <button
+            onClick={scrollLeft}
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white p-3 rounded-full shadow-lg"
+          >
+            <i className="ri-arrow-left-line text-xl" />
+          </button>
 
-    {/* Slider Buku */}
-    <div
-      ref={bookSliderRef}
-      className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth"
-    >
-      {filteredBooks.map((book) => (
-        <div key={book.id} className="min-w-[300px] max-w-sm flex-shrink-0">
-          <BookCard book={book} />
+          {/* Tombol kanan */}
+          <button
+            onClick={scrollRight}
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white p-3 rounded-full shadow-lg"
+          >
+            <i className="ri-arrow-right-line text-xl" />
+          </button>
+
+          <div
+            ref={bookSliderRef}
+            className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth"
+          >
+            {filteredBooks.map((book) => (
+              <div key={book.id} className="min-w-[300px] max-w-sm flex-shrink-0">
+                <BookCard book={book} />
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
 
 
@@ -421,38 +427,36 @@ const testimonials = [
       </section>
 
       {/* Testimonials Section */}
-<section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
-  <div className="max-w-6xl mx-auto px-4">
-    <div className="text-center mb-16">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4">Kata Mereka</h2>
-      <p className="text-xl text-gray-400">Ulasan dari komunitas pembaca kami.</p>
-    </div>
-
-    {/* Tombol dan Slider dibungkus agar tombol tidak menindih */}
-    <div className="relative">
-      {/* Slider Testimoni */}
-      <div
-        ref={testimonialSliderRef}
-        className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth px-8"
-      >
-        {[...testimonials, ...testimonials].map((t, index) => (
-          <div
-            key={index}
-            className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl"
-          >
-            <div className="flex items-center mb-4">
-              <div>
-                <h4 className="font-semibold">{t.name}</h4>
-                <p className="text-gray-400 text-sm">{t.role}</p>
-              </div>
-            </div>
-            <p className="text-gray-300 italic">&ldquo;{t.quote}&rdquo;</p>
+      <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Kata Mereka</h2>
+            <p className="text-xl text-gray-400">Ulasan dari komunitas pembaca kami.</p>
           </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
+
+          <div className="relative">
+            <div
+              ref={testimonialSliderRef}
+              className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth px-8"
+            >
+              {[...testimonials, ...testimonials].map((t, index) => (
+                <div
+                  key={index}
+                  className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl"
+                >
+                  <div className="flex items-center mb-4">
+                    <div>
+                      <h4 className="font-semibold">{t.name}</h4>
+                      <p className="text-gray-400 text-sm">{t.role}</p>
+                    </div>
+                  </div>
+                  <p className="text-gray-300 italic">&ldquo;{t.quote}&rdquo;</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[#8E44AD] to-[#A569BD]">
