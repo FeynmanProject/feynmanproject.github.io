@@ -124,7 +124,7 @@ export default function Home() {
     if (!container) return;
 
     let scrollPos = 0;
-    const speed = 1.5;
+    const speed = 2;
     const animationFrameIdRef = { current: 0 };
 
     const scroll = () => {
@@ -358,7 +358,7 @@ export default function Home() {
             key={index}
             onClick={() => scrollToIndex(index)} // ← tambahkan penggunaan index
             className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
-              index === currentIndex ? 'bg-[#111111]' : 'bg-[#333333] hover:bg-[#444444]'
+              index === currentIndex ? 'bg-white' : 'bg-[#111111] hover:bg-[#222222]'
             }`}
           />
         ))}
