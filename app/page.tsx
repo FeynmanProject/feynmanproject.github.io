@@ -7,19 +7,20 @@ import Image from 'next/image';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const testimonialSliderRef = useRef<HTMLDivElement>(null);
+  const testimonialSliderRef = useRef<HTMLDivElement | null>(null);
 
-  const scrollLeft = (ref: React.RefObject<HTMLDivElement>) => {
-    if (ref.current) {
-      ref.current.scrollBy({ left: -800, behavior: 'smooth' });
-    }
-  };
+const scrollLeft = (ref: React.RefObject<HTMLDivElement | null>) => {
+  if (ref.current) {
+    ref.current.scrollBy({ left: -800, behavior: 'smooth' });
+  }
+};
 
-  const scrollRight = (ref: React.RefObject<HTMLDivElement>) => {
-    if (ref.current) {
-      ref.current.scrollBy({ left: 800, behavior: 'smooth' });
-    }
-  };
+const scrollRight = (ref: React.RefObject<HTMLDivElement | null>) => {
+  if (ref.current) {
+    ref.current.scrollBy({ left: 800, behavior: 'smooth' });
+  }
+};
+
 
   const testimonials = [
     {
