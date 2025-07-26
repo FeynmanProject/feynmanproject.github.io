@@ -2,34 +2,48 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const testimonialSliderRef = useRef<HTMLDivElement | null>(null);
-  
-  const addFadeAnimation = (ref: React.RefObject<HTMLDivElement | null>) => {
-    if (ref.current) {
-      ref.current.classList.remove('animate-fade-slide'); // reset animasi dulu
-      void ref.current.offsetWidth; // force reflow
-      ref.current.classList.add('animate-fade-slide');
-    }
-  };
-  
-const scrollLeft = (ref: React.RefObject<HTMLDivElement | null>) => {
-  if (ref.current) {
-    ref.current.scrollBy({ left: -800, behavior: 'smooth' });
-    addFadeAnimation(ref); // tambahkan animasi
-  }
-};
 
-const scrollRight = (ref: React.RefObject<HTMLDivElement | null>) => {
-  if (ref.current) {
-    ref.current.scrollBy({ left: 800, behavior: 'smooth' });
-    addFadeAnimation(ref); // tambahkan animasi
-  }
-};
+  // ✅ Autoplay testimonial section
+  useEffect(() => {
+    const container = testimonialSliderRef.current;
+    if (!container) return;
+
+    let scrollPos = 0;
+    const speed = 1.5;
+    const animationFrameIdRef = { current: 0 };
+
+    const scroll = () => {
+      scrollPos += speed;
+      if (scrollPos >= container.scrollWidth / 2) {
+        scrollPos = 0;
+      }
+
+      container.scrollTo({ left: scrollPos, behavior: 'auto' });
+      animationFrameIdRef.current = requestAnimationFrame(scroll);
+    };
+
+    animationFrameIdRef.current = requestAnimationFrame(scroll);
+
+    const handleMouseEnter = () => cancelAnimationFrame(animationFrameIdRef.current);
+    const handleMouseLeave = () => {
+      animationFrameIdRef.current = requestAnimationFrame(scroll);
+    };
+
+    container.addEventListener('mouseenter', handleMouseEnter);
+    container.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      cancelAnimationFrame(animationFrameIdRef.current);
+      container.removeEventListener('mouseenter', handleMouseEnter);
+      container.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
 
 
   const testimonials = [
@@ -272,48 +286,37 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Kata Mereka</h2>
-            <p className="text-xl text-gray-400">Ulasan dari pemirsa video kami.</p>
-          </div>
-          <div className="relative">
-            <button
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
-              onClick={() => scrollLeft(testimonialSliderRef)}
-            >
-              <i className="ri-arrow-left-line text-xl"></i>
-            </button>
-            <button
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
-              onClick={() => scrollRight(testimonialSliderRef)}
-            >
-              <i className="ri-arrow-right-line text-xl"></i>
-            </button>
-            <div
-              ref={testimonialSliderRef}
-              className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth px-8"
-            >
-              {testimonials.map((t, index) => (
-                <div
-                  key={index}
-                  className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl"
-                >
-                  <div className="flex items-center mb-4">
-                    <div>
-                      <h4 className="font-semibold">{t.name}</h4>
-                      <p className="text-gray-400 text-sm">{t.role}</p>
-                    </div>
-                  </div>
-                  <p className="text-gray-300 italic">&ldquo;{t.quote}&rdquo;</p>
-                </div>
-              ))}
+{/* Testimonials Section */}
+<section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4">Kata Mereka</h2>
+      <p className="text-xl text-gray-400">Ulasan dari pemirsa video kami.</p>
+    </div>
+    <div className="relative">
+      <div
+        ref={testimonialSliderRef}
+        className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth px-8"
+      >
+        {[...testimonials, ...testimonials].map((t, index) => (
+          <div
+            key={index}
+            className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl"
+          >
+            <div className="flex items-center mb-4">
+              <div>
+                <h4 className="font-semibold">{t.name}</h4>
+                <p className="text-gray-400 text-sm">{t.role}</p>
+              </div>
             </div>
+            <p className="text-gray-300 italic">&ldquo;{t.quote}&rdquo;</p>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
       
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[#8E44AD] to-[#A569BD]">
