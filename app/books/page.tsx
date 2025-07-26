@@ -92,7 +92,7 @@ useEffect(() => {
       id: 3,
       title: "Algoritma dan Pemrograman",
       author: "Abdul Wahhab, Albert Wijaya",
-      description: "Menyusun algoritma dengan alur logika bersyarat dan berulang serta menggunakan array, vektor, matriks dan fungsi untuk menyelesaikan masalah saintifik.",
+      description: "Menyusun algoritma dengan alur logika bersyarat dan berulang serta menggunakan array, vektor, matriks, dan fungsi secara efisien untuk menyelesaikan masalah saintifik kompleks.",
       price: "Rp 60.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/8e187fa56beec5354edb3df4bb22a2f6.png",
       category: "ALPROG",
