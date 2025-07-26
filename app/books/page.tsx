@@ -20,18 +20,18 @@ export default function Books() {
     }
   };
   
-const scrollLeft = (el: HTMLDivElement | null) => {
-  if (el) {
-    el.scrollBy({ left: -800, behavior: 'smooth' });
-  }
-};
+  // ✅ Fungsi scrollLeft dan scrollRight khusus untuk bookSlider
+  const scrollLeft = () => {
+    if (bookSliderRef.current) {
+      bookSliderRef.current.scrollBy({ left: -800, behavior: 'smooth' });
+    }
+  };
 
-const scrollRight = (el: HTMLDivElement | null) => {
-  if (el) {
-    el.scrollBy({ left: 800, behavior: 'smooth' });
-  }
-};
-
+  const scrollRight = () => {
+    if (bookSliderRef.current) {
+      bookSliderRef.current.scrollBy({ left: 800, behavior: 'smooth' });
+    }
+  };
 
 
   // ✅ Tambahkan useEffect untuk autoplay testimonial
