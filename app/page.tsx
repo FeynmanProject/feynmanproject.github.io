@@ -16,42 +16,42 @@ interface ClassData {
 const classesData: ClassData[] = [
   {
     id: '1',
-    title: 'Kalkulus 1',
+    title: '  Kalkulus 1',
     displayName: 'Class Of Calculus 1',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/d2561da9ec1202b39f016196e2801322.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample1'
   },
   {
     id: '2',
-    title: 'Logika',
+    title: '   Logika',
     displayName: 'Class Of Logics',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/79815af43fe7c1311b7e1b6a14827e61.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample2'
   },
   {
     id: '3',
-    title: 'ALE',
+    title: '    ALE',
     displayName: 'Aljabar Linear Elementer',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/83b88160e918a6ae3c82fa58837973db.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample3'
   },
   {
     id: '4',
-    title: 'Kalkulus 3',
+    title: '  Kalkulus 3',
     displayName: 'Class Of Calculus 3',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/78627b70bc245649255a4f947f0e3846.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample4'
   },
   {
     id: '5',
-    title: 'Kalkulus 2',
+    title: ' Kalkulus 2',
     displayName: 'Class Of Calculus 2',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b00731e90631af26bff4c5fee9b79878.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
   },
   {
     id: '6',
-    title: 'PDB',
+    title: '   PDB',
     displayName: 'Persamaan Diferensial Biasa',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b00731e90631af26bff4c5fee9b79878.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
@@ -65,14 +65,14 @@ const classesData: ClassData[] = [
   },
   {
     id: '8',
-    title: 'ALIN',
+    title: '   ALIN',
     displayName: 'Aljabar Linear',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b00731e90631af26bff4c5fee9b79878.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
   },
   {
     id: '9',
-    title: 'Analisis 1',
+    title: '  Analisis 1',
     displayName: 'Analisis Riil',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b00731e90631af26bff4c5fee9b79878.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample6'
