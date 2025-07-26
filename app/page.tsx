@@ -364,12 +364,6 @@ export default function Home() {
         ))}
         </div>
       </div>
-    
-    <div className="text-center mt-12">
-      <button className="bg-transparent border-2 border-[#8E44AD] text-[#8E44AD] hover:bg-[#8E44AD] hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 cursor-pointer whitespace-nowrap">
-        See All Classes
-      </button>
-    </div>
   </div>
 </section>
 
