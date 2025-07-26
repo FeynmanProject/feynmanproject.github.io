@@ -281,7 +281,7 @@ export default function Home() {
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         <div className="flex space-x-6 pb-4">
-          {classesData.map((classItem, index) => (
+          {classesData.map((classItem) => (
             <div
               key={classItem.id}
               className="flex-shrink-0 w-96 bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 transform hover:scale-105"
