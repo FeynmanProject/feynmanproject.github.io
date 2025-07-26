@@ -44,13 +44,34 @@ const classesData: ClassData[] = [
   },
   {
     id: '5',
-    title: 'APPLIED STATISTICS',
+    title: 'INTRODUCTION STATISTICS',
     displayName: 'Applied Statistics',
     thumbnail: 'https://readdy.ai/api/search-image?query=Statistics%20teacher%20presenting%20data%20analysis%20on%20modern%20displays%2C%20clean%20professional%20classroom%2C%20educational%20technology%2C%20bright%20academic%20environment%2C%20minimalist%20contemporary%20design&width=400&height=240&seq=stat1&orientation=landscape',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
   },
   {
     id: '6',
+    title: 'APPLIED STATISTICS 1',
+    displayName: 'Applied Statistics',
+    thumbnail: 'https://readdy.ai/api/search-image?query=Statistics%20teacher%20presenting%20data%20analysis%20on%20modern%20displays%2C%20clean%20professional%20classroom%2C%20educational%20technology%2C%20bright%20academic%20environment%2C%20minimalist%20contemporary%20design&width=400&height=240&seq=stat1&orientation=landscape',
+    youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
+  },
+  {
+    id: '7',
+    title: 'APPLIED STATISTICS 2',
+    displayName: 'Applied Statistics',
+    thumbnail: 'https://readdy.ai/api/search-image?query=Statistics%20teacher%20presenting%20data%20analysis%20on%20modern%20displays%2C%20clean%20professional%20classroom%2C%20educational%20technology%2C%20bright%20academic%20environment%2C%20minimalist%20contemporary%20design&width=400&height=240&seq=stat1&orientation=landscape',
+    youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
+  },
+  {
+    id: '8',
+    title: 'APPLIED STATISTICS 3',
+    displayName: 'Applied Statistics',
+    thumbnail: 'https://readdy.ai/api/search-image?query=Statistics%20teacher%20presenting%20data%20analysis%20on%20modern%20displays%2C%20clean%20professional%20classroom%2C%20educational%20technology%2C%20bright%20academic%20environment%2C%20minimalist%20contemporary%20design&width=400&height=240&seq=stat1&orientation=landscape',
+    youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
+  },
+  {
+    id: '9',
     title: 'MOLECULAR BIOLOGY',
     displayName: 'Molecular Biology',
     thumbnail: 'https://readdy.ai/api/search-image?query=Biology%20professor%20explaining%20molecular%20structures%20in%20modern%20laboratory%2C%20clean%20scientific%20environment%2C%20professional%20educational%20setting%2C%20bright%20clean%20background%2C%20academic%20atmosphere&width=400&height=240&seq=bio1&orientation=landscape',
