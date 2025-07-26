@@ -5,33 +5,40 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
 import { useRef } from 'react';
+import { useEffect } from 'react';
 
 export default function Books() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const bookSliderRef = useRef<HTMLDivElement>(null);
   const testimonialSliderRef = useRef<HTMLDivElement>(null);
 
-  const addFadeAnimation = (ref: React.RefObject<HTMLDivElement | null>) => {
-    if (ref.current) {
-      ref.current.classList.remove('animate-fade-slide'); // reset animasi dulu
-      void ref.current.offsetWidth; // force reflow
-      ref.current.classList.add('animate-fade-slide');
-    }
-  };
+  // ✅ Tambahkan useEffect untuk autoplay testimonial
+  useEffect(() => {
+    const container = testimonialSliderRef.current;
+    if (!container) return;
 
-  const scrollLeft = (ref: React.RefObject<HTMLDivElement | null>) => {
-    if (ref.current) {
-      ref.current.scrollBy({ left: -800, behavior: 'smooth' });
-      addFadeAnimation(ref); // tambahkan animasi
-    }
-  };
+    let scrollPos = 0;
+    const speed = 0.5;
+    let animationFrameId: number;
 
-  const scrollRight = (ref: React.RefObject<HTMLDivElement | null>) => {
-    if (ref.current) {
-      ref.current.scrollBy({ left: 800, behavior: 'smooth' });
-      addFadeAnimation(ref); // tambahkan animasi
-    }
-  };
+    const scroll = () => {
+      scrollPos += speed;
+      if (scrollPos >= container.scrollWidth / 2) {
+        scrollPos = 0;
+      }
+
+      container.scrollTo({
+        left: scrollPos,
+        behavior: 'auto'
+      });
+
+      animationFrameId = requestAnimationFrame(scroll);
+    };
+
+    scroll();
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, []);
 
   const books = [
     {
@@ -433,7 +440,7 @@ const testimonials = [
         ref={testimonialSliderRef}
         className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth px-8"
       >
-        {testimonials.map((t, index) => (
+        {[...testimonials, ...testimonials].map((t, index) => (
           <div
             key={index}
             className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl"
