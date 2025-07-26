@@ -12,6 +12,14 @@ export default function Books() {
   const bookSliderRef = useRef<HTMLDivElement>(null);
   const testimonialSliderRef = useRef<HTMLDivElement>(null);
 
+  const addFadeAnimation = (ref: React.RefObject<HTMLDivElement | null>) => {
+    if (ref.current) {
+      ref.current.classList.remove('animate-fade-slide'); // reset animasi dulu
+      void ref.current.offsetWidth; // force reflow
+      ref.current.classList.add('animate-fade-slide');
+    }
+  };
+  
 const scrollLeft = (ref: React.RefObject<HTMLDivElement | null>) => {
   if (ref.current) {
     ref.current.scrollBy({ left: -800, behavior: 'smooth' });
@@ -352,19 +360,6 @@ const testimonials = [
 <section className="py-20 bg-[#0D0D0D]">
   <div className="max-w-6xl mx-auto px-4 relative"> {/* Posisikan relative DI SINI */}
     
-    {/* Tombol Panah */}
-    <button
-      className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
-      onClick={() => scrollLeft(bookSliderRef)}
-    >
-      <i className="ri-arrow-left-line text-xl"></i>
-    </button>
-    <button
-      className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
-      onClick={() => scrollRight(bookSliderRef)}
-    >
-      <i className="ri-arrow-right-line text-xl"></i>
-    </button>
 
     {/* Slider Buku */}
     <div
@@ -434,20 +429,6 @@ const testimonials = [
 
     {/* Tombol dan Slider dibungkus agar tombol tidak menindih */}
     <div className="relative">
-      {/* Tombol Panah */}
-      <button
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
-        onClick={() => scrollLeft(testimonialSliderRef)}
-      >
-        <i className="ri-arrow-left-line text-xl"></i>
-      </button>
-      <button
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white rounded-full p-3 shadow-lg"
-        onClick={() => scrollRight(testimonialSliderRef)}
-      >
-        <i className="ri-arrow-right-line text-xl"></i>
-      </button>
-
       {/* Slider Testimoni */}
       <div
         ref={testimonialSliderRef}
