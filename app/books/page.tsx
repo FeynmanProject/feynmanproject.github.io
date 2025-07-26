@@ -32,7 +32,7 @@ export default function Books() {
     if (!container) return;
 
     let scrollPos = 0;
-    const speed = 0.5;
+    const speed = 1.5;
     let animationFrameId: number;
 
     const scroll = () => {
