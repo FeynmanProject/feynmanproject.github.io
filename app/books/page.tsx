@@ -188,54 +188,39 @@ const BookCard = ({ book }: { book: Book }) => (
 
 const testimonials = [
   {
-    name: "Filbert Martin",
-    role: "Teknik Informatika, Institut Teknologi Sepuluh Nopember (ITS)",
-    quote: "Suka banget sama pendekatan Feynman Project yang ngajak ngerti konsep lebih dalam. Videonya bantu nyusun ulang materi dengan cara yang runtut dan masuk akal.",
+    name: "-",
+    role: "-",
+    quote: "-",
   },
   {
-    name: "Marcus Roberts",
-    role: "High School Teacher",
-    quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
+    name: "-",
+    role: "-",
+    quote: "-",
   },
   {
-    name: "Marcus Roberts",
-    role: "High School Teacher",
-    quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
+    name: "-",
+    role: "-",
+    quote: "-",
   },
   {
-    name: "Marcus Roberts",
-    role: "High School Teacher",
-    quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
+    name: "-",
+    role: "-",
+    quote: "-",
   },
   {
-    name: "Marcus Roberts",
-    role: "High School Teacher",
-    quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
+    name: "-",
+    role: "-",
+    quote: "-",
   },
   {
-    name: "Marcus Roberts",
-    role: "High School Teacher",
-    quote: "Teaching to Learn transformed my classroom. My students are more engaged and understand concepts much deeper now.",
+    name: "-",
+    role: "-",
+    quote: "-",
   },
   {
-    name: "Rahma Wati",
-    role: "Pendidikan Matematika, Universitas Lambung Mangkurat (ULM)",
-    quote: "Belajar konsep sebelum ngajar itu penting. Video dari Feynman Project bantu banget, terutama penjelasan limit dan turunan yang sering bikin bingung.",
-  },
-  {
-    name: "Naia Saira",
-    role: "Teknik Industri, Universitas Tarumanagara (UNTAR)",
-    quote: "Belajar kalkulus dan aljabar di teknik industri kadang bikin bingung, apalagi kalau konsep dasarnya belum kuat, Feynman Project bantu banget lewat penjelasan yang runtut dan mudah dipahami.",
-  },
-  {
-    name: "Muhammad Andi Garlan",
-    role: "Teknik Sipil, Universitas Brawijaya (UB)",
-    quote: "Sebagai mahasiswa teknik yang sempat kesulitan memahami kalkulus, keberadaan buku diktat dan video dari Feynman Project sangat membantu. Materi dijelaskan dari konsep dasarnya, bukan sekadar rumus.",
-  },
-  {
-    name: "Syach Iqbal",
-    role: "Digital Business Innovation, Universitas Bina Nusantara (BINUS)",
-    quote: "Aku bukan anak murni matematika, tapi kadang butuh paham teori dasar buat ngoding. Video di Feynman Project cukup bantu, apalagi yang soal logika proposisional dan himpunan.",
+    name: "-",
+    role: "-",
+    quote: "-",
   },
 ];
 
