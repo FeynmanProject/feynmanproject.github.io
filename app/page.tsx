@@ -164,7 +164,7 @@ export default function Home() {
     {
       name: "Rachel Keisha Loviana",
       role: "Matematika, Universitas Pertahanan (UNHAN)",
-      quote: "Thanks to Feynman Project, akhirnya bisa paham konsep integral dan cara pakainya, yang sebelumnya terasa abstrak banget waktu belajar sendiri.",
+      quote: "Awalnya mikir belajar mandiri cukup, tapi makin ke sini sadar pentingnya penjelasan yang jelas dan terstruktur. Feynman Project hadir di waktu yang pas, ngebantu ngerti ulang materi dengan pendekatan yang nggak ngebosenin.",
     },
     {
       name: "Rahma Wati",
