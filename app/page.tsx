@@ -86,28 +86,30 @@ export default function Home() {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const scrollToIndex = (index: number) => {
-    if (carouselRef.current) {
-      const cardWidth = 400;
-      const gap = 24;
-      const scrollPosition = index * (cardWidth + gap);
-      carouselRef.current.scrollTo({
-        left: scrollPosition,
-        behavior: 'smooth'
-      });
-      setCurrentIndex(index);
-    }
-  };
+const maxSlides = classesData.length - 2; // hanya 7 langkah scroll
 
-  const nextSlide = useCallback(() => {
-    const nextIndex = (currentIndex + 1) % classesData.length;
-    scrollToIndex(nextIndex);
-  }, [currentIndex]);
+const scrollToIndex = (index: number) => {
+  if (carouselRef.current) {
+    const cardWidth = 400;
+    const gap = 24;
+    const scrollPosition = index * (cardWidth + gap);
+    carouselRef.current.scrollTo({
+      left: scrollPosition,
+      behavior: 'smooth'
+    });
+    setCurrentIndex(index);
+  }
+};
 
-  const prevSlide = () => {
-    const prevIndex = currentIndex === 0 ? classesData.length - 1 : currentIndex - 1;
-    scrollToIndex(prevIndex);
-  };
+const nextSlide = useCallback(() => {
+  const nextIndex = (currentIndex + 1) % maxSlides;
+  scrollToIndex(nextIndex);
+}, [currentIndex]);
+
+const prevSlide = () => {
+  const prevIndex = currentIndex === 0 ? maxSlides - 1 : currentIndex - 1;
+  scrollToIndex(prevIndex);
+};
 
   const handleMouseEnter = () => setIsAutoPlaying(false);
   const handleMouseLeave = () => setIsAutoPlaying(true);
@@ -353,10 +355,10 @@ export default function Home() {
       </div>
 
       <div className="flex justify-center mt-8 space-x-2">
-        {classesData.slice(0, classesData.length - 2).map((_, index) => (
+        {[...Array(maxSlides)].map((_, index) => (
           <button
             key={index}
-            onClick={() => scrollToIndex(index)} // ← tambahkan penggunaan index
+            onClick={() => scrollToIndex(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
               index === currentIndex ? 'bg-white' : 'bg-[#111111] hover:bg-[#222222]'
             }`}
