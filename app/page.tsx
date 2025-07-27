@@ -25,7 +25,7 @@ const classesData: ClassData[] = [
     id: '2',
     title: '   Logika',
     displayName: 'Class Of Logics',
-    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/e8ca9c666125964ac6ffb9b8ff337748.png',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/f95c8d515d663f66423ccb99be7a6d35.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample2'
   },
   {
@@ -39,7 +39,7 @@ const classesData: ClassData[] = [
     id: '4',
     title: '  Kalkulus 3',
     displayName: 'Class Of Calculus 3',
-    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/6f0929dc1f493fc21e0d992e93a6c14e.png',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/cea10d88b79b9104ce5dcb32376f60f9.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample4'
   },
   {
