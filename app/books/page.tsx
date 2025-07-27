@@ -130,12 +130,12 @@ useEffect(() => {
     },
     {
       id: 7,
-      title: "Kalkulus 2",
-      author: "-",
-      description: "-",
-      price: "Rp ****",
-      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b9b7039ee591637b7cca258c95026aa0.png",
-      category: "Kalkulus",
+      title: "Logika dan Himpunan",
+      author: "Albert Wijaya, Abdul Wahhab, Richard Gordon",
+      description: "Diktat ini membahas topik Logika Proposisi, Himpunan dan Operasinya, Predikat dan Kuantifikasi, Teknik-teknik Pembuktian Matematis.",
+      price: "Rp 60.000",
+      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c2bc88c89234b365e974c411cb35f5fd.png",
+      category: "LDH",
       buyLink: "https://forms.google.com/feynman-book-purchase-7"
     },
     {
