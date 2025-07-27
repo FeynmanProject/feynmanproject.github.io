@@ -121,44 +121,40 @@ const prevSlide = () => {
   }, [currentIndex, isAutoPlaying, nextSlide]);
 
   // ✅ Autoplay testimonial section
-useEffect(() => {
-  const container = testimonialSliderRef.current;
-  if (!container) return;
+  useEffect(() => {
+    const container = testimonialSliderRef.current;
+    if (!container) return;
 
-  let scrollPos = 0;
-  const speed = 2;
-  let animationFrameId: number;
+    let scrollPos = 0;
+    const speed = 2;
+    const animationFrameIdRef = { current: 0 };
 
-  const scroll = () => {
-    scrollPos += speed;
-    if (scrollPos >= container.scrollWidth / 2) {
-      scrollPos = 0;
-    }
+    const scroll = () => {
+      scrollPos += speed;
+      if (scrollPos >= container.scrollWidth / 2) {
+        scrollPos = 0;
+      }
 
-    container.scrollTo({ left: scrollPos, behavior: 'auto' });
-    animationFrameId = requestAnimationFrame(scroll);
-  };
+      container.scrollTo({ left: scrollPos, behavior: 'auto' });
+      animationFrameIdRef.current = requestAnimationFrame(scroll);
+    };
 
-  animationFrameId = requestAnimationFrame(scroll);
+    animationFrameIdRef.current = requestAnimationFrame(scroll);
 
-  const stopScroll = () => {
-    cancelAnimationFrame(animationFrameId);
-  };
+    const handleMouseEnter = () => cancelAnimationFrame(animationFrameIdRef.current);
+    const handleMouseLeave = () => {
+      animationFrameIdRef.current = requestAnimationFrame(scroll);
+    };
 
-  const startScroll = () => {
-    animationFrameId = requestAnimationFrame(scroll);
-  };
+    container.addEventListener('mouseenter', handleMouseEnter);
+    container.addEventListener('mouseleave', handleMouseLeave);
 
-  container.addEventListener('mouseenter', stopScroll);
-  container.addEventListener('mouseleave', startScroll);
-
-  return () => {
-    cancelAnimationFrame(animationFrameId);
-    container.removeEventListener('mouseenter', stopScroll);
-    container.removeEventListener('mouseleave', startScroll);
-  };
-}, []);
-
+    return () => {
+      cancelAnimationFrame(animationFrameIdRef.current);
+      container.removeEventListener('mouseenter', handleMouseEnter);
+      container.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
 
 
   const testimonials = [
@@ -236,9 +232,9 @@ useEffect(() => {
 
         {/* Mobile Navigation */}
         <div
-          className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+          className={md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
             isMenuOpen ? 'max-h-96 opacity-100 pb-4' : 'max-h-0 opacity-0'
-          }`}
+          }}
         >
           <div className="flex flex-col space-y-2">
             <Link href="/about" className="flex items-center space-x-2 py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
@@ -363,9 +359,9 @@ useEffect(() => {
           <button
             key={index}
             onClick={() => scrollToIndex(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
+            className={w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
               index === currentIndex ? 'bg-white' : 'bg-gray-500 hover:bg-gray-400'
-            }`}
+            }}
           />
         ))}
         </div>
@@ -476,28 +472,27 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
       </section>
 
 {/* Testimonials Section */}
-<section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A] overflow-hidden">
-  <div className="px-0">
+<section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
+  <div className="max-w-6xl mx-auto px-4">
     <div className="text-center mb-16">
       <h2 className="text-3xl md:text-4xl font-bold mb-4">Kata Mereka</h2>
       <p className="text-xl text-gray-400">Ulasan dari pemirsa video kami.</p>
     </div>
-
-    <div
-      ref={testimonialSliderRef}
-      className="relative overflow-hidden"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <div className="flex w-max animate-scroll-horizontal whitespace-nowrap gap-6">
+    <div className="relative">
+      <div
+        ref={testimonialSliderRef}
+        className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth px-8"
+      >
         {[...testimonials, ...testimonials].map((t, index) => (
           <div
             key={index}
-            className="w-[400px] md:w-[460px] min-h-[240px] bg-[#2A2A2A] p-6 rounded-2xl shadow-xl flex-shrink-0"
+            className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl"
           >
-            <div className="mb-4">
-              <h4 className="font-semibold text-white">{t.name}</h4>
-              <p className="text-gray-400 text-sm">{t.role}</p>
+            <div className="flex items-center mb-4">
+              <div>
+                <h4 className="font-semibold">{t.name}</h4>
+                <p className="text-gray-400 text-sm">{t.role}</p>
+              </div>
             </div>
             <p className="text-gray-300 italic">&ldquo;{t.quote}&rdquo;</p>
           </div>
