@@ -360,7 +360,7 @@ const prevSlide = () => {
             key={index}
             onClick={() => scrollToIndex(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
-              index === currentIndex ? 'bg-white' : 'bg-[#111111] hover:bg-[#222222]'
+              index === currentIndex ? 'bg-white' : 'bg-gray-500 hover:bg-gray-400'
             }`}
           />
         ))}
