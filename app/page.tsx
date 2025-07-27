@@ -141,10 +141,16 @@ const prevSlide = () => {
 
     animationFrameIdRef.current = requestAnimationFrame(scroll);
 
-    const handleMouseEnter = () => cancelAnimationFrame(animationFrameIdRef.current);
-    const handleMouseLeave = () => {
-      animationFrameIdRef.current = requestAnimationFrame(scroll);
-    };
+const handleMouseEnter = () => {
+  setIsAutoPlaying(false);
+  cancelAnimationFrame(animationFrameIdRef.current);
+};
+
+const handleMouseLeave = () => {
+  setIsAutoPlaying(true);
+  animationFrameIdRef.current = requestAnimationFrame(scroll);
+};
+
 
     container.addEventListener('mouseenter', handleMouseEnter);
     container.addEventListener('mouseleave', handleMouseLeave);
@@ -479,12 +485,17 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
       <p className="text-xl text-gray-400">Ulasan dari pemirsa video kami.</p>
     </div>
 
-    <div className="relative overflow-hidden">
+    <div
+      ref={testimonialSliderRef}
+      className="relative overflow-hidden"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="flex w-max animate-scroll-horizontal whitespace-nowrap gap-6">
         {[...testimonials, ...testimonials].map((t, index) => (
           <div
             key={index}
-            className="w-[300px] bg-[#2A2A2A] p-6 rounded-2xl shadow-xl flex-shrink-0"
+            className="w-[400px] md:w-[460px] bg-[#2A2A2A] p-6 rounded-2xl shadow-xl flex-shrink-0"
           >
             <div className="mb-4">
               <h4 className="font-semibold text-white">{t.name}</h4>
