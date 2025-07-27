@@ -31,7 +31,7 @@ const classesData: ClassData[] = [
   {
     id: '3',
     title: 'Aljabar linear elementer',
-    displayName: 'Class Of ALE',
+    displayName: 'Class Of Linear Algebra 1',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/9661290a2efbe8fce754a0c96664f2e8.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample3'
   },
