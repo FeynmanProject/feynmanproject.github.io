@@ -18,63 +18,63 @@ const classesData: ClassData[] = [
     id: '1',
     title: 'Kalkulus 1',
     displayName: 'Class Of Calculus 1',
-    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/d2561da9ec1202b39f016196e2801322.png',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/a43973e7bae870e60689d4c381c1895d.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample1'
   },
   {
     id: '2',
     title: '   Logika',
     displayName: 'Class Of Logics',
-    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/79815af43fe7c1311b7e1b6a14827e61.png',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/e8ca9c666125964ac6ffb9b8ff337748.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample2'
   },
   {
     id: '3',
-    title: 'Aljabar linear elementer',
+    title: 'Class Of ALE',
     displayName: 'ALE',
-    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/83b88160e918a6ae3c82fa58837973db.png',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/9661290a2efbe8fce754a0c96664f2e8.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample3'
   },
   {
     id: '4',
     title: '  Kalkulus 3',
     displayName: 'Class Of Calculus 3',
-    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/78627b70bc245649255a4f947f0e3846.png',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/6f0929dc1f493fc21e0d992e93a6c14e.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample4'
   },
   {
     id: '5',
     title: ' Kalkulus 2',
-    displayName: 'Class Of Calculus 2',
-    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b00731e90631af26bff4c5fee9b79878.png',
+    displayName: 'Coming Soon',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c8953865b10527e8a7ca5c46c3df0eee.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
   },
   {
     id: '6',
     title: 'PDB',
-    displayName: 'Persamaan Diferensial Biasa',
-    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b00731e90631af26bff4c5fee9b79878.png',
+    displayName: 'Coming Soon',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c8953865b10527e8a7ca5c46c3df0eee.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
   },
   {
     id: '7',
     title: 'Matdis',
-    displayName: 'Matematika Diskrit',
-    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b00731e90631af26bff4c5fee9b79878.png',
+    displayName: 'Coming Soon',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c8953865b10527e8a7ca5c46c3df0eee.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
   },
   {
     id: '8',
     title: 'Aljabar Linear',
-    displayName: 'ALIN',
-    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b00731e90631af26bff4c5fee9b79878.png',
+    displayName: 'Coming Soon',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c8953865b10527e8a7ca5c46c3df0eee.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
   },
   {
     id: '9',
     title: '  Analisis 1',
-    displayName: 'Analisis Riil',
-    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b00731e90631af26bff4c5fee9b79878.png',
+    displayName: 'Coming Soon',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c8953865b10527e8a7ca5c46c3df0eee.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample6'
   }
 ];
@@ -124,7 +124,7 @@ export default function Home() {
     if (!container) return;
 
     let scrollPos = 0;
-    const speed = 2;
+    const speed = 3.5;
     const animationFrameIdRef = { current: 0 };
 
     const scroll = () => {
