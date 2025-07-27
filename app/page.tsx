@@ -478,11 +478,9 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
       <h2 className="text-3xl md:text-4xl font-bold mb-4">Kata Mereka</h2>
       <p className="text-xl text-gray-400">Ulasan dari pemirsa video kami.</p>
     </div>
+
     <div className="relative overflow-hidden">
-      <div
-        ref={testimonialSliderRef}
-        className="flex w-max animate-scroll-horizontal gap-6 pl-[100vw]"
-      >
+      <div className="flex w-max animate-scroll-horizontal whitespace-nowrap gap-6">
         {[...testimonials, ...testimonials].map((t, index) => (
           <div
             key={index}
@@ -499,9 +497,6 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
     </div>
   </div>
 </section>
-
-
-
       
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[#8E44AD] to-[#A569BD]">
