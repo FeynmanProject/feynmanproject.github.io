@@ -121,46 +121,44 @@ const prevSlide = () => {
   }, [currentIndex, isAutoPlaying, nextSlide]);
 
   // ✅ Autoplay testimonial section
-  useEffect(() => {
-    const container = testimonialSliderRef.current;
-    if (!container) return;
+useEffect(() => {
+  const container = testimonialSliderRef.current;
+  if (!container) return;
 
-    let scrollPos = 0;
-    const speed = 2;
-    const animationFrameIdRef = { current: 0 };
+  let scrollPos = 0;
+  const speed = 2;
+  let animationFrameId: number;
 
-    const scroll = () => {
-      scrollPos += speed;
-      if (scrollPos >= container.scrollWidth / 2) {
-        scrollPos = 0;
-      }
+  const scroll = () => {
+    scrollPos += speed;
+    if (scrollPos >= container.scrollWidth / 2) {
+      scrollPos = 0;
+    }
 
-      container.scrollTo({ left: scrollPos, behavior: 'auto' });
-      animationFrameIdRef.current = requestAnimationFrame(scroll);
-    };
+    container.scrollTo({ left: scrollPos, behavior: 'auto' });
+    animationFrameId = requestAnimationFrame(scroll);
+  };
 
-    animationFrameIdRef.current = requestAnimationFrame(scroll);
+  animationFrameId = requestAnimationFrame(scroll);
 
-const handleMouseEnter = () => {
-  setIsAutoPlaying(false);
-  cancelAnimationFrame(animationFrameIdRef.current);
-};
+  const stopScroll = () => {
+    cancelAnimationFrame(animationFrameId);
+  };
 
-const handleMouseLeave = () => {
-  setIsAutoPlaying(true);
-  animationFrameIdRef.current = requestAnimationFrame(scroll);
-};
+  const startScroll = () => {
+    animationFrameId = requestAnimationFrame(scroll);
+  };
 
+  container.addEventListener('mouseenter', stopScroll);
+  container.addEventListener('mouseleave', startScroll);
 
-    container.addEventListener('mouseenter', handleMouseEnter);
-    container.addEventListener('mouseleave', handleMouseLeave);
+  return () => {
+    cancelAnimationFrame(animationFrameId);
+    container.removeEventListener('mouseenter', stopScroll);
+    container.removeEventListener('mouseleave', startScroll);
+  };
+}, []);
 
-    return () => {
-      cancelAnimationFrame(animationFrameIdRef.current);
-      container.removeEventListener('mouseenter', handleMouseEnter);
-      container.removeEventListener('mouseleave', handleMouseLeave);
-    };
-  }, []);
 
 
   const testimonials = [
@@ -495,7 +493,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
         {[...testimonials, ...testimonials].map((t, index) => (
           <div
             key={index}
-            className="w-[400px] md:w-[460px] bg-[#2A2A2A] p-6 rounded-2xl shadow-xl flex-shrink-0"
+            className="w-[400px] md:w-[460px] min-h-[240px] bg-[#2A2A2A] p-6 rounded-2xl shadow-xl flex-shrink-0"
           >
             <div className="mb-4">
               <h4 className="font-semibold text-white">{t.name}</h4>
