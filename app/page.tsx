@@ -32,7 +32,7 @@ const classesData: ClassData[] = [
     id: '3',
     title: 'Aljabar linear elementer',
     displayName: 'Class Of Linear Algebra 1',
-    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/273932c7bf8278c1f0839f733e39934f.png',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/bd15f59f9d400fb76aac2c53153f5bcb.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample3'
   },
   {
@@ -53,14 +53,14 @@ const classesData: ClassData[] = [
     id: '6',
     title: 'PDB',
     displayName: 'Coming Soon',
-    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c8953865b10527e8a7ca5c46c3df0eee.png',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/304b64f5a0cd7cbf33560d8302c564b9.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
   },
   {
     id: '7',
     title: 'Aljabar linear',
     displayName: 'Coming Soon',
-    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c8953865b10527e8a7ca5c46c3df0eee.png',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/304b64f5a0cd7cbf33560d8302c564b9.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
   },
   {
@@ -74,7 +74,7 @@ const classesData: ClassData[] = [
     id: '9',
     title: 'METODE NUMERIK',
     displayName: 'Coming Soon',
-    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c8953865b10527e8a7ca5c46c3df0eee.png',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/304b64f5a0cd7cbf33560d8302c564b9.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample6'
   }
 ];
