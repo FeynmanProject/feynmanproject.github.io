@@ -23,7 +23,7 @@ const classesData: ClassData[] = [
   },
   {
     id: '2',
-    title: '   Logika',
+    title: 'Logika dan himpunan',
     displayName: 'Class Of Logics',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/3e7b479d231acc835815185971300c1e.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample2'
