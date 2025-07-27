@@ -86,7 +86,7 @@ useEffect(() => {
       price: "Rp 50.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/3df264044ff8ef342a62e169384b991a.png",
       category: "ALE",
-      buyLink: "https://forms.google.com/feynman-book-purchase-2"
+      buyLink: "https://feynmanbookstore.vercel.app/"
     },
     {
       id: 3,
@@ -96,7 +96,7 @@ useEffect(() => {
       price: "Rp 60.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/8e187fa56beec5354edb3df4bb22a2f6.png",
       category: "ALPROG",
-      buyLink: "https://forms.google.com/feynman-book-purchase-3"
+      buyLink: "https://feynmanbookstore.vercel.app/"
     },
     {
       id: 4,
@@ -106,7 +106,7 @@ useEffect(() => {
       price: "Rp 60.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c606d4d1341412a98dd748c3be25ef70.png",
       category: "PDB",
-      buyLink: "https://forms.google.com/feynman-book-purchase-4"
+      buyLink: "https://feynmanbookstore.vercel.app/"
     },
     {
       id: 5,
@@ -116,7 +116,7 @@ useEffect(() => {
       price: "Rp. 65.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/e7c0cb832afcd55576b125f8212959ec.png",
       category: "Kalkulus",
-      buyLink: "https://forms.google.com/feynman-book-purchase-5"
+      buyLink: "https://feynmanbookstore.vercel.app/"
     },
     {
       id: 6,
@@ -126,7 +126,7 @@ useEffect(() => {
       price: "Rp 50.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/a9a31e10b72d5850e0662f4260044bd9.png",
       category: "MatDas",
-      buyLink: "https://forms.google.com/feynman-book-purchase-6"
+      buyLink: "https://feynmanbookstore.vercel.app/"
     },
     {
       id: 7,
@@ -136,7 +136,7 @@ useEffect(() => {
       price: "Rp 60.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c2bc88c89234b365e974c411cb35f5fd.png",
       category: "LDH",
-      buyLink: "https://forms.google.com/feynman-book-purchase-7"
+      buyLink: "https://feynmanbookstore.vercel.app/"
     },
     {
       id: 8,
@@ -146,7 +146,7 @@ useEffect(() => {
       price: "Rp *****",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b9b7039ee591637b7cca258c95026aa0.png",
       category: "Matdis",
-      buyLink: "https://forms.google.com/feynman-book-purchase-8"
+      buyLink: "https://feynmanbookstore.vercel.app/"
     },
     {
       id: 9,
@@ -156,7 +156,7 @@ useEffect(() => {
       price: "Rp ****",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b9b7039ee591637b7cca258c95026aa0.png",
       category: "Analisis Riil",
-      buyLink: "https://forms.google.com/feynman-book-purchase-7"    
+      buyLink: "https://feynmanbookstore.vercel.app/"    
     },
     {
       id: 10,
@@ -166,7 +166,7 @@ useEffect(() => {
       price: "Rp *****",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b9b7039ee591637b7cca258c95026aa0.png",
       category: "Geolit",
-      buyLink: "https://forms.google.com/feynman-book-purchase-9"
+      buyLink: "https://feynmanbookstore.vercel.app/"
     }
   ];
   
