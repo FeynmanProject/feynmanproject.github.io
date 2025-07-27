@@ -232,10 +232,10 @@ const prevSlide = () => {
 
         {/* Mobile Navigation */}
         <div
-          className={md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+          className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
             isMenuOpen ? 'max-h-96 opacity-100 pb-4' : 'max-h-0 opacity-0'
-          }}
-        >
+          }`}
+        >      
           <div className="flex flex-col space-y-2">
             <Link href="/about" className="flex items-center space-x-2 py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
               <i className="ri-information-line"></i>
