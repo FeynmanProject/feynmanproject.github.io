@@ -126,7 +126,7 @@ const prevSlide = () => {
     if (!container) return;
 
     let scrollPos = 0;
-    const speed = 3.5;
+    const speed = 2;
     const animationFrameIdRef = { current: 0 };
 
     const scroll = () => {
