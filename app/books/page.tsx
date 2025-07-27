@@ -132,7 +132,7 @@ useEffect(() => {
       id: 7,
       title: "Logika dan Himpunan",
       author: "Albert Wijaya, Abdul Wahhab, Richard Gordon",
-      description: "Diktat ini membahas topik Logika Proposisi, Himpunan dan Operasinya, Predikat dan Kuantifikasi, Teknik-teknik Pembuktian Matematis.",
+      description: "Membahas topik logika proposisi, himpunan dan operasinya, predikat dan kuantifikasi, serta teknik-teknik pembuktian matematis secara runtut, logis, dan menyeluruh sebagai fondasi penting dalam memahami struktur berpikir matematika formal.",
       price: "Rp 60.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c2bc88c89234b365e974c411cb35f5fd.png",
       category: "LDH",
