@@ -25,28 +25,28 @@ const classesData: ClassData[] = [
     id: '2',
     title: '   Logika',
     displayName: 'Class Of Logics',
-    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/f95c8d515d663f66423ccb99be7a6d35.png',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/3e7b479d231acc835815185971300c1e.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample2'
   },
   {
     id: '3',
     title: 'Aljabar linear elementer',
     displayName: 'Class Of Linear Algebra 1',
-    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/9661290a2efbe8fce754a0c96664f2e8.png',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/273932c7bf8278c1f0839f733e39934f.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample3'
   },
   {
     id: '4',
     title: '  Kalkulus 3',
     displayName: 'Class Of Calculus 3',
-    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/cea10d88b79b9104ce5dcb32376f60f9.png',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c3fa38d5de461cc4981a1f4c7c4ac62c.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample4'
   },
   {
     id: '5',
     title: ' Kalkulus 2',
     displayName: 'Coming Soon',
-    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c8953865b10527e8a7ca5c46c3df0eee.png',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b1bb2aeefbd21b73a230330888a23751.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
   },
   {
@@ -72,7 +72,7 @@ const classesData: ClassData[] = [
   },
   {
     id: '9',
-    title: 'Analisis riil',
+    title: 'METODE NUMERIK',
     displayName: 'Coming Soon',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c8953865b10527e8a7ca5c46c3df0eee.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample6'
