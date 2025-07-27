@@ -76,7 +76,7 @@ useEffect(() => {
       price: "Rp 50.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/09df2910d57052d7c1994f7e5a00ba22.png",
       category: "Kalkulus",
-      buyLink: "https://forms.google.com/feynman-book-purchase-1"
+      buyLink: "https://feynmanbookstore.vercel.app/"
     },
     {
       id: 2,
