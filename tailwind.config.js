@@ -10,7 +10,7 @@ module.exports = {
         },
       },
       animation: {
-        'scroll-horizontal': 'scroll-horizontal 40s linear infinite',
+        'scroll-horizontal': 'scroll-horizontal 20s linear infinite',
       },
     },
   },
