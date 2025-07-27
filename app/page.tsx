@@ -481,26 +481,31 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
     <div className="relative">
       <div
         ref={testimonialSliderRef}
-        className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth"
+        className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth px-6"
       >
+        {/* Spacer kiri */}
+        <div className="flex-shrink-0 w-1" />
+
         {[...testimonials, ...testimonials].map((t, index) => (
           <div
             key={index}
-            className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl mx-4"
+            className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl"
           >
-            <div className="flex items-center mb-4">
-              <div>
-                <h4 className="font-semibold">{t.name}</h4>
-                <p className="text-gray-400 text-sm">{t.role}</p>
-              </div>
+            <div className="mb-4">
+              <h4 className="font-semibold text-white">{t.name}</h4>
+              <p className="text-gray-400 text-sm">{t.role}</p>
             </div>
             <p className="text-gray-300 italic">&ldquo;{t.quote}&rdquo;</p>
           </div>
         ))}
+
+        {/* Spacer kanan */}
+        <div className="flex-shrink-0 w-1" />
       </div>
     </div>
   </div>
 </section>
+
 
       
       {/* CTA Section */}
