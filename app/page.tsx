@@ -58,14 +58,21 @@ const classesData: ClassData[] = [
   },
   {
     id: '7',
-    title: 'Matdis',
+    title: 'Aljabar linear',
     displayName: 'Coming Soon',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c8953865b10527e8a7ca5c46c3df0eee.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
   },
   {
     id: '8',
-    title: 'Aljabar Linear',
+    title: 'Matdis',
+    displayName: 'Coming Soon',
+    thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c8953865b10527e8a7ca5c46c3df0eee.png',
+    youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
+  },
+  {
+    id: '9',
+    title: 'Analisis riil',
     displayName: 'Coming Soon',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c8953865b10527e8a7ca5c46c3df0eee.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample6'
