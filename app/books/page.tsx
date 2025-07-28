@@ -208,8 +208,6 @@ const BookCard = ({ book }: { book: Book }) => (
         <span className="text-2xl font-bold text-[#8E44AD]">{book.price}</span>
         <a
           href={book.buyLink}
-          target="_blank"
-          rel="noopener noreferrer"
           className="bg-[#8E44AD] hover:bg-[#7D3C98] text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap"
         >
           Beli Sekarang
