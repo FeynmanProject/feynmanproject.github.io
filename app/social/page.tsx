@@ -275,7 +275,7 @@ export default function Social() {
                   <i className="ri-bank-line text-[#8E44AD] mr-2"></i>
                   <span className="text-sm text-gray-400">Seabank</span>
                 </div>
-                <h3 className="font-semibold mb-2">Dukung Feynman Project Lewat Donasi Anda</h3>
+                <h3 className="font-semibold mb-2">Dukung Feynman Project Lewat Donasi</h3>
                 <p className="text-gray-400 text-sm">Bantu kami terus berkarya lewat edukasi terbuka dan konten yang bermanfaat</p>
               </div>
             </div>
