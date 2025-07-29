@@ -233,10 +233,10 @@ export default function Social() {
               <div className="p-4">
                 <div className="flex items-center mb-2">
                   <i className="ri-instagram-line text-[#8E44AD] mr-2"></i>
-                  <span className="text-sm text-gray-400">Instagram • 2 days ago</span>
+                  <span className="text-sm text-gray-400">Inspiration</span>
                 </div>
-                <h3 className="font-semibold mb-2">The 4 Steps of Feynman Technique</h3>
-                <p className="text-gray-400 text-sm">Master any concept with this simple yet powerful learning method...</p>
+                <h3 className="font-semibold mb-2">RIP Richard Feynman (1918–1988)</h3>
+                <p className="text-gray-400 text-sm">Sosok yang mengajarkan kita bahwa belajar dimulai dari rasa ingin tahu. Terima kasih, Feynman.</p>
               </div>
             </div>
             
@@ -253,10 +253,10 @@ export default function Social() {
               <div className="p-4">
                 <div className="flex items-center mb-2">
                   <i className="ri-youtube-line text-[#8E44AD] mr-2"></i>
-                  <span className="text-sm text-gray-400">Youtube • 5 days ago</span>
+                  <span className="text-sm text-gray-400">Our Website</span>
                 </div>
-                <h3 className="font-semibold mb-2">Quantum Physics in 5 Minutes</h3>
-                <p className="text-gray-400 text-sm">Breaking down quantum mechanics using everyday analogies...</p>
+                <h3 className="font-semibold mb-2">Kenali Isi Website Kami</h3>
+                <p className="text-gray-400 text-sm">Jelajahi koleksi buku, kelas, dan video pembelajaran yang disusun.</p>
               </div>
             </div>
             
@@ -275,7 +275,7 @@ export default function Social() {
                   <span className="text-sm text-gray-400">Seabank</span>
                 </div>
                 <h3 className="font-semibold mb-2">Dukung Feynman Project Lewat Donasi Anda</h3>
-                <p className="text-gray-400 text-sm">Bantu Kami Berkembang Lewat Donasi...</p>
+                <p className="text-gray-400 text-sm">Bantu kami terus berkarya lewat edukasi terbuka dan konten yang bermanfaat</p>
               </div>
             </div>
           </div>
