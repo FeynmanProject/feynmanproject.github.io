@@ -33,6 +33,10 @@ export default function About() {
                 <i className="ri-book-2-line text-lg"></i>
                 <span>Books</span>
               </Link>
+              <Link href="/social#contact" className="flex items-center space-x-1 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
+                <i className="ri-contacts-line text-lg"></i>
+                <span>Contact Us</span>
+              </Link>
               <Link href="/social" className="flex items-center space-x-1 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
                 <i className="ri-share-line text-lg"></i>
                 <span>Social Media</span>
@@ -64,6 +68,10 @@ export default function About() {
             <Link href="/books" className="flex items-center space-x-2 py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
               <i className="ri-book-2-line"></i>
               <span>Books</span>
+            </Link>
+            <Link href="/social#contact" className="flex items-center space-x-2 py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
+              <i className="ri-contacts-line"></i>
+              <span>Contact Us</span>
             </Link>
             <Link href="/social" className="flex items-center space-x-2 py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
               <i className="ri-share-line"></i>
