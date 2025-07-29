@@ -275,7 +275,7 @@ export default function Social() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20 bg-[#1A1A1A]">
+      <section id="contact" className="py-20 bg-[#1A1A1A]">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Hubungi Kami</h2>
