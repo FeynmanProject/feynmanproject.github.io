@@ -223,7 +223,7 @@ export default function Social() {
             <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl">
               <div className="relative aspect-square overflow-hidden">
                 <Image
-                  src="https://readdy.ai/api/search-image?query=Educational%20infographic%20about%20the%20Feynman%20Technique%20with%20step-by-step%20process%2C%20modern%20design%20with%20purple%20accents%2C%20clean%20typography%2C%20learning%20methodology%20visualization%2C%20professional%20educational%20content&width=400&height=400&seq=post-1&orientation=squarish"
+                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/23a55f10bef391e92a9c0239a0920414.png"
                   alt="Feynman Technique Steps"
                   fill
                   className="w-full h-full object-cover object-top"
@@ -243,7 +243,7 @@ export default function Social() {
             <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl">
               <div className="relative aspect-square overflow-hidden">
                 <Image
-                  src="https://readdy.ai/api/search-image?query=Physics%20concept%20explanation%20with%20simple%20analogies%20and%20visual%20diagrams%2C%20educational%20illustration%20style%2C%20purple%20and%20white%20color%20scheme%2C%20scientific%20learning%20made%20simple%2C%20clear%20explanatory%20graphics&width=400&height=400&seq=post-2&orientation=squarish"
+                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/65cc37aa0536b8aee2ac8c3d37391a28.png"
                   alt="Physics Made Simple"
                   fill
                   className="object-cover object-top"
@@ -263,7 +263,7 @@ export default function Social() {
             <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl">
               <div className="relative aspect-square overflow-hidden">
                 <Image
-                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/de89c6e5ad3f5ed561ecf092a6909bfb.png"
+                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/806800b6a8aac78bea560c27f6167a67.png"
                   alt="Study Tips"
                   fill
                   className="object-cover object-top"
