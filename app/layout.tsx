@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Pacifico } from "next/font/google";
 import "./globals.css";
-import Head from "next/head";
 import Script from "next/script"; // ✅ Tambahkan Script
 
 const pacifico = Pacifico({
