@@ -232,7 +232,7 @@ export default function Social() {
               </div>
               <div className="p-4">
                 <div className="flex items-center mb-2">
-                  <i className="ri-instagram-line text-[#8E44AD] mr-2"></i>
+                  <i className="ri-emotion-sad-line text-[#8E44AD] mr-2"></i>
                   <span className="text-sm text-gray-400">Inspiration</span>
                 </div>
                 <h3 className="font-semibold mb-2">RIP Richard Feynman (1918–1988)</h3>
@@ -252,7 +252,7 @@ export default function Social() {
               </div>
               <div className="p-4">
                 <div className="flex items-center mb-2">
-                  <i className="ri-youtube-line text-[#8E44AD] mr-2"></i>
+                  <i className="ri-global-line text-[#8E44AD] mr-2"></i>
                   <span className="text-sm text-gray-400">Our Website</span>
                 </div>
                 <h3 className="font-semibold mb-2">Kenali Isi Website Kami</h3>
@@ -272,6 +272,7 @@ export default function Social() {
               </div>
               <div className="p-4">
                 <div className="flex items-center mb-2">
+                  <i className="ri-bank-line text-[#8E44AD] mr-2"></i>
                   <span className="text-sm text-gray-400">Seabank</span>
                 </div>
                 <h3 className="font-semibold mb-2">Dukung Feynman Project Lewat Donasi Anda</h3>
