@@ -145,6 +145,13 @@ export default function Social() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
+              <Image 
+                src="/logo.png" // pastikan nama sesuai dan ada di /public
+                alt="Logo Feynman"
+                width={36}
+                height={36}
+                className="object-contain"
+              />
               <div className="text-2xl font-bold text-[#8E44AD] font-sans">
                 Feynman Project
               </div>
