@@ -391,7 +391,18 @@ const testimonials = [
 
 <section className="py-12 bg-[#1A1A1A]">
   <div className="max-w-6xl mx-auto px-4">
-    <div className="flex flex-wrap justify-center gap-4 mb-6">
+
+    {/* Search Bar di atas kategori */}
+    <input
+      type="text"
+      placeholder="Cari berdasarkan judul, penulis, atau kategori..."
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+      className="w-full px-6 py-3 rounded-full bg-[#0D0D0D] border border-[#8E44AD]/40 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#8E44AD] transition-all duration-300 mb-6"
+    />
+
+    {/* Kategori di bawah search */}
+    <div className="flex flex-wrap justify-center gap-4">
       {uniqueCategories.map((category) => (
         <button
           key={category}
@@ -406,17 +417,9 @@ const testimonials = [
         </button>
       ))}
     </div>
-
-    {/* Search Bar langsung di bawah kategori */}
-    <input
-      type="text"
-      placeholder="Cari berdasarkan judul, penulis, atau kategori..."
-      value={searchTerm}
-      onChange={(e) => setSearchTerm(e.target.value)}
-      className="w-full px-6 py-3 rounded-full bg-[#0D0D0D] border border-[#8E44AD]/40 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#8E44AD] transition-all duration-300"
-    />
   </div>
 </section>
+
 
       
 
