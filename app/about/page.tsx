@@ -4,10 +4,14 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+
 
 
 export default function About() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+
 
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white">
@@ -30,25 +34,49 @@ export default function About() {
             </Link>
           </div>
 
-            {/* Desktop Menu */}
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/about" className="flex items-center space-x-1 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
-                <i className="ri-information-line text-lg"></i>
-                <span>About</span>
-              </Link>
-              <Link href="/books" className="flex items-center space-x-1 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
-                <i className="ri-book-2-line text-lg"></i>
-                <span>Books</span>
-              </Link>
-              <Link href="/social#contact" className="flex items-center space-x-1 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
-                <i className="ri-contacts-line text-lg"></i>
-                <span>Contact Us</span>
-              </Link>
-              <Link href="/social" className="flex items-center space-x-1 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
-                <i className="ri-share-line text-lg"></i>
-                <span>Social Media</span>
-              </Link>
-            </div>
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center space-x-8">
+            <Link
+              href="/about"
+              className={`flex items-center space-x-1 transition-colors duration-300 cursor-pointer ${
+                pathname.startsWith('/about') ? 'text-[#8E44AD]' : 'hover:text-[#8E44AD]'
+              }`}
+            >
+              <i className="ri-information-line text-lg"></i>
+              <span>About</span>
+            </Link>
+
+            <Link
+              href="/books"
+              className={`flex items-center space-x-1 transition-colors duration-300 cursor-pointer ${
+                pathname.startsWith('/books') ? 'text-[#8E44AD]' : 'hover:text-[#8E44AD]'
+              }`}
+            >
+              <i className="ri-book-2-line text-lg"></i>
+              <span>Books</span>
+            </Link>
+
+            <Link
+              href="/social#contact"
+              className={`flex items-center space-x-1 transition-colors duration-300 cursor-pointer ${
+                pathname.startsWith('/social') ? 'text-[#8E44AD]' : 'hover:text-[#8E44AD]'
+              }`}
+            >
+              <i className="ri-contacts-line text-lg"></i>
+              <span>Contact Us</span>
+            </Link>
+
+            <Link
+              href="/social"
+              className={`flex items-center space-x-1 transition-colors duration-300 cursor-pointer ${
+                pathname.startsWith('/social') ? 'text-[#8E44AD]' : 'hover:text-[#8E44AD]'
+              }`}
+            >
+              <i className="ri-share-line text-lg"></i>
+              <span>Social Media</span>
+            </Link>
+          </div>
+
        
   
 
