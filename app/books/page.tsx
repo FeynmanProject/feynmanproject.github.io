@@ -486,7 +486,7 @@ const testimonials = [
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 
-              href="https://forms.google.com/feynman-book-purchase" 
+              href="https://feynmanbookstore.vercel.app/" 
               className="bg-white text-[#8E44AD] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap"
             >
               Beli Sekarang
