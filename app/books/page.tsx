@@ -389,40 +389,35 @@ const testimonials = [
         </div>
       </section>
 
-      {/* Category Filter */}
-      <section className="py-12 bg-[#1A1A1A]">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-4">
-            {uniqueCategories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
+<section className="py-12 bg-[#1A1A1A]">
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="flex flex-wrap justify-center gap-4 mb-6">
+      {uniqueCategories.map((category) => (
+        <button
+          key={category}
+          onClick={() => setSelectedCategory(category)}
+          className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 cursor-pointer whitespace-nowrap ${
+            selectedCategory === category
+              ? 'bg-[#8E44AD] text-white'
+              : 'bg-[#2A2A2A] text-gray-300 hover:bg-[#8E44AD]/20 hover:text-[#8E44AD]'
+          }`}
+        >
+          {category}
+        </button>
+      ))}
+    </div>
 
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 cursor-pointer whitespace-nowrap ${
-                  selectedCategory === category
-                    ? 'bg-[#8E44AD] text-white'
-                    : 'bg-[#2A2A2A] text-gray-300 hover:bg-[#8E44AD]/20 hover:text-[#8E44AD]'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
+    {/* Search Bar langsung di bawah kategori */}
+    <input
+      type="text"
+      placeholder="Cari berdasarkan judul, penulis, atau kategori..."
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+      className="w-full px-6 py-3 rounded-full bg-[#0D0D0D] border border-[#8E44AD]/40 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#8E44AD] transition-all duration-300"
+    />
+  </div>
+</section>
 
-      {/* Search Bar */}
-      <section className="bg-[#0D0D0D] py-6 px-4">
-        <div className="max-w-4xl mx-auto">
-          <input
-            type="text"
-            placeholder="Cari berdasarkan judul, penulis, atau kategori..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-6 py-3 rounded-full bg-[#1A1A1A] border border-[#8E44AD]/40 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#8E44AD] transition-all duration-300"
-          />
-        </div>
-      </section>
       
 
       {/* Book Slider */}
