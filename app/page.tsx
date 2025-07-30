@@ -6,7 +6,6 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
-
 interface ClassData {
   id: string;
   title: string;
@@ -88,8 +87,10 @@ export default function Home() {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
+  const pathname = usePathname();
+  
+
 const maxSlides = classesData.length - 2; // hanya 7 langkah scroll
-const pathname = usePathname();
 
 const scrollToIndex = (index: number) => {
   if (carouselRef.current) {
@@ -218,19 +219,42 @@ const prevSlide = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/about" className="flex items-center space-x-1 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
+            <Link
+              href="/about"
+              className={`flex items-center space-x-1 transition-colors duration-300 cursor-pointer ${
+                pathname.startsWith('/about') ? 'text-[#8E44AD]' : 'hover:text-[#8E44AD]'
+              }`}
+            >
               <i className="ri-information-line text-lg"></i>
               <span>About</span>
             </Link>
-            <Link href="/books" className="flex items-center space-x-1 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
+
+            <Link
+              href="/books"
+              className={`flex items-center space-x-1 transition-colors duration-300 cursor-pointer ${
+                pathname.startsWith('/books') ? 'text-[#8E44AD]' : 'hover:text-[#8E44AD]'
+              }`}
+            >
               <i className="ri-book-2-line text-lg"></i>
               <span>Books</span>
             </Link>
-            <Link href="/social#contact" className="flex items-center space-x-1 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
+
+            <Link
+              href="/social#contact"
+              className={`flex items-center space-x-1 transition-colors duration-300 cursor-pointer ${
+                pathname.startsWith('/social') ? 'text-[#8E44AD]' : 'hover:text-[#8E44AD]'
+              }`}
+            >
               <i className="ri-contacts-line text-lg"></i>
               <span>Contact Us</span>
             </Link>
-            <Link href="/social" className="flex items-center space-x-1 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
+
+            <Link
+              href="/social"
+              className={`flex items-center space-x-1 transition-colors duration-300 cursor-pointer ${
+                pathname.startsWith('/social') ? 'text-[#8E44AD]' : 'hover:text-[#8E44AD]'
+              }`}
+            >
               <i className="ri-share-line text-lg"></i>
               <span>Social Media</span>
             </Link>
