@@ -30,3 +30,19 @@
 .animate-fade-slide {
   animation: fadeSlide 0.4s ease-out;
 }
+
+/* 🌊 Animasi Ripple untuk efek hover pada gambar */
+@keyframes ripple {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.6);
+  }
+}
+
+.animate-ripple {
+  animation: ripple 1.2s ease-out forwards;
+}
