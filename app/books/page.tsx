@@ -173,7 +173,8 @@ useEffect(() => {
       buyLink: "https://feynmanbookstore.vercel.app/"
     }
   ];
-  
+
+  const [searchTerm, setSearchTerm] = useState('');
   const uniqueCategories = ["All", ...Array.from(new Set(books.map(book => book.category)))];
   const [selectedCategory, setSelectedCategory] = useState("All");
   
@@ -187,10 +188,14 @@ useEffect(() => {
     category: string;
     buyLink?: string;
   }
-  
-  const filteredBooks = selectedCategory === "All" 
-    ? books 
-    : books.filter(book => book.category === selectedCategory);
+
+  const filteredBooks = books.filter((book) => {
+    const matchesCategory = selectedCategory === "All" || book.category === selectedCategory;
+    const matchesSearch = book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                          book.author.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
   
 const BookCard = ({ book }: { book: Book }) => (
   <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
@@ -382,6 +387,20 @@ const testimonials = [
         </div>
       </section>
 
+      {/* Search Bar */}
+      <section className="bg-[#0D0D0D] py-6 px-4">
+        <div className="max-w-4xl mx-auto">
+          <input
+            type="text"
+            placeholder="Cari berdasarkan judul atau penulis..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full px-6 py-3 rounded-full bg-[#1A1A1A] border border-[#8E44AD]/40 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#8E44AD] transition-all duration-300"
+          />
+        </div>
+      </section>
+
+      
       {/* Category Filter */}
       <section className="py-12 bg-[#1A1A1A]">
         <div className="max-w-6xl mx-auto px-4">
