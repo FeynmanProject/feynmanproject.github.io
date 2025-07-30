@@ -189,11 +189,13 @@ useEffect(() => {
     buyLink?: string;
   }
 
+  const normalizedSearch = searchTerm.toLowerCase();
   const filteredBooks = books.filter((book) => {
     const matchesCategory = selectedCategory === "All" || book.category === selectedCategory;
-    const matchesSearch = book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          book.author.toLowerCase().includes(searchTerm.toLowerCase());
-                          book.category.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch = 
+      book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      book.author.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      book.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
