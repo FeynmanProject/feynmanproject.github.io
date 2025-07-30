@@ -2,29 +2,79 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 export default function Social() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
 
+  const updateSliderRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const container = updateSliderRef.current;
+    if (!container) return;
+
+    let scrollPos = 0;
+    const speed = 2;
+    const animationFrameIdRef = { current: 0 };
+
+    const scroll = () => {
+      scrollPos += speed;
+      if (scrollPos >= container.scrollWidth / 2) {
+        scrollPos = 0;
+      }
+      container.scrollTo({ left: scrollPos, behavior: 'auto' });
+      animationFrameIdRef.current = requestAnimationFrame(scroll);
+    };
+
+    animationFrameIdRef.current = requestAnimationFrame(scroll);
+
+    const handleMouseEnter = () => cancelAnimationFrame(animationFrameIdRef.current);
+    const handleMouseLeave = () => {
+      animationFrameIdRef.current = requestAnimationFrame(scroll);
+    };
+
+    container.addEventListener('mouseenter', handleMouseEnter);
+    container.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      cancelAnimationFrame(animationFrameIdRef.current);
+      container.removeEventListener('mouseenter', handleMouseEnter);
+      container.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
+
+  const cards = [
+    {
+      icon: 'ri-emotion-sad-line',
+      category: 'Inspiration',
+      title: 'RIP Richard Feynman (1918–1988)',
+      desc: 'Sosok yang mengajarkan kita bahwa belajar dimulai dari rasa ingin tahu. Terima kasih, Feynman.',
+      image: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/23a55f10bef391e92a9c0239a0920414.png',
+    },
+    {
+      icon: 'ri-global-line',
+      category: 'Our Website',
+      title: 'Kenali Isi Website Kami',
+      desc: 'Jelajahi koleksi buku, kelas, dan video pembelajaran yang disusun.',
+      image: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/65cc37aa0536b8aee2ac8c3d37391a28.png',
+    },
+    {
+      icon: 'ri-bank-line',
+      category: 'Seabank',
+      title: 'Dukung Feynman Project Lewat Donasi',
+      desc: 'Bantu kami terus berkarya lewat edukasi terbuka dan konten yang bermanfaat',
+      image: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/806800b6a8aac78bea560c27f6167a67.png',
+    },
+  ];
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    if (name === 'message' && value.length > 500) {
-      return;
-    }
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    if (name === 'message' && value.length > 500) return;
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -211,74 +261,42 @@ export default function Social() {
         </div>
       </section>
 
-      {/* Latest Content Section */}
+      {/* Ganti ini menjadi autoslide */}
       <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Pemberitahuan Terbaru</h2>
             <p className="text-xl text-gray-400">Informasi dan pembaruan terkini dari kami</p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl">
-              <div className="relative aspect-square overflow-hidden">
-                <Image
-                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/23a55f10bef391e92a9c0239a0920414.png"
-                  alt="Feynman Technique Steps"
-                  fill
-                  className="w-full h-full object-cover object-top"
-                  unoptimized
-                />
-              </div>
-              <div className="p-4">
-                <div className="flex items-center mb-2">
-                  <i className="ri-emotion-sad-line text-[#8E44AD] mr-2"></i>
-                  <span className="text-sm text-gray-400">Inspiration</span>
+
+          <div
+            ref={updateSliderRef}
+            className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth px-2"
+          >
+            {[...Array(2)].flatMap(() => cards).map((item, i) => (
+              <div
+                key={i}
+                className="min-w-[300px] max-w-sm bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl flex-shrink-0"
+              >
+                <div className="relative aspect-square overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="w-full h-full object-cover object-top"
+                    unoptimized
+                  />
                 </div>
-                <h3 className="font-semibold mb-2">RIP Richard Feynman (1918–1988)</h3>
-                <p className="text-gray-400 text-sm">Sosok yang mengajarkan kita bahwa belajar dimulai dari rasa ingin tahu. Terima kasih, Feynman.</p>
-              </div>
-            </div>
-            
-            <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl">
-              <div className="relative aspect-square overflow-hidden">
-                <Image
-                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/65cc37aa0536b8aee2ac8c3d37391a28.png"
-                  alt="Physics Made Simple"
-                  fill
-                  className="object-cover object-top"
-                  unoptimized
-                />
-              </div>
-              <div className="p-4">
-                <div className="flex items-center mb-2">
-                  <i className="ri-global-line text-[#8E44AD] mr-2"></i>
-                  <span className="text-sm text-gray-400">Our Website</span>
+                <div className="p-4">
+                  <div className="flex items-center mb-2">
+                    <i className={`${item.icon} text-[#8E44AD] mr-2`}></i>
+                    <span className="text-sm text-gray-400">{item.category}</span>
+                  </div>
+                  <h3 className="font-semibold mb-2">{item.title}</h3>
+                  <p className="text-gray-400 text-sm">{item.desc}</p>
                 </div>
-                <h3 className="font-semibold mb-2">Kenali Isi Website Kami</h3>
-                <p className="text-gray-400 text-sm">Jelajahi koleksi buku, kelas, dan video pembelajaran yang disusun.</p>
               </div>
-            </div>
-            
-            <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl">
-              <div className="relative aspect-square overflow-hidden">
-                <Image
-                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/806800b6a8aac78bea560c27f6167a67.png"
-                  alt="Study Tips"
-                  fill
-                  className="object-cover object-top"
-                  unoptimized
-                />
-              </div>
-              <div className="p-4">
-                <div className="flex items-center mb-2">
-                  <i className="ri-bank-line text-[#8E44AD] mr-2"></i>
-                  <span className="text-sm text-gray-400">Seabank</span>
-                </div>
-                <h3 className="font-semibold mb-2">Dukung Feynman Project Lewat Donasi</h3>
-                <p className="text-gray-400 text-sm">Bantu kami terus berkarya lewat edukasi terbuka dan konten yang bermanfaat</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
