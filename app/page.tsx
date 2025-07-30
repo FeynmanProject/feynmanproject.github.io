@@ -4,6 +4,8 @@
 import Link from 'next/link';
 import { useState, useRef, useEffect, useCallback } from 'react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+
 
 interface ClassData {
   id: string;
@@ -87,6 +89,7 @@ export default function Home() {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
 const maxSlides = classesData.length - 2; // hanya 7 langkah scroll
+const pathname = usePathname();
 
 const scrollToIndex = (index: number) => {
   if (carouselRef.current) {
