@@ -448,11 +448,18 @@ const testimonials = [
             ref={bookSliderRef}
             className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth"
           >
-            {filteredBooks.map((book) => (
-              <div key={book.id} className="min-w-[300px] max-w-sm flex-shrink-0">
-                <BookCard book={book} />
+
+            {filteredBooks.length === 0 ? (
+              <div className="text-center text-gray-400 text-lg py-12 w-full">
+                Tidak ditemukan hasil yang sesuai.
               </div>
-            ))}
+            ) : (
+              filteredBooks.map((book) => (
+                <div key={book.id} className="min-w-[300px] max-w-sm flex-shrink-0">
+                  <BookCard book={book} />
+                </div>
+              ))
+            )}
           </div>
         </div>
       </section>
