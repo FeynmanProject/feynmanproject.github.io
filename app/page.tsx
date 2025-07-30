@@ -198,7 +198,15 @@ const prevSlide = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
+
             <Link href="/" className="flex items-center space-x-2">
+              <Image 
+                src="/logo.png" // pastikan nama sesuai dan ada di /public
+                alt="Logo Feynman"
+                width={32}
+                height={32}
+                className="object-contain"
+              />
               <div className="text-2xl font-bold text-[#8E44AD] font-sans">
                 Feynman Project
               </div>
