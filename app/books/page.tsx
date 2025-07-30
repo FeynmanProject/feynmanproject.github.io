@@ -191,10 +191,13 @@ useEffect(() => {
 
   const filteredBooks = books.filter((book) => {
     const matchesCategory = selectedCategory === "All" || book.category === selectedCategory;
-    const matchesSearch = 
-      book.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      book.author.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      book.category.toLowerCase().includes(searchTerm.toLowerCase());
+    const searchWords = searchTerm.toLowerCase().split(" ").filter(Boolean);
+    const matchesSearch = searchWords.every(word =>
+      book.title.toLowerCase().includes(word) ||
+      book.author.toLowerCase().includes(word) ||
+      book.category.toLowerCase().includes(word)
+    );
+
     return matchesCategory && matchesSearch;
   });
 
