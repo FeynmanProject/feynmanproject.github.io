@@ -389,20 +389,6 @@ const testimonials = [
         </div>
       </section>
 
-      {/* Search Bar */}
-      <section className="bg-[#0D0D0D] py-6 px-4">
-        <div className="max-w-4xl mx-auto">
-          <input
-            type="text"
-            placeholder="Cari berdasarkan judul, penulis, atau kategori..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full px-6 py-3 rounded-full bg-[#1A1A1A] border border-[#8E44AD]/40 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#8E44AD] transition-all duration-300"
-          />
-        </div>
-      </section>
-
-      
       {/* Category Filter */}
       <section className="py-12 bg-[#1A1A1A]">
         <div className="max-w-6xl mx-auto px-4">
@@ -424,6 +410,20 @@ const testimonials = [
           </div>
         </div>
       </section>
+
+      {/* Search Bar */}
+      <section className="bg-[#0D0D0D] py-6 px-4">
+        <div className="max-w-4xl mx-auto">
+          <input
+            type="text"
+            placeholder="Cari berdasarkan judul, penulis, atau kategori..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-full px-6 py-3 rounded-full bg-[#1A1A1A] border border-[#8E44AD]/40 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#8E44AD] transition-all duration-300"
+          />
+        </div>
+      </section>
+      
 
       {/* Book Slider */}
       <section className="py-20 bg-[#0D0D0D]">
