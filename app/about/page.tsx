@@ -208,8 +208,7 @@ export default function About() {
           
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="group w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl relative">
-                <div className="absolute inset-0 z-10 pointer-events-none group-hover:animate-ripple bg-white/10 rounded-full"></div>
+              <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl">
                 <Image
                   src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/0909b88981a42a1416b47377a17d9718.png"
                   alt="Dr. Sarah Chen - Founder"
@@ -227,8 +226,7 @@ export default function About() {
             </div>
             
             <div className="text-center">
-              <div className="group w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl relative">
-                <div className="absolute inset-0 z-10 pointer-events-none group-hover:animate-ripple bg-white/10 rounded-full"></div>
+              <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl relative">
                 <Image 
                   src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/89caa20f90a1aa501a81121965edf303.png"
                   alt="Michael Rodriguez - Content Director"
@@ -245,8 +243,7 @@ export default function About() {
             </div>
             
             <div className="text-center">
-              <div className="group w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl relative">
-                <div className="absolute inset-0 z-10 pointer-events-none group-hover:animate-ripple bg-white/10 rounded-full"></div>
+              <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl relative">
                 <Image
                   src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/35f2486849850195865b2e960e70faa7.png"
                   alt="Emily Watson - Technology Lead"
@@ -263,8 +260,7 @@ export default function About() {
             </div>
 
             <div className="text-center">
-              <div className="group w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl relative">
-                <div className="absolute inset-0 z-10 pointer-events-none group-hover:animate-ripple bg-white/10 rounded-full"></div>
+              <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl relative">
                 <Image 
                   src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/d2aae01ff2024d3fe3f211134c42626d.png"
                   alt="David Park - Community Manager"
