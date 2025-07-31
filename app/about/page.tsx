@@ -37,6 +37,15 @@ export default function About() {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <Link
+              href="/#kelas"
+              className={`flex items-center space-x-1 transition-colors duration-300 cursor-pointer ${
+                pathname === '/' ? 'text-[#8E44AD]' : 'hover:text-[#8E44AD]'
+              }`}
+            >
+              <i className="ri-graduation-cap-line text-lg"></i>
+              <span>Our Classes</span>
+            </Link>
+            <Link
               href="/about"
               className={`flex items-center space-x-1 transition-colors duration-300 cursor-pointer ${
                 pathname.startsWith('/about') ? 'text-[#8E44AD]' : 'hover:text-[#8E44AD]'
@@ -96,6 +105,10 @@ export default function About() {
           }`}
         >
           <div className="flex flex-col space-y-2">
+            <Link href="/#kelas" className="flex items-center space-x-2 py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
+              <i className="ri-graduation-cap-line"></i>
+              <span>Our Classes</span>
+            </Link>
             <Link href="/about" className="flex items-center space-x-2 py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
               <i className="ri-information-line"></i>
               <span>About</span>
