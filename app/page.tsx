@@ -226,7 +226,7 @@ const prevSlide = () => {
               }`}
             >
               <i className="ri-graduation-cap-line text-lg"></i>
-              <span>Class</span>
+              <span>Our Classes</span>
             </Link>
             <Link
               href="/about"
@@ -284,7 +284,7 @@ const prevSlide = () => {
           <div className="flex flex-col space-y-2">
             <Link href="/#kelas" className="flex items-center space-x-2 py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
               <i className="ri-graduation-cap-line"></i>
-              <span>Class</span>
+              <span>Our Classes</span>
             </Link>
             <Link href="/about" className="flex items-center space-x-2 py-2 hover:text-[#8E44AD] transition-colors duration-300 cursor-pointer">
               <i className="ri-information-line"></i>
