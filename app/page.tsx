@@ -473,8 +473,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
               </div>
             </div>
             <div className="relative">
-
-              <div className="bg-[#2A2A2A] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden">
                 <Image 
                   src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/ed683c15d9bdb59669509c782ab9d728.jfif"
                   alt="Feynman Technique Illustration"
