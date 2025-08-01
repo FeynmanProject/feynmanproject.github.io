@@ -493,7 +493,7 @@ const testimonials = [
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer">
                 <i className="ri-lightbulb-line text-2xl text-white"></i>
               </div>
               <h3 className="text-xl font-bold mb-4">Penjelasan yang Jelas</h3>
@@ -503,7 +503,7 @@ const testimonials = [
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer">
                 <i className="ri-user-line text-2xl text-white"></i>
               </div>
               <h3 className="text-xl font-bold mb-4">Aplikasi Praktis</h3>
@@ -513,7 +513,7 @@ const testimonials = [
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center mx-auto mb-6 transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer">
                 <i className="ri-award-line text-2xl text-white"></i>
               </div>
               <h3 className="text-xl font-bold mb-4">Tim Penyusun Terpercaya</h3>
