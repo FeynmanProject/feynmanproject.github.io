@@ -228,7 +228,7 @@ export default function About() {
             
             <div className="bg-[#2A2A2A] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
               <div className="w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center mb-6">
-                <i className="ri-book-open-line text-2xl text-white"></i>
+                <i className="ri-global-line text-2xl text-white"></i>
               </div>
               <h3 className="text-xl font-bold mb-4">Teaching is Learning</h3>
               <p className="text-gray-400 leading-relaxed">
