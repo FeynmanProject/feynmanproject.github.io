@@ -146,7 +146,7 @@ export default function About() {
 {/* Mission Section */}
 <section className="py-20 bg-[#1A1A1A]">
   <div className="max-w-6xl mx-auto px-4">
-    <div className="grid md:grid-cols-2 gap-12 items-stretch">
+    <div className="grid md:grid-cols-2 gap-12 items-center">
       <div>
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
         <p className="text-lg text-gray-300 mb-6 leading-relaxed">
@@ -175,7 +175,7 @@ export default function About() {
 {/* Vision Section */}
 <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
   <div className="max-w-6xl mx-auto px-4">
-    <div className="grid md:grid-cols-2 gap-12 items-stretch">
+    <div className="grid md:grid-cols-2 gap-12 items-center">
       <div className="relative order-2 md:order-1 h-full flex items-stretch">
         <div className="w-full rounded-2xl shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 hover:scale-105 overflow-hidden">
           <Image
