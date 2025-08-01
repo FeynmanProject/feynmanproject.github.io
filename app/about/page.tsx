@@ -340,7 +340,7 @@ export default function About() {
           
           <div className="space-y-12">
             <div className="flex items-start space-x-6">
-              <div className="flex-shrink-0 w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center">
+              <div className="flex-shrink-0 w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer">
                 <span className="text-white font-bold">1</span>
               </div>
               <div>
@@ -353,7 +353,7 @@ export default function About() {
             </div>
             
             <div className="flex items-start space-x-6">
-              <div className="flex-shrink-0 w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center">
+              <div className="flex-shrink-0 w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer">
                 <span className="text-white font-bold">2</span>
               </div>
               <div>
@@ -365,7 +365,7 @@ export default function About() {
             </div>
             
             <div className="flex items-start space-x-6">
-              <div className="flex-shrink-0 w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center">
+              <div className="flex-shrink-0 w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer">
                 <span className="text-white font-bold">3</span>
               </div>
               <div>
@@ -377,7 +377,7 @@ export default function About() {
             </div>
             
             <div className="flex items-start space-x-6">
-              <div className="flex-shrink-0 w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center">
+              <div className="flex-shrink-0 w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer">
                 <span className="text-white font-bold">4</span>
               </div>
               <div>
@@ -389,7 +389,7 @@ export default function About() {
             </div>
             
             <div className="flex items-start space-x-6">
-              <div className="flex-shrink-0 w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center">
+              <div className="flex-shrink-0 w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg cursor-pointer">
                 <span className="text-white font-bold">5</span>
               </div>
               <div>
