@@ -150,10 +150,10 @@ export default function About() {
       <div>
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
         <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-          Kami percaya bahwa pemahaman yang sejati ...
+          Kami percaya bahwa pemahaman yang sejati tidak hanya diukur dari seberapa banyak yang bisa dihafal, tetapi dari seberapa baik seseorang dapat menjelaskan kembali sebuah konsep dengan cara yang sederhana. Misi kami adalah membangun ruang belajar yang mendorong setiap individu untuk benar-benar memahami apa yang mereka pelajari—bukan sekadar mengejar nilai, tetapi mengejar makna.
         </p>
         <p className="text-lg text-gray-300 leading-relaxed">
-          Melalui pendekatan belajar yang aktif dan reflektif ...
+          Melalui pendekatan belajar yang aktif dan reflektif, kami menciptakan komunitas yang mendorong setiap pembelajar untuk menjadi pengajar. Dengan konten yang terarah, media yang mudah diakses, dan semangat kolaborasi, kami membentuk lingkungan belajar yang tidak hanya mendalam, tetapi juga menyenangkan dan penuh dukungan.
         </p>
       </div>
       <div className="relative h-full flex items-stretch">
@@ -191,10 +191,10 @@ export default function About() {
       <div className="order-1 md:order-2">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Vision</h2>
         <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-          Menumbuhkan pemahaman matematika ...
+          Menumbuhkan pemahaman matematika yang kokoh dan berkelanjutan melalui metode aktif—dengan ‘teaching-as-learning’, peserta bukan hanya paham, tapi bisa mengajar.
         </p>
         <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-          Menjadi rujukan pembelajaran matematika modern ...
+          Menjadi rujukan pembelajaran matematika modern yang memadukan intuisi, logika, dan keberanian berpikir—setiap pelajar menjadi ‘mathematician’ yang percaya diri menjelaskan konsep rumit.
         </p>
         <div className="bg-[#8E44AD]/10 border-l-4 border-[#8E44AD] p-6 rounded-r-lg">
           <p className="text-[#8E44AD] font-semibold italic">
