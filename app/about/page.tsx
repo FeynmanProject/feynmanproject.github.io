@@ -143,66 +143,69 @@ export default function About() {
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="py-20 bg-[#1A1A1A]">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
-              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                Kami percaya bahwa pemahaman yang sejati tidak hanya diukur dari seberapa banyak yang bisa dihafal, tetapi dari seberapa baik seseorang dapat menjelaskan kembali sebuah konsep dengan cara yang sederhana. Misi kami adalah membangun ruang belajar yang mendorong setiap individu untuk benar-benar memahami apa yang mereka pelajari—bukan sekadar mengejar nilai, tetapi mengejar makna.
-              </p>
-              <p className="text-lg text-gray-300 leading-relaxed">
-                Melalui pendekatan belajar yang aktif dan reflektif, kami menciptakan komunitas yang mendorong setiap pembelajar untuk menjadi pengajar. Dengan konten yang terarah, media yang mudah diakses, dan semangat kolaborasi, kami membentuk lingkungan belajar yang tidak hanya mendalam, tetapi juga menyenangkan dan penuh dukungan.
-              </p>
-            </div>
-            <div className="relative">
-              <div className="aspect-square relative rounded-2xl overflow-hidden shadow-2xl">
-                <Image 
-                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/36d3026030e784dc6480169fed366441.png"
-                  alt="Our Mission"
-                  fill
-                  className="object-cover object-top"
-                  unoptimized
-                />
-              </div>
-            </div>
-          </div>
+{/* Mission Section */}
+<section className="py-20 bg-[#1A1A1A]">
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="grid md:grid-cols-2 gap-12 items-stretch">
+      <div>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
+        <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+          Kami percaya bahwa pemahaman yang sejati ...
+        </p>
+        <p className="text-lg text-gray-300 leading-relaxed">
+          Melalui pendekatan belajar yang aktif dan reflektif ...
+        </p>
+      </div>
+      <div className="relative h-full flex items-stretch">
+        <div className="w-full rounded-2xl shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 hover:scale-105 overflow-hidden">
+          <Image
+            src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/36d3026030e784dc6480169fed366441.png"
+            alt="Our Mission"
+            width={800}
+            height={800}
+            className="w-full h-full object-cover object-top"
+            unoptimized
+          />
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-      {/* Vision Section */}
-      <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative order-2 md:order-1">
-              <div className="aspect-square relative rounded-2xl overflow-hidden shadow-2xl">
-                <Image 
-                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/9fdc9f77a1962ccbe565261e8ff2ab4f.png"
-                  alt="Our Vision"
-                  fill
-                  className="object-cover object-top"
-                  unoptimized
-                />
-              </div>
-            </div>
-            <div className="order-1 md:order-2">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Vision</h2>
-              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                Menumbuhkan pemahaman matematika yang kokoh dan berkelanjutan melalui metode aktif—dengan ‘teaching-as-learning’, peserta bukan hanya paham, tapi bisa mengajar.
-              </p>
-              <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                Menjadi rujukan pembelajaran matematika modern yang memadukan intuisi, logika, dan keberanian berpikir—setiap pelajar menjadi ‘mathematician’ yang percaya diri menjelaskan konsep rumit.
-              </p>
-              <div className="bg-[#8E44AD]/10 border-l-4 border-[#8E44AD] p-6 rounded-r-lg">
-                <p className="text-[#8E44AD] font-semibold italic">
-                  &ldquo;If you can&rsquo;t explain it simply, you don&rsquo;t understand it well enough.&rdquo; &ndash; Richard Feynman
-                </p>
-              </div>
-            </div>
-          </div>
+{/* Vision Section */}
+<section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="grid md:grid-cols-2 gap-12 items-stretch">
+      <div className="relative order-2 md:order-1 h-full flex items-stretch">
+        <div className="w-full rounded-2xl shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 hover:scale-105 overflow-hidden">
+          <Image
+            src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/9fdc9f77a1962ccbe565261e8ff2ab4f.png"
+            alt="Our Vision"
+            width={800}
+            height={800}
+            className="w-full h-full object-cover object-top"
+            unoptimized
+          />
         </div>
-      </section>
+      </div>
+      <div className="order-1 md:order-2">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Vision</h2>
+        <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+          Menumbuhkan pemahaman matematika ...
+        </p>
+        <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+          Menjadi rujukan pembelajaran matematika modern ...
+        </p>
+        <div className="bg-[#8E44AD]/10 border-l-4 border-[#8E44AD] p-6 rounded-r-lg">
+          <p className="text-[#8E44AD] font-semibold italic">
+            &ldquo;If you can&rsquo;t explain it simply, you don&rsquo;t understand it well enough.&rdquo; &ndash; Richard Feynman
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Philosophy Section */}
       <section className="py-20 bg-[#1A1A1A]">
