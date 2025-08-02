@@ -37,6 +37,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head>
+        {/* ✅ Meta verifikasi Google */}
+        <meta
+          name="google-site-verification"
+          content="4gh9t54IWxNFdoN8S2fkKqBYT_BfPDCiw11rFFaBRJI"
+        />
+
         {/* ✅ CDN Remix Icon */}
         <link
           href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
