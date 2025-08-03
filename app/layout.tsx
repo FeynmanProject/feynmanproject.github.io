@@ -21,9 +21,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Feynman Project",
+  title: "Feynman Project - Official Website",
   description:
-    "Feynman Project adalah inisiatif pembelajaran matematika yang berfokus pada pemahaman konsep secara mendalam. Kami menghadirkan materi, latihan, dan penjelasan yang dirancang agar matematika tidak hanya dapat dihitung, tapi benar-benar dipahami.",
+    "Feynman Project adalah platform edukasi matematika resmi yang menghadirkan video pembelajaran, buku diktat, dan materi belajar untuk membantu mahasiswa memahami konsep matematika secara mendalam. Kunjungi situs resmi kami untuk informasi lengkap.",
   icons: {
     icon: "/favicon.png",
   },
