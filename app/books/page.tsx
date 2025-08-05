@@ -13,6 +13,10 @@ export default function Books() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const bookSliderRef = useRef<HTMLDivElement>(null);
   const testimonialSliderRef = useRef<HTMLDivElement>(null);
+  // State untuk kontrol pause testimonial
+  const [isPaused, setIsPaused] = useState(false);
+  const [manualPause, setManualPause] = useState(false);
+
   const pathname = usePathname();
 
 
@@ -28,48 +32,6 @@ export default function Books() {
       bookSliderRef.current.scrollBy({ left: 800, behavior: 'smooth' });
     }
   };
-
-
-  // ✅ Tambahkan useEffect untuk autoplay testimonial
-useEffect(() => {
-  const container = testimonialSliderRef.current;
-  if (!container) return;
-
-  let scrollPos = 0;
-  const speed = 2;
-  const animationFrameIdRef = { current: 0 };
-
-  const scroll = () => {
-    scrollPos += speed;
-    if (scrollPos >= container.scrollWidth / 2) {
-      scrollPos = 0;
-    }
-
-    container.scrollTo({
-      left: scrollPos,
-      behavior: 'auto',
-    });
-
-    animationFrameIdRef.current = requestAnimationFrame(scroll);
-  };
-
-  animationFrameIdRef.current = requestAnimationFrame(scroll);
-
-  // Hentikan scroll saat hover
-  const handleMouseEnter = () => cancelAnimationFrame(animationFrameIdRef.current);
-  const handleMouseLeave = () => {
-    animationFrameIdRef.current = requestAnimationFrame(scroll);
-  };
-
-  container.addEventListener('mouseenter', handleMouseEnter);
-  container.addEventListener('mouseleave', handleMouseLeave);
-
-  return () => {
-    cancelAnimationFrame(animationFrameIdRef.current);
-    container.removeEventListener('mouseenter', handleMouseEnter);
-    container.removeEventListener('mouseleave', handleMouseLeave);
-  };
-}, []);
 
   const books = [
     {
@@ -525,37 +487,46 @@ const testimonials = [
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Kata Mereka</h2>
-            <p className="text-xl text-gray-400">Ulasan dari komunitas pembaca kami.</p>
-          </div>
+{/* Testimonials Section */}
+<section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4">Kata Mereka</h2>
+      <p className="text-xl text-gray-400">Ulasan dari komunitas pembaca kami.</p>
+    </div>
 
-          <div className="relative">
-            <div
-              ref={testimonialSliderRef}
-              className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth px-8"
-            >
-              {[...testimonials, ...testimonials].map((t, index) => (
-                <div
-                  key={index}
-                  className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl"
-                >
-                  <div className="flex items-center mb-4">
-                    <div>
-                      <h4 className="font-semibold">{t.name}</h4>
-                      <p className="text-gray-400 text-sm">{t.role}</p>
-                    </div>
-                  </div>
-                  <p className="text-gray-300 italic">&ldquo;{t.quote}&rdquo;</p>
-                </div>
-              ))}
+    <div className="overflow-hidden">
+      <div
+        className={`testimonial-track ${isPaused ? "paused" : ""}`}
+        onMouseEnter={() => {
+          if (!manualPause) setIsPaused(true);
+        }}
+        onMouseLeave={() => {
+          if (!manualPause) setIsPaused(false);
+        }}
+      >
+        {[...testimonials, ...testimonials, ...testimonials].map((t, index) => (
+          <div
+            key={index}
+            className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl cursor-pointer"
+            onClick={() => {
+              const newManualPause = !manualPause;
+              setManualPause(newManualPause);
+              setIsPaused(newManualPause);
+            }}
+          >
+            <div className="mb-4">
+              <h4 className="font-semibold">{t.name}</h4>
+              <p className="text-gray-400 text-sm">{t.role}</p>
             </div>
+            <p className="text-gray-300 italic">&ldquo;{t.quote}&rdquo;</p>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-[#8E44AD] to-[#A569BD]">
