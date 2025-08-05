@@ -33,6 +33,11 @@
     backface-visibility: hidden;
     transform: translate3d(0, 0, 0);
   }
+
+  /* ⏸ Pause animasi testimonial */
+  .testimonial-track.paused {
+    animation-play-state: paused !important;
+  }
 } /* ⬅️ penutup @layer utilities */
 
 /* 🎞️ Animasi fade + slide */
