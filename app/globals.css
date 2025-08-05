@@ -5,13 +5,29 @@
 @tailwind utilities;
 
 @layer utilities {
+  /* 🔒 Hilangkan scrollbar */
   .no-scrollbar {
     -ms-overflow-style: none; /* Internet Explorer 10+ */
     scrollbar-width: none; /* Firefox */
   }
-
   .no-scrollbar::-webkit-scrollbar {
     display: none; /* Chrome, Safari, and Opera */
+  }
+
+  /* 🔄 Animasi scroll testimonial tak henti */
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .testimonial-track {
+    display: flex;
+    gap: 1.5rem;
+    animation: scrollLeft 40s linear infinite;
+    width: max-content; /* supaya tidak terpotong */
   }
 }
 
