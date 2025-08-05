@@ -17,10 +17,10 @@
   /* 🔄 Animasi scroll testimonial tak henti */
   @keyframes scrollLeft {
     0% {
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
     }
     100% {
-      transform: translateX(-33.333%); /* geser sepertiga panjang track */
+      transform: translate3d(-33.333%, 0, 0);
     }
   }
 
@@ -30,6 +30,8 @@
     animation: scrollLeft 40s linear infinite;
     width: max-content;
     will-change: transform; /* optimasi GPU untuk cegah kedip */
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
   }
 } /* ⬅️ penutup @layer utilities */
 
