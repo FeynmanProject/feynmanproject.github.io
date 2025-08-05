@@ -5,14 +5,12 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Image from 'next/image';
 import { useRef } from 'react';
-import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
 
 export default function Books() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const bookSliderRef = useRef<HTMLDivElement>(null);
-  const testimonialSliderRef = useRef<HTMLDivElement>(null);
   // State untuk kontrol pause testimonial
   const [isPaused, setIsPaused] = useState(false);
   const [manualPause, setManualPause] = useState(false);
