@@ -124,42 +124,6 @@ const prevSlide = () => {
     return () => clearInterval(interval);
   }, [currentIndex, isAutoPlaying, nextSlide]);
 
-  // ✅ Autoplay testimonial section
-  useEffect(() => {
-    const container = testimonialSliderRef.current;
-    if (!container) return;
-
-    let scrollPos = 0;
-    const speed = 2;
-    const animationFrameIdRef = { current: 0 };
-
-    const scroll = () => {
-      scrollPos += speed;
-      if (scrollPos >= container.scrollWidth / 2) {
-        scrollPos = 0;
-      }
-
-      container.scrollTo({ left: scrollPos, behavior: 'auto' });
-      animationFrameIdRef.current = requestAnimationFrame(scroll);
-    };
-
-    animationFrameIdRef.current = requestAnimationFrame(scroll);
-
-    const handleMouseEnter = () => cancelAnimationFrame(animationFrameIdRef.current);
-    const handleMouseLeave = () => {
-      animationFrameIdRef.current = requestAnimationFrame(scroll);
-    };
-
-    container.addEventListener('mouseenter', handleMouseEnter);
-    container.addEventListener('mouseleave', handleMouseLeave);
-
-    return () => {
-      cancelAnimationFrame(animationFrameIdRef.current);
-      container.removeEventListener('mouseenter', handleMouseEnter);
-      container.removeEventListener('mouseleave', handleMouseLeave);
-    };
-  }, []);
-
 
   const testimonials = [
     {
