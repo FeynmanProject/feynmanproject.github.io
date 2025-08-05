@@ -176,6 +176,8 @@ const prevSlide = () => {
                 alt="Logo Feynman"
                 width={36}
                 height={36}
+                quality={100} // kualitas maksimum
+                priority // supaya dimuat segera
                 className="object-contain"
               />
               <div className="text-2xl font-bold text-[#8E44AD] font-sans">
