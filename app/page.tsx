@@ -86,6 +86,9 @@ export default function Home() {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
+  // State untuk kontrol pause testimonial
+  const [isPaused, setIsPaused] = useState(false);
+  const [manualPause, setManualPause] = useState(false);
   const pathname = usePathname();
   
 
@@ -497,11 +500,25 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
     </div>
 
     <div className="overflow-hidden">
-      <div className="testimonial-track">
+      <div
+        className={`testimonial-track ${isPaused ? "paused" : ""}`}
+        onMouseEnter={() => {
+          if (!manualPause) setIsPaused(true);
+        }}
+        onMouseLeave={() => {
+          if (!manualPause) setIsPaused(false);
+        }}
+      >
         {[...testimonials, ...testimonials, ...testimonials].map((t, index) => (
           <div
             key={index}
-            className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl"
+            className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl cursor-pointer"
+            onClick={() => {
+              // Toggle manual pause
+              const newManualPause = !manualPause;
+              setManualPause(newManualPause);
+              setIsPaused(newManualPause);
+            }}
           >
             <div className="mb-4">
               <h4 className="font-semibold">{t.name}</h4>
