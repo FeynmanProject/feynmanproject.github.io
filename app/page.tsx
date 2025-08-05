@@ -534,7 +534,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
 
     <div className="overflow-hidden">
       <div className="testimonial-track">
-        {[...testimonials, ...testimonials].map((t, index) => (
+        {[...testimonials, ...testimonials, ...testimonials].map((t, index) => (
           <div
             key={index}
             className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl"
@@ -550,6 +550,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
     </div>
   </div>
 </section>
+
 
 
 
