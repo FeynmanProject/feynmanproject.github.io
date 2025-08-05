@@ -2,7 +2,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useRef } from 'react';
+import { useState,} from 'react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
