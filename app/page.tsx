@@ -82,7 +82,6 @@ const classesData: ClassData[] = [
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const testimonialSliderRef = useRef<HTMLDivElement | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -108,7 +107,8 @@ const scrollToIndex = (index: number) => {
 const nextSlide = useCallback(() => {
   const nextIndex = (currentIndex + 1) % maxSlides;
   scrollToIndex(nextIndex);
-}, [currentIndex]);
+}, [currentIndex, maxSlides]); // ✅ tambahkan maxSlides
+
 
 const prevSlide = () => {
   const prevIndex = currentIndex === 0 ? maxSlides - 1 : currentIndex - 1;
