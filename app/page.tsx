@@ -179,6 +179,7 @@ const prevSlide = () => {
                 quality={100} // kualitas maksimum
                 priority // supaya dimuat segera
                 className="object-contain"
+                unoptimized
               />
               <div className="text-2xl font-bold text-[#8E44AD] font-sans">
                 Feynman Project
