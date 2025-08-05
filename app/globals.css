@@ -14,22 +14,25 @@
     display: none; /* Chrome, Safari, and Opera */
   }
 
-  /* 🔄 Animasi scroll testimonial tak henti */
-  @keyframes scrollLeft {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
+/* 🔄 Animasi scroll testimonial tak henti */
+  
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
   }
-  .testimonial-track {
-    display: flex;
-    gap: 1.5rem;
-    animation: scrollLeft 40s linear infinite;
-    width: max-content; /* supaya tidak terpotong */
+  100% {
+    transform: translateX(-33.333%); /* geser sepertiga panjang track */
   }
 }
+
+.testimonial-track {
+  display: flex;
+  gap: 1.5rem;
+  animation: scrollLeft 40s linear infinite;
+  width: max-content;
+  will-change: transform; /* optimasi GPU untuk cegah kedip */
+}
+
 
 /* 🎞️ Animasi fade + slide */
 @keyframes fadeSlide {
