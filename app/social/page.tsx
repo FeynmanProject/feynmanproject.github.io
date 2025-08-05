@@ -2,7 +2,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
@@ -13,42 +13,11 @@ export default function Social() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
 
+  const [isPaused, setIsPaused] = useState(false);
+  const [manualPause, setManualPause] = useState(false);
+
+
   const pathname = usePathname();
-  const updateSliderRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const container = updateSliderRef.current;
-    if (!container) return;
-
-    let scrollPos = 0;
-    const speed = 2;
-    const animationFrameIdRef = { current: 0 };
-
-    const scroll = () => {
-      scrollPos += speed;
-      if (scrollPos >= container.scrollWidth / 2) {
-        scrollPos = 0;
-      }
-      container.scrollTo({ left: scrollPos, behavior: 'auto' });
-      animationFrameIdRef.current = requestAnimationFrame(scroll);
-    };
-
-    animationFrameIdRef.current = requestAnimationFrame(scroll);
-
-    const handleMouseEnter = () => cancelAnimationFrame(animationFrameIdRef.current);
-    const handleMouseLeave = () => {
-      animationFrameIdRef.current = requestAnimationFrame(scroll);
-    };
-
-    container.addEventListener('mouseenter', handleMouseEnter);
-    container.addEventListener('mouseleave', handleMouseLeave);
-
-    return () => {
-      cancelAnimationFrame(animationFrameIdRef.current);
-      container.removeEventListener('mouseenter', handleMouseEnter);
-      container.removeEventListener('mouseleave', handleMouseLeave);
-    };
-  }, []);
 
   const cards = [
     {
@@ -307,45 +276,58 @@ export default function Social() {
         </div>
       </section>
 
-      {/* Ganti ini menjadi autoslide */}
-      <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Pemberitahuan Terbaru</h2>
-            <p className="text-xl text-gray-400">Informasi dan pembaruan terkini dari kami</p>
-          </div>
+{/* Pemberitahuan Terbaru */}
+<section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
+  <div className="max-w-6xl mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4">Pemberitahuan Terbaru</h2>
+      <p className="text-xl text-gray-400">Informasi dan pembaruan terkini dari kami</p>
+    </div>
 
+    <div className="overflow-hidden">
+      <div
+        className={`flex gap-6 testimonial-track ${isPaused ? 'paused' : ''}`}
+        onMouseEnter={() => {
+          if (!manualPause) setIsPaused(true);
+        }}
+        onMouseLeave={() => {
+          if (!manualPause) setIsPaused(false);
+        }}
+      >
+        {[...cards, ...cards, ...cards].map((item, i) => (
           <div
-            ref={updateSliderRef}
-            className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth px-2"
+            key={i}
+            className="min-w-[300px] max-w-sm bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl flex-shrink-0 cursor-pointer"
+            onClick={() => {
+              const newManualPause = !manualPause;
+              setManualPause(newManualPause);
+              setIsPaused(newManualPause);
+            }}
           >
-            {[...Array(2)].flatMap(() => cards).map((item, i) => (
-              <div
-                key={i}
-                className="min-w-[300px] max-w-sm bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl flex-shrink-0"
-              >
-                <div className="relative aspect-square overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="w-full h-full object-cover object-top"
-                    unoptimized
-                  />
-                </div>
-                <div className="p-4">
-                  <div className="flex items-center mb-2">
-                    <i className={`${item.icon} text-[#8E44AD] mr-2`}></i>
-                    <span className="text-sm text-gray-400">{item.category}</span>
-                  </div>
-                  <h3 className="font-semibold mb-2">{item.title}</h3>
-                  <p className="text-gray-400 text-sm">{item.desc}</p>
-                </div>
+            <div className="relative aspect-square overflow-hidden">
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                className="w-full h-full object-cover object-top"
+                unoptimized
+              />
+            </div>
+            <div className="p-4">
+              <div className="flex items-center mb-2">
+                <i className={`${item.icon} text-[#8E44AD] mr-2`}></i>
+                <span className="text-sm text-gray-400">{item.category}</span>
               </div>
-            ))}
+              <h3 className="font-semibold mb-2">{item.title}</h3>
+              <p className="text-gray-400 text-sm">{item.desc}</p>
+            </div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Contact Form Section */}
       <section id="contact" className="py-20 bg-[#1A1A1A]">
