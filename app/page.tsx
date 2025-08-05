@@ -182,7 +182,7 @@ const prevSlide = () => {
                 unoptimized
               />
               <div className="ml-2 flex items-center">
-                <span className="text-lg font-bold text-[#8E44AD] font-sans leading-none">
+                <span className="text-xl font-bold text-[#8E44AD] font-sans leading-none tracking-wide">
                   Feynman Project
                 </span>
               </div>
