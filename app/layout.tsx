@@ -49,6 +49,44 @@ export default function RootLayout({
           rel="stylesheet"
         />
 
+        {/* ✅ JSON-LD WebSite Schema */}
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "url": "https://feynmanproject.vercel.app/",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://feynmanproject.vercel.app/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
+
+        {/* ✅ JSON-LD Organization Schema */}
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Feynman Project",
+              "url": "https://feynmanproject.vercel.app/",
+              "logo": "https://feynmanproject.vercel.app/logo.png",
+              "sameAs": [
+                "https://www.instagram.com/feynmanprojects",
+                "https://www.youtube.com/@FeynmanProjects",
+                "https://www.linkedin.com/company/feynmanproject"
+              ]
+            })
+          }}
+        />
+
         {/* ✅ Crisp Chat Script */}
         <Script
           id="crisp-chat"
