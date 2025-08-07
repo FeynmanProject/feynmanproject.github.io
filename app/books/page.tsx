@@ -508,7 +508,11 @@ const testimonials = [
 <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
   <div className="max-w-6xl mx-auto px-4">
     <div className="text-center mb-16">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4">Kata Mereka</h2>
+      <h2 className="text-3xl md:text-4xl font-bold mb-4 font-mono text-white">
+        <span className="block mx-auto w-fit typing-loop">
+          Kata Mereka
+        </span>
+      </h2>
       <p className="text-xl text-gray-400">Ulasan dari komunitas pembaca kami.</p>
     </div>
 
