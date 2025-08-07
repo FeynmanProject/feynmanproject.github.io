@@ -5,8 +5,6 @@ import Link from 'next/link';
 import { useState, useRef, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Typewriter } from 'react-simple-typewriter';
-
 
 interface ClassData {
   id: string;
@@ -401,21 +399,9 @@ const prevSlide = () => {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-                <Typewriter
-                  words={[
-                    'Mengapa Feynman Project?',
-                    'Kenapa Harus Feynman Project?',
-                    'Apa Kelebihan Feynman Project?'
-                  ]}
-                  loop={true}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={60}
-                  deleteSpeed={40}
-                  delaySpeed={1500}
-                />
-              </h2> 
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 font-mono whitespace-nowrap overflow-hidden border-r-2 border-[#8E44AD] animate-typing">
+                Mengapa Feynman Project?
+              </h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                 Nama platform ini terinspirasi dari Richard Feynman — seorang fisikawan peraih Nobel yang dikenal bukan hanya karena kejeniusannya, tetapi karena kemampuannya menjelaskan hal sulit dengan cara yang sederhana dan penuh rasa ingin tahu.
 
