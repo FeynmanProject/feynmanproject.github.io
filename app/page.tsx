@@ -466,7 +466,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
       <section className="py-20 bg-[#1A1A1A]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 typing-loop">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-mono typing-loop">
               Mengapa Memilih Platform Kami?
             </h2>
             <p className="text-xl text-gray-400">Ubah cara Anda belajar dengan pendekatan yang telah terbukti efektif.</p>
