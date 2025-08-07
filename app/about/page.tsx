@@ -154,7 +154,11 @@ export default function About() {
   <div className="max-w-6xl mx-auto px-4">
     <div className="grid md:grid-cols-2 gap-12 items-center">
       <div>
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 font-mono text-white">
+          <span className="block mx-auto w-fit typing-loop">
+            Our Mission
+          </span>
+        </h2>
         <p className="text-lg text-gray-300 mb-6 leading-relaxed">
           Kami percaya bahwa pemahaman yang sejati tidak hanya diukur dari seberapa banyak yang bisa dihafal, tetapi dari seberapa baik seseorang dapat menjelaskan kembali sebuah konsep dengan cara yang sederhana. Misi kami adalah membangun ruang belajar yang mendorong setiap individu untuk benar-benar memahami apa yang mereka pelajari—bukan sekadar mengejar nilai, tetapi mengejar makna.
         </p>
@@ -195,7 +199,11 @@ export default function About() {
         </div>
       </div>
       <div className="order-1 md:order-2">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Vision</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 font-mono text-white">
+          <span className="block mx-auto w-fit typing-loop">
+            Our Vision
+          </span>
+        </h2>
         <p className="text-lg text-gray-300 mb-6 leading-relaxed">
           Menumbuhkan pemahaman matematika yang kokoh dan berkelanjutan melalui metode aktif—dengan ‘teaching-as-learning’, peserta bukan hanya paham, tapi bisa mengajar.
         </p>
@@ -259,7 +267,11 @@ export default function About() {
       <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Team</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-mono text-white">
+              <span className="block mx-auto w-fit typing-loop-15">
+                Meet Our Team
+              </span>
+            </h2>
             <p className="text-xl text-gray-400">Feynman Project lahir dari kolaborasi para pembelajar dan berfokus pada penyajian ilmu secara runtut dan sederhana untuk mendukung proses belajar yang lebih bermakna.</p>
           </div>
           
