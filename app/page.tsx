@@ -468,7 +468,8 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 font-mono text-white">
               <span className="block mx-auto w-fit typing-loop">
-              Mengapa Memilih Platform Kami?
+                Mengapa Memilih Platform Kami?
+              </span>
             </h2>
             <p className="text-xl text-gray-400">Ubah cara Anda belajar dengan pendekatan yang telah terbukti efektif.</p>
           </div>
