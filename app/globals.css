@@ -39,6 +39,26 @@
     animation-play-state: paused !important;
   }
 
+  @keyframes typing-loop {
+    0% {
+      width: 0ch;
+    }
+    50% {
+      width: 30ch; /* Ubah sesuai panjang teks */
+    }
+    100% {
+      width: 0ch;
+    }
+  }
+
+  .typing-loop {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #8E44AD;
+    animation: typing-loop 6s steps(30) infinite;
+  }
+
+  
   /* ⌨️ Efek teks mengetik */
   @keyframes typing {
     0% {
