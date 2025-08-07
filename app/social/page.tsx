@@ -25,7 +25,7 @@ export default function Social() {
       category: 'Inspiration',
       title: 'RIP Richard Feynman (1918–1988)',
       desc: 'Sosok yang mengajarkan kita bahwa belajar dimulai dari rasa ingin tahu. Terima kasih, Feynman.',
-      image: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/23a55f10bef391e92a9c0239a0920414.png',
+      image: 'https://i.imgur.com/mq7F1gN.png',
     },
     {
       icon: 'ri-global-line',
