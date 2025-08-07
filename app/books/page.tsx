@@ -372,18 +372,31 @@ const testimonials = [
   <div className="max-w-6xl mx-auto px-4">
 
     {/* Search Bar di atas kategori */}
-    <div className="relative w-full mb-6">
-      <span className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400">
-        <i className="ri-search-line text-lg" />
-      </span>
-      <input
-        type="text"
-        placeholder="Cari berdasarkan judul, penulis, atau kategori..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        className="w-full pl-10 pr-6 py-3 rounded-full bg-[#0D0D0D] border border-[#8E44AD]/40 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#8E44AD] transition-all duration-300"
-      />
-    </div>
+<div className="relative w-full mb-6">
+  <span className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400">
+    <i className="ri-search-line text-lg" />
+  </span>
+
+  {/* Input search */}
+  <input
+    type="text"
+    placeholder="Cari berdasarkan judul, penulis, atau kategori..."
+    value={searchTerm}
+    onChange={(e) => setSearchTerm(e.target.value)}
+    className="w-full pl-10 pr-10 py-3 rounded-full bg-[#0D0D0D] border border-[#8E44AD]/40 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#8E44AD] transition-all duration-300"
+  />
+
+  {/* Tombol clear muncul hanya saat searchTerm tidak kosong */}
+  {searchTerm && (
+    <button
+      onClick={() => setSearchTerm("")}
+      className="absolute inset-y-0 right-0 pr-4 flex items-center text-gray-400 hover:text-white focus:outline-none"
+    >
+      <i className="ri-close-line text-lg" />
+    </button>
+  )}
+</div>
+
 
 
     {/* Kategori di bawah search */}
