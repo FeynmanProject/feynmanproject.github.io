@@ -165,7 +165,7 @@ export default function About() {
       <div className="relative h-full flex items-stretch">
         <div className="w-full rounded-2xl shadow-2xl hover:shadow-purple-500/20 transition-all duration-300 hover:scale-105 overflow-hidden">
           <Image
-            src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/36d3026030e784dc6480169fed366441.png"
+            src="https://i.imgur.com/eKA1yiI.jpeg"
             alt="Our Mission"
             width={800}
             height={800}
