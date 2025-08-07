@@ -466,11 +466,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
       <section className="py-20 bg-[#1A1A1A]">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-mono text-white">
-              <span className="block mx-auto w-fit typing-loop">
-                Mengapa Memilih Platform Kami?
-              </span>
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Mengapa Memilih Platform Kami?</h2>
             <p className="text-xl text-gray-400">Ubah cara Anda belajar dengan pendekatan yang telah terbukti efektif.</p>
           </div>
           
@@ -506,7 +502,11 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
 <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
   <div className="max-w-6xl mx-auto px-4">
     <div className="text-center mb-16">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4">Kata Mereka</h2>
+      <h2 className="text-3xl md:text-4xl font-bold mb-4 font-mono text-white">
+        <span className="block mx-auto w-fit typing-loop">
+          Kata Mereka
+        </span>
+      </h2>
       <p className="text-xl text-gray-400">Ulasan dari pemirsa video kami.</p>
     </div>
 
