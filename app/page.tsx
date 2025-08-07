@@ -503,7 +503,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
   <div className="max-w-6xl mx-auto px-4">
     <div className="text-center mb-16">
       <h2 className="text-3xl md:text-4xl font-bold mb-4 font-mono text-white">
-        <span className="block mx-auto w-fit typing-loop">
+        <span className="block mx-auto w-fit typing-loop pr-1">
           Kata Mereka
         </span>
       </h2>
