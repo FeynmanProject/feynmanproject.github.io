@@ -339,7 +339,11 @@ export default function Social() {
       <section id="contact" className="py-20 bg-[#1A1A1A]">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Hubungi Kami</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 font-mono text-white">
+              <span className="block mx-auto w-fit typing-loop-15">
+                Hubungi Kami
+              </span>
+            </h2>
             <p className="text-xl text-gray-400">Punya pertanyaan atau saran? Kami dengan senang hati ingin mendengarnya! Anda juga dapat menggunakan fitur chat yang terletak di pojok kanan bawah layar untuk menghubungi kami secara langsung.</p>
           </div>
           
