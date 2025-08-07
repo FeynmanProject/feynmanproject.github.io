@@ -447,7 +447,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
             <div className="relative h-full flex items-stretch">
               <div className="w-full rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden">
                 <Image 
-                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/ed683c15d9bdb59669509c782ab9d728.jfif"
+                  src="https://i.imgur.com/keni2hu.jpeg"
                   alt="Feynman Technique Illustration"
                   width={800}
                   height={800}
