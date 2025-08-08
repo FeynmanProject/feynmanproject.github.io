@@ -47,10 +47,10 @@ function PricingSection() {
   ];
 
   // kiri/kanan dikunci tingginya, tengah bebas
-  const sideCardH = 'md:h-[340px] lg:h-[370px]';
+  const sideCardH = 'md:h-[340px] lg:h-[390px]';
 
   return (
-    <section className="py-16 md:py-20 bg-[#0D0D0D]">
+    <section className="py-16 md:py-20 bg-[#8E44AD]">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-center text-2xl md:text-3xl font-bold mb-2">
           Paket Bundling Hemat
