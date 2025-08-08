@@ -50,7 +50,7 @@ function PricingSection() {
   const sideCardH = 'md:h-[340px] lg:h-[390px]';
 
   return (
-    <section className="py-16 md:py-20 bg-[#8E44AD]">
+    <section className="py-16 md:py-20 bg-[#0D0D0D]">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-center text-2xl md:text-3xl font-bold mb-2">
           Paket Bundling Hemat
@@ -127,7 +127,7 @@ function PricingSection() {
                   className={[
                     'mt-auto w-full text-center rounded-full py-3 font-semibold transition-all',
                     isCenter
-                      ? 'bg-[#7C3AED] hover:bg-[#6D2FE5] text-white'
+                      ? 'bg-[#7C3AED] hover:bg-[#8E44AD] text-white'
                       : 'bg-[#2A2A2A] hover:bg-[#8E44AD]/25 text-gray-100',
                   ].join(' ')}
                 >
