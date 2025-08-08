@@ -46,8 +46,7 @@ function PricingSection() {
     },
   ];
 
-  // tinggi kartu kiri/kanan (lebih pendek dari sebelumnya)
-  const sideCardH = 'md:h-[440px] lg:h-[460px]';
+  const sideCardH = 'md:h-[380px] lg:h-[400px]';
 
   return (
     <section className="py-20 bg-[#0D0D0D]">
