@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
-// ——— Pricing Section (tinggi kiri/kanan tidak ikut tengah) ———
+// ——— Pricing Section (semua lebar sama, tinggi kiri & kanan dikunci, tengah bebas) ———
 function PricingSection() {
   const plans = [
     {
@@ -46,6 +46,9 @@ function PricingSection() {
     },
   ];
 
+  // tinggi kartu kiri/kanan
+  const sideCardH = 'md:h-[520px] lg:h-[560px]';
+
   return (
     <section className="py-20 bg-[#0D0D0D]">
       <div className="max-w-6xl mx-auto px-4">
@@ -56,60 +59,56 @@ function PricingSection() {
           Pilih bundling sesuai kebutuhanmu. Harga sudah didiskon.
         </p>
 
-        {/* ⬇️ items-start bikin tinggi tiap kartu mengikuti kontennya sendiri */}
-        <div className="grid grid-cols-1 md:grid-cols-12 items-start gap-6 mt-10">
+        {/* Semua lebar sama (3 kolom), tapi tinggi kiri/kanan dikunci */}
+        <div className="grid grid-cols-1 md:grid-cols-3 items-start gap-6 mt-10">
           {plans.map((p, i) => (
             <div
               key={i}
-              className={i === 1 ? 'self-start md:col-span-6' : 'self-start md:col-span-3'}
+              className={[
+                'relative rounded-2xl p-8 transition-all flex flex-col',
+                i !== 1 ? sideCardH : '', // tinggi kunci hanya untuk kiri & kanan
+                p.highlight
+                  ? 'bg-[#1A1230] border border-[#8E44AD]/60 ring-2 ring-[#8E44AD]/40 shadow-[0_0_0_1px_rgba(142,68,173,0.2)]'
+                  : 'bg-[#1A1A1A] border border-white/5',
+              ].join(' ')}
             >
-              <div
+              {p.badge && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-semibold tracking-wide bg-[#2A1A3A] text-[#D7B0FF] px-3 py-1 rounded-full border border-[#8E44AD]/30">
+                  {p.badge}
+                </div>
+              )}
+
+              <div className="text-center mb-6">
+                <div className="text-sm text-gray-300">{p.title}</div>
+                <div className="mt-3">
+                  <div className="text-4xl md:text-5xl font-extrabold">{p.price}</div>
+                  <div className="text-gray-400 line-through mt-1">{p.struck}</div>
+                  {p.footnote && (
+                    <div className="mt-2 text-xs text-[#D7B0FF]">{p.footnote}</div>
+                  )}
+                </div>
+              </div>
+
+              <ul className="space-y-3 mb-8">
+                {p.includes.map((line, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <i className="ri-check-line mt-1 text-[#8E44AD]" />
+                    <span className="text-gray-200">{line}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={p.cta}
                 className={[
-                  // ⛔️ h-full DIHAPUS
-                  'relative rounded-2xl p-8 transition-all flex flex-col',
+                  'mt-auto block w-full text-center rounded-full py-3 font-semibold transition-all',
                   p.highlight
-                    ? 'bg-[#1A1230] border border-[#8E44AD]/60 ring-2 ring-[#8E44AD]/40 shadow-[0_0_0_1px_rgba(142,68,173,0.2)]'
-                    : 'bg-[#1A1A1A] border border-white/5',
+                    ? 'bg-[#8E44AD] hover:bg-[#7D3C98] text-white'
+                    : 'bg-[#2A2A2A] hover:bg-[#8E44AD]/20 text-gray-100 hover:text-white',
                 ].join(' ')}
               >
-                {p.badge && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-semibold tracking-wide bg-[#2A1A3A] text-[#D7B0FF] px-3 py-1 rounded-full border border-[#8E44AD]/30">
-                    {p.badge}
-                  </div>
-                )}
-
-                <div className="text-center mb-6">
-                  <div className="text-sm text-gray-300">{p.title}</div>
-                  <div className="mt-3">
-                    <div className="text-4xl md:text-5xl font-extrabold">{p.price}</div>
-                    <div className="text-gray-400 line-through mt-1">{p.struck}</div>
-                    {p.footnote && (
-                      <div className="mt-2 text-xs text-[#D7B0FF]">{p.footnote}</div>
-                    )}
-                  </div>
-                </div>
-
-                <ul className="space-y-3 mb-8">
-                  {p.includes.map((line, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <i className="ri-check-line mt-1 text-[#8E44AD]" />
-                      <span className="text-gray-200">{line}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <a
-                  href={p.cta}
-                  className={[
-                    'mt-auto block w-full text-center rounded-full py-3 font-semibold transition-all',
-                    p.highlight
-                      ? 'bg-[#8E44AD] hover:bg-[#7D3C98] text-white'
-                      : 'bg-[#2A2A2A] hover:bg-[#8E44AD]/20 text-gray-100 hover:text-white',
-                  ].join(' ')}
-                >
-                  Pilih Paket
-                </a>
-              </div>
+                Pilih Paket
+              </a>
             </div>
           ))}
         </div>
@@ -117,6 +116,7 @@ function PricingSection() {
     </section>
   );
 }
+
 
 
 export default function Books() {
