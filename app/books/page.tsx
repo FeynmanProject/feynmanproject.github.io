@@ -7,8 +7,7 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
-// ——— Pricing Section ———
-// ——— Pricing Section (baru) ———
+// ——— Pricing Section (asymmetric width) ———
 function PricingSection() {
   const plans = [
     // KIRI
@@ -18,14 +17,10 @@ function PricingSection() {
       struck: 'Rp 100.000',
       highlight: false,
       badge: undefined,
-      cta: '#', // ganti ke link checkout kamu
-      includes: [
-        'PDB Pra UTS — Rp 50.000',
-        'PDB Pasca UTS — Rp 50.000',
-      ],
+      cta: '#',
+      includes: ['PDB Pra UTS — Rp 50.000', 'PDB Pasca UTS — Rp 50.000'],
       footnote: 'Hemat Rp 10.000',
     },
-
     // TENGAH — PENAWARAN TERBAIK
     {
       title: 'Pack Maba',
@@ -43,7 +38,6 @@ function PricingSection() {
       ],
       footnote: 'Hemat Rp 35.000',
     },
-
     // KANAN
     {
       title: 'Bundling PDB + Kalkulus 3',
@@ -52,10 +46,7 @@ function PricingSection() {
       highlight: false,
       badge: undefined,
       cta: '#',
-      includes: [
-        'PDB (Pra + Pasca UTS) — Rp 100.000',
-        'Kalkulus 3 — Rp 60.000',
-      ],
+      includes: ['PDB (Pra + Pasca UTS) — Rp 100.000', 'Kalkulus 3 — Rp 60.000'],
       footnote: 'Hemat Rp 20.000',
     },
   ];
@@ -70,57 +61,66 @@ function PricingSection() {
           Pilih bundling sesuai kebutuhanmu. Harga sudah didiskon.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+        {/* 1 kolom di mobile, 12 kolom di md+ */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mt-10">
           {plans.map((p, i) => (
             <div
               key={i}
-              className={[
-                'relative rounded-2xl p-8 transition-all',
-                p.highlight
-                  ? 'bg-[#1A1230] border border-[#8E44AD]/60 ring-2 ring-[#8E44AD]/40 shadow-[0_0_0_1px_rgba(142,68,173,0.2)]'
-                  : 'bg-[#1A1A1A] border border-white/5',
-              ].join(' ')}
+              // kiri & kanan = 3 kolom; tengah = 6 kolom
+              className={i === 1 ? 'md:col-span-6' : 'md:col-span-3'}
             >
-              {p.badge && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-semibold tracking-wide bg-[#2A1A3A] text-[#D7B0FF] px-3 py-1 rounded-full border border-[#8E44AD]/30">
-                  {p.badge}
-                </div>
-              )}
-
-              <div className="text-center mb-6">
-                <div className="text-sm text-gray-300">{p.title}</div>
-                <div className="mt-3">
-                  <div className="text-4xl md:text-5xl font-extrabold">{p.price}</div>
-                  <div className="text-gray-400 line-through mt-1">{p.struck}</div>
-                  {p.footnote && (
-                    <div className="mt-2 text-xs text-[#D7B0FF]">
-                      {p.footnote}
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              {/* Daftar item di paket */}
-              <ul className="space-y-3 mb-8">
-                {p.includes.map((line, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <i className="ri-check-line mt-1 text-[#8E44AD]" />
-                    <span className="text-gray-200">{line}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <a
-                href={p.cta}
+              <div
                 className={[
-                  'block w-full text-center rounded-full py-3 font-semibold transition-all',
+                  'relative rounded-2xl p-8 transition-all h-full flex flex-col',
                   p.highlight
-                    ? 'bg-[#8E44AD] hover:bg-[#7D3C98] text-white'
-                    : 'bg-[#2A2A2A] hover:bg-[#8E44AD]/20 text-gray-100 hover:text-white',
+                    ? 'bg-[#1A1230] border border-[#8E44AD]/60 ring-2 ring-[#8E44AD]/40 shadow-[0_0_0_1px_rgba(142,68,173,0.2)]'
+                    : 'bg-[#1A1A1A] border border-white/5',
                 ].join(' ')}
               >
-                Pilih Paket
-              </a>
+                {p.badge && (
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-semibold tracking-wide bg-[#2A1A3A] text-[#D7B0FF] px-3 py-1 rounded-full border border-[#8E44AD]/30">
+                    {p.badge}
+                  </div>
+                )}
+
+                <div className="text-center mb-6">
+                  <div className="text-sm text-gray-300">{p.title}</div>
+                  <div className="mt-3">
+                    <div className="text-4xl md:text-5xl font-extrabold">
+                      {p.price}
+                    </div>
+                    <div className="text-gray-400 line-through mt-1">
+                      {p.struck}
+                    </div>
+                    {p.footnote && (
+                      <div className="mt-2 text-xs text-[#D7B0FF]">
+                        {p.footnote}
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                <ul className="space-y-3 mb-8">
+                  {p.includes.map((line, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <i className="ri-check-line mt-1 text-[#8E44AD]" />
+                      <span className="text-gray-200">{line}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href={p.cta}
+                  className={[
+                    'mt-auto block w-full text-center rounded-full py-3 font-semibold transition-all',
+                    p.highlight
+                      ? 'bg-[#8E44AD] hover:bg-[#7D3C98] text-white'
+                      : 'bg-[#2A2A2A] hover:bg-[#8E44AD]/20 text-gray-100 hover:text-white',
+                  ].join(' ')}
+                >
+                  Pilih Paket
+                </a>
+              </div>
             </div>
           ))}
         </div>
@@ -128,6 +128,8 @@ function PricingSection() {
     </section>
   );
 }
+
+
 export default function Books() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const bookSliderRef = useRef<HTMLDivElement>(null);
