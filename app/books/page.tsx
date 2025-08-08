@@ -47,7 +47,7 @@ function PricingSection() {
   ];
 
   // kiri/kanan dikunci tingginya, tengah bebas
-  const sideCardH = 'md:h-[340px] lg:h-[360px]';
+  const sideCardH = 'md:h-[340px] lg:h-[370px]';
 
   return (
     <section className="py-16 md:py-20 bg-[#0D0D0D]">
