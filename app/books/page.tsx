@@ -8,45 +8,67 @@ import { useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
 // ——— Pricing Section ———
+// ——— Pricing Section (baru) ———
 function PricingSection() {
   const plans = [
+    // KIRI
     {
-      title: 'Paket 1 Bulan',
-      price: 'Rp 125.000',
-      struck: 'Rp 300.000',
+      title: 'Bundling PDB (Pra & Pasca UTS)',
+      price: 'Rp 90.000',
+      struck: 'Rp 100.000',
       highlight: false,
-      cta: '#',
+      badge: undefined,
+      cta: '#', // ganti ke link checkout kamu
+      includes: [
+        'PDB Pra UTS — Rp 50.000',
+        'PDB Pasca UTS — Rp 50.000',
+      ],
+      footnote: 'Hemat Rp 10.000',
     },
+
+    // TENGAH — PENAWARAN TERBAIK
     {
-      title: 'Paket 3 Bulan',
-      price: 'Rp 375.000',
-      struck: 'Rp 900.000',
+      title: 'Pack Maba',
+      price: 'Rp 190.000',
+      struck: 'Rp 225.000',
       highlight: true,
       badge: 'PENAWARAN TERBAIK!',
       cta: '#',
+      includes: [
+        'Kalkulus 1 Jilid 1 — Rp 50.000',
+        'Kalkulus 1 Jilid 2 — Rp 50.000',
+        'Aljabar Linear Elementer — Rp 45.000',
+        'Logika & Himpunan — Rp 50.000',
+        'Algoritma & Pemrograman — Rp 30.000',
+      ],
+      footnote: 'Hemat Rp 35.000',
     },
-    {
-      title: 'Paket 6 Bulan',
-      price: 'Rp 750.000',
-      struck: 'Rp 1.800.000',
-      highlight: false,
-      cta: '#',
-    },
-  ];
 
-  const features = [
-    { label: 'Video', desc: 'Akses 500+ video belajar on-demand.' },
-    { label: 'Latihan', desc: 'Bank soal tahun lalu & pembahasannya.' },
-    { label: 'Rangkuman', desc: 'Ringkasan materi beserta ilustrasi.' },
-    { label: 'Komunitas', desc: 'Tanya pertanyaanmu sepuasnya.' },
+    // KANAN
+    {
+      title: 'Bundling PDB + Kalkulus 3',
+      price: 'Rp 140.000',
+      struck: 'Rp 160.000',
+      highlight: false,
+      badge: undefined,
+      cta: '#',
+      includes: [
+        'PDB (Pra + Pasca UTS) — Rp 100.000',
+        'Kalkulus 3 — Rp 60.000',
+      ],
+      footnote: 'Hemat Rp 20.000',
+    },
   ];
 
   return (
     <section className="py-20 bg-[#0D0D0D]">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-center text-2xl md:text-3xl font-bold mb-2">
-          Tertarik? Langganan untuk mengakses seluruh materi
+          Paket Bundling Hemat
         </h2>
+        <p className="text-center text-gray-400">
+          Pilih bundling sesuai kebutuhanmu. Harga sudah didiskon.
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
           {plans.map((p, i) => (
@@ -70,17 +92,20 @@ function PricingSection() {
                 <div className="mt-3">
                   <div className="text-4xl md:text-5xl font-extrabold">{p.price}</div>
                   <div className="text-gray-400 line-through mt-1">{p.struck}</div>
+                  {p.footnote && (
+                    <div className="mt-2 text-xs text-[#D7B0FF]">
+                      {p.footnote}
+                    </div>
+                  )}
                 </div>
               </div>
 
-              <ul className="space-y-4 mb-8">
-                {features.map((f) => (
-                  <li key={f.label} className="flex items-start gap-3">
+              {/* Daftar item di paket */}
+              <ul className="space-y-3 mb-8">
+                {p.includes.map((line, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
                     <i className="ri-check-line mt-1 text-[#8E44AD]" />
-                    <div>
-                      <div className="font-semibold">{f.label}</div>
-                      <div className="text-sm text-gray-400">{f.desc}</div>
-                    </div>
+                    <span className="text-gray-200">{line}</span>
                   </li>
                 ))}
               </ul>
@@ -94,7 +119,7 @@ function PricingSection() {
                     : 'bg-[#2A2A2A] hover:bg-[#8E44AD]/20 text-gray-100 hover:text-white',
                 ].join(' ')}
               >
-                Langganan Sekarang
+                Pilih Paket
               </a>
             </div>
           ))}
@@ -103,7 +128,6 @@ function PricingSection() {
     </section>
   );
 }
-
 export default function Books() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const bookSliderRef = useRef<HTMLDivElement>(null);
