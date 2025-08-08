@@ -700,7 +700,7 @@ const testimonials = [
                   unoptimized
                 />
               </div>
-              <h3 className="text-xl font-bold mb-2">Fritz Adelbertus Sitindaon</h3>
+              <h3 className="text-xl font-bold mb-2">Fritz Sitindaon</h3>
               <p className="text-[#8E44AD] mb-4">Penulis Diktat</p>
               <p className="text-gray-400 leading-relaxed">
                Tertarik pada logika, membantu merancang konten dan operasional agar matematika terasa masuk akal dan mudah dipahami.
