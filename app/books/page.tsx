@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
-// ——— Pricing Section (semua lebar sama, tinggi kiri & kanan dikunci, tengah bebas) ———
+// ——— Pricing Section (styled mirip gambar) ———
 function PricingSection() {
   const plans = [
     {
@@ -46,10 +46,11 @@ function PricingSection() {
     },
   ];
 
+  // kiri/kanan dikunci tingginya, tengah bebas
   const sideCardH = 'md:h-[340px] lg:h-[360px]';
 
   return (
-    <section className="py-20 bg-[#0D0D0D]">
+    <section className="py-16 md:py-20 bg-[#0D0D0D]">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-center text-2xl md:text-3xl font-bold mb-2">
           Paket Bundling Hemat
@@ -58,63 +59,89 @@ function PricingSection() {
           Pilih bundling sesuai kebutuhanmu. Harga sudah didiskon.
         </p>
 
-        {/* Semua lebar sama (3 kolom), tapi tinggi kiri/kanan dikunci */}
-        <div className="grid grid-cols-1 md:grid-cols-3 items-start gap-6 mt-10">
-          {plans.map((p, i) => (
-            <div
-              key={i}
-              className={[
-                'relative rounded-2xl p-8 transition-all flex flex-col',
-                i !== 1 ? sideCardH : '', // tinggi kunci hanya untuk kiri & kanan
-                p.highlight
-                  ? 'bg-[#1A1230] border border-[#8E44AD]/60 ring-2 ring-[#8E44AD]/40 shadow-[0_0_0_1px_rgba(142,68,173,0.2)]'
-                  : 'bg-[#1A1A1A] border border-white/5',
-              ].join(' ')}
-            >
-              {p.badge && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-semibold tracking-wide bg-[#2A1A3A] text-[#D7B0FF] px-3 py-1 rounded-full border border-[#8E44AD]/30">
-                  {p.badge}
-                </div>
-              )}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-8 md:mt-10 items-start">
+          {plans.map((p, i) => {
+            const isCenter = i === 1;
 
-              <div className="text-center mb-6">
-                <div className="text-sm text-gray-300">{p.title}</div>
-                <div className="mt-3">
-                  <div className="text-4xl md:text-5xl font-extrabold">{p.price}</div>
-                  <div className="text-gray-400 line-through mt-1">{p.struck}</div>
-                  {p.footnote && (
-                    <div className="mt-2 text-xs text-[#D7B0FF]">{p.footnote}</div>
-                  )}
-                </div>
-              </div>
-
-              <ul className="space-y-3 mb-8">
-                {p.includes.map((line, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <i className="ri-check-line mt-1 text-[#8E44AD]" />
-                    <span className="text-gray-200">{line}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <a
-                href={p.cta}
+            return (
+              <div
+                key={p.title}
                 className={[
-                  'mt-auto block w-full text-center rounded-full py-3 font-semibold transition-all',
-                  p.highlight
-                    ? 'bg-[#8E44AD] hover:bg-[#7D3C98] text-white'
-                    : 'bg-[#2A2A2A] hover:bg-[#8E44AD]/20 text-gray-100 hover:text-white',
+                  // card shell
+                  'relative rounded-2xl p-6 md:p-8 flex flex-col transition-all',
+                  'shadow-[0_8px_40px_rgba(0,0,0,0.25)]',
+                  isCenter
+                    ? 'bg-[#1B1331] border border-[#8E44AD]/60 ring-2 ring-[#8E44AD]/40'
+                    : 'bg-[#1A1A1A] border border-white/5',
+                  !isCenter ? sideCardH : 'md:pb-8',
+                  isCenter ? 'scale-[1.02]' : 'hover:-translate-y-1',
                 ].join(' ')}
               >
-                Pilih Paket
-              </a>
-            </div>
-          ))}
+                {/* Badge bar (tengah saja) */}
+                {isCenter && p.badge && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 text-xs font-semibold rounded-full bg-[#2A1A3A] text-[#D7B0FF] border border-[#8E44AD]/30">
+                    {p.badge}
+                  </div>
+                )}
+
+                {/* Header & price */}
+                <div className="text-center mb-5 md:mb-6">
+                  <div className="text-sm md:text-base font-semibold text-gray-200">
+                    {p.title}
+                  </div>
+
+                  <div className="mt-3">
+                    <div
+                      className={[
+                        'font-extrabold leading-none',
+                        'text-[34px] md:text-[42px]',
+                        isCenter ? 'text-white' : 'text-white',
+                      ].join(' ')}
+                    >
+                      {p.price}
+                    </div>
+                    <div className="text-[#B27575] line-through mt-2 text-base">
+                      {p.struck}
+                    </div>
+                    {p.footnote && (
+                      <div className="mt-2 text-xs text-[#D7B0FF]">{p.footnote}</div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Features list */}
+                <ul className="space-y-3 md:space-y-4 mb-6 md:mb-8">
+                  {p.includes.map((line) => (
+                    <li key={line} className="flex items-start gap-3">
+                      <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-[#3A2A53] text-[#B887FF]">
+                        <i className="ri-check-line text-sm" />
+                      </span>
+                      <span className="text-gray-200">{line}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* CTA */}
+                <a
+                  href={p.cta}
+                  className={[
+                    'mt-auto w-full text-center rounded-full py-3 font-semibold transition-all',
+                    isCenter
+                      ? 'bg-[#7C3AED] hover:bg-[#6D2FE5] text-white'
+                      : 'bg-[#2A2A2A] hover:bg-[#8E44AD]/25 text-gray-100',
+                  ].join(' ')}
+                >
+                  Pilih Paket
+                </a>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 }
+
 
 
 
