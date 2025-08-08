@@ -7,21 +7,18 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
-// ——— Pricing Section (asymmetric width) ———
+// ——— Pricing Section (tinggi kiri/kanan tidak ikut tengah) ———
 function PricingSection() {
   const plans = [
-    // KIRI
     {
       title: 'Bundling PDB (Pra & Pasca UTS)',
       price: 'Rp 90.000',
       struck: 'Rp 100.000',
       highlight: false,
-      badge: undefined,
       cta: '#',
       includes: ['PDB Pra UTS — Rp 50.000', 'PDB Pasca UTS — Rp 50.000'],
       footnote: 'Hemat Rp 10.000',
     },
-    // TENGAH — PENAWARAN TERBAIK
     {
       title: 'Pack Maba',
       price: 'Rp 190.000',
@@ -38,13 +35,11 @@ function PricingSection() {
       ],
       footnote: 'Hemat Rp 35.000',
     },
-    // KANAN
     {
       title: 'Bundling PDB + Kalkulus 3',
       price: 'Rp 140.000',
       struck: 'Rp 160.000',
       highlight: false,
-      badge: undefined,
       cta: '#',
       includes: ['PDB (Pra + Pasca UTS) — Rp 100.000', 'Kalkulus 3 — Rp 60.000'],
       footnote: 'Hemat Rp 20.000',
@@ -61,17 +56,17 @@ function PricingSection() {
           Pilih bundling sesuai kebutuhanmu. Harga sudah didiskon.
         </p>
 
-        {/* 1 kolom di mobile, 12 kolom di md+ */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 mt-10">
+        {/* ⬇️ items-start bikin tinggi tiap kartu mengikuti kontennya sendiri */}
+        <div className="grid grid-cols-1 md:grid-cols-12 items-start gap-6 mt-10">
           {plans.map((p, i) => (
             <div
               key={i}
-              // kiri & kanan = 3 kolom; tengah = 6 kolom
-              className={i === 1 ? 'md:col-span-6' : 'md:col-span-3'}
+              className={i === 1 ? 'self-start md:col-span-6' : 'self-start md:col-span-3'}
             >
               <div
                 className={[
-                  'relative rounded-2xl p-8 transition-all h-full flex flex-col',
+                  // ⛔️ h-full DIHAPUS
+                  'relative rounded-2xl p-8 transition-all flex flex-col',
                   p.highlight
                     ? 'bg-[#1A1230] border border-[#8E44AD]/60 ring-2 ring-[#8E44AD]/40 shadow-[0_0_0_1px_rgba(142,68,173,0.2)]'
                     : 'bg-[#1A1A1A] border border-white/5',
@@ -86,16 +81,10 @@ function PricingSection() {
                 <div className="text-center mb-6">
                   <div className="text-sm text-gray-300">{p.title}</div>
                   <div className="mt-3">
-                    <div className="text-4xl md:text-5xl font-extrabold">
-                      {p.price}
-                    </div>
-                    <div className="text-gray-400 line-through mt-1">
-                      {p.struck}
-                    </div>
+                    <div className="text-4xl md:text-5xl font-extrabold">{p.price}</div>
+                    <div className="text-gray-400 line-through mt-1">{p.struck}</div>
                     {p.footnote && (
-                      <div className="mt-2 text-xs text-[#D7B0FF]">
-                        {p.footnote}
-                      </div>
+                      <div className="mt-2 text-xs text-[#D7B0FF]">{p.footnote}</div>
                     )}
                   </div>
                 </div>
