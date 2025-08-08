@@ -46,7 +46,7 @@ function PricingSection() {
     },
   ];
 
-  const sideCardH = 'md:h-[360px] lg:h-[380px]';
+  const sideCardH = 'md:h-[340px] lg:h-[360px]';
 
   return (
     <section className="py-20 bg-[#0D0D0D]">
@@ -528,7 +528,6 @@ const testimonials = [
   </div>
 </section>
 
-<PricingSection />
 
       
       
@@ -572,7 +571,7 @@ const testimonials = [
         </div>
       </section>
 
-
+<PricingSection />
 
       {/* Features Section */}
       <section className="py-20 bg-[#1A1A1A]">
