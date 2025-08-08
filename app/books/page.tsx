@@ -127,7 +127,7 @@ function PricingSection() {
                   className={[
                     'mt-auto w-full text-center rounded-full py-3 font-semibold transition-all',
                     isCenter
-                      ? 'bg-[#7C3AED] hover:bg-[#8E44AD] text-white'
+                      ? 'bg-[#7C3AED] hover:bg-[#6D2FE5] text-white'
                       : 'bg-[#2A2A2A] hover:bg-[#8E44AD]/25 text-gray-100',
                   ].join(' ')}
                 >
