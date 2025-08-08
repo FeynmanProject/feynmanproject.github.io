@@ -642,6 +642,91 @@ const testimonials = [
         </div>
       </section>
 
+      {/* Team Section */}
+      <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 font-mono text-white">
+              <span className="block mx-auto w-fit typing-loop-15">
+                Meet Our Team
+              </span>
+            </h2>
+            <p className="text-xl text-gray-400">Feynman Project lahir dari kolaborasi para pembelajar dan berfokus pada penyajian ilmu secara runtut dan sederhana untuk mendukung proses belajar yang lebih bermakna.</p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                <Image
+                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/0909b88981a42a1416b47377a17d9718.png"
+                  alt="Dr. Sarah Chen - Founder"
+                  width={192}
+                  height={192}
+                  className="w-full h-full object-cover object-top rounded-full"
+                  unoptimized
+                />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Muhammad Faris Naufaldi</h3>
+              <p className="text-[#8E44AD] mb-4">Founder of Feynman Project</p>
+              <p className="text-gray-400 leading-relaxed">
+                Mengelola wajah digital Feynman Project dari desain hingga media. Aktif menginisiasi kolaborasi untuk pengembangan buku dan platform belajar.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                <Image 
+                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/89caa20f90a1aa501a81121965edf303.png"
+                  alt="Michael Rodriguez - Content Director"
+                  fill
+                  className="object-cover object-top"
+                  unoptimized
+                />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Natalius Desta Riyanto</h3>
+              <p className="text-[#8E44AD] mb-4">Co-Founder of Feynman Project</p>
+              <p className="text-gray-400 leading-relaxed">
+                Menyusun materi pengajaran untuk video dan buku diktat, fokus pada penyampaian konsep secara sistematis dan jelas.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                <Image
+                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/35f2486849850195865b2e960e70faa7.png"
+                  alt="Emily Watson - Technology Lead"
+                  fill
+                  className="object-cover object-top"
+                  unoptimized
+                />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Richard G. H. Sinurat</h3>
+              <p className="text-[#8E44AD] mb-4">Co-Founder of Feynman Project</p>
+              <p className="text-gray-400 leading-relaxed">
+               Tertarik pada logika, membantu merancang konten dan operasional agar matematika terasa masuk akal dan mudah dipahami.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                <Image 
+                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/d2aae01ff2024d3fe3f211134c42626d.png"
+                  alt="David Park - Community Manager"
+                  fill
+                  unoptimized
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Adregal Tora</h3>
+              <p className="text-[#8E44AD] mb-4">Co-Founder of Feynman Project</p>
+              <p className="text-gray-400 leading-relaxed">
+                Berperan dalam pembuatan animasi edukatif dan penyusunan materi ajar yang mendukung pemahaman logis dan runtut.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>              
+      
 {/* Testimonials Section */}
 <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
   <div className="max-w-6xl mx-auto px-4">
