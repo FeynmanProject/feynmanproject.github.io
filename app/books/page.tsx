@@ -24,7 +24,7 @@ function PricingSection() {
       price: 'Rp 190.000',
       struck: 'Rp 225.000',
       highlight: true,
-      badge: 'PENAWARAN TERBAIK!',
+      badge: 'Penawaran Terbaik',
       cta: 'https://feynmanbookstore.vercel.app/',
       includes: [
         'Kalkulus 1 Jilid 1 — Rp 50.000',
