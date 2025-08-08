@@ -46,7 +46,7 @@ function PricingSection() {
     },
   ];
 
-  const sideCardH = 'md:h-[380px] lg:h-[400px]';
+  const sideCardH = 'md:h-[360px] lg:h-[380px]';
 
   return (
     <section className="py-20 bg-[#0D0D0D]">
