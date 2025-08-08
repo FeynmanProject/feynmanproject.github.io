@@ -648,7 +648,7 @@ const testimonials = [
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 font-mono text-white">
               <span className="block mx-auto w-fit typing-loop-15">
-                Our Collaborator
+                Penulis Diktat
               </span>
             </h2>
             <p className="text-xl text-gray-400">Kami mengucapkan terima kasih yang sebesar-besarnya kepada para penulis buku yang telah mencurahkan waktu, tenaga, dan pemikirannya untuk menyusun materi yang bermutu, sehingga dapat menjadi sumber belajar yang bermanfaat bagi banyak orang.</p>
