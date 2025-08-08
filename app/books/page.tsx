@@ -7,6 +7,102 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
+// ——— Pricing Section ———
+function PricingSection() {
+  const plans = [
+    {
+      title: 'Paket 1 Bulan',
+      price: 'Rp 125.000',
+      struck: 'Rp 300.000',
+      highlight: false,
+      cta: '#',
+    },
+    {
+      title: 'Paket 3 Bulan',
+      price: 'Rp 375.000',
+      struck: 'Rp 900.000',
+      highlight: true,
+      badge: 'PENAWARAN TERBAIK!',
+      cta: '#',
+    },
+    {
+      title: 'Paket 6 Bulan',
+      price: 'Rp 750.000',
+      struck: 'Rp 1.800.000',
+      highlight: false,
+      cta: '#',
+    },
+  ];
+
+  const features = [
+    { label: 'Video', desc: 'Akses 500+ video belajar on-demand.' },
+    { label: 'Latihan', desc: 'Bank soal tahun lalu & pembahasannya.' },
+    { label: 'Rangkuman', desc: 'Ringkasan materi beserta ilustrasi.' },
+    { label: 'Komunitas', desc: 'Tanya pertanyaanmu sepuasnya.' },
+  ];
+
+  return (
+    <section className="py-20 bg-[#0D0D0D]">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-center text-2xl md:text-3xl font-bold mb-2">
+          Tertarik? Langganan untuk mengakses seluruh materi
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+          {plans.map((p, i) => (
+            <div
+              key={i}
+              className={[
+                'relative rounded-2xl p-8 transition-all',
+                p.highlight
+                  ? 'bg-[#1A1230] border border-[#8E44AD]/60 ring-2 ring-[#8E44AD]/40 shadow-[0_0_0_1px_rgba(142,68,173,0.2)]'
+                  : 'bg-[#1A1A1A] border border-white/5',
+              ].join(' ')}
+            >
+              {p.badge && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-semibold tracking-wide bg-[#2A1A3A] text-[#D7B0FF] px-3 py-1 rounded-full border border-[#8E44AD]/30">
+                  {p.badge}
+                </div>
+              )}
+
+              <div className="text-center mb-6">
+                <div className="text-sm text-gray-300">{p.title}</div>
+                <div className="mt-3">
+                  <div className="text-4xl md:text-5xl font-extrabold">{p.price}</div>
+                  <div className="text-gray-400 line-through mt-1">{p.struck}</div>
+                </div>
+              </div>
+
+              <ul className="space-y-4 mb-8">
+                {features.map((f) => (
+                  <li key={f.label} className="flex items-start gap-3">
+                    <i className="ri-check-line mt-1 text-[#8E44AD]" />
+                    <div>
+                      <div className="font-semibold">{f.label}</div>
+                      <div className="text-sm text-gray-400">{f.desc}</div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={p.cta}
+                className={[
+                  'block w-full text-center rounded-full py-3 font-semibold transition-all',
+                  p.highlight
+                    ? 'bg-[#8E44AD] hover:bg-[#7D3C98] text-white'
+                    : 'bg-[#2A2A2A] hover:bg-[#8E44AD]/20 text-gray-100 hover:text-white',
+                ].join(' ')}
+              >
+                Langganan Sekarang
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function Books() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -418,7 +514,9 @@ const testimonials = [
   </div>
 </section>
 
+<PricingSection />
 
+      
       
 
       {/* Book Slider */}
