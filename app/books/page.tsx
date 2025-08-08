@@ -654,7 +654,7 @@ const testimonials = [
             <p className="text-xl text-gray-400">Kami mengucapkan terima kasih yang sebesar-besarnya kepada para penulis buku yang telah mencurahkan waktu, tenaga, dan pemikirannya untuk menyusun materi yang bermutu, sehingga dapat menjadi sumber belajar yang bermanfaat bagi banyak orang.</p>
           </div>
           
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 place-items-center">
             <div className="text-center">
               <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <Image
