@@ -648,10 +648,10 @@ const testimonials = [
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 font-mono text-white">
               <span className="block mx-auto w-fit typing-loop-15">
-                Meet Our Team
+                Our Collaborator
               </span>
             </h2>
-            <p className="text-xl text-gray-400">Feynman Project lahir dari kolaborasi para pembelajar dan berfokus pada penyajian ilmu secara runtut dan sederhana untuk mendukung proses belajar yang lebih bermakna.</p>
+            <p className="text-xl text-gray-400">Kami mengucapkan terima kasih yang sebesar-besarnya kepada para penulis buku yang telah mencurahkan waktu, tenaga, dan pemikirannya untuk menyusun materi yang bermutu, sehingga dapat menjadi sumber belajar yang bermanfaat bagi banyak orang.</p>
           </div>
           
           <div className="grid md:grid-cols-4 gap-8">
@@ -666,8 +666,8 @@ const testimonials = [
                   unoptimized
                 />
               </div>
-              <h3 className="text-xl font-bold mb-2">Muhammad Faris Naufaldi</h3>
-              <p className="text-[#8E44AD] mb-4">Founder of Feynman Project</p>
+              <h3 className="text-xl font-bold mb-2">Abdul Wahhab</h3>
+              <p className="text-[#8E44AD] mb-4">Penulis Diktat</p>
               <p className="text-gray-400 leading-relaxed">
                 Mengelola wajah digital Feynman Project dari desain hingga media. Aktif menginisiasi kolaborasi untuk pengembangan buku dan platform belajar.
               </p>
@@ -683,8 +683,8 @@ const testimonials = [
                   unoptimized
                 />
               </div>
-              <h3 className="text-xl font-bold mb-2">Natalius Desta Riyanto</h3>
-              <p className="text-[#8E44AD] mb-4">Co-Founder of Feynman Project</p>
+              <h3 className="text-xl font-bold mb-2">Renzie Aditya</h3>
+              <p className="text-[#8E44AD] mb-4">Penulis Diktat</p>
               <p className="text-gray-400 leading-relaxed">
                 Menyusun materi pengajaran untuk video dan buku diktat, fokus pada penyampaian konsep secara sistematis dan jelas.
               </p>
@@ -700,12 +700,29 @@ const testimonials = [
                   unoptimized
                 />
               </div>
-              <h3 className="text-xl font-bold mb-2">Richard G. H. Sinurat</h3>
-              <p className="text-[#8E44AD] mb-4">Co-Founder of Feynman Project</p>
+              <h3 className="text-xl font-bold mb-2">Fritz Adelbertus Sitindaon</h3>
+              <p className="text-[#8E44AD] mb-4">Penulis Diktat</p>
               <p className="text-gray-400 leading-relaxed">
                Tertarik pada logika, membantu merancang konten dan operasional agar matematika terasa masuk akal dan mudah dipahami.
               </p>
             </div>
+
+            <div className="text-center">
+              <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+                <Image
+                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/35f2486849850195865b2e960e70faa7.png"
+                  alt="Emily Watson - Technology Lead"
+                  fill
+                  className="object-cover object-top"
+                  unoptimized
+                />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Albert Wijaya</h3>
+              <p className="text-[#8E44AD] mb-4">Penulis Diktat</p>
+              <p className="text-gray-400 leading-relaxed">
+               Tertarik pada logika, membantu merancang konten dan operasional agar matematika terasa masuk akal dan mudah dipahami.
+              </p>
+            </div>            
 
             <div className="text-center">
               <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
@@ -717,8 +734,8 @@ const testimonials = [
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <h3 className="text-xl font-bold mb-2">Adregal Tora</h3>
-              <p className="text-[#8E44AD] mb-4">Co-Founder of Feynman Project</p>
+              <h3 className="text-xl font-bold mb-2">Bryan Jonathan</h3>
+              <p className="text-[#8E44AD] mb-4">Penulis Diktat</p>
               <p className="text-gray-400 leading-relaxed">
                 Berperan dalam pembuatan animasi edukatif dan penyusunan materi ajar yang mendukung pemahaman logis dan runtut.
               </p>
