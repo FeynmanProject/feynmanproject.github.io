@@ -249,14 +249,14 @@ export default function Books() {
   const books = [
     {
       id: 1,
-      title: "Kalkulus 1",
+      title: "Kalkulus 1 Jilid 1",
       author: "Abdul Wahhab, Fritz Adelbertus Sitindaon, Natalius Desta Riyanto",
       description: "Menentukan penyelesaian dari permasalahan yang berkaitan dengan Kalkulus fungsi real satu variabel seperti limit, turunan, dan integral.",
       price: "Rp 50.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/09df2910d57052d7c1994f7e5a00ba22.png",
       category: "Kalkulus",
       buyLink: "https://feynmanbookstore.vercel.app/",
-      previewLink: "https://drive.google.com/file/d/YYYY/view?usp=sharing", // ← ganti
+      previewLink: "https://drive.google.com/drive/folders/1IPMDMcDMWKgm0-jUQniL6tVZMbsamUAH", // ← ganti
     },
     {
       id: 2,
@@ -267,7 +267,7 @@ export default function Books() {
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/3df264044ff8ef342a62e169384b991a.png",
       category: "ALE",
       buyLink: "https://feynmanbookstore.vercel.app/",
-      previewLink: "https://drive.google.com/file/d/YYYY/view?usp=sharing", // ← ganti
+      previewLink: "https://drive.google.com/drive/folders/1IPMDMcDMWKgm0-jUQniL6tVZMbsamUAH", // ← ganti
     },
     {
       id: 3,
@@ -278,18 +278,18 @@ export default function Books() {
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/8e187fa56beec5354edb3df4bb22a2f6.png",
       category: "ALPROG",
       buyLink: "https://feynmanbookstore.vercel.app/",
-      previewLink: "https://drive.google.com/file/d/YYYY/view?usp=sharing", // ← ganti
+      previewLink: "https://drive.google.com/drive/folders/1IPMDMcDMWKgm0-jUQniL6tVZMbsamUAH", // ← ganti
     },
     {
       id: 4,
-      title: "Persamaan Diferensial Biasa",
+      title: "Persamaan Diferensial Biasa Jilid 1",
       author: "Abdul Wahhab, Renzie Aditya",
       description: "Menerapkan konsep dasar matematis untuk menyelesaikan berbagai masalah persamaan diferensial biasa, baik secara analitik, maupun menggunakan pendekatan deret.",
       price: "Rp 60.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c606d4d1341412a98dd748c3be25ef70.png",
       category: "PDB",
       buyLink: "https://feynmanbookstore.vercel.app/",
-      previewLink: "https://drive.google.com/file/d/YYYY/view?usp=sharing", // ← ganti
+      previewLink: "https://drive.google.com/drive/folders/1IPMDMcDMWKgm0-jUQniL6tVZMbsamUAH", // ← ganti
     },
     {
       id: 5,
@@ -300,7 +300,7 @@ export default function Books() {
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/e7c0cb832afcd55576b125f8212959ec.png",
       category: "Kalkulus",
       buyLink: "https://feynmanbookstore.vercel.app/",
-      previewLink: "https://drive.google.com/file/d/YYYY/view?usp=sharing", // ← ganti
+      previewLink: "https://drive.google.com/drive/folders/1IPMDMcDMWKgm0-jUQniL6tVZMbsamUAH", // ← ganti
     },
     {
       id: 6,
