@@ -28,7 +28,7 @@ function SplitBuyPreviewButton({
   }, []);
 
   return (
-    <div ref={menuRef} className="relative flex">
+    <div ref={menuRef} className="relative flex z-[55]">
       {/* Tombol utama */}
       <a
         href={buyLink}
@@ -55,7 +55,9 @@ function SplitBuyPreviewButton({
       {open && (
         <div
           role="menu"
-          className="absolute z-20 right-0 mt-2 w-48 rounded-xl border border-white/10 bg-[#1A1A1A] shadow-[0_8px_30px_rgba(0,0,0,0.35)] p-1"
+          className="absolute z-[60] right-0 mt-2 w-48 rounded-xl border border-white/10
+                     bg-[#1A1A1A] shadow-[0_8px_30px_rgba(0,0,0,0.35)] p-1"
+
         >
           {buyLink && (
             <a
@@ -388,19 +390,17 @@ export default function Books() {
 
   
 const BookCard = ({ book }: { book: Book }) => (
-  <div className="bg-[#1A1A1A] rounded-2xl /* overflow-hidden ⟵ HAPUS */
-                  shadow-xl hover:shadow-2xl transition-all duration-300
-                  hover:scale-105 flex flex-col relative">
+  <div className="bg-[#1A1A1A] rounded-2xl shadow-xl hover:shadow-2xl 
+                  transition-all duration-300 hover:scale-105 flex flex-col relative">
     <div className="w-full aspect-[832/1107] relative overflow-hidden rounded-t-2xl">
       <Image
         src={book.image}
         alt={book.title}
         fill
-        className="object-cover" /* rounded sudah di wrapper */
+        className="object-cover"
         unoptimized
       />
     </div>
-
     <div className="flex-1 flex flex-col p-6">
       <div className="text-sm text-[#8E44AD] font-semibold mb-2">{book.category}</div>
       <h3 className="text-xl font-bold mb-2">{book.title}</h3>
@@ -414,6 +414,7 @@ const BookCard = ({ book }: { book: Book }) => (
     </div>
   </div>
 );
+
 
 
 const testimonials = [
@@ -575,7 +576,7 @@ const testimonials = [
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#0D0D0D] via-[#1A0D1A] to-[#0D0D0D]">
-        <div className="absolute inset-0 bg-[url('https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/4e022c79b031d0b30a9e1786362ee671.jfif')] bg-cover bg-center opacity-15')] bg-cover bg-center opacity-15"></div>
+        <div className="absolute inset-0 bg-[url('https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/4e022c79b031d0b30a9e1786362ee671.jfif')] bg-cover bg-center opacity-20"></div>
         
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-[#8E44AD] bg-clip-text text-transparent">
@@ -667,7 +668,7 @@ const testimonials = [
 
           <div
             ref={bookSliderRef}
-            className="flex gap-6 overflow-x-auto no-scrollbar scroll-smooth"
+            className="flex gap-6 overflow-x-auto overflow-y-visible no-scrollbar scroll-smooth"
           >
 
             {filteredBooks.length === 0 ? (
