@@ -226,26 +226,11 @@ function PricingSection() {
 
 export default function Books() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const bookSliderRef = useRef<HTMLDivElement>(null);
   // State untuk kontrol pause testimonial
   const [isPaused, setIsPaused] = useState(false);
   const [manualPause, setManualPause] = useState(false);
 
   const pathname = usePathname();
-
-
-  // ✅ Fungsi scrollLeft dan scrollRight untuk tombol buku
-  const scrollLeft = () => {
-    if (bookSliderRef.current) {
-      bookSliderRef.current.scrollBy({ left: -800, behavior: 'smooth' });
-    }
-  };
-
-  const scrollRight = () => {
-    if (bookSliderRef.current) {
-      bookSliderRef.current.scrollBy({ left: 800, behavior: 'smooth' });
-    }
-  };
 
   const books = [
     {
