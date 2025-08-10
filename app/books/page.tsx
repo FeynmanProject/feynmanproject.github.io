@@ -6,6 +6,88 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { usePathname } from 'next/navigation';
+import { useEffect } from 'react';
+
+function SplitBuyPreviewButton({
+  buyLink,
+  previewLink,
+}: {
+  buyLink?: string;
+  previewLink?: string;
+}) {
+  const [open, setOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  // tutup saat klik di luar
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      if (!menuRef.current) return;
+      if (!menuRef.current.contains(e.target as Node)) setOpen(false);
+    };
+    window.addEventListener('click', onClick);
+    return () => window.removeEventListener('click', onClick);
+  }, []);
+
+  return (
+    <div className="relative flex">
+      {/* Tombol utama */}
+      <a
+        href={buyLink}
+        className="rounded-l-full bg-[#8E44AD] hover:bg-[#7D3C98] text-white px-6 py-2 font-semibold transition-all duration-300"
+      >
+        Beli Sekarang
+      </a>
+
+      {/* Tombol caret */}
+      <button
+        type="button"
+        aria-haspopup="menu"
+        aria-expanded={open}
+        onClick={(e) => {
+          e.stopPropagation();
+          setOpen((v) => !v);
+        }}
+        className="rounded-r-full bg-[#8E44AD] hover:bg-[#7D3C98] text-white px-3 py-2 border-l border-white/20 transition-all duration-300"
+      >
+        <i className="ri-arrow-down-s-line text-xl leading-none" />
+        <span className="sr-only">Opsi lainnya</span>
+      </button>
+
+      {/* Menu dropdown */}
+      {open && (
+        <div
+          ref={menuRef}
+          role="menu"
+          className="absolute z-20 right-0 mt-2 w-48 rounded-xl border border-white/10 bg-[#1A1A1A] shadow-[0_8px_30px_rgba(0,0,0,0.35)] p-1"
+        >
+          {/* (Opsional) tampilkan juga aksi utama di menu */}
+          {buyLink && (
+            <a
+              role="menuitem"
+              href={buyLink}
+              className="block px-3 py-2 rounded-lg text-sm text-gray-200 hover:bg-white/5"
+            >
+              Beli Sekarang
+            </a>
+          )}
+
+          {previewLink && (
+            <a
+              role="menuitem"
+              href={previewLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block px-3 py-2 rounded-lg text-sm text-gray-200 hover:bg-white/5"
+            >
+              Preview
+            </a>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
 
 // ——— Pricing Section (styled mirip gambar) ———
 function PricingSection() {
@@ -177,7 +259,8 @@ export default function Books() {
       price: "Rp 50.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/09df2910d57052d7c1994f7e5a00ba22.png",
       category: "Kalkulus",
-      buyLink: "https://feynmanbookstore.vercel.app/"
+      buyLink: "https://feynmanbookstore.vercel.app/",
+      previewLink: "https://drive.google.com/file/d/YYYY/view?usp=sharing", // ← ganti
     },
     {
       id: 2,
@@ -187,7 +270,8 @@ export default function Books() {
       price: "Rp 50.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/3df264044ff8ef342a62e169384b991a.png",
       category: "ALE",
-      buyLink: "https://feynmanbookstore.vercel.app/"
+      buyLink: "https://feynmanbookstore.vercel.app/",
+      previewLink: "https://drive.google.com/file/d/YYYY/view?usp=sharing", // ← ganti
     },
     {
       id: 3,
@@ -197,7 +281,8 @@ export default function Books() {
       price: "Rp 60.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/8e187fa56beec5354edb3df4bb22a2f6.png",
       category: "ALPROG",
-      buyLink: "https://feynmanbookstore.vercel.app/"
+      buyLink: "https://feynmanbookstore.vercel.app/",
+      previewLink: "https://drive.google.com/file/d/YYYY/view?usp=sharing", // ← ganti
     },
     {
       id: 4,
@@ -207,7 +292,8 @@ export default function Books() {
       price: "Rp 60.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c606d4d1341412a98dd748c3be25ef70.png",
       category: "PDB",
-      buyLink: "https://feynmanbookstore.vercel.app/"
+      buyLink: "https://feynmanbookstore.vercel.app/",
+      previewLink: "https://drive.google.com/file/d/YYYY/view?usp=sharing", // ← ganti
     },
     {
       id: 5,
@@ -217,7 +303,8 @@ export default function Books() {
       price: "Rp 65.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/e7c0cb832afcd55576b125f8212959ec.png",
       category: "Kalkulus",
-      buyLink: "https://feynmanbookstore.vercel.app/"
+      buyLink: "https://feynmanbookstore.vercel.app/",
+      previewLink: "https://drive.google.com/file/d/YYYY/view?usp=sharing", // ← ganti
     },
     {
       id: 6,
@@ -227,7 +314,8 @@ export default function Books() {
       price: "Rp 50.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/a9a31e10b72d5850e0662f4260044bd9.png",
       category: "MatDas",
-      buyLink: "https://feynmanbookstore.vercel.app/"
+      buyLink: "https://feynmanbookstore.vercel.app/",
+      previewLink: "https://drive.google.com/file/d/YYYY/view?usp=sharing", // ← ganti
     },
     {
       id: 7,
@@ -237,7 +325,8 @@ export default function Books() {
       price: "Rp 60.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c2bc88c89234b365e974c411cb35f5fd.png",
       category: "LDH",
-      buyLink: "https://feynmanbookstore.vercel.app/"
+      buyLink: "https://feynmanbookstore.vercel.app/",
+      previewLink: "https://drive.google.com/file/d/YYYY/view?usp=sharing", // ← ganti
     },
     {
       id: 8,
@@ -247,7 +336,8 @@ export default function Books() {
       price: "Rp *****",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b9b7039ee591637b7cca258c95026aa0.png",
       category: "Matdis",
-      buyLink: "https://feynmanbookstore.vercel.app/"
+      buyLink: "https://feynmanbookstore.vercel.app/",
+      previewLink: "https://drive.google.com/file/d/YYYY/view?usp=sharing", // ← ganti
     },
     {
       id: 9,
@@ -257,7 +347,8 @@ export default function Books() {
       price: "Rp ****",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b9b7039ee591637b7cca258c95026aa0.png",
       category: "Analisis Riil",
-      buyLink: "https://feynmanbookstore.vercel.app/"    
+      buyLink: "https://feynmanbookstore.vercel.app/", 
+      previewLink: "https://drive.google.com/file/d/YYYY/view?usp=sharing", // ← ganti
     },
     {
       id: 10,
@@ -267,7 +358,8 @@ export default function Books() {
       price: "Rp *****",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b9b7039ee591637b7cca258c95026aa0.png",
       category: "Geolit",
-      buyLink: "https://feynmanbookstore.vercel.app/"
+      buyLink: "https://feynmanbookstore.vercel.app/",
+      previewLink: "https://drive.google.com/file/d/YYYY/view?usp=sharing", // ← ganti
     }
   ];
 
@@ -284,6 +376,7 @@ export default function Books() {
     image: string;
     category: string;
     buyLink?: string;
+    previewLink?: string; // ← tambah
   }
 
   const filteredBooks = books.filter((book) => {
@@ -317,12 +410,10 @@ const BookCard = ({ book }: { book: Book }) => (
       <p className="text-gray-300 text-sm mb-4 leading-relaxed line-clamp-4">{book.description}</p>
       <div className="mt-auto flex items-center justify-between">
         <span className="text-2xl font-bold text-[#8E44AD]">{book.price}</span>
-        <a
-          href={book.buyLink}
-          className="bg-[#8E44AD] hover:bg-[#7D3C98] text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap"
-        >
-          Beli Sekarang
-        </a>
+        <SplitBuyPreviewButton
+           buyLink={book.buyLink}
+           previewLink={book.previewLink} // tambahkan di data buku
+        />
       </div>
     </div>
   </div>
