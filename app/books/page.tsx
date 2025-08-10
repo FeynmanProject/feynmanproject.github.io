@@ -256,7 +256,7 @@ export default function Books() {
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/09df2910d57052d7c1994f7e5a00ba22.png",
       category: "Kalkulus",
       buyLink: "https://feynmanbookstore.vercel.app/",
-      previewLink: "https://drive.google.com/drive/folders/1IPMDMcDMWKgm0-jUQniL6tVZMbsamUAH", // ← ganti
+      previewLink: "https://drive.google.com/file/d/1mg-ycVSn8EhaE7DJx_yxPkZIQjQlGLjJ/view?usp=sharing", // ← ganti
     },
     {
       id: 2,
@@ -267,7 +267,7 @@ export default function Books() {
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/3df264044ff8ef342a62e169384b991a.png",
       category: "ALE",
       buyLink: "https://feynmanbookstore.vercel.app/",
-      previewLink: "https://drive.google.com/drive/folders/1IPMDMcDMWKgm0-jUQniL6tVZMbsamUAH", // ← ganti
+      previewLink: "https://drive.google.com/file/d/1hcht660DS_kggFWacbjmsXOzrTp1JnoF/view?usp=sharing", // ← ganti
     },
     {
       id: 3,
@@ -278,7 +278,7 @@ export default function Books() {
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/8e187fa56beec5354edb3df4bb22a2f6.png",
       category: "ALPROG",
       buyLink: "https://feynmanbookstore.vercel.app/",
-      previewLink: "https://drive.google.com/drive/folders/1IPMDMcDMWKgm0-jUQniL6tVZMbsamUAH", // ← ganti
+      previewLink: "https://drive.google.com/file/d/18OQ4J-udJdIg0eeF_2s1FVK7vJkD1TOx/view?usp=sharing", // ← ganti
     },
     {
       id: 4,
@@ -289,7 +289,7 @@ export default function Books() {
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c606d4d1341412a98dd748c3be25ef70.png",
       category: "PDB",
       buyLink: "https://feynmanbookstore.vercel.app/",
-      previewLink: "https://drive.google.com/drive/folders/1IPMDMcDMWKgm0-jUQniL6tVZMbsamUAH", // ← ganti
+      previewLink: "https://drive.google.com/file/d/1yBniMqPF4Fa_5Mv4SllNeOZlT-TODUs-/view?usp=sharing", // ← ganti
     },
     {
       id: 5,
@@ -300,7 +300,7 @@ export default function Books() {
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/e7c0cb832afcd55576b125f8212959ec.png",
       category: "Kalkulus",
       buyLink: "https://feynmanbookstore.vercel.app/",
-      previewLink: "https://drive.google.com/drive/folders/1IPMDMcDMWKgm0-jUQniL6tVZMbsamUAH", // ← ganti
+      previewLink: "https://drive.google.com/file/d/1fiKi_xEjZtZcR0N3KCFdz2sOoETwXpSb/view?usp=sharing", // ← ganti
     },
     {
       id: 6,
