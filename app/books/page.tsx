@@ -18,7 +18,6 @@ function SplitBuyPreviewButton({
   const [open, setOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  // tutup saat klik di luar
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
       if (!menuRef.current) return;
@@ -29,7 +28,7 @@ function SplitBuyPreviewButton({
   }, []);
 
   return (
-    <div className="relative flex">
+    <div ref={menuRef} className="relative flex">
       {/* Tombol utama */}
       <a
         href={buyLink}
@@ -50,17 +49,14 @@ function SplitBuyPreviewButton({
         className="rounded-r-full bg-[#8E44AD] hover:bg-[#7D3C98] text-white px-3 py-2 border-l border-white/20 transition-all duration-300"
       >
         <i className="ri-arrow-down-s-line text-xl leading-none" />
-        <span className="sr-only">Opsi lainnya</span>
       </button>
 
       {/* Menu dropdown */}
       {open && (
         <div
-          ref={menuRef}
           role="menu"
           className="absolute z-20 right-0 mt-2 w-48 rounded-xl border border-white/10 bg-[#1A1A1A] shadow-[0_8px_30px_rgba(0,0,0,0.35)] p-1"
         >
-          {/* (Opsional) tampilkan juga aksi utama di menu */}
           {buyLink && (
             <a
               role="menuitem"
@@ -70,7 +66,6 @@ function SplitBuyPreviewButton({
               Beli Sekarang
             </a>
           )}
-
           {previewLink && (
             <a
               role="menuitem"
@@ -393,27 +388,28 @@ export default function Books() {
 
   
 const BookCard = ({ book }: { book: Book }) => (
-  <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col">
-    <div className="w-full aspect-[832/1107] relative">
+  <div className="bg-[#1A1A1A] rounded-2xl /* overflow-hidden ⟵ HAPUS */
+                  shadow-xl hover:shadow-2xl transition-all duration-300
+                  hover:scale-105 flex flex-col relative">
+    <div className="w-full aspect-[832/1107] relative overflow-hidden rounded-t-2xl">
       <Image
         src={book.image}
         alt={book.title}
         fill
-        className="object-cover rounded-t-2xl"
+        className="object-cover" /* rounded sudah di wrapper */
         unoptimized
       />
     </div>
+
     <div className="flex-1 flex flex-col p-6">
       <div className="text-sm text-[#8E44AD] font-semibold mb-2">{book.category}</div>
       <h3 className="text-xl font-bold mb-2">{book.title}</h3>
       <p className="text-gray-400 text-sm mb-3">by {book.author}</p>
       <p className="text-gray-300 text-sm mb-4 leading-relaxed line-clamp-4">{book.description}</p>
+
       <div className="mt-auto flex items-center justify-between">
         <span className="text-2xl font-bold text-[#8E44AD]">{book.price}</span>
-        <SplitBuyPreviewButton
-           buyLink={book.buyLink}
-           previewLink={book.previewLink} // tambahkan di data buku
-        />
+        <SplitBuyPreviewButton buyLink={book.buyLink} previewLink={book.previewLink} />
       </div>
     </div>
   </div>
