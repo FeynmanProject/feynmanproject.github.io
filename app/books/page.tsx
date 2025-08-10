@@ -647,44 +647,25 @@ const testimonials = [
       
       
 
-      {/* Book Slider */}
-      <section className="py-20 bg-[#0D0D0D]">
-        <div className="max-w-6xl mx-auto px-4 relative">
-          {/* Tombol kiri */}
-          <button
-            onClick={scrollLeft}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white p-3 rounded-full shadow-lg"
-          >
-            <i className="ri-arrow-left-line text-xl" />
-          </button>
 
-          {/* Tombol kanan */}
-          <button
-            onClick={scrollRight}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white p-3 rounded-full shadow-lg"
-          >
-            <i className="ri-arrow-right-line text-xl" />
-          </button>
-
-          <div
-            ref={bookSliderRef}
-            className="flex gap-6 overflow-x-auto overflow-y-visible no-scrollbar scroll-smooth"
-          >
-
-            {filteredBooks.length === 0 ? (
-              <div className="text-center text-gray-400 text-lg py-12 w-full">
-                Tidak ditemukan hasil yang sesuai.
-              </div>
-            ) : (
-              filteredBooks.map((book) => (
-                <div key={book.id} className="min-w-[300px] max-w-sm flex-shrink-0">
-                  <BookCard book={book} />
-                </div>
-              ))
-            )}
+{/* Book Grid (tanpa scroll internal) */}
+<section className="py-20 bg-[#0D0D0D]">
+  <div className="max-w-6xl mx-auto px-4">
+    {filteredBooks.length === 0 ? (
+      <div className="text-center text-gray-400 text-lg py-12 w-full">
+        Tidak ditemukan hasil yang sesuai.
+      </div>
+    ) : (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {filteredBooks.map((book) => (
+          <div key={book.id} className="h-full">
+            <BookCard book={book} />
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    )}
+  </div>
+</section>
 
 <PricingSection />
 
