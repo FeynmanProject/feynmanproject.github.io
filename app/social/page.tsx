@@ -360,17 +360,6 @@ export default function Social() {
                     <p className="text-gray-400">feynmanpro@gmail.com</p>
                   </div>
                 </div>
-
-                {/* Contact Person */}
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center flex-shrink-0">
-                    <i className="ri-phone-line text-white"></i>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Contact Person</h4>
-                    <p className="text-gray-400">+62</p>
-                  </div>
-                </div>
                 
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-[#8E44AD] rounded-full flex items-center justify-center flex-shrink-0">
