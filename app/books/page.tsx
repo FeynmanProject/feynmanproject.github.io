@@ -756,7 +756,7 @@ const testimonials = [
               <h3 className="text-xl font-bold mb-2">Abdul Wahhab</h3>
               <p className="text-[#8E44AD] mb-4">Penulis Diktat</p>
               <p className="text-gray-400 leading-relaxed">
-                Mengelola wajah digital Feynman Project dari desain hingga media. Aktif menginisiasi kolaborasi untuk pengembangan buku dan platform belajar.
+                -
               </p>
             </div>
             
@@ -773,7 +773,7 @@ const testimonials = [
               <h3 className="text-xl font-bold mb-2">Renzie Aditya</h3>
               <p className="text-[#8E44AD] mb-4">Penulis Diktat</p>
               <p className="text-gray-400 leading-relaxed">
-                Menyusun materi pengajaran untuk video dan buku diktat, fokus pada penyampaian konsep secara sistematis dan jelas.
+                -
               </p>
             </div>
             
@@ -790,7 +790,7 @@ const testimonials = [
               <h3 className="text-xl font-bold mb-2">Fritz Sitindaon</h3>
               <p className="text-[#8E44AD] mb-4">Penulis Diktat</p>
               <p className="text-gray-400 leading-relaxed">
-               Tertarik pada logika, membantu merancang konten dan operasional agar matematika terasa masuk akal dan mudah dipahami.
+               -
               </p>
             </div>
 
@@ -807,14 +807,14 @@ const testimonials = [
               <h3 className="text-xl font-bold mb-2">Albert Wijaya</h3>
               <p className="text-[#8E44AD] mb-4">Penulis Diktat</p>
               <p className="text-gray-400 leading-relaxed">
-               Tertarik pada logika, membantu merancang konten dan operasional agar matematika terasa masuk akal dan mudah dipahami.
+               -
               </p>
             </div>            
 
             <div className="text-center">
               <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <Image 
-                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/d2aae01ff2024d3fe3f211134c42626d.png"
+                  src="https://i.imgur.com/NbsdjBz.png"
                   alt="David Park - Community Manager"
                   fill
                   unoptimized
@@ -824,7 +824,7 @@ const testimonials = [
               <h3 className="text-xl font-bold mb-2">Bryan Jonathan</h3>
               <p className="text-[#8E44AD] mb-4">Penulis Diktat</p>
               <p className="text-gray-400 leading-relaxed">
-                Berperan dalam pembuatan animasi edukatif dan penyusunan materi ajar yang mendukung pemahaman logis dan runtut.
+                -
               </p>
             </div>
           </div>
