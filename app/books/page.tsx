@@ -758,7 +758,7 @@ const testimonials = [
             <div className="text-center">
               <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <Image
-                  src="https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/0909b88981a42a1416b47377a17d9718.png"
+                  src="https://i.imgur.com/CoKjTh2.png"
                   alt="Dr. Sarah Chen - Founder"
                   width={192}
                   height={192}
