@@ -130,34 +130,34 @@ const prevSlide = () => {
 
   const testimonials = [
     {
-      name: "Filbert Martin",
-      role: "Teknik Informatika, Institut Teknologi Sepuluh Nopember (ITS)",
-      quote: "Suka banget sama pendekatan Feynman Project yang ngajak ngerti konsep lebih dalam. Videonya bantu nyusun ulang materi dengan cara yang runtut dan masuk akal.",
+      name: "-",
+      role: "-",
+      quote: "-",
     },
     {
-      name: "Rachel Keisha Loviana",
-      role: "Matematika, Universitas Pertahanan (UNHAN)",
-      quote: "Awalnya mikir belajar mandiri cukup, tapi makin ke sini sadar pentingnya penjelasan yang jelas dan terstruktur. Feynman Project hadir di waktu yang pas, ngebantu ngerti ulang materi dengan pendekatan yang nggak ngebosenin.",
+      name: "-",
+      role: "-",
+      quote: "-",
     },
     {
-      name: "Rahma Wati",
-      role: "Pendidikan Matematika, Universitas Lambung Mangkurat (ULM)",
-      quote: "Belajar konsep sebelum ngajar itu penting. Video dari Feynman Project bantu banget, terutama penjelasan limit dan turunan yang sering bikin bingung.",
+      name: "-",
+      role: "-",
+      quote: "-",
     },
     {
-      name: "Naia Saira",
-      role: "Teknik Industri, Universitas Tarumanagara (UNTAR)",
-      quote: "Belajar kalkulus dan aljabar di teknik industri kadang bikin bingung, apalagi kalau konsep dasarnya belum kuat, Feynman Project bantu banget lewat penjelasan yang runtut dan mudah dipahami.",
+      name: "-",
+      role: "-",
+      quote: "-",
     },
     {
-      name: "Muhammad Andi Garlan",
-      role: "Teknik Sipil, Universitas Brawijaya (UB)",
-      quote: "Sebagai mahasiswa teknik yang sempat kesulitan memahami kalkulus, keberadaan buku diktat dan video dari Feynman Project sangat membantu. Materi dijelaskan dari konsep dasarnya, bukan sekadar rumus.",
+      name: "-",
+      role: "-",
+      quote: "-",
     },
     {
-      name: "Syach Iqbal",
-      role: "Digital Business Innovation, Universitas Bina Nusantara (BINUS)",
-      quote: "Aku bukan anak murni matematika, tapi kadang butuh paham teori dasar buat ngoding. Video di Feynman Project cukup bantu, apalagi yang soal logika proposisional dan himpunan.",
+      name: "-",
+      role: "-",
+      quote: "-",
     },
   ];
 
