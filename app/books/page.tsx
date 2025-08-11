@@ -695,7 +695,8 @@ const testimonials = [
             )}
           </div>
         </div>
-      </section>
+      </div> 
+    </section>
 
 <PricingSection />
 
