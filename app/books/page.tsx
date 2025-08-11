@@ -90,37 +90,37 @@ function PricingSection() {
   const plans = [
     {
       title: 'Bundling PDB (Pra & Pasca UTS)',
-      price: 'Rp 90.000',
-      struck: 'Rp 100.000',
+      price: 'Rp 80.000',
+      struck: 'Rp 90.000',
       highlight: false,
       cta: 'https://feynmanbookstore.vercel.app/',
-      includes: ['PDB Pra UTS — Rp 50.000', 'PDB Pasca UTS — Rp 50.000'],
+      includes: ['PDB Pra UTS — Rp 45.000', 'PDB Pasca UTS — Rp 45.000'],
       footnote: 'Hemat Rp 10.000',
     },
     {
       title: 'Pack Maba',
-      price: 'Rp 190.000',
-      struck: 'Rp 225.000',
+      price: 'Rp 169.000',
+      struck: 'Rp 181.000',
       highlight: true,
       badge: 'Penawaran Terbaik',
       cta: 'https://feynmanbookstore.vercel.app/',
       includes: [
-        'Kalkulus 1 Jilid 1 — Rp 50.000',
-        'Kalkulus 1 Jilid 2 — Rp 50.000',
-        'Aljabar Linear Elementer — Rp 45.000',
-        'Logika & Himpunan — Rp 50.000',
-        'Algoritma & Pemrograman — Rp 30.000',
+        'Kalkulus 1 Jilid 1 — Rp 39.500',
+        'Kalkulus 1 Jilid 2 — Rp 39.500',
+        'Aljabar Linear Elementer — Rp 32.000',
+        'Logika & Himpunan — Rp 45.000',
+        'Algoritma & Pemrograman — Rp 25.000',
       ],
-      footnote: 'Hemat Rp 35.000',
+      footnote: 'Hemat Rp 12.000',
     },
     {
       title: 'Bundling PDB + Kalkulus 3',
-      price: 'Rp 140.000',
-      struck: 'Rp 160.000',
+      price: 'Rp 130.000',
+      struck: 'Rp 140.000',
       highlight: false,
       cta: 'https://feynmanbookstore.vercel.app/',
-      includes: ['PDB (Pra + Pasca UTS) — Rp 100.000', 'Kalkulus 3 — Rp 60.000'],
-      footnote: 'Hemat Rp 20.000',
+      includes: ['PDB (Pra + Pasca UTS) — Rp 80.000', 'Kalkulus 3 — Rp 60.000'],
+      footnote: 'Hemat Rp 10.000',
     },
   ];
 
@@ -252,7 +252,7 @@ export default function Books() {
       title: "Kalkulus 1 Jilid 1",
       author: "Abdul Wahhab, Fritz Adelbertus Sitindaon, Natalius Desta Riyanto",
       description: "Menentukan penyelesaian dari permasalahan yang berkaitan dengan Kalkulus fungsi real satu variabel seperti limit, turunan, dan integral.",
-      price: "Rp 50.000",
+      price: "Rp 39.500",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/09df2910d57052d7c1994f7e5a00ba22.png",
       category: "Kalkulus",
       buyLink: "https://feynmanbookstore.vercel.app/",
@@ -263,7 +263,7 @@ export default function Books() {
       title: "Aljabar Linear Elementer",
       author: "Abdul Wahhab",
       description: "Menerapkan teori dasar aljabar linier ruang Euclid, mampu menghitung perhitungan dalam persamaan linier dan matriks, aplikasi dari sistem linier, determinan, ruang vektor Euclidean, nilai eigen dan vektor eigen.",
-      price: "Rp 50.000",
+      price: "Rp 32.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/3df264044ff8ef342a62e169384b991a.png",
       category: "ALE",
       buyLink: "https://feynmanbookstore.vercel.app/",
@@ -274,7 +274,7 @@ export default function Books() {
       title: "Algoritma dan Pemrograman",
       author: "Abdul Wahhab, Albert Wijaya",
       description: "Menyusun algoritma dengan alur logika bersyarat dan berulang serta menggunakan array, vektor, matriks, dan fungsi secara efisien untuk menyelesaikan masalah saintifik kompleks.",
-      price: "Rp 60.000",
+      price: "Rp 25.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/8e187fa56beec5354edb3df4bb22a2f6.png",
       category: "ALPROG",
       buyLink: "https://feynmanbookstore.vercel.app/",
@@ -285,7 +285,7 @@ export default function Books() {
       title: "Persamaan Diferensial Biasa Jilid 1",
       author: "Abdul Wahhab, Renzie Aditya",
       description: "Menerapkan konsep dasar matematis untuk menyelesaikan berbagai masalah persamaan diferensial biasa, baik secara analitik, maupun menggunakan pendekatan deret.",
-      price: "Rp 60.000",
+      price: "Rp 45.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c606d4d1341412a98dd748c3be25ef70.png",
       category: "PDB",
       buyLink: "https://feynmanbookstore.vercel.app/",
@@ -296,7 +296,7 @@ export default function Books() {
       title: "Kalkulus 3",
       author: "Abdul Wahhab, Bryan Jonathan",
       description: "Mengaitkan konsep dasar matematika yang  berhubungan dengan deret bilangan riil, integral tak wajar dan deret fungsi secara sistematis, logis, dan komprehensif sesuai dengan konsep dasar kalkulus.",
-      price: "Rp 65.000",
+      price: "Rp 60.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/e7c0cb832afcd55576b125f8212959ec.png",
       category: "Kalkulus",
       buyLink: "https://feynmanbookstore.vercel.app/",
@@ -307,7 +307,7 @@ export default function Books() {
       title: "Matematika Dasar",
       author: "Abdul Wahhab",
       description: "Mempelajari fungsi 1 variabel bernilai riil dan konsep kalkulus yang berkaitan dengan fungsi tersebut, seperti sistem bilangan riil, fungsi, limit, kekontinuan, turunan dan aplikasinya, integral dan aplikasinya, fungsi transenden alami dan sifat-sifatnya.",
-      price: "Rp 50.000",
+      price: "Rp 35.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/a9a31e10b72d5850e0662f4260044bd9.png",
       category: "MatDas",
       buyLink: "https://feynmanbookstore.vercel.app/",
@@ -318,7 +318,7 @@ export default function Books() {
       title: "Logika dan Himpunan",
       author: "Albert Wijaya, Abdul Wahhab, Richard Gordon",
       description: "Membahas topik logika proposisi, himpunan dan operasinya, predikat dan kuantifikasi, serta teknik-teknik pembuktian matematis secara runtut, logis, dan menyeluruh sebagai fondasi penting dalam memahami struktur berpikir matematika formal.",
-      price: "Rp 60.000",
+      price: "Rp 45.000",
       image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c2bc88c89234b365e974c411cb35f5fd.png",
       category: "LDH",
       buyLink: "https://feynmanbookstore.vercel.app/",
@@ -326,23 +326,23 @@ export default function Books() {
     },
     {
       id: 8,
-      title: "Matematika Diskrit",
-      author: "-",
-      description: "-",
-      price: "Rp *****",
-      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b9b7039ee591637b7cca258c95026aa0.png",
-      category: "Matdis",
+      title: "Kalkulus 1 Jilid 2",
+      author: "Abdul Wahhab, Fritz Adelbertus Sitindaon, Natalius Desta Riyanto",
+      description: "Menentukan penyelesaian dari permasalahan yang berkaitan dengan Kalkulus fungsi real satu variabel seperti limit, turunan, dan integral.",
+      price: "Rp 39.500",
+      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/09df2910d57052d7c1994f7e5a00ba22.png",
+      category: "Kalkulus",
       buyLink: "https://feynmanbookstore.vercel.app/",
       previewLink: "https://drive.google.com/file/d/YYYY/view?usp=sharing", // ← ganti
     },
     {
       id: 9,
-      title: "Analisis 1",
-      author: "-",
-      description: "-",
-      price: "Rp ****",
-      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b9b7039ee591637b7cca258c95026aa0.png",
-      category: "Analisis Riil",
+      title: "Persamaan Diferensial Biasa Jilid 2",
+      author: "Abdul Wahhab, Renzie Aditya",
+      description: "Menerapkan konsep dasar matematis untuk menyelesaikan berbagai masalah persamaan diferensial biasa, baik secara analitik, maupun menggunakan pendekatan deret.",
+      price: "Rp 45.000",
+      image: "https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c606d4d1341412a98dd748c3be25ef70.png",
+      category: "PDB",
       buyLink: "https://feynmanbookstore.vercel.app/", 
       previewLink: "https://drive.google.com/file/d/YYYY/view?usp=sharing", // ← ganti
     },
@@ -649,6 +649,18 @@ const testimonials = [
       {/* Book Slider */}
       <section className="py-20 bg-[#0D0D0D]">
         <div className="max-w-6xl mx-auto px-4 relative">
+
+    {/* ⬇️ Tambahan header pengumuman */}
+    <div className="text-center mb-8">
+      <span className="inline-block bg-[#8E44AD]/15 border border-[#8E44AD]/40
+                     text-[#EBD9FF] rounded-full px-4 py-2 text-base md:text-lg font-semibold">
+        Pembelian dapat dilakukan pada tanggal 14 Agustus 2025
+      </span>
+    </div>
+
+    {/* ⬇️ Wrapper baru agar panah terpusat ke area slider saja */}
+    <div className="relative">
+          
           {/* Tombol kiri */}
           <button
             onClick={scrollLeft}
