@@ -274,7 +274,7 @@ useEffect(() => {
   
 
   return (
-    <div className="min-h-screen bg-[#0D0D0D] text-white">
+    <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-[#0D0D0D]/95 backdrop-blur-sm border-b border-purple-500/20 px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
@@ -446,7 +446,7 @@ useEffect(() => {
           {classesData.map((classItem) => (
             <div
               key={classItem.id}
-              className="flex-shrink-0 w-96 bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 transform hover:scale-105"
+              className="flex-shrink-0 w-96 bg-black ring-1 ring-white/5 rounded-2xl overflow-hidden shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 transform hover:scale-105"
             >
               <div className="relative h-60 overflow-hidden">
                 <Image
@@ -517,7 +517,7 @@ useEffect(() => {
 Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metode belajar yang menekankan pemahaman mendalam melalui penjelasan yang sederhana. Berikut adalah langkah-langkah dalam teknik tersebut:
               </p>
               <div className="space-y-4">
-                <div className="flex items-start space-x-3 p-4 rounded-xl bg-[#1A1A1A] shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                <div className="flex items-start space-x-3 p-4 rounded-xl bg-black ring-1 ring-white/5 shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
                   <div className="w-8 h-8 bg-[#8E44AD] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-white font-bold text-sm">1</span>
                   </div>
@@ -526,7 +526,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
                     <p className="text-gray-400">Tentukan topik atau materi yang ingin kamu pahami lebih dalam.</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3 p-4 rounded-xl bg-[#1A1A1A] shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                <div className="flex items-start space-x-3 p-4 rounded-xl bg-black ring-1 ring-white/5 shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
                   <div className="w-8 h-8 bg-[#8E44AD] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-white font-bold text-sm">2</span>
                   </div>
@@ -535,7 +535,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
                     <p className="text-gray-400">Coba jelaskan topik tersebut seolah kamu mengajarkannya kepada anak kecil — sederhana, jujur, dan langsung.</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3 p-4 rounded-xl bg-[#1A1A1A] shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                <div className="flex items-start space-x-3 p-4 rounded-xl bg-black ring-1 ring-white/5 shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
                   <div className="w-8 h-8 bg-[#8E44AD] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-white font-bold text-sm">3</span>
                   </div>
@@ -544,7 +544,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
                     <p className="text-gray-400">Amati bagian mana yang sulit dijelaskan. Di situlah celah pemahamanmu.</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-3 p-4 rounded-xl bg-[#1A1A1A] shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                <div className="flex items-start space-x-3 p-4 rounded-xl bg-black ring-1 ring-white/5 shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
                   <div className="w-8 h-8 bg-[#8E44AD] rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-white font-bold text-sm">4</span>
                   </div>
@@ -580,7 +580,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-[#2A2A2A] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            <div className="bg-black ring-1 ring-white/5 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
               <div className="w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center mb-6">
                 <i className="ri-book-open-line text-2xl text-white"></i>
               </div>
@@ -588,7 +588,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
               <p className="text-gray-400">Jelajahi buku-buku pilihan kami — tersedia untuk dibaca dan dibeli, lengkap dengan materi dan pembahasan soal.</p>
             </div>
             
-            <div className="bg-[#2A2A2A] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            <div className="bg-black ring-1 ring-white/5 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
               <div className="w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center mb-6">
                 <i className="ri-video-line text-2xl text-white"></i>
               </div>
@@ -596,7 +596,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
               <p className="text-gray-400">Jelajahi video pembelajaran matematika yang disusun secara sistematis untuk membantu pemahaman konsep dari dasar hingga lanjutan.</p>
             </div>
             
-            <div className="bg-[#2A2A2A] p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            <div className="bg-black ring-1 ring-white/5 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
               <div className="w-16 h-16 bg-[#8E44AD] rounded-full flex items-center justify-center mb-6">
                 <i className="ri-community-line text-2xl text-white"></i>
               </div>
@@ -632,7 +632,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
         {[...testimonials, ...testimonials, ...testimonials].map((t, index) => (
           <div
             key={index}
-            className="min-w-[300px] max-w-sm flex-shrink-0 bg-[#2A2A2A] p-6 rounded-2xl shadow-xl cursor-pointer"
+            className="min-w-[300px] max-w-sm flex-shrink-0 bg-black ring-1 ring-white/5 p-6 rounded-2xl shadow-xl cursor-pointer"
             onClick={() => {
               // Toggle manual pause
               const newManualPause = !manualPause;
