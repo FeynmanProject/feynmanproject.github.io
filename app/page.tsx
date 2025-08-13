@@ -484,7 +484,7 @@ useEffect(() => {
               </div>
 
               <div className="p-6">
-                <div className="inline-block bg-black px-3 py-1 rounded-full mb-4">
+                <div className="inline-block px-3 py-1 rounded-full mb-4 bg-[#111111] group-hover:bg-[#222222] transition-colors duration-300">
                   <span className="text-white text-sm font-medium">{classItem.displayName}</span>
                 </div>
 
