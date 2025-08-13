@@ -309,8 +309,16 @@ export default function Social() {
                     <span className="text-[#8E44AD] font-bold text-lg">{platform.followers}</span>
                   </div>
                   <p className="text-gray-400 mb-6 leading-relaxed">{platform.description}</p>
-                  <a href={platform.url} target="_blank" rel="noopener noreferrer" className="block w-full bg-[#8E44AD] hover:bg-[#7D3C98] text-white text-center py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer">
-                    Ikuti Kami
+                  <a href={platform.url} target="_blank" rel="noopener noreferrer" 
+                    className="group block w-full rounded-full py-3 font-semibold text-center
+                               bg-[#1F1F1F] hover:bg-[#262626]
+                               ring-1 ring-white/10 hover:ring-white/20
+                               transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                   > 
+                    <span className="text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]
+                                     group-hover:drop-shadow-[0_0_14px_rgba(255,255,255,0.9)]">
+                      Ikuti Kami
+                    </span>
                   </a>
                 </div>
               </div>
