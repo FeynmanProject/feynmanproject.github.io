@@ -21,7 +21,7 @@ const BG_URLS = {
   about:         'https://i.imgur.com/L4kyTrq.jpeg',
   features:      'https://i.imgur.com/oZiejJO.jpeg',
   testimonials:  'https://i.imgur.com/o31xDRj.jpeg',
-  cta:           'https://i.imgur.com/mTwaiqF.jpeg',
+  cta:           'https://i.imgur.com/ztbYHH4.jpeg',
   footer:        'https://i.imgur.com/roN93QN.jpeg',
 };
 
