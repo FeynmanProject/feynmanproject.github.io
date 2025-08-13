@@ -525,22 +525,21 @@ export default function Books() {
         </div>
       </nav>
 
-{/* Hero Section — samakan dengan Home */}
-<section className="relative min-h-screen flex items-center justify-center">
-  <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
+{/* Hero Section — compact */}
+<section className="relative py-20 md:py-24">
+  <div className="max-w-4xl mx-auto px-4 text-center">
     <h1
-      className={`${mediumWordmark.className} text-5xl md:text-7xl font-normal tracking-tight
-      leading-[1.2] md:leading-[1.15] pb-[0.06em]
-      mb-6 bg-gradient-to-r from-white to-[#8E44AD] bg-clip-text text-transparent`}
+      className={`${mediumWordmark.className}
+        text-4xl md:text-6xl font-normal tracking-tight leading-[1.15]
+        mb-4 bg-gradient-to-r from-white to-[#8E44AD] bg-clip-text text-transparent`}
     >
       Koleksi Buku Kami
     </h1>
 
-    <p className="text-xl md:text-2xl mb-8 text-gray-300 font-light">
+    <p className="text-lg md:text-xl text-gray-300/95 leading-relaxed">
       Buku-buku yang dirancang dengan cermat untuk menyajikan penjelasan yang jelas,
       terstruktur, dan mudah dipahami.
     </p>
-    
   </div>
 </section>
 
