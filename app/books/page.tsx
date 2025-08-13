@@ -14,75 +14,49 @@ function SplitBuyPreviewButton({
   buyLink?: string;
   previewLink?: string;
 }) {
-  const [open, setOpen] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const onClick = (e: MouseEvent) => {
-      if (!menuRef.current) return;
-      if (!menuRef.current.contains(e.target as Node)) setOpen(false);
-    };
-    window.addEventListener('click', onClick);
-    return () => window.removeEventListener('click', onClick);
-  }, []);
+  const hasPreview = Boolean(previewLink);
 
   return (
-    <div ref={menuRef} className="relative flex z-[55]">
-      {/* Tombol utama */}
+    <div className="group inline-flex items-center rounded-full overflow-hidden bg-[#181018] border border-[#8E44AD]/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_8px_30px_rgba(0,0,0,0.35)]">
+      {/* Preview */}
       <a
-        href={buyLink}
-        className="rounded-l-full bg-[#8E44AD] hover:bg-[#7D3C98] text-white px-6 py-2 font-semibold transition-all duration-300"
+        href={hasPreview ? previewLink : undefined}
+        target={hasPreview ? "_blank" : undefined}
+        rel={hasPreview ? "noopener noreferrer" : undefined}
+        aria-disabled={!hasPreview}
+        className={[
+          "relative px-4 py-2 text-sm font-semibold transition-all select-none",
+          "flex items-center gap-2",
+          hasPreview
+            ? "text-[#B887FF] hover:text-white hover:bg-[#8E44AD]/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E44AD]"
+            : "text-gray-500 cursor-not-allowed",
+        ].join(" ")}
+        title={hasPreview ? "Lihat cuplikan" : "Preview belum tersedia"}
       >
-        Beli Sekarang
+        <i className="ri-eye-line text-base" />
+        <span>Preview</span>
+
+        {/* subtle divider glow on hover */}
+        <span className="absolute right-0 top-1/2 -translate-y-1/2 h-5 w-px bg-gradient-to-b from-transparent via-[#8E44AD]/50 to-transparent opacity-60" />
       </a>
 
-      {/* Tombol caret */}
-      <button
-        type="button"
-        aria-haspopup="menu"
-        aria-expanded={open}
-        onClick={(e) => {
-          e.stopPropagation();
-          setOpen((v) => !v);
-        }}
-        className="rounded-r-full bg-[#8E44AD] hover:bg-[#7D3C98] text-white px-3 py-2 border-l border-white/20 transition-all duration-300"
+      {/* Beli Sekarang */}
+      <a
+        href={buyLink}
+        className="relative px-5 py-2 text-sm font-semibold text-white bg-[#7C3AED] hover:bg-[#6D2FE5] transition-all
+                   focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-0 focus-visible:ring-[#8E44AD]
+                   active:scale-[0.98] flex items-center gap-2"
       >
-        <i className="ri-arrow-down-s-line text-xl leading-none" />
-      </button>
-
-      {/* Menu dropdown */}
-      {open && (
-        <div
-          role="menu"
-          className="absolute z-[60] right-0 mt-2 w-48 rounded-xl border border-white/10
-                     bg-[#1A1A1A] shadow-[0_8px_30px_rgba(0,0,0,0.35)] p-1"
-
-        >
-          {buyLink && (
-            <a
-              role="menuitem"
-              href={buyLink}
-              className="block px-3 py-2 rounded-lg text-sm text-gray-200 hover:bg-white/5"
-            >
-              Beli Sekarang
-            </a>
-          )}
-          {previewLink && (
-            <a
-              role="menuitem"
-              href={previewLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block px-3 py-2 rounded-lg text-sm text-gray-200 hover:bg-white/5"
-            >
-              Preview
-            </a>
-          )}
-        </div>
-      )}
+        {/* glow ring on group hover */}
+        <span className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity
+                         [background:radial-gradient(120px_60px_at_50%_120%,rgba(140,70,200,0.25),transparent_60%)]" />
+        <i className="ri-shopping-bag-3-line text-base" />
+        <span>Beli Sekarang</span>
+      </a>
     </div>
   );
 }
+
 
 
 // ——— Pricing Section (styled mirip gambar) ———
