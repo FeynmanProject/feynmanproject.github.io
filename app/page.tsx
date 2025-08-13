@@ -356,7 +356,7 @@ useEffect(() => {
               }`}
             >
               <i className="ri-share-line text-lg"></i>
-              <span className={`${mediumWordmark.className} leading-none`}>Social Media</span>
+              <span>Social Media</span>
             </Link>
           </div>
 
