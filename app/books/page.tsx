@@ -33,7 +33,10 @@ function SplitBuyPreviewButton({ buyLink, previewLink }: { buyLink?: string; pre
         title={hasPreview ? "Lihat cuplikan" : "Preview belum tersedia"}
       >
         <i className="ri-eye-line text-xs sm:text-base" />
-        <span className="truncate">Preview</span>
+        {/* pendek di mobile, penuh di ≥sm */}
+        <span className="sm:hidden truncate">Prev</span>
+        <span className="hidden sm:inline truncate">Preview</span>
+
         <span className="absolute right-0 top-1/2 -translate-y-1/2 h-4 sm:h-5 w-px bg-gradient-to-b from-transparent via-[#8E44AD]/50 to-transparent opacity-60" />
       </a>
 
@@ -47,7 +50,9 @@ function SplitBuyPreviewButton({ buyLink, previewLink }: { buyLink?: string; pre
         <span className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity
                          [background:radial-gradient(90px_40px_at_50%_120%,rgba(140,70,200,0.25),transparent_60%)]" />
         <i className="ri-shopping-bag-3-line text-xs sm:text-base" />
-        <span className="truncate">Beli Sekarang</span>
+        {/* pendek di mobile, penuh di ≥sm */}
+        <span className="sm:hidden truncate">Beli</span>
+        <span className="hidden sm:inline truncate">Beli Sekarang</span>
       </a>
     </div>
   );
@@ -375,7 +380,7 @@ const BookCard = ({ book }: { book: Book }) => (
         </span>
 
         {/* dorong tombol ke kanan dan batasi lebar di layar kecil */}
-        <div className="ml-auto flex-shrink min-w-0 max-w-[60%] sm:max-w-none">
+        <div className="ml-auto flex-shrink min-w-0 max-w-[70%] sm:max-w-none">
           <SplitBuyPreviewButton buyLink={book.buyLink} previewLink={book.previewLink} />
         </div>
       </div>
