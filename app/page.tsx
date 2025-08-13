@@ -60,7 +60,7 @@ const classesData: ClassData[] = [
   },
   {
     id: '4',
-    title: '  Kalkulus 3',
+    title: 'Kalkulus 3',
     displayName: 'Class Of Calculus 3',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c3fa38d5de461cc4981a1f4c7c4ac62c.png',
     youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample4'
@@ -743,29 +743,38 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
       </footer>
 
 <style jsx global>{`
-  /* --- yang sudah ada --- */
-  .fp-bg {
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: saturate(1.05) contrast(1.02);
-    will-change: transform;
-  }
-  .fp-bg-grain {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    opacity: 0.07;
-    mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.4'/></svg>");
-    background-size: 200px 200px;
-    pointer-events: none;
-  }
+/* bikin tiap section/footer punya konteks tumpukan sendiri */
+section, footer { position: relative; isolation: isolate; }
 
+/* layer gambar & grain jadi di belakang konten, tapi bukan negatif */
+.fp-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;                /* <— dulu -2 */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: saturate(1.05) contrast(1.02);
+  will-change: transform;
+  pointer-events: none;
+}
+.fp-bg-grain {
+  position: absolute;
+  inset: 0;
+  z-index: 1;                /* sedikit di atas gambar */
+  opacity: 0.07;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.4'/></svg>");
+  background-size: 200px 200px;
+  pointer-events: none;
+}
 
+/* pastikan semua konten section berada di atas kedua layer tadi */
+section > *:not([data-fp-bg]):not([data-fp-bg-grain]),
+footer  > *:not([data-fp-bg]):not([data-fp-bg-grain]) {
+  position: relative;
+  z-index: 2;
+}
 `}</style>
       
     </div>
