@@ -494,7 +494,7 @@ useEffect(() => {
                   rel="noopener noreferrer"
                   className="w-full bg-[#111111] hover:bg-[#222222] text-white py-3 px-6 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap flex items-center justify-center space-x-2"
                 >
-                  <i className="ri-play-circle-line text-xl"></i>
+                  <i className="ri-play-circle-line text-xl filter drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"></i>
                   <span>Tonton Sekarang</span>
                 </a>
               </div>
@@ -509,7 +509,9 @@ useEffect(() => {
             key={index}
             onClick={() => scrollToIndex(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${
-              index === currentIndex ? 'bg-white' : 'bg-gray-500 hover:bg-gray-400'
+              index === currentIndex 
+              ? 'bg-white shadow-[0_0_12px_4px_rgba(255,255,255,0.55)]'
+              : 'bg-gray-500 hover:bg-gray-400'
             }`}
           />
         ))}
