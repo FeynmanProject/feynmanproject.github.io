@@ -337,18 +337,18 @@ export default function Books() {
   const uniqueCategories = ["All", ...Array.from(new Set(books.map(book => book.category)))];
   const [selectedCategory, setSelectedCategory] = useState("All");
   
-    interface Book {
-    id: number;
-    title: string;
-    author: string;
-    description: string;
-    price: string;
-    image: string;
-    category: string;
-    buyLink?: string;
-    previewLink?: string; // ← tambah
-  }
-
+// type didefinisikan dulu
+interface Book {
+  id: number;
+  title: string;
+  author: string;
+  description: string;
+  price: string;
+  image: string;
+  category: string;
+  buyLink?: string;
+  previewLink?: string;
+}
   const filteredBooks = books.filter((book) => {
     const matchesCategory = selectedCategory === "All" || book.category === selectedCategory;
     const searchWords = searchTerm.toLowerCase().split(" ").filter(Boolean);
@@ -362,18 +362,13 @@ export default function Books() {
   });
 
   
+// KOMponen kartu buku – pastikan ada pembuka ( dan penutup );
 const BookCard = ({ book }: { book: Book }) => (
-  <div className="bg-[#1A1A1A] rounded-2xl shadow-xl hover:shadow-2xl 
-                  transition-all duration-300 hover:scale-105 flex flex-col relative">
+  <div className="bg-[#1A1A1A] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col relative">
     <div className="w-full aspect-[832/1107] relative overflow-hidden rounded-t-2xl">
-      <Image
-        src={book.image}
-        alt={book.title}
-        fill
-        className="object-cover"
-        unoptimized
-      />
+      <Image src={book.image} alt={book.title} fill className="object-cover" unoptimized />
     </div>
+
     <div className="flex-1 flex flex-col p-6">
       <div className="text-sm text-[#8E44AD] font-semibold mb-2">{book.category}</div>
       <h3 className="text-xl font-bold mb-2">{book.title}</h3>
@@ -381,15 +376,14 @@ const BookCard = ({ book }: { book: Book }) => (
       <p className="text-gray-300 text-sm mb-4 leading-relaxed line-clamp-4">{book.description}</p>
 
       <div className="mt-auto flex items-center justify-between gap-3 flex-nowrap">
-        <span className="text-xl sm:text-2xl font-bold text-[#8E44AD] shrink-0">
-          {book.price}
-        </span>
+        <span className="text-xl sm:text-2xl font-bold text-[#8E44AD] shrink-0">{book.price}</span>
         <div className="shrink-0">
           <SplitBuyPreviewButton buyLink={book.buyLink} previewLink={book.previewLink} />
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 
 
 
