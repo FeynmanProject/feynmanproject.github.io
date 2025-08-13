@@ -477,7 +477,7 @@ export default function Books() {
             </Link>
             <Link href="/social" className={`flex items-center space-x-1 transition-colors duration-300 cursor-pointer ${pathname.startsWith('/social') ? 'text-[#8E44AD]' : 'hover:text-[#8E44AD]'}`}>
               <i className="ri-share-line text-lg"></i>
-              <span className={`${mediumWordmark.className} leading-none`}>Social Media</span>
+              <span>Social Media</span>
             </Link>
           </div>
 
