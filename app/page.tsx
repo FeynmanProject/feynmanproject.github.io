@@ -21,7 +21,7 @@ const BG_URLS = {
   about:         'https://i.imgur.com/L4kyTrq.jpeg',
   features:      'https://i.imgur.com/oZiejJO.jpeg',
   testimonials:  'https://i.imgur.com/o31xDRj.jpeg',
-  cta:           'https://i.imgur.com/roN93QN.jpeg',
+  cta:           'https://i.imgur.com/f6vCXVs.jpeg',
   footer:        'https://i.imgur.com/roN93QN.jpeg',
 };
 
@@ -301,7 +301,10 @@ useEffect(() => {
                 unoptimized
               />
               <div className="ml-2 flex items-center">
-                <span className="text-xl font-bold text-[#8E44AD] font-sans leading-none tracking-wide">
+                <span
+                  className={`${mediumWordmark.className} text-[22px] md:text-[24px] 
+                  font-normal tracking-normal leading-[1.05] pb-[0.04em] text-[#8E44AD]`}
+                >
                   Feynman Project
                 </span>
               </div>
@@ -317,7 +320,7 @@ useEffect(() => {
               }`}
             >
               <i className="ri-graduation-cap-line text-lg"></i>
-              <span>Our Classes</span>
+              <span className={`${mediumWordmark.className} leading-none`}>Our Classes</span>
             </Link>
             <Link
               href="/about"
@@ -326,7 +329,7 @@ useEffect(() => {
               }`}
             >
               <i className="ri-information-line text-lg"></i>
-              <span>About</span>
+              <span className={`${mediumWordmark.className} leading-none`}>About</span>
             </Link>
             <Link
               href="/books"
@@ -335,7 +338,7 @@ useEffect(() => {
               }`}
             >
               <i className="ri-book-2-line text-lg"></i>
-              <span>Books</span>
+              <span className={`${mediumWordmark.className} leading-none`}>Books</span>
             </Link>
             <Link
               href="/social#contact"
@@ -344,7 +347,7 @@ useEffect(() => {
               }`}
             >
               <i className="ri-contacts-line text-lg"></i>
-              <span>Contact Us</span>
+              <span className={`${mediumWordmark.className} leading-none`}>Contact Us</span>
             </Link>
             <Link
               href="/social"
@@ -353,7 +356,7 @@ useEffect(() => {
               }`}
             >
               <i className="ri-share-line text-lg"></i>
-              <span>Social Media</span>
+              <span className={`${mediumWordmark.className} leading-none`}>Social Media</span>
             </Link>
           </div>
 
