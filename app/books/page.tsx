@@ -172,7 +172,7 @@ function PricingSection() {
 // ====== BG URLS (samakan gaya dengan Home) ======
 const BG_URLS = {
   hero: 'https://i.imgur.com/BLGWdwV.jpeg',
-  search: 'https://i.imgur.com/roN93QN.jpeg',
+  search: 'https://i.imgur.com/TrBVzYS.jpeg',
   slider: 'https://i.imgur.com/L4kyTrq.jpeg',
   pricing: 'https://i.imgur.com/oZiejJO.jpeg',
   features: 'https://i.imgur.com/oZiejJO.jpeg',
