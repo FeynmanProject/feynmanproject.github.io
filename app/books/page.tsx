@@ -6,18 +6,15 @@ import Image from 'next/image';
 import { useRef } from 'react';
 import { usePathname } from 'next/navigation';
 
-function SplitBuyPreviewButton({
-  buyLink,
-  previewLink,
-}: {
-  buyLink?: string;
-  previewLink?: string;
-}) {
+function SplitBuyPreviewButton({ buyLink, previewLink }: { buyLink?: string; previewLink?: string }) {
   const hasPreview = Boolean(previewLink);
 
   return (
-    <div className="group inline-flex items-center rounded-full overflow-hidden bg-[#181018] border border-[#8E44AD]/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_8px_30px_rgba(0,0,0,0.35)]
-                    text-xs sm:text-sm whitespace-nowrap">
+    <div
+      className="group inline-flex items-center rounded-full overflow-hidden bg-[#181018]
+                 border border-[#8E44AD]/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_8px_30px_rgba(0,0,0,0.35)]
+                 text-[11px] sm:text-sm whitespace-nowrap flex-shrink min-w-0 max-w-full"
+    >
       {/* Preview */}
       <a
         href={hasPreview ? previewLink : undefined}
@@ -27,37 +24,34 @@ function SplitBuyPreviewButton({
         tabIndex={hasPreview ? 0 : -1}
         onClick={(e) => { if (!hasPreview) e.preventDefault(); }}
         className={[
-          "relative px-3 py-1.5 sm:px-4 sm:py-2 font-semibold transition-all select-none",
-          "flex items-center gap-1.5 sm:gap-2",
+          "relative px-2.5 py-1 sm:px-4 sm:py-2 font-semibold transition-all select-none",
+          "flex items-center gap-1 sm:gap-2",
           hasPreview
             ? "text-[#B887FF] hover:text-white hover:bg-[#8E44AD]/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E44AD]"
             : "text-gray-500 cursor-not-allowed",
         ].join(" ")}
         title={hasPreview ? "Lihat cuplikan" : "Preview belum tersedia"}
       >
-        <i className="ri-eye-line text-sm sm:text-base" />
-        <span>Preview</span>
+        <i className="ri-eye-line text-xs sm:text-base" />
+        <span className="truncate">Preview</span>
         <span className="absolute right-0 top-1/2 -translate-y-1/2 h-4 sm:h-5 w-px bg-gradient-to-b from-transparent via-[#8E44AD]/50 to-transparent opacity-60" />
       </a>
 
       {/* Beli */}
       <a
         href={buyLink}
-        className="relative px-4 py-1.5 sm:px-5 sm:py-2 font-semibold text-white bg-[#7C3AED] hover:bg-[#6D2FE5] transition-all
+        className="relative px-3 py-1 sm:px-5 sm:py-2 font-semibold text-white bg-[#7C3AED] hover:bg-[#6D2FE5] transition-all
                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-0 focus-visible:ring-[#8E44AD]
-                   active:scale-[0.98] flex items-center gap-1.5 sm:gap-2"
+                   active:scale-[0.98] flex items-center gap-1 sm:gap-2"
       >
         <span className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity
                          [background:radial-gradient(90px_40px_at_50%_120%,rgba(140,70,200,0.25),transparent_60%)]" />
-        <i className="ri-shopping-bag-3-line text-sm sm:text-base" />
-        <span>Beli Sekarang</span>
+        <i className="ri-shopping-bag-3-line text-xs sm:text-base" />
+        <span className="truncate">Beli Sekarang</span>
       </a>
     </div>
   );
 }
-
-
-
 
 // ——— Pricing Section (styled mirip gambar) ———
 function PricingSection() {
@@ -364,7 +358,7 @@ interface Book {
 // KOMponen kartu buku
 const BookCard = ({ book }: { book: Book }) => (
   <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col relative">
-    <div className="w-full aspect-[832/1107] relative overflow-hidden">
+    <div className="w-full aspect-[832/1107] relative overflow-hidden rounded-t-2xl">
       <Image src={book.image} alt={book.title} fill className="object-cover" unoptimized />
     </div>
 
@@ -374,14 +368,14 @@ const BookCard = ({ book }: { book: Book }) => (
       <p className="text-gray-400 text-sm mb-3">by {book.author}</p>
       <p className="text-gray-300 text-sm mb-4 leading-relaxed line-clamp-4">{book.description}</p>
 
-      {/* FOOTER: harga + tombol */}
-      <div className="mt-auto flex flex-wrap items-center justify-between gap-3">
-        <span className="text-xl sm:text-2xl font-bold text-[#8E44AD]">
+      {/* Harga + Tombol (sebaris) */}
+      <div className="mt-auto flex items-center gap-3 min-w-0">
+        <span className="text-xl sm:text-2xl font-bold text-[#8E44AD] flex-shrink-0">
           {book.price}
         </span>
 
-        {/* Tombol akan turun ke bawah saat sempit */}
-        <div className="w-full sm:w-auto max-w-full">
+        {/* dorong tombol ke kanan dan batasi lebar di layar kecil */}
+        <div className="ml-auto flex-shrink min-w-0 max-w-[60%] sm:max-w-none">
           <SplitBuyPreviewButton buyLink={book.buyLink} previewLink={book.previewLink} />
         </div>
       </div>
