@@ -540,11 +540,7 @@ export default function Books() {
       Buku-buku yang dirancang dengan cermat untuk menyajikan penjelasan yang jelas,
       terstruktur, dan mudah dipahami.
     </p>
-
-    <p className="text-lg md:text-xl mb-12 text-gray-400 max-w-3xl mx-auto leading-relaxed">
-      Setiap buku dirancang untuk membantu Anda belajar mandiri dengan penjelasan runtut,
-      materi lengkap, dan pembahasan soal.
-    </p>
+    
   </div>
 </section>
 
