@@ -746,11 +746,36 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
 /* bikin tiap section/footer punya konteks tumpukan sendiri */
 section, footer { position: relative; isolation: isolate; }
 
-/* layer gambar & grain jadi di belakang konten, tapi bukan negatif */
+/* === Divider putih untuk tiap section (atas & bawah) === */
+section::before,
+section::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.16) 12%,
+    rgba(255,255,255,0.28) 50%,
+    rgba(255,255,255,0.16) 88%,
+    rgba(255,255,255,0) 100%
+  );
+  pointer-events: none;
+  z-index: 2;                 /* di atas grain (1), di bawah konten (3) */
+}
+section::before { top: -1px; }
+section::after  { bottom: -1px; }
+
+/* Hindari tabrakan dengan navbar & footer */
+nav + section::before { display: none; }
+footer::before, footer::after { display: none; }
+
+/* layer gambar & grain jadi di belakang konten */
 .fp-bg {
   position: absolute;
   inset: 0;
-  z-index: 0;                /* <— dulu -2 */
+  z-index: 0;                 /* background image */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -761,7 +786,7 @@ section, footer { position: relative; isolation: isolate; }
 .fp-bg-grain {
   position: absolute;
   inset: 0;
-  z-index: 1;                /* sedikit di atas gambar */
+  z-index: 1;                 /* noise/grain di atas gambar */
   opacity: 0.07;
   mix-blend-mode: overlay;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.4'/></svg>");
@@ -769,12 +794,18 @@ section, footer { position: relative; isolation: isolate; }
   pointer-events: none;
 }
 
-/* pastikan semua konten section berada di atas kedua layer tadi */
+/* pastikan semua konten section berada di atas kedua layer + divider */
 section > *:not([data-fp-bg]):not([data-fp-bg-grain]),
 footer  > *:not([data-fp-bg]):not([data-fp-bg-grain]) {
   position: relative;
-  z-index: 2;
+  z-index: 3;                 /* konten */
 }
+
+/* (opsional) kurangi animasi untuk pengguna prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
 `}</style>
       
     </div>
