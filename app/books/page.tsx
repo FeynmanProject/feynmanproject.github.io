@@ -16,45 +16,46 @@ function SplitBuyPreviewButton({
   const hasPreview = Boolean(previewLink);
 
   return (
-    <div className="group inline-flex items-center rounded-full overflow-hidden bg-[#181018] border border-[#8E44AD]/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_8px_30px_rgba(0,0,0,0.35)]">
+    <div className="group inline-flex items-center rounded-full overflow-hidden bg-[#181018] border border-[#8E44AD]/40 shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_8px_30px_rgba(0,0,0,0.35)]
+                    text-xs sm:text-sm whitespace-nowrap">
       {/* Preview */}
       <a
         href={hasPreview ? previewLink : undefined}
         target={hasPreview ? "_blank" : undefined}
         rel={hasPreview ? "noopener noreferrer" : undefined}
         aria-disabled={!hasPreview}
+        tabIndex={hasPreview ? 0 : -1}
+        onClick={(e) => { if (!hasPreview) e.preventDefault(); }}
         className={[
-          "relative px-4 py-2 text-sm font-semibold transition-all select-none",
-          "flex items-center gap-2",
+          "relative px-3 py-1.5 sm:px-4 sm:py-2 font-semibold transition-all select-none",
+          "flex items-center gap-1.5 sm:gap-2",
           hasPreview
             ? "text-[#B887FF] hover:text-white hover:bg-[#8E44AD]/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8E44AD]"
             : "text-gray-500 cursor-not-allowed",
         ].join(" ")}
         title={hasPreview ? "Lihat cuplikan" : "Preview belum tersedia"}
       >
-        <i className="ri-eye-line text-base" />
+        <i className="ri-eye-line text-sm sm:text-base" />
         <span>Preview</span>
-
-        {/* subtle divider glow on hover */}
-        <span className="absolute right-0 top-1/2 -translate-y-1/2 h-5 w-px bg-gradient-to-b from-transparent via-[#8E44AD]/50 to-transparent opacity-60" />
+        <span className="absolute right-0 top-1/2 -translate-y-1/2 h-4 sm:h-5 w-px bg-gradient-to-b from-transparent via-[#8E44AD]/50 to-transparent opacity-60" />
       </a>
 
-      {/* Beli Sekarang */}
+      {/* Beli */}
       <a
         href={buyLink}
-        className="relative px-5 py-2 text-sm font-semibold text-white bg-[#7C3AED] hover:bg-[#6D2FE5] transition-all
+        className="relative px-4 py-1.5 sm:px-5 sm:py-2 font-semibold text-white bg-[#7C3AED] hover:bg-[#6D2FE5] transition-all
                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-0 focus-visible:ring-[#8E44AD]
-                   active:scale-[0.98] flex items-center gap-2"
+                   active:scale-[0.98] flex items-center gap-1.5 sm:gap-2"
       >
-        {/* glow ring on group hover */}
         <span className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity
-                         [background:radial-gradient(120px_60px_at_50%_120%,rgba(140,70,200,0.25),transparent_60%)]" />
-        <i className="ri-shopping-bag-3-line text-base" />
+                         [background:radial-gradient(90px_40px_at_50%_120%,rgba(140,70,200,0.25),transparent_60%)]" />
+        <i className="ri-shopping-bag-3-line text-sm sm:text-base" />
         <span>Beli Sekarang</span>
       </a>
     </div>
   );
 }
+
 
 
 
@@ -379,13 +380,16 @@ const BookCard = ({ book }: { book: Book }) => (
       <p className="text-gray-400 text-sm mb-3">by {book.author}</p>
       <p className="text-gray-300 text-sm mb-4 leading-relaxed line-clamp-4">{book.description}</p>
 
-      <div className="mt-auto flex items-center justify-between">
-        <span className="text-2xl font-bold text-[#8E44AD]">{book.price}</span>
-        <SplitBuyPreviewButton buyLink={book.buyLink} previewLink={book.previewLink} />
+      <div className="mt-auto flex items-center justify-between gap-3 flex-nowrap">
+        <span className="text-xl sm:text-2xl font-bold text-[#8E44AD] shrink-0">
+          {book.price}
+        </span>
+        <div className="shrink-0">
+          <SplitBuyPreviewButton buyLink={book.buyLink} previewLink={book.previewLink} />
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
 
 
 
