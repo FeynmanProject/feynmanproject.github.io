@@ -5,7 +5,6 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { usePathname } from 'next/navigation';
-import { useEffect } from 'react';
 
 function SplitBuyPreviewButton({
   buyLink,
