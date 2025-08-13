@@ -315,7 +315,7 @@ export default function Books() {
       id: 2,
       title: 'Aljabar Linear Elementer (Jilid 1 + 2)',
       author: 'Abdul Wahhab',
-      description: 'Menerapkan teori dasar aljabar linier ruang Euclid, mampu menghitung perhitungan dalam persamaan linier dan matriks, aplikasi dari sistem linier, determinan, ruang vektor Euclidean, nilai eigen dan vektor eigen.',
+      description: 'Menerapkan teori dasar aljabar linier ruang Euclid, mampu menghitung perhitungan dalam persamaan linier dan matriks, aplikasi dari sistem linier.',
       price: 'Rp 32.000',
       image: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/3df264044ff8ef342a62e169384b991a.png',
       category: 'ALE',
