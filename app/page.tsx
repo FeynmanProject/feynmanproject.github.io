@@ -418,18 +418,10 @@ useEffect(() => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/books" 
-              className="group rounded-full px-8 py-4 bg-white shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-            >  
-              <span className="font-semibold bg-gradient-to-r from-[#8E44AD] to-[#C39BD3] bg-clip-text text-transparent">
-                Jelajahi Buku Diktat Kami
-              </span>  
+            <Link href="/books" className="bg-[#8E44AD] hover:bg-[#7D3C98] text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 cursor-pointer whitespace-nowrap">
+              Jelajahi Buku Diktat Kami
             </Link>
-            <Link 
-              href="/about" 
-              className="rounded-full px-8 py-4 border-2 border-white/80 text-white hover:bg-white/10 transition-all duration-300 cursor-pointer whitespace-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
-            >
+            <Link href="/about" className="border-2 border-[#8E44AD] text-[#8E44AD] hover:bg-[#8E44AD] hover:text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 cursor-pointer whitespace-nowrap">
               Pelajari Lebih Lanjut
             </Link>
           </div>
