@@ -571,7 +571,9 @@ export default function Books() {
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 cursor-pointer whitespace-nowrap ${
-                  selectedCategory === category ? 'bg-[#8E44AD] text-white' : 'bg-[#2A2A2A] text-gray-300 hover:bg-[#8E44AD]/20 hover:text-[#8E44AD]'
+                  selectedCategory === category 
+                  ? 'bg-[#8E44AD] text-white shadow-[0_0_0_1px_rgba(255,255,255,0.08)]'
+                  : 'bg-black text-gray-300 ring-1 ring-white/10 hover:bg-[#8E44AD]/20 hover:text-[#8E44AD]'
                 }`}
               >
                 {category}
