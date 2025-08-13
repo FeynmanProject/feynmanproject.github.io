@@ -320,7 +320,7 @@ useEffect(() => {
               }`}
             >
               <i className="ri-graduation-cap-line text-lg"></i>
-              <span className={`${mediumWordmark.className} leading-none`}>Our Classes</span>
+              <span>Our Classes</span>
             </Link>
             <Link
               href="/about"
@@ -329,7 +329,7 @@ useEffect(() => {
               }`}
             >
               <i className="ri-information-line text-lg"></i>
-              <span className={`${mediumWordmark.className} leading-none`}>About</span>
+              <span>About</span>
             </Link>
             <Link
               href="/books"
@@ -338,7 +338,7 @@ useEffect(() => {
               }`}
             >
               <i className="ri-book-2-line text-lg"></i>
-              <span className={`${mediumWordmark.className} leading-none`}>Books</span>
+              <span>Books</span>
             </Link>
             <Link
               href="/social#contact"
@@ -347,7 +347,7 @@ useEffect(() => {
               }`}
             >
               <i className="ri-contacts-line text-lg"></i>
-              <span className={`${mediumWordmark.className} leading-none`}>Contact Us</span>
+              <span>Contact Us</span>
             </Link>
             <Link
               href="/social"
