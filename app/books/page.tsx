@@ -361,11 +361,10 @@ interface Book {
     return matchesCategory && matchesSearch;
   });
 
-  
-// KOMponen kartu buku – pastikan ada pembuka ( dan penutup );
+// KOMponen kartu buku
 const BookCard = ({ book }: { book: Book }) => (
-  <div className="bg-[#1A1A1A] rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col relative">
-    <div className="w-full aspect-[832/1107] relative overflow-hidden rounded-t-2xl">
+  <div className="bg-[#1A1A1A] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex flex-col relative">
+    <div className="w-full aspect-[832/1107] relative overflow-hidden">
       <Image src={book.image} alt={book.title} fill className="object-cover" unoptimized />
     </div>
 
@@ -375,17 +374,20 @@ const BookCard = ({ book }: { book: Book }) => (
       <p className="text-gray-400 text-sm mb-3">by {book.author}</p>
       <p className="text-gray-300 text-sm mb-4 leading-relaxed line-clamp-4">{book.description}</p>
 
-      <div className="mt-auto flex items-center justify-between gap-3 flex-nowrap">
-        <span className="text-xl sm:text-2xl font-bold text-[#8E44AD] shrink-0">{book.price}</span>
-        <div className="shrink-0">
+      {/* FOOTER: harga + tombol */}
+      <div className="mt-auto flex flex-wrap items-center justify-between gap-3">
+        <span className="text-xl sm:text-2xl font-bold text-[#8E44AD]">
+          {book.price}
+        </span>
+
+        {/* Tombol akan turun ke bawah saat sempit */}
+        <div className="w-full sm:w-auto max-w-full">
           <SplitBuyPreviewButton buyLink={book.buyLink} previewLink={book.previewLink} />
         </div>
       </div>
     </div>
   </div>
 );
-
-
 
 const testimonials = [
   {
