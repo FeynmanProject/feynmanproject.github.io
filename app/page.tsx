@@ -9,11 +9,11 @@ import { usePathname } from 'next/navigation';
 // ====== BG URLS (cukup ganti di sini) ======
 const BG_URLS = {
   hero:          'https://i.imgur.com/BLGWdwV.jpeg',
-  classes:       'https://i.imgur.com/rpK39tZ.jpeg',
+  classes:       'https://i.imgur.com/L4kyTrq.jpeg',
   about:         'https://i.imgur.com/L4kyTrq.jpeg',
   features:      'https://i.imgur.com/oZiejJO.jpeg',
   testimonials:  'https://i.imgur.com/o31xDRj.jpeg',
-  cta:           'https://i.imgur.com/Gqc2mNf.jpeg',
+  cta:           'https://i.imgur.com/L4kyTrq.jpeg',
   footer:        'https://i.imgur.com/roN93QN.jpeg',
 };
 
