@@ -401,7 +401,9 @@ useEffect(() => {
       <section className="relative min-h-screen flex items-center justify-center">
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <h1 
-            className={`${mediumWordmark.className} text-5xl md:text-7xl font-normal tracking-tight leading-tight mb-6 bg-gradient-to-r from-white to-[#8E44AD] bg-clip-text text-transparent`}
+            className={`${mediumWordmark.className} text-5xl md:text-7xl font-normal tracking-tight
+            leading-[1.2] md:leading-[1.15] pb-[0.06em]
+            mb-6 bg-gradient-to-r from-white to-[#8E44AD] bg-clip-text text-transparent`}
           >
             Feynman Project
           </h1>
