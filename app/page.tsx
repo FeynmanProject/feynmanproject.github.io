@@ -5,6 +5,14 @@ import Link from 'next/link';
 import { useState, useRef, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { DM_Serif_Display } from 'next/font/google';
+
+const mediumWordmark = DM_Serif_Display({
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap',
+});
+
 
 // ====== BG URLS (cukup ganti di sini) ======
 const BG_URLS = {
@@ -13,7 +21,7 @@ const BG_URLS = {
   about:         'https://i.imgur.com/L4kyTrq.jpeg',
   features:      'https://i.imgur.com/oZiejJO.jpeg',
   testimonials:  'https://i.imgur.com/o31xDRj.jpeg',
-  cta:           'https://i.imgur.com/o31xDRj.jpeg',
+  cta:           'https://i.imgur.com/roN93QN.jpeg',
   footer:        'https://i.imgur.com/roN93QN.jpeg',
 };
 
@@ -392,7 +400,9 @@ useEffect(() => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center">
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-[#8E44AD] bg-clip-text text-transparent">
+          <h1 
+            className={`${mediumWordmark.className} text-5xl md:text-7xl font-normal tracking-tight leading-tight mb-6 bg-gradient-to-r from-white to-[#8E44AD] bg-clip-text text-transparent`}
+          >
             Feynman Project
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300 font-light">
