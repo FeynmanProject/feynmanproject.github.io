@@ -6,6 +6,28 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
+// ====== BG URLS (cukup ganti di sini) ======
+const BG_URLS = {
+  hero:          'https://i.imgur.com/BLGWdwV.jpeg',
+  classes:       'https://i.imgur.com/rpK39tZ.jpeg',
+  about:         'https://i.imgur.com/L4kyTrq.jpeg',
+  features:      'https://i.imgur.com/oZiejJO.jpeg',
+  testimonials:  'https://i.imgur.com/o31xDRj.jpeg',
+  cta:           'https://i.imgur.com/Gqc2mNf.jpeg',
+  footer:        'https://i.imgur.com/roN93QN.jpeg',
+};
+
+// Urutan section sesuai halaman kamu (biarkan saja):
+const SECTION_ORDER: Array<keyof typeof BG_URLS> = [
+  'hero',        // 1) Hero (section pertama)
+  'classes',     // 2) Kelas Paling Populer
+  'about',       // 3) Quick About
+  'features',    // 4) Features
+  'testimonials',// 5) Testimonials
+  'cta',         // 6) CTA
+];
+
+
 interface ClassData {
   id: string;
   title: string;
@@ -161,6 +183,95 @@ const prevSlide = () => {
     },
   ];
 
+// ====== AUTO-INJECT PER-SECTION BACKGROUND ======
+useEffect(() => {
+  // Helper overlay per section (gradient cantik + transparansi pas)
+  const overlayFor = (name: keyof typeof BG_URLS): string => {
+    switch (name) {
+      case 'hero':
+      case 'cta':
+        return [
+          'radial-gradient(900px 520px at 50% 35%, rgba(142,68,173,0.35), transparent 70%)',
+          'radial-gradient(700px 380px at 90% 80%, rgba(165,105,189,0.18), transparent 65%)',
+          'linear-gradient(180deg, rgba(4,4,6,0.88), rgba(4,4,6,0.88))',
+        ].join(', ');
+      case 'classes':
+        return [
+          'radial-gradient(1200px 520px at 12% 20%, rgba(199,155,226,0.16), transparent 65%)',
+          'radial-gradient(1100px 520px at 88% 80%, rgba(165,105,189,0.14), transparent 65%)',
+          'linear-gradient(180deg, rgba(10,10,12,0.86), rgba(10,10,12,0.86))',
+        ].join(', ');
+      case 'about':
+        return [
+          'radial-gradient(800px 500px at 15% 15%, rgba(142,68,173,0.28), transparent 60%)',
+          'radial-gradient(900px 520px at 85% 85%, rgba(120,86,255,0.16), transparent 60%)',
+          'linear-gradient(180deg, rgba(9,8,12,0.88), rgba(9,8,12,0.88))',
+        ].join(', ');
+      case 'features':
+        return [
+          'radial-gradient(800px 500px at 50% 40%, rgba(199,155,226,0.14), transparent 70%)',
+          'linear-gradient(135deg, rgba(14,12,18,0.92), rgba(13,13,13,0.92))',
+        ].join(', ');
+      case 'testimonials':
+        return [
+          'radial-gradient(900px 520px at 10% 20%, rgba(142,68,173,0.20), transparent 60%)',
+          'radial-gradient(1000px 540px at 90% 80%, rgba(165,105,189,0.18), transparent 60%)',
+          'radial-gradient(1100px 560px at 50% 60%, rgba(120,86,255,0.12), transparent 60%)',
+          'linear-gradient(180deg, rgba(7,7,10,0.88), rgba(7,7,10,0.88))',
+        ].join(', ');
+      default:
+        return 'linear-gradient(180deg, rgba(0,0,0,0.85), rgba(0,0,0,0.85))';
+    }
+  };
+
+  // Tambahkan background ke setiap <section> sesuai urutan
+  const sections = Array.from(document.querySelectorAll('section'));
+  SECTION_ORDER.forEach((name, idx) => {
+    const url = BG_URLS[name];
+    const el = sections[idx];
+    if (!url || !el) return;
+    if (el.querySelector('[data-fp-bg]')) return; // sudah dipasang
+
+    el.style.position = 'relative';
+    el.classList.add('overflow-hidden');
+
+    // Layer: gradient overlay + image sekaligus
+    const bg = document.createElement('div');
+    bg.setAttribute('data-fp-bg', '');
+    bg.className = 'fp-bg';
+    bg.style.backgroundImage = `${overlayFor(name)}, url(${url})`;
+
+    // Layer: grain tipis supaya premium (murah performa)
+    const grain = document.createElement('div');
+    grain.setAttribute('data-fp-bg-grain', '');
+    grain.className = 'fp-bg-grain';
+
+    el.prepend(bg);
+    el.prepend(grain);
+  });
+
+  // Footer (elemen <footer> terakhir)
+  const footer = document.querySelector('footer');
+  if (footer && BG_URLS.footer && !footer.querySelector('[data-fp-bg]')) {
+    footer.style.position = 'relative';
+    footer.classList.add('overflow-hidden');
+
+    const bg = document.createElement('div');
+    bg.setAttribute('data-fp-bg', '');
+    bg.className = 'fp-bg';
+    bg.style.backgroundImage =
+      `linear-gradient(180deg, rgba(9,8,10,0.90), rgba(9,8,10,0.90)), url(${BG_URLS.footer})`;
+
+    const grain = document.createElement('div');
+    grain.setAttribute('data-fp-bg-grain', '');
+    grain.className = 'fp-bg-grain';
+
+    footer.prepend(bg);
+    footer.prepend(grain);
+  }
+}, []);
+
+  
 
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white">
@@ -632,6 +743,42 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
           </div>
         </div>
       </footer>
+
+<style jsx global>{`
+  /* --- yang sudah ada --- */
+  .fp-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: saturate(1.05) contrast(1.02);
+    will-change: transform;
+  }
+  .fp-bg-grain {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.07;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.4'/></svg>");
+    background-size: 200px 200px;
+    pointer-events: none;
+  }
+
+  /* --- tambahkan ini: matikan background bawaan section/footer --- */
+  section, footer {
+    background: transparent !important;
+    background-image: none !important;
+  }
+
+  /* Hero kamu punya child .inset-0 (gambar/overlay lama) – sembunyikan agar injector terlihat */
+  section > .inset-0 {
+    display: none !important;
+  }
+`}</style>
+      
     </div>
   );
 }
