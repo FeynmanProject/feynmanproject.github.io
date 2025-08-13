@@ -1,9 +1,11 @@
 'use client';
 
+import type React from 'react';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+
 
 export default function Social() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -310,13 +312,14 @@ export default function Social() {
                   </div>
                   <p className="text-gray-400 mb-6 leading-relaxed">{platform.description}</p>
                   <a href={platform.url} target="_blank" rel="noopener noreferrer" 
-                    className="group block w-full rounded-full py-3 font-semibold text-center
+                    className={`group block w-full rounded-full py-3 font-semibold text-center
                                bg-[#1F1F1F] hover:bg-[#262626]
                                ring-1 ring-white/10 hover:ring-white/20
-                               transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                               transition-all duration-300 transform hover:scale-105 cursor-pointer`}
                    > 
-                    <span className="text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]
-                                     group-hover:drop-shadow-[0_0_14px_rgba(255,255,255,0.9)]">
+                    <span className={`text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]
+                                     group-hover:drop-shadow-[0_0_14px_rgba(255,255,255,0.9)]`}
+                    >
                       Ikuti Kami
                     </span>
                   </a>
