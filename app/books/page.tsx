@@ -52,7 +52,7 @@ function SplitBuyPreviewButton({ buyLink, previewLink }: { buyLink?: string; pre
         <i className="ri-shopping-bag-3-line text-xs sm:text-base" />
         {/* pendek di mobile, penuh di ≥sm */}
         <span className="sm:hidden truncate">Beli</span>
-        <span className="hidden sm:inline truncate">Beli Sekarang</span>
+        <span className="hidden sm:inline truncate">Beli</span>
       </a>
     </div>
   );
