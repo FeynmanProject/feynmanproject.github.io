@@ -302,10 +302,10 @@ export default function Books() {
   const books: Book[] = [
     {
       id: 1,
-      title: 'Kalkulus 1 Jilid 1',
+      title: 'Kalkulus 1 (Jilid 1+2)',
       author: 'Abdul Wahhab, Fritz Adelbertus Sitindaon, Natalius Desta Riyanto',
       description: 'Menentukan penyelesaian dari permasalahan yang berkaitan dengan Kalkulus fungsi real satu variabel seperti limit, turunan, dan integral.',
-      price: 'Rp 39.500',
+      price: 'Rp 79.000',
       image: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/09df2910d57052d7c1994f7e5a00ba22.png',
       category: 'Kalkulus',
       buyLink: 'https://feynmanbookstore.vercel.app/',
@@ -313,7 +313,7 @@ export default function Books() {
     },
     {
       id: 2,
-      title: 'Aljabar Linear Elementer',
+      title: 'Aljabar Linear Elementer (Jilid 1 + 2)',
       author: 'Abdul Wahhab',
       description: 'Menerapkan teori dasar aljabar linier ruang Euclid, mampu menghitung perhitungan dalam persamaan linier dan matriks, aplikasi dari sistem linier, determinan, ruang vektor Euclidean, nilai eigen dan vektor eigen.',
       price: 'Rp 32.000',
@@ -379,17 +379,6 @@ export default function Books() {
     },
     {
       id: 8,
-      title: 'Kalkulus 1 Jilid 2',
-      author: 'Abdul Wahhab, Fritz Adelbertus Sitindaon, Natalius Desta Riyanto',
-      description: 'Menentukan penyelesaian dari permasalahan yang berkaitan dengan Kalkulus fungsi real satu variabel seperti limit, turunan, dan integral.',
-      price: 'Rp 39.500',
-      image: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/09df2910d57052d7c1994f7e5a00ba22.png',
-      category: 'Kalkulus',
-      buyLink: 'https://feynmanbookstore.vercel.app/',
-      previewLink: 'https://drive.google.com/file/d/YYYY/view?usp=sharing',
-    },
-    {
-      id: 9,
       title: 'Persamaan Diferensial Biasa Jilid 2',
       author: 'Abdul Wahhab, Renzie Aditya',
       description: 'Menerapkan konsep dasar matematis untuk menyelesaikan berbagai masalah persamaan diferensial biasa, baik secara analitik, maupun menggunakan pendekatan deret.',
@@ -400,7 +389,7 @@ export default function Books() {
       previewLink: 'https://drive.google.com/file/d/YYYY/view?usp=sharing',
     },
     {
-      id: 10,
+      id: 9,
       title: 'Geometri Analitik',
       author: '-',
       description: '-',
@@ -588,7 +577,7 @@ export default function Books() {
         <div className="max-w-6xl mx-auto px-4 relative">
           <div className="text-center mb-8">
             <span className="inline-block bg-[#8E44AD]/15 border border-[#8E44AD]/40 text-[#EBD9FF] rounded-full px-4 py-2 text-base md:text-lg font-semibold">
-              Pembelian dapat dilakukan pada tanggal 14 Agustus 2025
+              Pembelian dapat dilakukan pada tanggal 14-21 Agustus 2025
             </span>
           </div>
 
