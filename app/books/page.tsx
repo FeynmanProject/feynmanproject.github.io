@@ -5,6 +5,8 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { usePathname } from 'next/navigation';
+import { useEffect } from 'react';
+
 
 function SplitBuyPreviewButton({ buyLink, previewLink }: { buyLink?: string; previewLink?: string }) {
   const hasPreview = Boolean(previewLink);
@@ -199,6 +201,34 @@ function PricingSection() {
 export default function Books() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const bookSliderRef = useRef<HTMLDivElement>(null);
+
+  // tombol panah: tampil/hide tergantung posisi scroll
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
+  const updateScrollButtons = () => {
+    const el = bookSliderRef.current;
+    if (!el) return;
+    const { scrollLeft, scrollWidth, clientWidth } = el;
+    const atStart = scrollLeft <= 1;
+    const atEnd = scrollLeft + clientWidth >= scrollWidth - 1;
+    setCanScrollLeft(!atStart);
+    setCanScrollRight(!atEnd);
+  };
+
+  // cek awal & saat resize
+  useEffect(() => {
+    updateScrollButtons();
+    const onResize = () => updateScrollButtons();
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+
+// sinkron saat kontainer discroll
+const handleScroll = () => updateScrollButtons();
+
+  
+  
   // State untuk kontrol pause testimonial
   const [isPaused, setIsPaused] = useState(false);
   const [manualPause, setManualPause] = useState(false);
@@ -206,18 +236,20 @@ export default function Books() {
   const pathname = usePathname();
 
 
-  // ✅ Fungsi scrollLeft dan scrollRight untuk tombol buku
-  const scrollLeft = () => {
-    if (bookSliderRef.current) {
-      bookSliderRef.current.scrollBy({ left: -800, behavior: 'smooth' });
-    }
-  };
+const scrollLeft = () => {
+  if (bookSliderRef.current) {
+    bookSliderRef.current.scrollBy({ left: -800, behavior: 'smooth' });
+    setTimeout(updateScrollButtons, 350); // ⬅️ tambahkan baris ini
+  }
+};
 
-  const scrollRight = () => {
-    if (bookSliderRef.current) {
-      bookSliderRef.current.scrollBy({ left: 800, behavior: 'smooth' });
-    }
-  };
+const scrollRight = () => {
+  if (bookSliderRef.current) {
+    bookSliderRef.current.scrollBy({ left: 800, behavior: 'smooth' });
+    setTimeout(updateScrollButtons, 350); // ⬅️ tambahkan baris ini
+  }
+};
+
 
   const books = [
     {
@@ -631,26 +663,30 @@ const testimonials = [
     </div>
 
     {/* ⬇️ Wrapper baru agar panah terpusat ke area slider saja */}
-    <div className="relative">
-          
-          {/* Tombol kiri */}
-          <button
-            onClick={scrollLeft}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white p-3 rounded-full shadow-lg"
-          >
-            <i className="ri-arrow-left-line text-xl" />
-          </button>
+<div className="relative">
+  {canScrollLeft && (
+    <button
+      onClick={scrollLeft}
+      className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white p-3 rounded-full shadow-lg"
+      aria-label="Scroll kiri"
+    >
+      <i className="ri-arrow-left-line text-xl" />
+    </button>
+  )}
 
-          {/* Tombol kanan */}
-          <button
-            onClick={scrollRight}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white p-3 rounded-full shadow-lg"
-          >
-            <i className="ri-arrow-right-line text-xl" />
-          </button>
+  {canScrollRight && (
+    <button
+      onClick={scrollRight}
+      className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white p-3 rounded-full shadow-lg"
+      aria-label="Scroll kanan"
+    >
+      <i className="ri-arrow-right-line text-xl" />
+    </button>
+  )}
 
           <div
             ref={bookSliderRef}
+            onScroll={handleScroll} 
             className="flex gap-6 overflow-x-auto overflow-y-visible no-scrollbar scroll-smooth"
           >
 
