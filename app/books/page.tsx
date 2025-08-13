@@ -302,7 +302,7 @@ export default function Books() {
   const books: Book[] = [
     {
       id: 1,
-      title: 'Kalkulus 1 (Jilid 1+2) (200+ Halaman/Jilid)',
+      title: 'Kalkulus 1 (Jilid 1 + 2) (200+ Halaman/Jilid)',
       author: 'Abdul Wahhab, Fritz Adelbertus Sitindaon, Natalius Desta Riyanto',
       description: 'Menentukan penyelesaian dari permasalahan yang berkaitan dengan Kalkulus fungsi real satu variabel seperti limit, turunan, dan integral.',
       price: 'Rp 79.000',
