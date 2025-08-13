@@ -407,12 +407,12 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 font-mono whitespace-nowrap overflow-hidden border-r-2 border-[#8E44AD] animate-typing">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 font-mono whitespace-nowrap overflow-hidden border-r-2 border-[#8E44AD]">
                 Mengapa Feynman Project?
               </h2>
               <p className="text-lg text-gray-200/90 mb-6 leading-relaxed">
                 Nama platform ini terinspirasi dari Richard Feynman — seorang fisikawan peraih Nobel yang dikenal bukan hanya karena kejeniusannya, tetapi karena kemampuannya menjelaskan hal sulit dengan cara yang sederhana dan penuh rasa ingin tahu.
-                \n\nKami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metode belajar yang menekankan pemahaman mendalam melalui penjelasan yang sederhana. Berikut adalah langkah-langkah dalam teknik tersebut:
+                Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metode belajar yang menekankan pemahaman mendalam melalui penjelasan yang sederhana. Berikut adalah langkah-langkah dalam teknik tersebut:
               </p>
 
               <div className="space-y-4">
