@@ -390,9 +390,7 @@ useEffect(() => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0D0D0D] via-[#1A0D1A] to-[#0D0D0D]">
-        <div className="absolute inset-0 bg-[url('https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/964d4280b0c5bacfb5ac985f4006f57d.jfif')] bg-cover bg-center opacity-20"></div>
-        
+      <section className="relative min-h-screen flex items-center justify-center">
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-[#8E44AD] bg-clip-text text-transparent">
             Feynman Project
@@ -415,7 +413,7 @@ useEffect(() => {
         </div>
       </section>
 
-<section id="kelas" className="py-20 bg-[#0D0D0D]">
+<section id="kelas" className="py-20">
   <div className="max-w-7xl mx-auto px-4">
     <div className="text-center mb-12">
       <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Kelas Paling Populer</h2>
@@ -506,7 +504,7 @@ useEffect(() => {
 </section>
 
       {/* Quick About Section */}
-      <section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
+      <section className="py-20">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -574,7 +572,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-[#1A1A1A]">
+      <section className="py-20">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Mengapa Memilih Platform Kami?</h2>
@@ -610,7 +608,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
       </section>
 
 {/* Testimonials Section */}
-<section className="py-20 bg-gradient-to-r from-[#0D0D0D] to-[#1A0D1A]">
+<section className="py-20">
   <div className="max-w-6xl mx-auto px-4">
     <div className="text-center mb-16">
       <h2 className="text-3xl md:text-4xl font-bold mb-4 font-mono text-white">
@@ -659,7 +657,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
 
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#8E44AD] to-[#A569BD]">
+      <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Siap Belajar Bersama Kami?</h2>
           <p className="text-xl mb-8 opacity-90">
@@ -686,7 +684,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
 
       
       {/* Footer */}
-      <footer className="bg-[#0D0D0D] py-12 border-t border-purple-500/20">
+      <footer className="py-12 border-t border-purple-500/20">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
@@ -767,16 +765,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
     pointer-events: none;
   }
 
-  /* --- tambahkan ini: matikan background bawaan section/footer --- */
-  section, footer {
-    background: transparent !important;
-    background-image: none !important;
-  }
 
-  /* Hero kamu punya child .inset-0 (gambar/overlay lama) – sembunyikan agar injector terlihat */
-  section > .inset-0 {
-    display: none !important;
-  }
 `}</style>
       
     </div>
