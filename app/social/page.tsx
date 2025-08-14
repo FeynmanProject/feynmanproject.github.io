@@ -5,6 +5,14 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { DM_Serif_Display } from 'next/font/google';
+
+const mediumWordmark = DM_Serif_Display({
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap',
+});
+
 
 
 export default function Social() {
@@ -212,7 +220,12 @@ export default function Social() {
             <Link href="/" className="flex items-center space-x-2">
               <Image src="/logo.png" alt="Logo Feynman" width={36} height={36} quality={100} priority className="object-contain" unoptimized />
               <div className="ml-2 flex items-center">
-                <span className="text-xl font-bold text-[#8E44AD] font-sans leading-none tracking-wide">Feynman Project</span>
+                <span 
+                  className={`${mediumWordmark.className} text-[22px] md:text-[24px] 
+                  font-normal tracking-normal leading-[1.05] pb-[0.04em] text-[#8E44AD]`}
+                >
+                  Feynman Project
+                </span>
               </div>
             </Link>
           </div>
