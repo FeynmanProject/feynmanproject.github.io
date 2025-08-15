@@ -410,10 +410,10 @@ useEffect(() => {
             Feynman Project
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300 font-light">
-            Paham Matematika? Jelasin Sendiri, Bro!
+            Semua Orang Bisa Bermatematika!
           </p>
           <p className="text-lg md:text-xl mb-12 text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Kuasai konsep matematika lewat pemahaman yang mendalam. Kami bantu kamu belajar secara runtut — karena mengerti itu lebih penting daripada sekadar mengerjakan soal.
+            Belajar matematika tak cukup hanya mengerti konsep, dan tak cukup hanya mengerjakan soal. Kami pandu kamu menguasai keduanya secara runtut.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
