@@ -290,7 +290,11 @@ export default function Social() {
       {/* Hero (compact, biar konsisten) */}
       <section className="py-20 md:py-24 text-center">
         <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-[#8E44AD] bg-clip-text text-transparent">
+          <h1 
+            className={`${mediumWordmark.className} text-5xl md:text-7xl font-normal tracking-tight
+            leading-[1.2] md:leading-[1.15] pb-[0.06em] mb-6
+            bg-gradient-to-r from-white to-[#8E44AD] bg-clip-text text-transparent`}
+          >
             Connect With Us
           </h1>
           <p className="text-lg md:text-xl text-gray-300/95 leading-relaxed">
