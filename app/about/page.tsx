@@ -252,7 +252,7 @@ export default function About() {
             About Feynman Project
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
-            Belajar Matematika Jadi Seru: Jelasin Sendiri, Paham Sampai Inti.
+            Belajar Matematika Jadi Seru: Siapa pun bisa jelasin, siapa pun bisa paham sampai inti.
           </p>
         </div>
       </section>
