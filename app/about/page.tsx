@@ -312,7 +312,7 @@ export default function About() {
                 Membangun pemahaman matematika yang kokoh, mendalam, dan berkelanjutan melalui metode aktif di mana belajar bukan hanya menerima, tetapi juga mengajarkan. Dengan pendekatan teaching-as-learning, setiap peserta tidak sekadar paham, tetapi mampu mengomunikasikan konsep secara jelas dan percaya diri.
               </p>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                Menjadi rujukan pembelajaran matematika modern yang memadukan intuisi, logika, dan keberanian berpikir—setiap pelajar menjadi ‘mathematician’ yang percaya diri menjelaskan konsep rumit.
+                Menjadi rujukan pembelajaran matematika modern yang memadukan intuisi, logika, dan keberanian berpikir setiap pelajar menjadi ‘mathematician’ yang percaya diri menjelaskan konsep rumit.
               </p>
               <div className="bg-[#8E44AD]/10 border-l-4 border-[#8E44AD] p-6 rounded-r-lg">
                 <p className="text-[#8E44AD] font-semibold italic">
