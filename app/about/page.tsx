@@ -266,10 +266,10 @@ export default function About() {
                 <span className="block mx-auto w-fit typing-loop">Our Mission</span>
               </h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                Kami percaya bahwa pemahaman yang sejati tidak hanya diukur dari seberapa banyak yang bisa dihafal, tetapi dari seberapa baik seseorang dapat menjelaskan kembali sebuah konsep dengan cara yang sederhana. Misi kami adalah membangun ruang belajar yang mendorong setiap individu untuk benar-benar memahami apa yang mereka pelajari—bukan sekadar mengejar nilai, tetapi mengejar makna.
+                Kami percaya bahwa pemahaman yang sejati tidak hanya diukur dari seberapa banyak yang bisa dihafal, tetapi dari seberapa baik seseorang dapat menjelaskan kembali sebuah konsep dengan cara yang sederhana. Misi kami adalah membangun ruang belajar yang mendorong setiap individu untuk benar-benar memahami apa yang mereka pelajari bukan sekadar mengejar nilai, tetapi mengejar makna.
               </p>
               <p className="text-lg text-gray-300 leading-relaxed">
-                Melalui pendekatan belajar yang aktif dan reflektif, kami menciptakan komunitas yang mendorong setiap pembelajar untuk menjadi pengajar. Dengan konten yang terarah, media yang mudah diakses, dan semangat kolaborasi, kami membentuk lingkungan belajar yang tidak hanya mendalam, tetapi juga menyenangkan dan penuh dukungan.
+                Melalui pendekatan belajar yang aktif dan reflektif, kami menciptakan komunitas dengan konten yang terarah, media yang mudah diakses, dan semangat kolaborasi. Kami membentuk lingkungan belajar yang tidak hanya mendalam, tetapi juga menyenangkan dan penuh dukungan.
               </p>
             </div>
             <div className="relative h-full flex items-stretch">
@@ -309,7 +309,7 @@ export default function About() {
                 <span className="block mx-auto w-fit typing-loop">Our Vision</span>
               </h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                Menumbuhkan pemahaman matematika yang kokoh dan berkelanjutan melalui metode aktif—dengan ‘teaching-as-learning’, peserta bukan hanya paham, tapi bisa mengajar.
+                Membangun pemahaman matematika yang kokoh, mendalam, dan berkelanjutan melalui metode aktif di mana belajar bukan hanya menerima, tetapi juga mengajarkan. Dengan pendekatan teaching-as-learning, setiap peserta tidak sekadar paham, tetapi mampu mengomunikasikan konsep secara jelas dan percaya diri.
               </p>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                 Menjadi rujukan pembelajaran matematika modern yang memadukan intuisi, logika, dan keberanian berpikir—setiap pelajar menjadi ‘mathematician’ yang percaya diri menjelaskan konsep rumit.
