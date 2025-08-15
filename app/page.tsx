@@ -530,7 +530,7 @@ useEffect(() => {
                 Mengapa Feynman Project?
               </h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                Nama platform ini terinspirasi dari Richard Feynman — seorang fisikawan peraih Nobel yang dikenal bukan hanya karena kejeniusannya, tetapi karena kemampuannya menjelaskan hal sulit dengan cara yang sederhana dan penuh rasa ingin tahu.
+                Nama platform ini terinspirasi dari Richard Feynman seorang fisikawan peraih Nobel yang dikenal bukan hanya karena kejeniusannya, tetapi karena kemampuannya menjelaskan hal sulit dengan cara yang sederhana dan penuh rasa ingin tahu.
 
 Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metode belajar yang menekankan pemahaman mendalam melalui penjelasan yang sederhana. Berikut adalah langkah-langkah dalam teknik tersebut:
               </p>
@@ -550,7 +550,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
                   </div>
                   <div>
                     <h3 className="font-semibold text-white mb-1">Ajarkan dengan Bahasa Sendiri</h3>
-                    <p className="text-gray-400">Coba jelaskan topik tersebut seolah kamu mengajarkannya kepada anak kecil — sederhana, jujur, dan langsung.</p>
+                    <p className="text-gray-400">Coba jelaskan topik tersebut seolah kamu mengajarkannya kepada anak kecil sederhana, jujur, dan langsung.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3 p-4 rounded-xl bg-black ring-1 ring-white/5 shadow-md hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
@@ -605,7 +605,7 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
                 <i className="ri-book-open-line text-2xl text-white"></i>
               </div>
               <h3 className="text-xl font-bold mb-4">Buku Diktat Pilihan</h3>
-              <p className="text-gray-400">Jelajahi buku-buku pilihan kami — tersedia untuk dibaca dan dibeli, lengkap dengan materi dan pembahasan soal.</p>
+              <p className="text-gray-400">Jelajahi buku-buku pilihan kami tersedia untuk dibaca dan dibeli, lengkap dengan materi dan pembahasan soal.</p>
             </div>
             
             <div className="bg-black ring-1 ring-white/5 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
