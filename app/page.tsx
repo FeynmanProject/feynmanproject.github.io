@@ -13,6 +13,13 @@ const mediumWordmark = DM_Serif_Display({
   display: 'swap',
 });
 
+import { Instrument_Serif } from 'next/font/google';
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap',
+});
 
 // ====== BG URLS (cukup ganti di sini) ======
 const BG_URLS = {
@@ -431,7 +438,9 @@ useEffect(() => {
 <section id="kelas" className="py-20">
   <div className="max-w-7xl mx-auto px-4">
     <div className="text-center mb-12">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Kelas Paling Populer</h2>
+      <h2 className={`${instrumentSerif.className} text-3xl md:text-4xl font-bold mb-4 text-white`}>
+        Kelas Paling Populer
+      </h2>
       <p className="text-xl text-gray-400">Feynman Project hadir untuk membangun pemahaman matematika yang kuat</p>
     </div>
 
@@ -525,7 +534,7 @@ useEffect(() => {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 font-mono whitespace-nowrap overflow-hidden border-r-2 border-[#8E44AD] animate-typing">
+              <h2 className={`${instrumentSerif.className} text-3xl md:text-4xl font-bold mb-4 whitespace-nowrap overflow-hidden border-r-2 border-[#8E44AD] animate-typing`}>
                 Mengapa Feynman Project?
               </h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
@@ -592,7 +601,9 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
       <section className="py-20">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Mengapa Memilih Platform Kami?</h2>
+            <h2 className={`${instrumentSerif.className} text-3xl md:text-4xl font-bold mb-4`}>
+              Mengapa Memilih Platform Kami?
+            </h2>
             <p className="text-xl text-gray-400">Ubah cara Anda belajar dengan pendekatan yang telah terbukti efektif.</p>
           </div>
           
@@ -628,10 +639,10 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
 <section className="py-20">
   <div className="max-w-6xl mx-auto px-4">
     <div className="text-center mb-16">
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 font-mono text-white">
-        <span className="block mx-auto w-fit typing-loop pr-1">
-          Kata Mereka
-        </span>
+      <h2 className={`${instrumentSerif.className} text-3xl md:text-4xl font-bold mb-4 text-white`}>
+          <span className="block mx-auto w-fit typing-loop pr-1">
+            Kata Mereka
+          </span>
       </h2>
       <p className="text-xl text-gray-400">Ulasan dari pemirsa video kami.</p>
     </div>
@@ -676,7 +687,9 @@ Kami mengadopsi prinsip belajar yang dikenal sebagai Teknik Feynman, yaitu metod
       {/* CTA Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Siap Belajar Bersama Kami?</h2>
+          <h2 className={`${instrumentSerif.className} text-3xl md:text-4xl font-bold mb-6`}>
+            Siap Belajar Bersama Kami?
+          </h2>
           <p className="text-xl mb-8 opacity-90">
             Belajar dengan cara yang membuatmu benar-benar memahami.
           </p>
