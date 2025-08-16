@@ -25,12 +25,12 @@ export const metadata: Metadata = {
   description:
     "Feynman Project adalah platform edukasi matematika resmi yang menghadirkan video pembelajaran, buku diktat, dan materi belajar untuk membantu mahasiswa memahami konsep matematika secara mendalam. Kunjungi situs resmi kami untuk informasi lengkap.",
   icons: {
-    icon: [
-    { url: "https://i.imgur.com/KZJ1pbu.png?v=2", sizes: "32x32", type: "image/png" },
-    { url: "https://i.imgur.com/KZJ1pbu.png?v=2", sizes: "16x16", type: "image/png" },
-    ],
+    icon: "/favicon.ico",       // favicon utama (multi-resolution)
+    shortcut: "/favicon.ico",   // alias untuk browser lama
+    apple: "/favicon.ico",      // agar iPad/iPhone bisa baca juga
   },
 };
+
 
 export default function RootLayout({
   children,
