@@ -357,7 +357,7 @@ export default function Books() {
     },
     {
       id: 6,
-      title: 'Matematika Dasar',
+      title: 'Matematika Dasar (Khusus Eksternal)',
       author: 'Abdul Wahhab',
       description: 'Mempelajari fungsi 1 variabel bernilai riil dan konsep kalkulus yang berkaitan dengan fungsi tersebut, seperti sistem bilangan riil, fungsi, limit, kekontinuan, turunan dan aplikasinya, integral dan aplikasinya, fungsi transenden alami dan sifat-sifatnya.',
       price: 'Rp 35.000',
