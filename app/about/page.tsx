@@ -16,7 +16,7 @@ const mediumWordmark = DM_Serif_Display({
 const BG_URLS = {
   hero: 'https://i.imgur.com/BLGWdwV.jpeg',
   mission: 'https://i.imgur.com/roN93QN.jpeg',
-  vision: 'https://i.imgur.com/L4kyTrq.jpeg',
+  vision: 'https://i.imgur.com/TrBVzYS.jpeg',
   philosophy: 'https://i.imgur.com/oZiejJO.jpeg',
   team: 'https://i.imgur.com/o31xDRj.jpeg',
   journey: 'https://i.imgur.com/ztbYHH4.jpeg',
