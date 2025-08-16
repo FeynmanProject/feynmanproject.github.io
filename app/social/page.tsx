@@ -30,7 +30,7 @@ export default function Social() {
   const BG_URLS = {
     hero: 'https://i.imgur.com/BLGWdwV.jpeg',
     platforms: 'https://i.imgur.com/roN93QN.jpeg',
-    news: 'https://i.imgur.com/L4kyTrq.jpeg',
+    news: 'https://i.imgur.com/TrBVzYS.jpeg',
     contact: 'https://i.imgur.com/o31xDRj.jpeg',
     stats: 'https://i.imgur.com/oZiejJO.jpeg',
     footer: 'https://i.imgur.com/roN93QN.jpeg',
