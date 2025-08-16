@@ -27,7 +27,6 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",       // favicon utama (multi-resolution)
     shortcut: "/favicon.ico",   // alias untuk browser lama
-    apple: "/favicon.ico",      // agar iPad/iPhone bisa baca juga
   },
 };
 
