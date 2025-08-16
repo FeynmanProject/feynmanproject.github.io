@@ -173,7 +173,7 @@ function PricingSection() {
 const BG_URLS = {
   hero: 'https://i.imgur.com/BLGWdwV.jpeg',
   search: 'https://i.imgur.com/TrBVzYS.jpeg',
-  slider: 'https://i.imgur.com/L4kyTrq.jpeg',
+  slider: 'https://i.imgur.com/TrBVzYS.jpeg',
   pricing: 'https://i.imgur.com/oZiejJO.jpeg',
   features: 'https://i.imgur.com/oZiejJO.jpeg',
   authors: 'https://i.imgur.com/o31xDRj.jpeg',
