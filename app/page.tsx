@@ -17,7 +17,7 @@ const mediumWordmark = DM_Serif_Display({
 const BG_URLS = {
   hero:          'https://i.imgur.com/BLGWdwV.jpeg',
   classes:       'https://i.imgur.com/roN93QN.jpeg',
-  about:         'https://i.imgur.com/L4kyTrq.jpeg',
+  about:         'https://i.imgur.com/TrBVzYS.jpeg',
   features:      'https://i.imgur.com/oZiejJO.jpeg',
   testimonials:  'https://i.imgur.com/o31xDRj.jpeg',
   cta:           'https://i.imgur.com/ztbYHH4.jpeg',
