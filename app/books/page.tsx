@@ -315,7 +315,7 @@ export default function Books() {
       id: 2,
       title: 'Aljabar Linear Elementer (Jilid 1 + 2) (100+ Halaman/Jilid)',
       author: 'Abdul Wahhab, Siti Nur Salamah',
-      description: 'Menerapkan teori dasar aljabar linier ruang Euclid, mampu menghitung perhitungan dalam persamaan linier dan matriks, aplikasi dari sistem linier.',
+      description: 'Menerapkan teori dasar aljabar linier ruang Euclid serta mampu menghitung perhitungan dalam persamaan linier dan matriks, aplikasi dari sistem linier, determinan, ruang vektor Euclidean.',
       price: 'Rp 32.000',
       image: 'https://i.imgur.com/toTKAb6.png',
       category: 'ALE',
