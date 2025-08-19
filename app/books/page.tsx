@@ -658,7 +658,7 @@ export default function Books() {
               { src: 'https://i.imgur.com/CoKjTh2.png', name: 'Abdul Wahhab' },
               { src: 'https://i.imgur.com/LOEBfiG.png', name: 'Renzie Aditya' },
               { src: 'https://i.imgur.com/51KzRF8.png', name: 'Fritz Sitindaon' },
-              { src: 'https://i.imgur.com/YDfrrZy.png', name: 'Albert Wijaya' },
+              { src: 'https://i.imgur.com/rKOO938.png', name: 'Albert Wijaya' },
               { src: 'https://i.imgur.com/NbsdjBz.png', name: 'Bryan Jonathan' },
             ].map((p) => (
               <div key={p.name} className="text-center">
