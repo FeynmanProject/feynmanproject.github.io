@@ -302,7 +302,7 @@ export default function Books() {
   const books: Book[] = [
     {
       id: 1,
-      title: 'Kalkulus 1 (Jilid 1 + 2) (200+ Halaman/Jilid)',
+      title: 'Kalkulus 1',
       author: 'Abdul Wahhab, Patrick Darian, Fritz Adelbertus Sitindaon, Natalius Desta Riyanto',
       description: 'Menentukan penyelesaian dari permasalahan yang berkaitan dengan Kalkulus fungsi real satu variabel seperti limit, turunan, dan integral.',
       price: 'Rp 79.000',
@@ -313,7 +313,7 @@ export default function Books() {
     },
     {
       id: 2,
-      title: 'Aljabar Linear Elementer (Jilid 1 + 2) (100+ Halaman/Jilid)',
+      title: 'Aljabar Linear Elementer',
       author: 'Abdul Wahhab, Siti Nur Salamah',
       description: 'Menerapkan teori dasar aljabar linier ruang Euclid serta mampu menghitung perhitungan dalam persamaan linier dan matriks, aplikasi dari sistem linier, determinan, ruang vektor Euclidean.',
       price: 'Rp 32.000',
@@ -324,7 +324,7 @@ export default function Books() {
     },
     {
       id: 3,
-      title: 'Algoritma dan Pemrograman (100+ Halaman)',
+      title: 'Algoritma dan Pemrograman',
       author: 'Abdul Wahhab, Albert Wijaya',
       description: 'Menyusun algoritma dengan alur logika bersyarat dan berulang serta menggunakan array, vektor, matriks, dan fungsi secara efisien untuk menyelesaikan masalah saintifik kompleks.',
       price: 'Rp 25.000',
@@ -368,7 +368,7 @@ export default function Books() {
     },
     {
       id: 7,
-      title: 'Logika dan Himpunan (250+ Halaman)',
+      title: 'Logika dan Himpunan',
       author: 'Albert Wijaya, Abdul Wahhab, Richard Gordon',
       description: 'Membahas topik logika proposisi, himpunan dan operasinya, predikat dan kuantifikasi, serta teknik-teknik pembuktian matematis secara runtut, logis, dan menyeluruh sebagai fondasi penting dalam memahami struktur berpikir matematika formal.',
       price: 'Rp 45.000',
