@@ -47,65 +47,65 @@ const classesData: ClassData[] = [
   {
     id: '1',
     title: 'Kalkulus 1',
-    displayName: 'Class Of Calculus 1',
+    displayName: 'Coming Soon',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/a43973e7bae870e60689d4c381c1895d.png',
-    youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample1'
+    youtubePlaylist: 'https://www.youtube.com/@FeynmanProjects'
   },
   {
     id: '2',
     title: 'Logika',
     displayName: 'Class Of Logics',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/3e7b479d231acc835815185971300c1e.png',
-    youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample2'
+    youtubePlaylist: 'https://www.youtube.com/watch?v=gsRRdhnCHyQ&list=PLxyrza7PN3aJbZ79WCB5mH-DhZFHcqmPp'
   },
   {
     id: '3',
     title: 'Aljabar linear elementer',
-    displayName: 'Class Of Linear Algebra 1',
+    displayName: 'Coming Soon',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/bd15f59f9d400fb76aac2c53153f5bcb.png',
-    youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample3'
+    youtubePlaylist: 'https://www.youtube.com/@FeynmanProjects'
   },
   {
     id: '4',
     title: 'Kalkulus 3',
     displayName: 'Class Of Calculus 3',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c3fa38d5de461cc4981a1f4c7c4ac62c.png',
-    youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample4'
+    youtubePlaylist: 'https://www.youtube.com/watch?v=O9JpKkAWLvg&list=PLxyrza7PN3aIt7VE4ZjYif2EYkK-DYdjO&index=3'
   },
   {
     id: '5',
     title: ' Kalkulus 2',
     displayName: 'Coming Soon',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/b1bb2aeefbd21b73a230330888a23751.png',
-    youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
+    youtubePlaylist: 'https://www.youtube.com/@FeynmanProjects'
   },
   {
     id: '6',
     title: 'PDB',
     displayName: 'Coming Soon',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/304b64f5a0cd7cbf33560d8302c564b9.png',
-    youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
+    youtubePlaylist: 'https://www.youtube.com/@FeynmanProjects'
   },
   {
     id: '7',
     title: 'Aljabar linear',
     displayName: 'Coming Soon',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/304b64f5a0cd7cbf33560d8302c564b9.png',
-    youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
+    youtubePlaylist: 'https://www.youtube.com/@FeynmanProjects'
   },
   {
     id: '8',
     title: 'Matdis',
     displayName: 'Coming Soon',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/c8953865b10527e8a7ca5c46c3df0eee.png',
-    youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample5'
+    youtubePlaylist: 'https://www.youtube.com/@FeynmanProjects'
   },
   {
     id: '9',
     title: 'METODE NUMERIK',
     displayName: 'Coming Soon',
     thumbnail: 'https://static.readdy.ai/image/420ea21a139446d9f8dbe141258338d9/304b64f5a0cd7cbf33560d8302c564b9.png',
-    youtubePlaylist: 'https://www.youtube.com/playlist?list=PLExample6'
+    youtubePlaylist: 'https://www.youtube.com/@FeynmanProjects'
   }
 ];
 
