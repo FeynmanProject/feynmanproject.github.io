@@ -32,7 +32,7 @@ export default function Social() {
     platforms: 'https://i.imgur.com/roN93QN.jpeg',
     news: 'https://i.imgur.com/TrBVzYS.jpeg',
     contact: 'https://i.imgur.com/o31xDRj.jpeg',
-    stats: 'https://i.imgur.com/oZiejJO.jpeg',
+    stats: 'https://i.imgur.com/roN93QN.jpeg',
     footer: 'https://i.imgur.com/roN93QN.jpeg',
   } as const;
 
