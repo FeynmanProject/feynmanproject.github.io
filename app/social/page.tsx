@@ -480,35 +480,6 @@ export default function Social() {
         </div>
       </section>
 
-      {/* Community Stats */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Bergabung dalam Perjalanan Belajar Kami</h2>
-            <p className="text-xl text-gray-300/95">Menumbuhkan Pemahaman, Bukan Sekadar Nilai.</p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div className="bg-black/50 ring-1 ring-white/10 rounded-2xl p-8">
-              <div className="text-4xl md:text-5xl font-bold mb-2">4+</div>
-              <p className="text-lg opacity-90">Buku Interaktif</p>
-            </div>
-            <div className="bg-black/50 ring-1 ring-white/10 rounded-2xl p-8">
-              <div className="text-4xl md:text-5xl font-bold mb-2">6+</div>
-              <p className="text-lg opacity-90">Kontributor Aktif</p>
-            </div>
-            <div className="bg-black/50 ring-1 ring-white/10 rounded-2xl p-8">
-              <div className="text-4xl md:text-5xl font-bold mb-2">200+</div>
-              <p className="text-lg opacity-90">Halaman Materi Disusun</p>
-            </div>
-            <div className="bg-black/50 ring-1 ring-white/10 rounded-2xl p-8">
-              <div className="text-4xl md:text-5xl font-bold mb-2">10+</div>
-              <p className="text-lg opacity-90">Konten Digital Dibagikan</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="py-12 border-t border-purple-500/20">
         <div className="max-w-6xl mx-auto px-4">
