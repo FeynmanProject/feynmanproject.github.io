@@ -209,11 +209,29 @@ interface Book {
 
 export default function Books() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const bookSliderRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
   const [manualPause, setManualPause] = useState(false);
   const pathname = usePathname();
+  const bookSliderRef = useRef<HTMLDivElement>(null);
 
+  // ✅ tambahan baru
+  const [showLeft, setShowLeft] = useState(false);
+  const [showRight, setShowRight] = useState(true);
+
+  useEffect(() => {
+    const slider = bookSliderRef.current;
+    if (!slider) return;
+
+    const handleScroll = () => {
+      setShowLeft(slider.scrollLeft > 0);
+      setShowRight(slider.scrollLeft + slider.clientWidth < slider.scrollWidth);
+    };
+
+    slider.addEventListener("scroll", handleScroll);
+    handleScroll(); // cek posisi awal
+    return () => slider.removeEventListener("scroll", handleScroll);
+  }, []);
+  
   // ====== AUTO-INJECT PER-SECTION BACKGROUND (copy gaya Home) ======
   useEffect(() => {
     const overlayFor = (name: keyof typeof BG_URLS): string => {
@@ -572,37 +590,60 @@ export default function Books() {
         </div>
       </section>
 
-      {/* Book Slider */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-4 relative">
-          <div className="text-center mb-8">
-            <span className="inline-block bg-[#8E44AD]/15 border border-[#8E44AD]/40 text-[#EBD9FF] rounded-full px-4 py-2 text-base md:text-lg font-semibold">
-              Pembelian dapat dilakukan pada tanggal 14-21 Agustus 2025
-            </span>
+{/* Book Slider */}
+<section className="py-20">
+  <div className="max-w-6xl mx-auto px-4 relative">
+    <div className="text-center mb-8">
+      <span className="inline-block bg-[#8E44AD]/15 border border-[#8E44AD]/40 text-[#EBD9FF] rounded-full px-4 py-2 text-base md:text-lg font-semibold">
+        Pembelian dapat dilakukan pada tanggal 14-21 Agustus 2025
+      </span>
+    </div>
+
+    <div className="relative">
+      {/* Panah kiri */}
+      {showLeft && (
+        <button
+          onClick={scrollLeft}
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white p-3 rounded-full shadow-lg"
+        >
+          <i className="ri-arrow-left-line text-xl" />
+        </button>
+      )}
+
+      {/* Slider */}
+      <div
+        ref={bookSliderRef}
+        className="flex gap-6 overflow-x-auto overflow-y-visible no-scrollbar scroll-smooth"
+      >
+        {filteredBooks.length === 0 ? (
+          <div className="text-center text-gray-400 text-lg py-12 w-full">
+            Tidak ditemukan hasil yang sesuai.
           </div>
-
-          <div className="relative">
-            <button onClick={scrollLeft} className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white p-3 rounded-full shadow-lg">
-              <i className="ri-arrow-left-line text-xl" />
-            </button>
-            <button onClick={scrollRight} className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white p-3 rounded-full shadow-lg">
-              <i className="ri-arrow-right-line text-xl" />
-            </button>
-
-            <div ref={bookSliderRef} className="flex gap-6 overflow-x-auto overflow-y-visible no-scrollbar scroll-smooth">
-              {filteredBooks.length === 0 ? (
-                <div className="text-center text-gray-400 text-lg py-12 w-full">Tidak ditemukan hasil yang sesuai.</div>
-              ) : (
-                filteredBooks.map((book) => (
-                  <div key={book.id} className="min-w-[300px] max-w-sm flex-shrink-0">
-                    <BookCard book={book} />
-                  </div>
-                ))
-              )}
+        ) : (
+          filteredBooks.map((book) => (
+            <div
+              key={book.id}
+              className="min-w-[300px] max-w-sm flex-shrink-0"
+            >
+              <BookCard book={book} />
             </div>
-          </div>
-        </div>
-      </section>
+          ))
+        )}
+      </div>
+
+      {/* Panah kanan */}
+      {showRight && (
+        <button
+          onClick={scrollRight}
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#8E44AD] hover:bg-[#7D3C98] text-white p-3 rounded-full shadow-lg"
+        >
+          <i className="ri-arrow-right-line text-xl" />
+        </button>
+      )}
+    </div>
+  </div>
+</section>
+
 
       {/* Pricing */}
       <PricingSection />
